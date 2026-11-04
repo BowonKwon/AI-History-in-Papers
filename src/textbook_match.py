@@ -39,6 +39,7 @@ def squeeze(s):
 
 
 BOOKS = {
+    "T1": "t1_nilsson_qai_refs.txt",  # Nilsson cites in chapter endnotes; the whole book text is matched (web PDF, Wayback 2026-10-11)
     "T2": "t2_aima4e.bib",
     "T3": "t3_goodfellow_bib.html",
     "T4": "t4_sutton_barto_2020_refs.txt",

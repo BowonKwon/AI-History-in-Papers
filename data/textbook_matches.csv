@@ -1,235 +1,235 @@
-﻿key,year,author,title,T2,T3,T4,T5,T6,n_hits,R1
-mcculloch1943,1943,McCulloch,A logical calculus of the ideas immanent in nervous activity,title,,title,title,author+year+words,4,pass
-rosenblueth1943,1943,Rosenblueth,"Behavior, Purpose and Teleology",title,,,,,1,one
-wiener1948,1948,Wiener,Cybernetics: or Control and Communication in the Animal and the Machine,,,,,,0,none
-shannon1948,1948,Shannon,A Mathematical Theory of Communication,author+year+words,,,,title,2,pass
-hebb1949,1949,Hebb,The Organization of Behavior,title,title,title,,,3,pass
-shannon1950,1950,Shannon,Programming a computer for playing chess,title,,title,,,2,pass
-turing1950,1950,Turing,Computing Machinery and Intelligence,title,,,,,1,one
-mccarthy1955,1955,McCarthy,A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence,,,,,,0,none
-newell1956,1956,Newell,The logic theory machine: A complex information processing system,,,,,,0,none
-chomsky1956,1956,Chomsky,Three models for the description of language,title,,,,title,2,pass
-bellman1957,1957,Bellman,Dynamic Programming,author+year+words,,author+year+words,,,2,pass
-rosenblatt1958,1958,Rosenblatt,The perceptron: A probabilistic model for information storage and organization in the brain,,title,,title,title,3,pass
-selfridge1959,1959,Selfridge,Pandemonium: A paradigm for learning,,,,,,0,none
-samuel1959,1959,Samuel,Some Studies in Machine Learning Using the Game of Checkers,title,,title,,,2,pass
-mccarthy1959,1959,McCarthy,Programs with Common Sense,title,,,,,1,one
-newell1959,1959,Newell,Report on a general problem-solving program,,,,,,0,none
-widrow1960,1960,Widrow,Adaptive switching circuits,title,title,title,,title,4,pass
-mccarthy1960,1960,McCarthy,"Recursive functions of symbolic expressions and their computation by machine, Part I",,,,,,0,none
-kalman1960,1960,Kalman,A New Approach to Linear Filtering and Prediction Problems,title,,,,,1,one
-minsky1961,1961,Minsky,Steps toward Artificial Intelligence,,,title,,,1,one
-solomonoff1964,1964,Solomonoff,A formal theory of inductive inference. Part I,author+year+words,,,,,1,one
-robinson1965,1965,Robinson,A Machine-Oriented Logic Based on the Resolution Principle,title,,,,,1,one
-zadeh1965,1965,Zadeh,Fuzzy sets,author+year+words,,,,,1,one
-ivakhnenko1965,1965,Ivakhnenko,Cybernetic Predicting Devices,,,,,,0,none
-weizenbaum1966,1966,Weizenbaum,ELIZA—a computer program for the study of natural language communication between man and machine,,,,,title,1,one
-amari1967,1967,Amari,A Theory of Adaptive Pattern Classifiers,,,,,,0,none
-hart1968,1968,Hart,A Formal Basis for the Heuristic Determination of Minimum Cost Paths,title,,,,,1,one
-quillian1968,1968,Quillian,Semantic memory,,,,,,0,none
-mccarthy1969,1969,McCarthy,Some Philosophical Problems from the Standpoint of Artificial Intelligence,title,,,,,1,one
-minsky1969,1969,Minsky,Perceptrons: An Introduction to Computational Geometry,title,,,title,,2,pass
-linnainmaa1970,1970,Linnainmaa,The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors,,,,,,0,none
-fikes1971,1971,Fikes,STRIPS: A new approach to the application of theorem proving to problem solving,title,,,,,1,one
-winograd1972,1972,Winograd,Understanding natural language,title,,,,title,2,pass
-lighthill1973,1973,Lighthill,Artificial Intelligence: A General Survey,title,,,,,1,one
-werbos1974,1974,Werbos,Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences,title,,,title,title,3,pass
-minsky1974,1974,Minsky,A Framework for Representing Knowledge,title,,,,title,2,pass
-holland1975,1975,Holland,Adaptation in Natural and Artificial Systems,,,title,,,1,one
-shortliffe1975,1975,Shortliffe,A model of inexact reasoning in medicine,,,,,,0,none
-newell1976,1976,Newell,Computer science as empirical inquiry: symbols and search,title,,,,,1,one
-dempster1977,1977,Dempster,Maximum Likelihood from Incomplete Data Via the EM Algorithm,title,,,title,,2,pass
-schank1977,1977,Schank,"Scripts, Plans, Goals and Understanding",title,,,,title,2,pass
-buchanan1978,1978,Buchanan,Dendral and Meta-Dendral: Their applications dimension,,,,,,0,none
-kowalski1979,1979,Kowalski,Algorithm = logic + control,,,,,,0,none
-searle1980,1980,Searle,"Minds, brains, and programs",title,,,,,1,one
-fukushima1980,1980,Fukushima,Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position,title,title,,title,,3,pass
-mcdermott1982,1982,McDermott,R1: A rule-based configurer of computer systems,title,,,,,1,one
-hopfield1982,1982,Hopfield,Neural networks and physical systems with emergent collective computational abilities,title,,,,,1,one
-kohonen1982,1982,Kohonen,Self-organized formation of topologically correct feature maps,,,,,,0,none
-marr1982,1982,Marr,Vision: A Computational Investigation into the Human Representation and Processing of Visual Information,title,,,,,1,one
-werbos1982,1982,Werbos,Applications of advances in nonlinear sensitivity analysis,,title,title,,,2,pass
-kirkpatrick1983,1983,Kirkpatrick,Optimization by Simulated Annealing,title,title,,,,2,pass
-barto1983,1983,Barto,Neuronlike adaptive elements that can solve difficult learning control problems,,,author+year+words,,,1,one
-valiant1984,1984,Valiant,A theory of the learnable,title,,,,,1,one
-geman1984,1984,Geman,"Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images",author+year+words,,,,,1,one
-ackley1985,1985,Ackley,A learning algorithm for Boltzmann machines,,title,,,,1,one
-rumelhart1986,1986,Rumelhart,Learning representations by back-propagating errors,title,title,,title,,3,pass
-quinlan1986,1986,Quinlan,Induction of decision trees,title,,,,,1,one
-brooks1986,1986,Brooks,A robust layered control system for a mobile robot,title,,,,,1,one
-pearl1988,1988,Pearl,Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference,title,title,,,,2,pass
-sutton1988,1988,Sutton,Learning to predict by the methods of temporal differences,title,,,title,,2,pass
-lecun1989,1989,LeCun,Backpropagation Applied to Handwritten Zip Code Recognition,,,,title,title,2,pass
-cybenko1989,1989,Cybenko,Approximation by superpositions of a sigmoidal function,title,title,title,title,,4,pass
-hornik1989,1989,Hornik,Multilayer feedforward networks are universal approximators,,title,,,,1,one
-watkins1989,1989,Watkins,Learning from Delayed Rewards,,,title,title,,2,pass
-rabiner1989,1989,Rabiner,A tutorial on hidden Markov models and selected applications in speech recognition,,,,,,0,none
-waibel1989,1989,Waibel,Phoneme recognition using time-delay neural networks,,title,,title,title,3,pass
-elman1990,1990,Elman,Finding Structure in Time,title,,,,title,2,pass
-brown1990,1990,Brown,A statistical approach to machine translation,,title,,,title,2,pass
-schapire1990,1990,Schapire,The strength of weak learnability,title,,,,,1,one
-jacobs1991,1991,Jacobs,Adaptive Mixtures of Local Experts,,title,,title,,2,pass
-hochreiter1991,1991,Hochreiter,Untersuchungen zu dynamischen neuronalen Netzen,title,title,,,,2,pass
-watkins1992,1992,Watkins,Q-learning,,,author+year+words,author+year+words,,2,pass
-williams1992,1992,Williams,Simple statistical gradient-following algorithms for connectionist reinforcement learning,title,,title,title,,3,pass
-boser1992,1992,Boser,A training algorithm for optimal margin classifiers,title,title,,,,2,pass
-quinlan1993,1993,Quinlan,C4.5: Programs for Machine Learning,title,,,,,1,one
-bengio1994,1994,Bengio,Learning long-term dependencies with gradient descent is difficult,title,title,,,,2,pass
-tesauro1995,1995,Tesauro,Temporal difference learning and TD-Gammon,title,,,,,1,one
-cortes1995,1995,Cortes,Support-vector networks,title,title,,,,2,pass
-russell1995,1995,Russell,Artificial Intelligence: A Modern Approach,title,title,title,,title,4,pass
-tibshirani1996,1996,Tibshirani,Regression Shrinkage and Selection Via the Lasso,,title,,,title,2,pass
-breiman1996,1996,Breiman,Bagging predictors,,,,,,0,none
-freund1997,1997,Freund,A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting,,,,title,,1,one
-hochreiter1997,1997,Hochreiter,Long Short-Term Memory,title,title,,title,title,4,pass
-schuster1997,1997,Schuster,Bidirectional recurrent neural networks,,title,,,title,2,pass
-campbell2002,2002,Campbell,Deep Blue,,,,,,0,none
-kaelbling1998,1998,Kaelbling,Planning and acting in partially observable stochastic domains,title,,,,,1,one
-lecun1998,1998,LeCun,Gradient-based learning applied to document recognition,,title,title,title,,3,pass
-sutton1998,1998,Sutton,Reinforcement Learning: An Introduction,title,title,title,title,title,5,pass
-page1999,1999,Page,The PageRank Citation Ranking: Bringing Order to the Web,,,,,,0,none
-sutton1999,1999,Sutton,Policy Gradient Methods for Reinforcement Learning with Function Approximation,title,title,title,title,,4,pass
-lowe1999,1999,Lowe,Object recognition from local scale-invariant features,,,,,,0,none
-friedman2001,2001,Friedman,Greedy function approximation: A gradient boosting machine,title,,,,,1,one
-breiman2001,2001,Breiman,Random Forests,author+year+words,,author+year+words,,,2,pass
-lafferty2001,2001,Lafferty,Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data,title,,,,title,2,pass
-viola2001,2001,Viola,Rapid object detection using a boosted cascade of simple features,,,,,,0,none
-breiman2001b,2001,Breiman,Statistical Modeling: The Two Cultures,,,,,,0,none
-hinton2002,2002,Hinton,Training Products of Experts by Minimizing Contrastive Divergence,,title,,,,1,one
-bengio2003,2003,Bengio,A Neural Probabilistic Language Model,title,title,,title,title,4,pass
-blei2003,2003,Blei,Latent Dirichlet Allocation,title,,,,title,2,pass
-thrun2006,2006,Thrun,Stanley: The robot that won the DARPA Grand Challenge,title,,,,,1,one
-kocsis2006,2006,Kocsis,Bandit Based Monte-Carlo Planning,title,,title,,,2,pass
-coulom2006,2006,Coulom,Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search,,,title,,,1,one
-hinton2006,2006,Hinton,A Fast Learning Algorithm for Deep Belief Nets,title,title,title,,title,4,pass
-hinton2006b,2006,Hinton,Reducing the Dimensionality of Data with Neural Networks,,title,,title,,2,pass
-bengio2007,2007,Bengio,Greedy Layer-Wise Training of Deep Networks,,title,,,title,2,pass
-schaeffer2007,2007,Schaeffer,Checkers Is Solved,author+year+words,,,,,1,one
-raina2009,2009,Raina,Large-scale deep unsupervised learning using graphics processors,,title,,,,1,one
-deng2009,2009,Deng,ImageNet: A large-scale hierarchical image database,title,title,,title,,3,pass
-halevy2009,2009,Halevy,The Unreasonable Effectiveness of Data,title,,,,,1,one
-glorot2010,2010,Glorot,Understanding the difficulty of training deep feedforward neural networks,,title,,title,,2,pass
-nair2010,2010,Nair,Rectified Linear Units Improve Restricted Boltzmann Machines,title,title,,title,,3,pass
-ciresan2010,2010,Ciresan,"Deep, Big, Simple Neural Nets for Handwritten Digit Recognition",,title,,,,1,one
-mikolov2010,2010,Mikolov,Recurrent neural network based language model,title,,,,title,2,pass
-ferrucci2010,2010,Ferrucci,Building Watson: An Overview of the DeepQA Project,title,,,,,1,one
-collobert2011,2011,Collobert,Natural Language Processing (almost) from Scratch,,title,,,title,2,pass
-ciresan2012,2012,Ciresan,Multi-column deep neural networks for image classification,,,,,,0,none
-krizhevsky2012,2012,Krizhevsky,ImageNet Classification with Deep Convolutional Neural Networks,title,title,,title,,3,pass
-hinton2012,2012,Hinton,Deep Neural Networks for Acoustic Modeling in Speech Recognition,title,title,,,,2,pass
-le2012,2012,Le,Building high-level features using large scale unsupervised learning,,title,,,,1,one
-mikolov2013,2013,Mikolov,Efficient Estimation of Word Representations in Vector Space,title,title,,,title,3,pass
-mikolov2013b,2013,Mikolov,Distributed Representations of Words and Phrases and their Compositionality,title,,,,title,2,pass
-kingma2013,2013,Kingma,Auto-Encoding Variational Bayes,title,title,,title,,3,pass
-mnih2013,2013,Mnih,Playing Atari with Deep Reinforcement Learning,title,title,title,,,3,pass
-graves2013,2013,Graves,Generating Sequences With Recurrent Neural Networks,,title,,,title,2,pass
-szegedy2013,2013,Szegedy,Intriguing properties of neural networks,title,title,,title,,3,pass
-girshick2014,2014,Girshick,Rich feature hierarchies for accurate object detection and semantic segmentation,,,,title,,1,one
-goodfellow2014,2014,Goodfellow,Generative Adversarial Nets,title,title,,title,,3,pass
-srivastava2014,2014,Srivastava,Dropout: A Simple Way to Prevent Neural Networks from Overfitting,title,title,title,title,title,5,pass
-cho2014,2014,Cho,Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation,,title,,author+year+words,title,3,pass
-sutskever2014,2014,Sutskever,Sequence to Sequence Learning with Neural Networks,title,title,,,title,3,pass
-bahdanau2014,2014,Bahdanau,Neural Machine Translation by Jointly Learning to Align and Translate,title,title,,title,title,4,pass
-pennington2014,2014,Pennington,GloVe: Global Vectors for Word Representation,title,,,,title,2,pass
-simonyan2014,2014,Simonyan,Very Deep Convolutional Networks for Large-Scale Image Recognition,,title,,title,,2,pass
-szegedy2014,2014,Szegedy,Going Deeper with Convolutions,,title,,,,1,one
-kingma2014,2014,Kingma,Adam: A Method for Stochastic Optimization,,title,title,title,title,4,pass
-graves2014,2014,Graves,Neural Turing Machines,,title,,,title,2,pass
-weston2014,2014,Weston,Memory Networks,,,,,author+year+words,1,one
-ioffe2015,2015,Ioffe,Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,title,title,title,title,,4,pass
-mnih2015,2015,Mnih,Human-level control through deep reinforcement learning,title,title,title,title,,4,pass
-lecun2015,2015,LeCun,Deep learning,author+year+words,author+year+words,,author+year+words,,3,pass
-schmidhuber2015,2015,Schmidhuber,Deep learning in neural networks: An overview,title,,title,,,2,pass
-he2015,2015,He,Deep Residual Learning for Image Recognition,title,,title,title,,3,pass
-srivastava2015,2015,Srivastava,Highway Networks,,,,author+year+words,,1,one
-ronneberger2015,2015,Ronneberger,U-Net: Convolutional Networks for Biomedical Image Segmentation,,,,title,,1,one
-ren2015,2015,Ren,Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,,,,title,,1,one
-redmon2015,2015,Redmon,"You Only Look Once: Unified, Real-Time Object Detection",,,,title,,1,one
-sohldickstein2015,2015,Sohl-Dickstein,Deep Unsupervised Learning using Nonequilibrium Thermodynamics,,title,,title,,2,pass
-luong2015,2015,Luong,Effective Approaches to Attention-based Neural Machine Translation,,,,title,,1,one
-xu2015,2015,Xu,"Show, Attend and Tell: Neural Image Caption Generation with Visual Attention",,title,,,,1,one
-schulman2015,2015,Schulman,Trust Region Policy Optimization,title,,,title,,2,pass
-lillicrap2015,2015,Lillicrap,Continuous control with deep reinforcement learning,title,,,title,,2,pass
-radford2015,2015,Radford,Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks,title,title,,title,,3,pass
-hinton2015,2015,Hinton,Distilling the Knowledge in a Neural Network,,title,,title,,2,pass
-sennrich2015,2015,Sennrich,Neural Machine Translation of Rare Words with Subword Units,,,,title,title,2,pass
-silver2016,2016,Silver,Mastering the game of Go with deep neural networks and tree search,title,,title,title,,3,pass
-vandenoord2016,2016,van den Oord,WaveNet: A Generative Model for Raw Audio,title,,,title,,2,pass
-mnih2016,2016,Mnih,Asynchronous Methods for Deep Reinforcement Learning,,,,title,,1,one
-wu2016,2016,Wu,Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation,title,,,,title,2,pass
-amodei2016,2016,Amodei,Concrete Problems in AI Safety,title,,,title,,2,pass
-kipf2016,2016,Kipf,Semi-Supervised Classification with Graph Convolutional Networks,,,,title,,1,one
-ba2016,2016,Ba,Layer Normalization,author+year+words,,,author+year+words,author+year+words,3,pass
-jouppi2017,2017,Jouppi,In-Datacenter Performance Analysis of a Tensor Processing Unit,title,,,,,1,one
-vaswani2017,2017,Vaswani,Attention Is All You Need,title,,,title,title,3,pass
-silver2017,2017,Silver,Mastering the game of Go without human knowledge,title,,title,,,2,pass
-schulman2017,2017,Schulman,Proximal Policy Optimization Algorithms,,,,title,,1,one
-christiano2017,2017,Christiano,Deep reinforcement learning from human preferences,,,,,,0,none
-shazeer2017,2017,Shazeer,Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer,title,,,,,1,one
-moravcik2017,2017,Moravčík,DeepStack: Expert-level artificial intelligence in heads-up no-limit poker,author+year+words,,,,,1,one
-hestness2017,2017,Hestness,"Deep Learning Scaling is Predictable, Empirically",,,,,,0,none
-peters2018,2018,Peters,Deep contextualized word representations,title,,,,title,2,pass
-howard2018,2018,Howard,Universal Language Model Fine-tuning for Text Classification,,,,,,0,none
-radford2018,2018,Radford,Improving Language Understanding by Generative Pre-Training,,,,,,0,none
-devlin2018,2018,Devlin,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,title,,,title,title,3,pass
-silver2018,2018,Silver,"A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play",title,,author+year+words,,,2,pass
-ha2018,2018,Ha,World Models,,,,,author+year+words,1,one
-karras2018,2018,Karras,A Style-Based Generator Architecture for Generative Adversarial Networks,,,,title,,1,one
-radford2019,2019,Radford,Language Models are Unsupervised Multitask Learners,title,,,title,title,3,pass
-sutton2019,2019,Sutton,The Bitter Lesson,,,,,,0,none
-raffel2019,2019,Raffel,Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer,title,,,title,title,3,pass
-vinyals2019,2019,Vinyals,Grandmaster level in StarCraft II using multi-agent reinforcement learning,title,,,,,1,one
-brown2019,2019,Brown,Superhuman AI for multiplayer poker,title,,,,,1,one
-schrittwieser2019,2019,Schrittwieser,"Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",title,,,title,,2,pass
-kaplan2020,2020,Kaplan,Scaling Laws for Neural Language Models,,,,,,0,none
-brown2020,2020,Brown,Language Models are Few-Shot Learners,,,,title,title,2,pass
-ho2020,2020,Ho,Denoising Diffusion Probabilistic Models,,,,title,,1,one
-dosovitskiy2020,2020,Dosovitskiy,An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,,,,title,,1,one
-lewis2020,2020,Lewis,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,,,,,,0,none
-song2020,2020,Song,Score-Based Generative Modeling through Stochastic Differential Equations,,,,title,,1,one
-stiennon2020,2020,Stiennon,Learning to summarize from human feedback,,,,,,0,none
-jumper2021,2021,Jumper,Highly accurate protein structure prediction with AlphaFold,,,,,,0,none
-radford2021,2021,Radford,Learning Transferable Visual Models From Natural Language Supervision,,,,title,,1,one
-ramesh2021,2021,Ramesh,Zero-Shot Text-to-Image Generation,,,,title,,1,one
-chen2021,2021,Chen,Evaluating Large Language Models Trained on Code,,,,,,0,none
-bender2021,2021,Bender,On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?,,,,,title,1,one
-bommasani2021,2021,Bommasani,On the Opportunities and Risks of Foundation Models,,,,,title,1,one
-hu2021,2021,Hu,LoRA: Low-Rank Adaptation of Large Language Models,,,,,title,1,one
-gu2021,2021,Gu,Efficiently Modeling Long Sequences with Structured State Spaces,,,,,,0,none
-fedus2021,2021,Fedus,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity,,,,,,0,none
-rombach2021,2021,Rombach,High-Resolution Image Synthesis with Latent Diffusion Models,,,,title,,1,one
-nakano2021,2021,Nakano,WebGPT: Browser-assisted question-answering with human feedback,,,,,,0,none
-wei2022,2022,Wei,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,,,,,title,1,one
-ouyang2022,2022,Ouyang,Training language models to follow instructions with human feedback,,,,title,title,2,pass
-hoffmann2022,2022,Hoffmann,Training Compute-Optimal Large Language Models,,,,title,title,2,pass
-chowdhery2022,2022,Chowdhery,PaLM: Scaling Language Modeling with Pathways,,,,title,,1,one
-wei2022b,2022,Wei,Emergent Abilities of Large Language Models,,,,,,0,none
-bai2022,2022,Bai,Constitutional AI: Harmlessness from AI Feedback,,,,,title,1,one
-kojima2022,2022,Kojima,Large Language Models are Zero-Shot Reasoners,,,,,,0,none
-wang2022,2022,Wang,Self-Consistency Improves Chain of Thought Reasoning in Language Models,,,,,,0,none
-radford2022,2022,Radford,Robust Speech Recognition via Large-Scale Weak Supervision,,,,,title,1,one
-ahn2022,2022,Ahn,"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",,,,,,0,none
-huang2022,2022,Huang,Inner Monologue: Embodied Reasoning through Planning with Language Models,,,,,,0,none
-yao2022,2022,Yao,ReAct: Synergizing Reasoning and Acting in Language Models,,,,,title,1,one
-touvron2023,2023,Touvron,LLaMA: Open and Efficient Foundation Language Models,,,,,,0,none
-openai2023,2023,OpenAI,GPT-4 Technical Report,,,,,,0,none
-rafailov2023,2023,Rafailov,Direct Preference Optimization: Your Language Model is Secretly a Reward Model,,,,,title,1,one
-gu2023,2023,Gu,Mamba: Linear-Time Sequence Modeling with Selective State Spaces,,,,,,0,none
-schick2023,2023,Schick,Toolformer: Language Models Can Teach Themselves to Use Tools,,,,,,0,none
-shinn2023,2023,Shinn,Reflexion: Language Agents with Verbal Reinforcement Learning,,,,,,0,none
-park2023,2023,Park,Generative Agents: Interactive Simulacra of Human Behavior,,,,,,0,none
-yao2023,2023,Yao,Tree of Thoughts: Deliberate Problem Solving with Large Language Models,,,,,,0,none
-wang2023,2023,Wang,Voyager: An Open-Ended Embodied Agent with Large Language Models,,,,,,0,none
-shen2023,2023,Shen,HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face,,,,,,0,none
-greshake2023,2023,Greshake,Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection,,,,,,0,none
-hong2023,2023,Hong,MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework,,,,,,0,none
-packer2023,2023,Packer,MemGPT: Towards LLMs as Operating Systems,,,,,,0,none
-jimenez2023,2023,Jimenez,SWE-bench: Can Language Models Resolve Real-World GitHub Issues?,,,,,,0,none
-zhou2023,2023,Zhou,WebArena: A Realistic Web Environment for Building Autonomous Agents,,,,,,0,none
-liu2023,2023,Liu,AgentBench: Evaluating LLMs as Agents,,,,,,0,none
-mialon2023,2023,Mialon,GAIA: a benchmark for General AI Assistants,,,,,,0,none
-yang2024,2024,Yang,SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering,,,,,,0,none
-xie2024,2024,Xie,OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments,,,,,,0,none
-yao2024,2024,Yao,τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains,,,,,,0,none
-kapoor2024,2024,Kapoor,AI Agents That Matter,,,,,,0,none
-deepseek2025,2025,DeepSeek-AI,DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning,,,,,,0,none
+﻿key,year,author,title,T1,T2,T3,T4,T5,T6,n_hits,R1
+mcculloch1943,1943,McCulloch,A logical calculus of the ideas immanent in nervous activity,author+year+words,title,,title,title,author+year+words,5,pass
+rosenblueth1943,1943,Rosenblueth,"Behavior, Purpose and Teleology",,title,,,,,1,one
+wiener1948,1948,Wiener,Cybernetics: or Control and Communication in the Animal and the Machine,,,,,,,0,none
+shannon1948,1948,Shannon,A Mathematical Theory of Communication,title,author+year+words,,,,title,3,pass
+hebb1949,1949,Hebb,The Organization of Behavior,title,title,title,title,,,4,pass
+shannon1950,1950,Shannon,Programming a computer for playing chess,title,title,,title,,,3,pass
+turing1950,1950,Turing,Computing Machinery and Intelligence,title,title,,,,,2,pass
+mccarthy1955,1955,McCarthy,A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence,title,,,,,,1,one
+newell1956,1956,Newell,The logic theory machine: A complex information processing system,title,,,,,,1,one
+chomsky1956,1956,Chomsky,Three models for the description of language,title,title,,,,title,3,pass
+bellman1957,1957,Bellman,Dynamic Programming,,author+year+words,,author+year+words,,,2,pass
+rosenblatt1958,1958,Rosenblatt,The perceptron: A probabilistic model for information storage and organization in the brain,title,,title,,title,title,4,pass
+selfridge1959,1959,Selfridge,Pandemonium: A paradigm for learning,title,,,,,,1,one
+samuel1959,1959,Samuel,Some Studies in Machine Learning Using the Game of Checkers,title,title,,title,,,3,pass
+mccarthy1959,1959,McCarthy,Programs with Common Sense,title,title,,,,,2,pass
+newell1959,1959,Newell,Report on a general problem-solving program,title,,,,,,1,one
+widrow1960,1960,Widrow,Adaptive switching circuits,,title,title,title,,title,4,pass
+mccarthy1960,1960,McCarthy,"Recursive functions of symbolic expressions and their computation by machine, Part I",,,,,,,0,none
+kalman1960,1960,Kalman,A New Approach to Linear Filtering and Prediction Problems,,title,,,,,1,one
+minsky1961,1961,Minsky,Steps toward Artificial Intelligence,title,,,title,,,2,pass
+solomonoff1964,1964,Solomonoff,A formal theory of inductive inference. Part I,,author+year+words,,,,,1,one
+robinson1965,1965,Robinson,A Machine-Oriented Logic Based on the Resolution Principle,title,title,,,,,2,pass
+zadeh1965,1965,Zadeh,Fuzzy sets,author+year+words,author+year+words,,,,,2,pass
+ivakhnenko1965,1965,Ivakhnenko,Cybernetic Predicting Devices,,,,,,,0,none
+weizenbaum1966,1966,Weizenbaum,ELIZA—a computer program for the study of natural language communication between man and machine,title,,,,,title,2,pass
+amari1967,1967,Amari,A Theory of Adaptive Pattern Classifiers,,,,,,,0,none
+hart1968,1968,Hart,A Formal Basis for the Heuristic Determination of Minimum Cost Paths,title,title,,,,,2,pass
+quillian1968,1968,Quillian,Semantic memory,author+year+words,,,,,,1,one
+mccarthy1969,1969,McCarthy,Some Philosophical Problems from the Standpoint of Artificial Intelligence,title,title,,,,,2,pass
+minsky1969,1969,Minsky,Perceptrons: An Introduction to Computational Geometry,title,title,,,title,,3,pass
+linnainmaa1970,1970,Linnainmaa,The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors,,,,,,,0,none
+fikes1971,1971,Fikes,STRIPS: A new approach to the application of theorem proving to problem solving,title,title,,,,,2,pass
+winograd1972,1972,Winograd,Understanding natural language,title,title,,,,title,3,pass
+lighthill1973,1973,Lighthill,Artificial Intelligence: A General Survey,title,title,,,,,2,pass
+werbos1974,1974,Werbos,Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences,title,title,,,title,title,4,pass
+minsky1974,1974,Minsky,A Framework for Representing Knowledge,title,title,,,,title,3,pass
+holland1975,1975,Holland,Adaptation in Natural and Artificial Systems,title,,,title,,,2,pass
+shortliffe1975,1975,Shortliffe,A model of inexact reasoning in medicine,,,,,,,0,none
+newell1976,1976,Newell,Computer science as empirical inquiry: symbols and search,title,title,,,,,2,pass
+dempster1977,1977,Dempster,Maximum Likelihood from Incomplete Data Via the EM Algorithm,,title,,,title,,2,pass
+schank1977,1977,Schank,"Scripts, Plans, Goals and Understanding",title,title,,,,title,3,pass
+buchanan1978,1978,Buchanan,Dendral and Meta-Dendral: Their applications dimension,,,,,,,0,none
+kowalski1979,1979,Kowalski,Algorithm = logic + control,,,,,,,0,none
+searle1980,1980,Searle,"Minds, brains, and programs",title,title,,,,,2,pass
+fukushima1980,1980,Fukushima,Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position,title,title,title,,title,,4,pass
+mcdermott1982,1982,McDermott,R1: A rule-based configurer of computer systems,title,title,,,,,2,pass
+hopfield1982,1982,Hopfield,Neural networks and physical systems with emergent collective computational abilities,title,title,,,,,2,pass
+kohonen1982,1982,Kohonen,Self-organized formation of topologically correct feature maps,,,,,,,0,none
+marr1982,1982,Marr,Vision: A Computational Investigation into the Human Representation and Processing of Visual Information,title,title,,,,,2,pass
+werbos1982,1982,Werbos,Applications of advances in nonlinear sensitivity analysis,,,title,title,,,2,pass
+kirkpatrick1983,1983,Kirkpatrick,Optimization by Simulated Annealing,,title,title,,,,2,pass
+barto1983,1983,Barto,Neuronlike adaptive elements that can solve difficult learning control problems,,,,author+year+words,,,1,one
+valiant1984,1984,Valiant,A theory of the learnable,,title,,,,,1,one
+geman1984,1984,Geman,"Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images",,author+year+words,,,,,1,one
+ackley1985,1985,Ackley,A learning algorithm for Boltzmann machines,,,title,,,,1,one
+rumelhart1986,1986,Rumelhart,Learning representations by back-propagating errors,title,title,title,,title,,4,pass
+quinlan1986,1986,Quinlan,Induction of decision trees,title,title,,,,,2,pass
+brooks1986,1986,Brooks,A robust layered control system for a mobile robot,,title,,,,,1,one
+pearl1988,1988,Pearl,Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference,,title,title,,,,2,pass
+sutton1988,1988,Sutton,Learning to predict by the methods of temporal differences,,title,,author+year+words,title,,3,pass
+lecun1989,1989,LeCun,Backpropagation Applied to Handwritten Zip Code Recognition,,,,,title,title,2,pass
+cybenko1989,1989,Cybenko,Approximation by superpositions of a sigmoidal function,,title,title,title,title,,4,pass
+hornik1989,1989,Hornik,Multilayer feedforward networks are universal approximators,,,title,,,,1,one
+watkins1989,1989,Watkins,Learning from Delayed Rewards,title,,,title,title,,3,pass
+rabiner1989,1989,Rabiner,A tutorial on hidden Markov models and selected applications in speech recognition,,,,,,,0,none
+waibel1989,1989,Waibel,Phoneme recognition using time-delay neural networks,,,title,,title,title,3,pass
+elman1990,1990,Elman,Finding Structure in Time,,title,,,,title,2,pass
+brown1990,1990,Brown,A statistical approach to machine translation,,,title,,,title,2,pass
+schapire1990,1990,Schapire,The strength of weak learnability,title,title,,,,,2,pass
+jacobs1991,1991,Jacobs,Adaptive Mixtures of Local Experts,,,title,,title,,2,pass
+hochreiter1991,1991,Hochreiter,Untersuchungen zu dynamischen neuronalen Netzen,,title,title,,,,2,pass
+watkins1992,1992,Watkins,Q-learning,author+year+words,,,author+year+words,author+year+words,,3,pass
+williams1992,1992,Williams,Simple statistical gradient-following algorithms for connectionist reinforcement learning,,title,,title,title,,3,pass
+boser1992,1992,Boser,A training algorithm for optimal margin classifiers,,title,title,,,,2,pass
+quinlan1993,1993,Quinlan,C4.5: Programs for Machine Learning,title,title,,,,,2,pass
+bengio1994,1994,Bengio,Learning long-term dependencies with gradient descent is difficult,,title,title,,,,2,pass
+tesauro1995,1995,Tesauro,Temporal difference learning and TD-Gammon,title,title,,title,,,3,pass
+cortes1995,1995,Cortes,Support-vector networks,,title,title,,,,2,pass
+russell1995,1995,Russell,Artificial Intelligence: A Modern Approach,title,title,title,title,,title,5,pass
+tibshirani1996,1996,Tibshirani,Regression Shrinkage and Selection Via the Lasso,,,title,,,title,2,pass
+breiman1996,1996,Breiman,Bagging predictors,author+year+words,,,,,,1,one
+freund1997,1997,Freund,A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting,title,,,,title,,2,pass
+hochreiter1997,1997,Hochreiter,Long Short-Term Memory,,title,title,,title,title,4,pass
+schuster1997,1997,Schuster,Bidirectional recurrent neural networks,,,title,,,title,2,pass
+campbell2002,2002,Campbell,Deep Blue,,,,,,,0,none
+kaelbling1998,1998,Kaelbling,Planning and acting in partially observable stochastic domains,,title,,,,,1,one
+lecun1998,1998,LeCun,Gradient-based learning applied to document recognition,,,title,title,title,,3,pass
+sutton1998,1998,Sutton,Reinforcement Learning: An Introduction,title,title,title,title,title,title,6,pass
+page1999,1999,Page,The PageRank Citation Ranking: Bringing Order to the Web,,,,,,,0,none
+sutton1999,1999,Sutton,Policy Gradient Methods for Reinforcement Learning with Function Approximation,,title,title,title,title,,4,pass
+lowe1999,1999,Lowe,Object recognition from local scale-invariant features,,,,,,,0,none
+friedman2001,2001,Friedman,Greedy function approximation: A gradient boosting machine,,title,,,,,1,one
+breiman2001,2001,Breiman,Random Forests,,author+year+words,,author+year+words,,,2,pass
+lafferty2001,2001,Lafferty,Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data,,title,,,,title,2,pass
+viola2001,2001,Viola,Rapid object detection using a boosted cascade of simple features,,,,,,,0,none
+breiman2001b,2001,Breiman,Statistical Modeling: The Two Cultures,,,,,,,0,none
+hinton2002,2002,Hinton,Training Products of Experts by Minimizing Contrastive Divergence,,,title,,,,1,one
+bengio2003,2003,Bengio,A Neural Probabilistic Language Model,,title,title,,title,title,4,pass
+blei2003,2003,Blei,Latent Dirichlet Allocation,title,title,,,,title,3,pass
+thrun2006,2006,Thrun,Stanley: The robot that won the DARPA Grand Challenge,title,title,,,,,2,pass
+kocsis2006,2006,Kocsis,Bandit Based Monte-Carlo Planning,,title,,title,,,2,pass
+coulom2006,2006,Coulom,Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search,,,,title,,,1,one
+hinton2006,2006,Hinton,A Fast Learning Algorithm for Deep Belief Nets,title,title,title,title,,title,5,pass
+hinton2006b,2006,Hinton,Reducing the Dimensionality of Data with Neural Networks,,,title,,title,,2,pass
+bengio2007,2007,Bengio,Greedy Layer-Wise Training of Deep Networks,,,title,,,title,2,pass
+schaeffer2007,2007,Schaeffer,Checkers Is Solved,author+year+words,author+year+words,,,,,2,pass
+raina2009,2009,Raina,Large-scale deep unsupervised learning using graphics processors,,,title,,,,1,one
+deng2009,2009,Deng,ImageNet: A large-scale hierarchical image database,,title,title,,title,,3,pass
+halevy2009,2009,Halevy,The Unreasonable Effectiveness of Data,,title,,,,,1,one
+glorot2010,2010,Glorot,Understanding the difficulty of training deep feedforward neural networks,,,title,,title,,2,pass
+nair2010,2010,Nair,Rectified Linear Units Improve Restricted Boltzmann Machines,,title,title,,title,,3,pass
+ciresan2010,2010,Ciresan,"Deep, Big, Simple Neural Nets for Handwritten Digit Recognition",,,title,,,,1,one
+mikolov2010,2010,Mikolov,Recurrent neural network based language model,,title,,,,title,2,pass
+ferrucci2010,2010,Ferrucci,Building Watson: An Overview of the DeepQA Project,,title,,,,,1,one
+collobert2011,2011,Collobert,Natural Language Processing (almost) from Scratch,,,title,,,title,2,pass
+ciresan2012,2012,Ciresan,Multi-column deep neural networks for image classification,,,,,,,0,none
+krizhevsky2012,2012,Krizhevsky,ImageNet Classification with Deep Convolutional Neural Networks,,title,title,,title,,3,pass
+hinton2012,2012,Hinton,Deep Neural Networks for Acoustic Modeling in Speech Recognition,,title,title,,,,2,pass
+le2012,2012,Le,Building high-level features using large scale unsupervised learning,,,title,,,,1,one
+mikolov2013,2013,Mikolov,Efficient Estimation of Word Representations in Vector Space,,title,title,,,title,3,pass
+mikolov2013b,2013,Mikolov,Distributed Representations of Words and Phrases and their Compositionality,,title,,,,title,2,pass
+kingma2013,2013,Kingma,Auto-Encoding Variational Bayes,,title,title,,title,,3,pass
+mnih2013,2013,Mnih,Playing Atari with Deep Reinforcement Learning,,title,title,title,,,3,pass
+graves2013,2013,Graves,Generating Sequences With Recurrent Neural Networks,,,title,,,title,2,pass
+szegedy2013,2013,Szegedy,Intriguing properties of neural networks,,title,title,,title,,3,pass
+girshick2014,2014,Girshick,Rich feature hierarchies for accurate object detection and semantic segmentation,,,,,title,,1,one
+goodfellow2014,2014,Goodfellow,Generative Adversarial Nets,,title,title,,title,,3,pass
+srivastava2014,2014,Srivastava,Dropout: A Simple Way to Prevent Neural Networks from Overfitting,,title,title,title,title,title,5,pass
+cho2014,2014,Cho,Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation,,,title,,author+year+words,title,3,pass
+sutskever2014,2014,Sutskever,Sequence to Sequence Learning with Neural Networks,,title,title,,,title,3,pass
+bahdanau2014,2014,Bahdanau,Neural Machine Translation by Jointly Learning to Align and Translate,,title,title,,title,title,4,pass
+pennington2014,2014,Pennington,GloVe: Global Vectors for Word Representation,,title,,,,title,2,pass
+simonyan2014,2014,Simonyan,Very Deep Convolutional Networks for Large-Scale Image Recognition,,,title,,title,,2,pass
+szegedy2014,2014,Szegedy,Going Deeper with Convolutions,,,title,,,,1,one
+kingma2014,2014,Kingma,Adam: A Method for Stochastic Optimization,,,title,title,title,title,4,pass
+graves2014,2014,Graves,Neural Turing Machines,,,title,,,title,2,pass
+weston2014,2014,Weston,Memory Networks,,,,,,author+year+words,1,one
+ioffe2015,2015,Ioffe,Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,,title,title,title,title,,4,pass
+mnih2015,2015,Mnih,Human-level control through deep reinforcement learning,,title,title,title,title,,4,pass
+lecun2015,2015,LeCun,Deep learning,,author+year+words,author+year+words,,author+year+words,,3,pass
+schmidhuber2015,2015,Schmidhuber,Deep learning in neural networks: An overview,,title,,title,,,2,pass
+he2015,2015,He,Deep Residual Learning for Image Recognition,,title,,title,title,,3,pass
+srivastava2015,2015,Srivastava,Highway Networks,,,,,author+year+words,,1,one
+ronneberger2015,2015,Ronneberger,U-Net: Convolutional Networks for Biomedical Image Segmentation,,,,,title,,1,one
+ren2015,2015,Ren,Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,,,,,title,,1,one
+redmon2015,2015,Redmon,"You Only Look Once: Unified, Real-Time Object Detection",,,,,title,,1,one
+sohldickstein2015,2015,Sohl-Dickstein,Deep Unsupervised Learning using Nonequilibrium Thermodynamics,,,title,,title,,2,pass
+luong2015,2015,Luong,Effective Approaches to Attention-based Neural Machine Translation,,,,,title,,1,one
+xu2015,2015,Xu,"Show, Attend and Tell: Neural Image Caption Generation with Visual Attention",,,title,,,,1,one
+schulman2015,2015,Schulman,Trust Region Policy Optimization,,title,,,title,,2,pass
+lillicrap2015,2015,Lillicrap,Continuous control with deep reinforcement learning,,title,,,title,,2,pass
+radford2015,2015,Radford,Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks,,title,title,,title,,3,pass
+hinton2015,2015,Hinton,Distilling the Knowledge in a Neural Network,,,title,,title,,2,pass
+sennrich2015,2015,Sennrich,Neural Machine Translation of Rare Words with Subword Units,,,,,title,title,2,pass
+silver2016,2016,Silver,Mastering the game of Go with deep neural networks and tree search,,title,,title,title,,3,pass
+vandenoord2016,2016,van den Oord,WaveNet: A Generative Model for Raw Audio,,title,,,title,,2,pass
+mnih2016,2016,Mnih,Asynchronous Methods for Deep Reinforcement Learning,,,,,title,,1,one
+wu2016,2016,Wu,Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation,,title,,,,title,2,pass
+amodei2016,2016,Amodei,Concrete Problems in AI Safety,,title,,,title,,2,pass
+kipf2016,2016,Kipf,Semi-Supervised Classification with Graph Convolutional Networks,,,,,title,,1,one
+ba2016,2016,Ba,Layer Normalization,,author+year+words,,,author+year+words,author+year+words,3,pass
+jouppi2017,2017,Jouppi,In-Datacenter Performance Analysis of a Tensor Processing Unit,,title,,,,,1,one
+vaswani2017,2017,Vaswani,Attention Is All You Need,,title,,,title,title,3,pass
+silver2017,2017,Silver,Mastering the game of Go without human knowledge,,title,,title,,,2,pass
+schulman2017,2017,Schulman,Proximal Policy Optimization Algorithms,,,,,title,,1,one
+christiano2017,2017,Christiano,Deep reinforcement learning from human preferences,,,,,,,0,none
+shazeer2017,2017,Shazeer,Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer,,title,,,,,1,one
+moravcik2017,2017,Moravčík,DeepStack: Expert-level artificial intelligence in heads-up no-limit poker,,author+year+words,,,,,1,one
+hestness2017,2017,Hestness,"Deep Learning Scaling is Predictable, Empirically",,,,,,,0,none
+peters2018,2018,Peters,Deep contextualized word representations,,title,,,,title,2,pass
+howard2018,2018,Howard,Universal Language Model Fine-tuning for Text Classification,,,,,,,0,none
+radford2018,2018,Radford,Improving Language Understanding by Generative Pre-Training,,,,,,,0,none
+devlin2018,2018,Devlin,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,,title,,,title,title,3,pass
+silver2018,2018,Silver,"A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play",,title,,author+year+words,,,2,pass
+ha2018,2018,Ha,World Models,,,,,,author+year+words,1,one
+karras2018,2018,Karras,A Style-Based Generator Architecture for Generative Adversarial Networks,,,,,title,,1,one
+radford2019,2019,Radford,Language Models are Unsupervised Multitask Learners,,title,,,title,title,3,pass
+sutton2019,2019,Sutton,The Bitter Lesson,,,,,,,0,none
+raffel2019,2019,Raffel,Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer,,title,,,title,title,3,pass
+vinyals2019,2019,Vinyals,Grandmaster level in StarCraft II using multi-agent reinforcement learning,,title,,,,,1,one
+brown2019,2019,Brown,Superhuman AI for multiplayer poker,,title,,,,,1,one
+schrittwieser2019,2019,Schrittwieser,"Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",,title,,,title,,2,pass
+kaplan2020,2020,Kaplan,Scaling Laws for Neural Language Models,,,,,,,0,none
+brown2020,2020,Brown,Language Models are Few-Shot Learners,,,,,title,title,2,pass
+ho2020,2020,Ho,Denoising Diffusion Probabilistic Models,,,,,title,,1,one
+dosovitskiy2020,2020,Dosovitskiy,An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,,,,,title,,1,one
+lewis2020,2020,Lewis,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,,,,,,,0,none
+song2020,2020,Song,Score-Based Generative Modeling through Stochastic Differential Equations,,,,,title,,1,one
+stiennon2020,2020,Stiennon,Learning to summarize from human feedback,,,,,,,0,none
+jumper2021,2021,Jumper,Highly accurate protein structure prediction with AlphaFold,,,,,,,0,none
+radford2021,2021,Radford,Learning Transferable Visual Models From Natural Language Supervision,,,,,title,,1,one
+ramesh2021,2021,Ramesh,Zero-Shot Text-to-Image Generation,,,,,title,,1,one
+chen2021,2021,Chen,Evaluating Large Language Models Trained on Code,,,,,,,0,none
+bender2021,2021,Bender,On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?,,,,,,title,1,one
+bommasani2021,2021,Bommasani,On the Opportunities and Risks of Foundation Models,,,,,,title,1,one
+hu2021,2021,Hu,LoRA: Low-Rank Adaptation of Large Language Models,,,,,,title,1,one
+gu2021,2021,Gu,Efficiently Modeling Long Sequences with Structured State Spaces,,,,,,,0,none
+fedus2021,2021,Fedus,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity,,,,,,,0,none
+rombach2021,2021,Rombach,High-Resolution Image Synthesis with Latent Diffusion Models,,,,,title,,1,one
+nakano2021,2021,Nakano,WebGPT: Browser-assisted question-answering with human feedback,,,,,,,0,none
+wei2022,2022,Wei,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,,,,,,title,1,one
+ouyang2022,2022,Ouyang,Training language models to follow instructions with human feedback,,,,,title,title,2,pass
+hoffmann2022,2022,Hoffmann,Training Compute-Optimal Large Language Models,,,,,title,title,2,pass
+chowdhery2022,2022,Chowdhery,PaLM: Scaling Language Modeling with Pathways,,,,,title,,1,one
+wei2022b,2022,Wei,Emergent Abilities of Large Language Models,,,,,,,0,none
+bai2022,2022,Bai,Constitutional AI: Harmlessness from AI Feedback,,,,,,title,1,one
+kojima2022,2022,Kojima,Large Language Models are Zero-Shot Reasoners,,,,,,,0,none
+wang2022,2022,Wang,Self-Consistency Improves Chain of Thought Reasoning in Language Models,,,,,,,0,none
+radford2022,2022,Radford,Robust Speech Recognition via Large-Scale Weak Supervision,,,,,,title,1,one
+ahn2022,2022,Ahn,"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",,,,,,,0,none
+huang2022,2022,Huang,Inner Monologue: Embodied Reasoning through Planning with Language Models,,,,,,,0,none
+yao2022,2022,Yao,ReAct: Synergizing Reasoning and Acting in Language Models,,,,,,title,1,one
+touvron2023,2023,Touvron,LLaMA: Open and Efficient Foundation Language Models,,,,,,,0,none
+openai2023,2023,OpenAI,GPT-4 Technical Report,,,,,,,0,none
+rafailov2023,2023,Rafailov,Direct Preference Optimization: Your Language Model is Secretly a Reward Model,,,,,,title,1,one
+gu2023,2023,Gu,Mamba: Linear-Time Sequence Modeling with Selective State Spaces,,,,,,,0,none
+schick2023,2023,Schick,Toolformer: Language Models Can Teach Themselves to Use Tools,,,,,,,0,none
+shinn2023,2023,Shinn,Reflexion: Language Agents with Verbal Reinforcement Learning,,,,,,,0,none
+park2023,2023,Park,Generative Agents: Interactive Simulacra of Human Behavior,,,,,,,0,none
+yao2023,2023,Yao,Tree of Thoughts: Deliberate Problem Solving with Large Language Models,,,,,,,0,none
+wang2023,2023,Wang,Voyager: An Open-Ended Embodied Agent with Large Language Models,,,,,,,0,none
+shen2023,2023,Shen,HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face,,,,,,,0,none
+greshake2023,2023,Greshake,Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection,,,,,,,0,none
+hong2023,2023,Hong,MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework,,,,,,,0,none
+packer2023,2023,Packer,MemGPT: Towards LLMs as Operating Systems,,,,,,,0,none
+jimenez2023,2023,Jimenez,SWE-bench: Can Language Models Resolve Real-World GitHub Issues?,,,,,,,0,none
+zhou2023,2023,Zhou,WebArena: A Realistic Web Environment for Building Autonomous Agents,,,,,,,0,none
+liu2023,2023,Liu,AgentBench: Evaluating LLMs as Agents,,,,,,,0,none
+mialon2023,2023,Mialon,GAIA: a benchmark for General AI Assistants,,,,,,,0,none
+yang2024,2024,Yang,SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering,,,,,,,0,none
+xie2024,2024,Xie,OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments,,,,,,,0,none
+yao2024,2024,Yao,τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains,,,,,,,0,none
+kapoor2024,2024,Kapoor,AI Agents That Matter,,,,,,,0,none
+deepseek2025,2025,DeepSeek-AI,DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning,,,,,,,0,none

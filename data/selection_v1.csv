@@ -1,92 +1,92 @@
 ﻿key,year,author,title,era,theme,rules,selected,tb_hits,cited_by_selected
-mcculloch1943,1943,McCulloch,A logical calculus of the ideas immanent in nervous activity,E1,NN,R1,yes,4,4
-rosenblueth1943,1943,Rosenblueth,"Behavior, Purpose and Teleology",E1,CYB,,no,1,0
-wiener1948,1948,Wiener,Cybernetics: or Control and Communication in the Animal and the Machine,E1,CYB,,no,0,2
-shannon1948,1948,Shannon,A Mathematical Theory of Communication,E1,FOUND,R1,yes,2,3
-hebb1949,1949,Hebb,The Organization of Behavior,E1,NN,R1,yes,3,4
-shannon1950,1950,Shannon,Programming a computer for playing chess,E1,SEARCH,R1,yes,2,4
-turing1950,1950,Turing,Computing Machinery and Intelligence,E1,FOUND,,no,1,1
-mccarthy1955,1955,McCarthy,A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence,E1,FOUND,,no,0,0
-newell1956,1956,Newell,The logic theory machine: A complex information processing system,E1,SYM,,no,0,0
-chomsky1956,1956,Chomsky,Three models for the description of language,E1,LANG,R1,yes,2,2
-bellman1957,1957,Bellman,Dynamic Programming,E2,RL,R1,yes,2,3
-rosenblatt1958,1958,Rosenblatt,The perceptron: A probabilistic model for information storage and organization in the brain,E2,NN,R1,yes,3,2
-selfridge1959,1959,Selfridge,Pandemonium: A paradigm for learning,E2,PERC,,no,0,1
-samuel1959,1959,Samuel,Some Studies in Machine Learning Using the Game of Checkers,E2,RL,R1,yes,2,9
-mccarthy1959,1959,McCarthy,Programs with Common Sense,E2,SYM,,no,1,1
-newell1959,1959,Newell,Report on a general problem-solving program,E2,SYM,,no,0,1
+mcculloch1943,1943,McCulloch,A logical calculus of the ideas immanent in nervous activity,E1,NN,R1,yes,5,5
+rosenblueth1943,1943,Rosenblueth,"Behavior, Purpose and Teleology",E1,CYB,,no,1,1
+wiener1948,1948,Wiener,Cybernetics: or Control and Communication in the Animal and the Machine,E1,CYB,R2(3),yes,0,3
+shannon1948,1948,Shannon,A Mathematical Theory of Communication,E1,FOUND,R1,yes,3,4
+hebb1949,1949,Hebb,The Organization of Behavior,E1,NN,R1,yes,4,5
+shannon1950,1950,Shannon,Programming a computer for playing chess,E1,SEARCH,R1,yes,3,7
+turing1950,1950,Turing,Computing Machinery and Intelligence,E1,FOUND,R1,yes,2,5
+mccarthy1955,1955,McCarthy,A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence,E1,FOUND,,no,1,0
+newell1956,1956,Newell,The logic theory machine: A complex information processing system,E1,SYM,,no,1,2
+chomsky1956,1956,Chomsky,Three models for the description of language,E1,LANG,R1,yes,3,2
+bellman1957,1957,Bellman,Dynamic Programming,E2,RL,R1,yes,2,4
+rosenblatt1958,1958,Rosenblatt,The perceptron: A probabilistic model for information storage and organization in the brain,E2,NN,R1,yes,4,2
+selfridge1959,1959,Selfridge,Pandemonium: A paradigm for learning,E2,PERC,,no,1,2
+samuel1959,1959,Samuel,Some Studies in Machine Learning Using the Game of Checkers,E2,RL,R1,yes,3,10
+mccarthy1959,1959,McCarthy,Programs with Common Sense,E2,SYM,R1,yes,2,3
+newell1959,1959,Newell,Report on a general problem-solving program,E2,SYM,R2(3),yes,1,3
 widrow1960,1960,Widrow,Adaptive switching circuits,E2,NN,R1,yes,4,3
-mccarthy1960,1960,McCarthy,"Recursive functions of symbolic expressions and their computation by machine, Part I",E2,SYM,R3,yes,0,1
+mccarthy1960,1960,McCarthy,"Recursive functions of symbolic expressions and their computation by machine, Part I",E2,SYM,R3,yes,0,2
 kalman1960,1960,Kalman,A New Approach to Linear Filtering and Prediction Problems,E2,FOUND,,no,1,2
-minsky1961,1961,Minsky,Steps toward Artificial Intelligence,E2,FOUND,R2(3),yes,1,3
+minsky1961,1961,Minsky,Steps toward Artificial Intelligence,E2,FOUND,R1,yes,2,4
 solomonoff1964,1964,Solomonoff,A formal theory of inductive inference. Part I,E2,FOUND,,no,1,2
-robinson1965,1965,Robinson,A Machine-Oriented Logic Based on the Resolution Principle,E2,SYM,,no,1,1
-zadeh1965,1965,Zadeh,Fuzzy sets,E2,SYM,,no,1,0
+robinson1965,1965,Robinson,A Machine-Oriented Logic Based on the Resolution Principle,E2,SYM,R1,yes,2,1
+zadeh1965,1965,Zadeh,Fuzzy sets,E2,SYM,R1,yes,2,0
 ivakhnenko1965,1965,Ivakhnenko,Cybernetic Predicting Devices,E2,NN,,no,0,1
-weizenbaum1966,1966,Weizenbaum,ELIZA—a computer program for the study of natural language communication between man and machine,E2,LANG,,no,1,2
+weizenbaum1966,1966,Weizenbaum,ELIZA—a computer program for the study of natural language communication between man and machine,E2,LANG,R1,yes,2,3
 amari1967,1967,Amari,A Theory of Adaptive Pattern Classifiers,E2,NN,,no,0,2
-hart1968,1968,Hart,A Formal Basis for the Heuristic Determination of Minimum Cost Paths,E2,SEARCH,,no,1,2
-quillian1968,1968,Quillian,Semantic memory,E2,KR,,no,0,1
-mccarthy1969,1969,McCarthy,Some Philosophical Problems from the Standpoint of Artificial Intelligence,E2,KR,,no,1,2
-minsky1969,1969,Minsky,Perceptrons: An Introduction to Computational Geometry,E2,NN,R1+R3,yes,2,7
+hart1968,1968,Hart,A Formal Basis for the Heuristic Determination of Minimum Cost Paths,E2,SEARCH,R1,yes,2,2
+quillian1968,1968,Quillian,Semantic memory,E2,KR,,no,1,1
+mccarthy1969,1969,McCarthy,Some Philosophical Problems from the Standpoint of Artificial Intelligence,E2,KR,R1,yes,2,3
+minsky1969,1969,Minsky,Perceptrons: An Introduction to Computational Geometry,E2,NN,R1+R3,yes,3,8
 linnainmaa1970,1970,Linnainmaa,The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors,E2,NN,,no,0,1
-fikes1971,1971,Fikes,STRIPS: A new approach to the application of theorem proving to problem solving,E2,SEARCH,,no,1,0
-winograd1972,1972,Winograd,Understanding natural language,E2,LANG,R1,yes,2,0
-lighthill1973,1973,Lighthill,Artificial Intelligence: A General Survey,E2,FOUND,,no,1,0
-werbos1974,1974,Werbos,Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences,E2,NN,R1,yes,3,5
-minsky1974,1974,Minsky,A Framework for Representing Knowledge,E3,KR,R1,yes,2,0
-holland1975,1975,Holland,Adaptation in Natural and Artificial Systems,E3,EVO,,no,1,2
+fikes1971,1971,Fikes,STRIPS: A new approach to the application of theorem proving to problem solving,E2,SEARCH,R1,yes,2,2
+winograd1972,1972,Winograd,Understanding natural language,E2,LANG,R1,yes,3,2
+lighthill1973,1973,Lighthill,Artificial Intelligence: A General Survey,E2,FOUND,R1,yes,2,0
+werbos1974,1974,Werbos,Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences,E2,NN,R1,yes,4,5
+minsky1974,1974,Minsky,A Framework for Representing Knowledge,E3,KR,R1,yes,3,0
+holland1975,1975,Holland,Adaptation in Natural and Artificial Systems,E3,EVO,R1,yes,2,2
 shortliffe1975,1975,Shortliffe,A model of inexact reasoning in medicine,E3,EXP,,no,0,1
-newell1976,1976,Newell,Computer science as empirical inquiry: symbols and search,E3,FOUND,R3,yes,1,0
+newell1976,1976,Newell,Computer science as empirical inquiry: symbols and search,E3,FOUND,R1+R3,yes,2,0
 dempster1977,1977,Dempster,Maximum Likelihood from Incomplete Data Via the EM Algorithm,E3,STAT,R1,yes,2,3
-schank1977,1977,Schank,"Scripts, Plans, Goals and Understanding",E3,KR,R1,yes,2,0
+schank1977,1977,Schank,"Scripts, Plans, Goals and Understanding",E3,KR,R1,yes,3,1
 buchanan1978,1978,Buchanan,Dendral and Meta-Dendral: Their applications dimension,E3,EXP,R3,yes,0,0
 kowalski1979,1979,Kowalski,Algorithm = logic + control,E3,SYM,,no,0,0
-searle1980,1980,Searle,"Minds, brains, and programs",E3,FOUND,,no,1,0
-fukushima1980,1980,Fukushima,Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position,E3,VISION,R1,yes,3,6
-mcdermott1982,1982,McDermott,R1: A rule-based configurer of computer systems,E3,EXP,,no,1,0
-hopfield1982,1982,Hopfield,Neural networks and physical systems with emergent collective computational abilities,E3,NN,R3,yes,1,4
+searle1980,1980,Searle,"Minds, brains, and programs",E3,FOUND,R1,yes,2,0
+fukushima1980,1980,Fukushima,Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position,E3,VISION,R1,yes,4,6
+mcdermott1982,1982,McDermott,R1: A rule-based configurer of computer systems,E3,EXP,R1,yes,2,0
+hopfield1982,1982,Hopfield,Neural networks and physical systems with emergent collective computational abilities,E3,NN,R1+R3,yes,2,4
 kohonen1982,1982,Kohonen,Self-organized formation of topologically correct feature maps,E3,NN,,no,0,1
-marr1982,1982,Marr,Vision: A Computational Investigation into the Human Representation and Processing of Visual Information,E3,VISION,,no,1,1
+marr1982,1982,Marr,Vision: A Computational Investigation into the Human Representation and Processing of Visual Information,E3,VISION,R1,yes,2,1
 werbos1982,1982,Werbos,Applications of advances in nonlinear sensitivity analysis,E3,NN,R1,yes,2,2
 kirkpatrick1983,1983,Kirkpatrick,Optimization by Simulated Annealing,E3,SEARCH,R1,yes,2,5
 barto1983,1983,Barto,Neuronlike adaptive elements that can solve difficult learning control problems,E3,RL,R3,yes,1,8
-valiant1984,1984,Valiant,A theory of the learnable,E3,THEORY,R3,yes,1,1
+valiant1984,1984,Valiant,A theory of the learnable,E3,THEORY,R3,yes,1,2
 geman1984,1984,Geman,"Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images",E3,STAT,R2(3),yes,1,3
-ackley1985,1985,Ackley,A learning algorithm for Boltzmann machines,E3,NN,R3,yes,1,2
-rumelhart1986,1986,Rumelhart,Learning representations by back-propagating errors,E3,NN,R1+R3,yes,3,8
-quinlan1986,1986,Quinlan,Induction of decision trees,E3,STAT,,no,1,0
+ackley1985,1985,Ackley,A learning algorithm for Boltzmann machines,E3,NN,R3,yes,1,3
+rumelhart1986,1986,Rumelhart,Learning representations by back-propagating errors,E3,NN,R1+R3,yes,4,8
+quinlan1986,1986,Quinlan,Induction of decision trees,E3,STAT,R1,yes,2,0
 brooks1986,1986,Brooks,A robust layered control system for a mobile robot,E3,ROBOT,,no,1,0
 pearl1988,1988,Pearl,Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference,E3,STAT,R1+R3,yes,2,3
-sutton1988,1988,Sutton,Learning to predict by the methods of temporal differences,E3,RL,R1+R3,yes,2,8
-lecun1989,1989,LeCun,Backpropagation Applied to Handwritten Zip Code Recognition,E3,VISION,R1+R3,yes,2,7
+sutton1988,1988,Sutton,Learning to predict by the methods of temporal differences,E3,RL,R1+R3,yes,3,8
+lecun1989,1989,LeCun,Backpropagation Applied to Handwritten Zip Code Recognition,E3,VISION,R1+R3,yes,2,8
 cybenko1989,1989,Cybenko,Approximation by superpositions of a sigmoidal function,E3,THEORY,R1,yes,4,2
 hornik1989,1989,Hornik,Multilayer feedforward networks are universal approximators,E3,THEORY,R2(3),yes,1,3
-watkins1989,1989,Watkins,Learning from Delayed Rewards,E3,RL,R1,yes,2,4
+watkins1989,1989,Watkins,Learning from Delayed Rewards,E3,RL,R1,yes,3,5
 rabiner1989,1989,Rabiner,A tutorial on hidden Markov models and selected applications in speech recognition,E3,SPEECH,R2(3),yes,0,3
 waibel1989,1989,Waibel,Phoneme recognition using time-delay neural networks,E3,SPEECH,R1,yes,3,5
-elman1990,1990,Elman,Finding Structure in Time,E3,NN,R1,yes,2,5
-brown1990,1990,Brown,A statistical approach to machine translation,E4,LANG,R1,yes,2,1
-schapire1990,1990,Schapire,The strength of weak learnability,E4,STAT,,no,1,2
-jacobs1991,1991,Jacobs,Adaptive Mixtures of Local Experts,E4,NN,R1,yes,2,1
-hochreiter1991,1991,Hochreiter,Untersuchungen zu dynamischen neuronalen Netzen,E4,NN,R1,yes,2,5
-watkins1992,1992,Watkins,Q-learning,E4,RL,R1,yes,2,5
-williams1992,1992,Williams,Simple statistical gradient-following algorithms for connectionist reinforcement learning,E4,RL,R1,yes,3,4
+elman1990,1990,Elman,Finding Structure in Time,E3,NN,R1,yes,2,6
+brown1990,1990,Brown,A statistical approach to machine translation,E4,LANG,R1,yes,2,2
+schapire1990,1990,Schapire,The strength of weak learnability,E4,STAT,R1,yes,2,3
+jacobs1991,1991,Jacobs,Adaptive Mixtures of Local Experts,E4,NN,R1,yes,2,3
+hochreiter1991,1991,Hochreiter,Untersuchungen zu dynamischen neuronalen Netzen,E4,NN,R1,yes,2,6
+watkins1992,1992,Watkins,Q-learning,E4,RL,R1,yes,3,5
+williams1992,1992,Williams,Simple statistical gradient-following algorithms for connectionist reinforcement learning,E4,RL,R1,yes,3,6
 boser1992,1992,Boser,A training algorithm for optimal margin classifiers,E4,STAT,R1,yes,2,2
-quinlan1993,1993,Quinlan,C4.5: Programs for Machine Learning,E4,STAT,,no,1,0
+quinlan1993,1993,Quinlan,C4.5: Programs for Machine Learning,E4,STAT,R1,yes,2,0
 bengio1994,1994,Bengio,Learning long-term dependencies with gradient descent is difficult,E4,NN,R1,yes,2,10
-tesauro1995,1995,Tesauro,Temporal difference learning and TD-Gammon,E4,RL,R2(3),yes,1,3
+tesauro1995,1995,Tesauro,Temporal difference learning and TD-Gammon,E4,RL,R1,yes,3,3
 cortes1995,1995,Cortes,Support-vector networks,E4,STAT,R1,yes,2,0
-russell1995,1995,Russell,Artificial Intelligence: A Modern Approach,E4,FOUND,R1,yes,4,3
-tibshirani1996,1996,Tibshirani,Regression Shrinkage and Selection Via the Lasso,E4,STAT,R1,yes,2,1
-breiman1996,1996,Breiman,Bagging predictors,E4,STAT,,no,0,2
-freund1997,1997,Freund,A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting,E4,STAT,,no,1,1
-hochreiter1997,1997,Hochreiter,Long Short-Term Memory,E4,NN,R1,yes,4,16
+russell1995,1995,Russell,Artificial Intelligence: A Modern Approach,E4,FOUND,R1,yes,5,5
+tibshirani1996,1996,Tibshirani,Regression Shrinkage and Selection Via the Lasso,E4,STAT,R1,yes,2,2
+breiman1996,1996,Breiman,Bagging predictors,E4,STAT,R1,yes,1,2
+freund1997,1997,Freund,A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting,E4,STAT,R1,yes,2,1
+hochreiter1997,1997,Hochreiter,Long Short-Term Memory,E4,NN,R1,yes,4,21
 schuster1997,1997,Schuster,Bidirectional recurrent neural networks,E4,NN,R1,yes,2,3
 campbell2002,2002,Campbell,Deep Blue,E4,SEARCH,R2(4),yes,0,4
 kaelbling1998,1998,Kaelbling,Planning and acting in partially observable stochastic domains,E4,RL,R2(3),yes,1,3
-lecun1998,1998,LeCun,Gradient-based learning applied to document recognition,E4,VISION,R1,yes,3,14
-sutton1998,1998,Sutton,Reinforcement Learning: An Introduction,E4,RL,R1+R3,yes,5,9
+lecun1998,1998,LeCun,Gradient-based learning applied to document recognition,E4,VISION,R1,yes,3,15
+sutton1998,1998,Sutton,Reinforcement Learning: An Introduction,E4,RL,R1+R3,yes,6,12
 page1999,1999,Page,The PageRank Citation Ranking: Bringing Order to the Web,E4,IR,,no,0,0
 sutton1999,1999,Sutton,Policy Gradient Methods for Reinforcement Learning with Function Approximation,E4,RL,R1,yes,4,2
 lowe1999,1999,Lowe,Object recognition from local scale-invariant features,E4,VISION,,no,0,2
@@ -95,127 +95,127 @@ breiman2001,2001,Breiman,Random Forests,E4,STAT,R1,yes,2,1
 lafferty2001,2001,Lafferty,Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data,E4,LANG,R1,yes,2,2
 viola2001,2001,Viola,Rapid object detection using a boosted cascade of simple features,E4,VISION,,no,0,0
 breiman2001b,2001,Breiman,Statistical Modeling: The Two Cultures,E4,STAT,,no,0,0
-hinton2002,2002,Hinton,Training Products of Experts by Minimizing Contrastive Divergence,E4,NN,R2(8),yes,1,8
-bengio2003,2003,Bengio,A Neural Probabilistic Language Model,E4,LANG,R1+R3,yes,4,10
-blei2003,2003,Blei,Latent Dirichlet Allocation,E4,STAT,R1,yes,2,0
-thrun2006,2006,Thrun,Stanley: The robot that won the DARPA Grand Challenge,E4,ROBOT,,no,1,0
+hinton2002,2002,Hinton,Training Products of Experts by Minimizing Contrastive Divergence,E4,NN,R2(8),yes,1,9
+bengio2003,2003,Bengio,A Neural Probabilistic Language Model,E4,LANG,R1+R3,yes,4,12
+blei2003,2003,Blei,Latent Dirichlet Allocation,E4,STAT,R1,yes,3,1
+thrun2006,2006,Thrun,Stanley: The robot that won the DARPA Grand Challenge,E4,ROBOT,R1,yes,2,0
 kocsis2006,2006,Kocsis,Bandit Based Monte-Carlo Planning,E4,SEARCH,R1,yes,2,3
 coulom2006,2006,Coulom,Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search,E4,SEARCH,R2(3),yes,1,3
-hinton2006,2006,Hinton,A Fast Learning Algorithm for Deep Belief Nets,E4,NN,R1,yes,4,11
-hinton2006b,2006,Hinton,Reducing the Dimensionality of Data with Neural Networks,E4,NN,R1,yes,2,9
-bengio2007,2007,Bengio,Greedy Layer-Wise Training of Deep Networks,E4,NN,R1,yes,2,6
-schaeffer2007,2007,Schaeffer,Checkers Is Solved,E4,SEARCH,,no,1,0
-raina2009,2009,Raina,Large-scale deep unsupervised learning using graphics processors,E4,HW,,no,1,2
-deng2009,2009,Deng,ImageNet: A large-scale hierarchical image database,E4,DATA,R1,yes,3,8
+hinton2006,2006,Hinton,A Fast Learning Algorithm for Deep Belief Nets,E4,NN,R1,yes,5,14
+hinton2006b,2006,Hinton,Reducing the Dimensionality of Data with Neural Networks,E4,NN,R1,yes,2,11
+bengio2007,2007,Bengio,Greedy Layer-Wise Training of Deep Networks,E4,NN,R1,yes,2,9
+schaeffer2007,2007,Schaeffer,Checkers Is Solved,E4,SEARCH,R1,yes,2,0
+raina2009,2009,Raina,Large-scale deep unsupervised learning using graphics processors,E4,HW,R2(3),yes,1,3
+deng2009,2009,Deng,ImageNet: A large-scale hierarchical image database,E4,DATA,R1,yes,3,11
 halevy2009,2009,Halevy,The Unreasonable Effectiveness of Data,E4,DATA,,no,1,0
-glorot2010,2010,Glorot,Understanding the difficulty of training deep feedforward neural networks,E4,NN,R1,yes,2,5
+glorot2010,2010,Glorot,Understanding the difficulty of training deep feedforward neural networks,E4,NN,R1,yes,2,6
 nair2010,2010,Nair,Rectified Linear Units Improve Restricted Boltzmann Machines,E4,NN,R1,yes,3,9
-ciresan2010,2010,Ciresan,"Deep, Big, Simple Neural Nets for Handwritten Digit Recognition",E4,VISION,R2(3),yes,1,3
-mikolov2010,2010,Mikolov,Recurrent neural network based language model,E4,LANG,R1,yes,2,3
-ferrucci2010,2010,Ferrucci,Building Watson: An Overview of the DeepQA Project,E4,LANG,,no,1,0
-collobert2011,2011,Collobert,Natural Language Processing (almost) from Scratch,E4,LANG,R1,yes,2,5
+ciresan2010,2010,Ciresan,"Deep, Big, Simple Neural Nets for Handwritten Digit Recognition",E4,VISION,R2(4),yes,1,4
+mikolov2010,2010,Mikolov,Recurrent neural network based language model,E4,LANG,R1,yes,2,5
+ferrucci2010,2010,Ferrucci,Building Watson: An Overview of the DeepQA Project,E4,LANG,,no,1,1
+collobert2011,2011,Collobert,Natural Language Processing (almost) from Scratch,E4,LANG,R1,yes,2,6
 ciresan2012,2012,Ciresan,Multi-column deep neural networks for image classification,E5,VISION,R2(3),yes,0,3
-krizhevsky2012,2012,Krizhevsky,ImageNet Classification with Deep Convolutional Neural Networks,E5,VISION,R1,yes,3,20
-hinton2012,2012,Hinton,Deep Neural Networks for Acoustic Modeling in Speech Recognition,E5,SPEECH,R1,yes,2,8
-le2012,2012,Le,Building high-level features using large scale unsupervised learning,E5,NN,R2(3),yes,1,3
+krizhevsky2012,2012,Krizhevsky,ImageNet Classification with Deep Convolutional Neural Networks,E5,VISION,R1,yes,3,28
+hinton2012,2012,Hinton,Deep Neural Networks for Acoustic Modeling in Speech Recognition,E5,SPEECH,R1,yes,2,9
+le2012,2012,Le,Building high-level features using large scale unsupervised learning,E5,NN,R2(3),yes,1,4
 mikolov2013,2013,Mikolov,Efficient Estimation of Word Representations in Vector Space,E5,LANG,R1,yes,3,7
-mikolov2013b,2013,Mikolov,Distributed Representations of Words and Phrases and their Compositionality,E5,LANG,R1,yes,2,11
+mikolov2013b,2013,Mikolov,Distributed Representations of Words and Phrases and their Compositionality,E5,LANG,R1,yes,2,14
 kingma2013,2013,Kingma,Auto-Encoding Variational Bayes,E5,GEN,R1,yes,3,5
-mnih2013,2013,Mnih,Playing Atari with Deep Reinforcement Learning,E5,RL,R1,yes,3,4
-graves2013,2013,Graves,Generating Sequences With Recurrent Neural Networks,E5,GEN,R1,yes,2,8
-szegedy2013,2013,Szegedy,Intriguing properties of neural networks,E5,SAFETY,R1,yes,3,1
+mnih2013,2013,Mnih,Playing Atari with Deep Reinforcement Learning,E5,RL,R1,yes,3,6
+graves2013,2013,Graves,Generating Sequences With Recurrent Neural Networks,E5,GEN,R1,yes,2,10
+szegedy2013,2013,Szegedy,Intriguing properties of neural networks,E5,SAFETY,R1,yes,3,2
 girshick2014,2014,Girshick,Rich feature hierarchies for accurate object detection and semantic segmentation,E5,VISION,R2(5),yes,1,7
-goodfellow2014,2014,Goodfellow,Generative Adversarial Nets,E5,GEN,R1,yes,3,3
-srivastava2014,2014,Srivastava,Dropout: A Simple Way to Prevent Neural Networks from Overfitting,E5,NN,R1,yes,5,5
-cho2014,2014,Cho,Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation,E5,LANG,R1,yes,3,7
-sutskever2014,2014,Sutskever,Sequence to Sequence Learning with Neural Networks,E5,LANG,R1,yes,3,12
-bahdanau2014,2014,Bahdanau,Neural Machine Translation by Jointly Learning to Align and Translate,E5,LANG,R1,yes,4,6
-pennington2014,2014,Pennington,GloVe: Global Vectors for Word Representation,E5,LANG,R1,yes,2,7
+goodfellow2014,2014,Goodfellow,Generative Adversarial Nets,E5,GEN,R1,yes,3,4
+srivastava2014,2014,Srivastava,Dropout: A Simple Way to Prevent Neural Networks from Overfitting,E5,NN,R1,yes,5,7
+cho2014,2014,Cho,Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation,E5,LANG,R1,yes,3,8
+sutskever2014,2014,Sutskever,Sequence to Sequence Learning with Neural Networks,E5,LANG,R1,yes,3,13
+bahdanau2014,2014,Bahdanau,Neural Machine Translation by Jointly Learning to Align and Translate,E5,LANG,R1,yes,4,11
+pennington2014,2014,Pennington,GloVe: Global Vectors for Word Representation,E5,LANG,R1,yes,2,9
 simonyan2014,2014,Simonyan,Very Deep Convolutional Networks for Large-Scale Image Recognition,E5,VISION,R1,yes,2,5
-szegedy2014,2014,Szegedy,Going Deeper with Convolutions,E5,VISION,R2(5),yes,1,5
-kingma2014,2014,Kingma,Adam: A Method for Stochastic Optimization,E5,NN,R1,yes,4,7
-graves2014,2014,Graves,Neural Turing Machines,E5,NN,R1,yes,2,3
-weston2014,2014,Weston,Memory Networks,E5,NN,,no,1,1
-ioffe2015,2015,Ioffe,Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,E5,NN,R1,yes,4,6
-mnih2015,2015,Mnih,Human-level control through deep reinforcement learning,E5,RL,R1,yes,4,6
+szegedy2014,2014,Szegedy,Going Deeper with Convolutions,E5,VISION,R2(5),yes,1,7
+kingma2014,2014,Kingma,Adam: A Method for Stochastic Optimization,E5,NN,R1,yes,4,17
+graves2014,2014,Graves,Neural Turing Machines,E5,NN,R1,yes,2,6
+weston2014,2014,Weston,Memory Networks,E5,NN,R2(3),yes,1,3
+ioffe2015,2015,Ioffe,Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,E5,NN,R1,yes,4,9
+mnih2015,2015,Mnih,Human-level control through deep reinforcement learning,E5,RL,R1,yes,4,9
 lecun2015,2015,LeCun,Deep learning,E5,FOUND,R1,yes,3,3
 schmidhuber2015,2015,Schmidhuber,Deep learning in neural networks: An overview,E5,FOUND,R1,yes,2,0
-he2015,2015,He,Deep Residual Learning for Image Recognition,E5,VISION,R1,yes,3,5
+he2015,2015,He,Deep Residual Learning for Image Recognition,E5,VISION,R1,yes,3,12
 srivastava2015,2015,Srivastava,Highway Networks,E5,NN,,no,1,2
 ronneberger2015,2015,Ronneberger,U-Net: Convolutional Networks for Biomedical Image Segmentation,E5,VISION,,no,1,0
-ren2015,2015,Ren,Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,E5,VISION,,no,1,1
+ren2015,2015,Ren,Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,E5,VISION,,no,1,2
 redmon2015,2015,Redmon,"You Only Look Once: Unified, Real-Time Object Detection",E5,VISION,,no,1,0
 sohldickstein2015,2015,Sohl-Dickstein,Deep Unsupervised Learning using Nonequilibrium Thermodynamics,E5,GEN,R1,yes,2,2
-luong2015,2015,Luong,Effective Approaches to Attention-based Neural Machine Translation,E5,LANG,R2(3),yes,1,3
+luong2015,2015,Luong,Effective Approaches to Attention-based Neural Machine Translation,E5,LANG,R2(3),yes,1,5
 xu2015,2015,Xu,"Show, Attend and Tell: Neural Image Caption Generation with Visual Attention",E5,VISION,,no,1,2
-schulman2015,2015,Schulman,Trust Region Policy Optimization,E5,RL,R1,yes,2,1
-lillicrap2015,2015,Lillicrap,Continuous control with deep reinforcement learning,E5,RL,R1,yes,2,1
+schulman2015,2015,Schulman,Trust Region Policy Optimization,E5,RL,R1,yes,2,4
+lillicrap2015,2015,Lillicrap,Continuous control with deep reinforcement learning,E5,RL,R1,yes,2,2
 radford2015,2015,Radford,Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks,E5,GEN,R1,yes,3,0
-hinton2015,2015,Hinton,Distilling the Knowledge in a Neural Network,E5,NN,R1,yes,2,4
-sennrich2015,2015,Sennrich,Neural Machine Translation of Rare Words with Subword Units,E5,LANG,R1,yes,2,4
-silver2016,2016,Silver,Mastering the game of Go with deep neural networks and tree search,E5,RL,R1,yes,3,6
+hinton2015,2015,Hinton,Distilling the Knowledge in a Neural Network,E5,NN,R1,yes,2,6
+sennrich2015,2015,Sennrich,Neural Machine Translation of Rare Words with Subword Units,E5,LANG,R1,yes,2,10
+silver2016,2016,Silver,Mastering the game of Go with deep neural networks and tree search,E5,RL,R1,yes,3,7
 vandenoord2016,2016,van den Oord,WaveNet: A Generative Model for Raw Audio,E5,GEN,R1,yes,2,2
-mnih2016,2016,Mnih,Asynchronous Methods for Deep Reinforcement Learning,E5,RL,,no,1,2
-wu2016,2016,Wu,Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation,E5,LANG,R1,yes,2,4
-amodei2016,2016,Amodei,Concrete Problems in AI Safety,E5,SAFETY,R1,yes,2,1
+mnih2016,2016,Mnih,Asynchronous Methods for Deep Reinforcement Learning,E5,RL,R2(3),yes,1,4
+wu2016,2016,Wu,Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation,E5,LANG,R1,yes,2,6
+amodei2016,2016,Amodei,Concrete Problems in AI Safety,E5,SAFETY,R1,yes,2,2
 kipf2016,2016,Kipf,Semi-Supervised Classification with Graph Convolutional Networks,E5,NN,,no,1,0
-ba2016,2016,Ba,Layer Normalization,E5,NN,R1,yes,3,3
-jouppi2017,2017,Jouppi,In-Datacenter Performance Analysis of a Tensor Processing Unit,E5,HW,R2(3),yes,1,3
-vaswani2017,2017,Vaswani,Attention Is All You Need,E5,LANG,R1,yes,3,12
+ba2016,2016,Ba,Layer Normalization,E5,NN,R1,yes,3,6
+jouppi2017,2017,Jouppi,In-Datacenter Performance Analysis of a Tensor Processing Unit,E5,HW,R2(3),yes,1,4
+vaswani2017,2017,Vaswani,Attention Is All You Need,E5,LANG,R1,yes,3,23
 silver2017,2017,Silver,Mastering the game of Go without human knowledge,E5,RL,R1,yes,2,4
-schulman2017,2017,Schulman,Proximal Policy Optimization Algorithms,E5,RL,,no,1,2
-christiano2017,2017,Christiano,Deep reinforcement learning from human preferences,E5,ALIGN,,no,0,1
-shazeer2017,2017,Shazeer,Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer,E5,NN,,no,1,1
+schulman2017,2017,Schulman,Proximal Policy Optimization Algorithms,E5,RL,R2(4),yes,1,6
+christiano2017,2017,Christiano,Deep reinforcement learning from human preferences,E5,ALIGN,R2(3),yes,0,4
+shazeer2017,2017,Shazeer,Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer,E5,NN,R2(3),yes,1,7
 moravcik2017,2017,Moravčík,DeepStack: Expert-level artificial intelligence in heads-up no-limit poker,E5,RL,,no,1,2
-hestness2017,2017,Hestness,"Deep Learning Scaling is Predictable, Empirically",E6,SCALE,R2(3),yes,0,4
-peters2018,2018,Peters,Deep contextualized word representations,E6,LANG,R1,yes,2,7
-howard2018,2018,Howard,Universal Language Model Fine-tuning for Text Classification,E6,LANG,R2(4),yes,0,5
-radford2018,2018,Radford,Improving Language Understanding by Generative Pre-Training,E6,LANG,R2(3),yes,0,3
-devlin2018,2018,Devlin,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,E6,LANG,R1,yes,3,4
-silver2018,2018,Silver,"A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play",E6,RL,R1,yes,2,1
-ha2018,2018,Ha,World Models,E6,RL,,no,1,0
+hestness2017,2017,Hestness,"Deep Learning Scaling is Predictable, Empirically",E6,SCALE,R2(3),yes,0,8
+peters2018,2018,Peters,Deep contextualized word representations,E6,LANG,R1,yes,2,10
+howard2018,2018,Howard,Universal Language Model Fine-tuning for Text Classification,E6,LANG,R2(4),yes,0,7
+radford2018,2018,Radford,Improving Language Understanding by Generative Pre-Training,E6,LANG,R2(5),yes,0,16
+devlin2018,2018,Devlin,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,E6,LANG,R1,yes,3,22
+silver2018,2018,Silver,"A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play",E6,RL,R1,yes,2,2
+ha2018,2018,Ha,World Models,E6,RL,,no,1,1
 karras2018,2018,Karras,A Style-Based Generator Architecture for Generative Adversarial Networks,E6,GEN,,no,1,0
-radford2019,2019,Radford,Language Models are Unsupervised Multitask Learners,E6,LANG,R1,yes,3,3
-sutton2019,2019,Sutton,The Bitter Lesson,E6,FOUND,,no,0,0
-raffel2019,2019,Raffel,Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer,E6,LANG,R1,yes,3,3
+radford2019,2019,Radford,Language Models are Unsupervised Multitask Learners,E6,LANG,R1,yes,3,19
+sutton2019,2019,Sutton,The Bitter Lesson,E6,FOUND,,no,0,2
+raffel2019,2019,Raffel,Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer,E6,LANG,R1,yes,3,18
 vinyals2019,2019,Vinyals,Grandmaster level in StarCraft II using multi-agent reinforcement learning,E6,RL,,no,1,2
 brown2019,2019,Brown,Superhuman AI for multiplayer poker,E6,RL,,no,1,0
 schrittwieser2019,2019,Schrittwieser,"Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",E6,RL,R1,yes,2,0
-kaplan2020,2020,Kaplan,Scaling Laws for Neural Language Models,E6,SCALE,R2(4),yes,0,4
-brown2020,2020,Brown,Language Models are Few-Shot Learners,E6,LANG,R1,yes,2,13
+kaplan2020,2020,Kaplan,Scaling Laws for Neural Language Models,E6,SCALE,R2(4),yes,0,12
+brown2020,2020,Brown,Language Models are Few-Shot Learners,E6,LANG,R1,yes,2,30
 ho2020,2020,Ho,Denoising Diffusion Probabilistic Models,E6,GEN,,no,1,1
-dosovitskiy2020,2020,Dosovitskiy,An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,E6,VISION,,no,1,1
-lewis2020,2020,Lewis,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,E6,LANG,R2(3),yes,0,3
+dosovitskiy2020,2020,Dosovitskiy,An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,E6,VISION,R2(3),yes,1,3
+lewis2020,2020,Lewis,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,E6,LANG,R2(5),yes,0,6
 song2020,2020,Song,Score-Based Generative Modeling through Stochastic Differential Equations,E6,GEN,,no,1,0
-stiennon2020,2020,Stiennon,Learning to summarize from human feedback,E6,ALIGN,,no,0,2
+stiennon2020,2020,Stiennon,Learning to summarize from human feedback,E6,ALIGN,R2(4),yes,0,4
 jumper2021,2021,Jumper,Highly accurate protein structure prediction with AlphaFold,E6,SCI,R3+R4,yes,0,0
-radford2021,2021,Radford,Learning Transferable Visual Models From Natural Language Supervision,E6,GEN,,no,1,2
+radford2021,2021,Radford,Learning Transferable Visual Models From Natural Language Supervision,E6,GEN,R2(4),yes,1,4
 ramesh2021,2021,Ramesh,Zero-Shot Text-to-Image Generation,E6,GEN,,no,1,2
-chen2021,2021,Chen,Evaluating Large Language Models Trained on Code,E6,LANG,R2(10),yes,0,11
-bender2021,2021,Bender,On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?,E6,SAFETY,R4,yes,1,3
-bommasani2021,2021,Bommasani,On the Opportunities and Risks of Foundation Models,E6,FOUND,R2(3),yes,1,3
+chen2021,2021,Chen,Evaluating Large Language Models Trained on Code,E6,LANG,R2(14),yes,0,18
+bender2021,2021,Bender,On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?,E6,SAFETY,R4,yes,1,9
+bommasani2021,2021,Bommasani,On the Opportunities and Risks of Foundation Models,E6,FOUND,R2(4),yes,1,8
 hu2021,2021,Hu,LoRA: Low-Rank Adaptation of Large Language Models,E6,LANG,,no,1,2
 gu2021,2021,Gu,Efficiently Modeling Long Sequences with Structured State Spaces,E6,NN,,no,0,0
-fedus2021,2021,Fedus,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity,E6,SCALE,,no,0,1
+fedus2021,2021,Fedus,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity,E6,SCALE,R2(4),yes,0,6
 rombach2021,2021,Rombach,High-Resolution Image Synthesis with Latent Diffusion Models,E6,GEN,,no,1,0
-nakano2021,2021,Nakano,WebGPT: Browser-assisted question-answering with human feedback,E7,AGENT,R4,yes,0,9
-wei2022,2022,Wei,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,E6,LANG,R4,yes,1,12
-ouyang2022,2022,Ouyang,Training language models to follow instructions with human feedback,E6,ALIGN,R1+R4,yes,2,8
-hoffmann2022,2022,Hoffmann,Training Compute-Optimal Large Language Models,E6,SCALE,R1+R4,yes,2,1
-chowdhery2022,2022,Chowdhery,PaLM: Scaling Language Modeling with Pathways,E6,SCALE,R2(7),yes,1,7
-wei2022b,2022,Wei,Emergent Abilities of Large Language Models,E6,SCALE,R2(4),yes,0,4
-bai2022,2022,Bai,Constitutional AI: Harmlessness from AI Feedback,E6,ALIGN,,no,1,0
-kojima2022,2022,Kojima,Large Language Models are Zero-Shot Reasoners,E6,LANG,R4,yes,0,3
-wang2022,2022,Wang,Self-Consistency Improves Chain of Thought Reasoning in Language Models,E6,LANG,R4,yes,0,6
+nakano2021,2021,Nakano,WebGPT: Browser-assisted question-answering with human feedback,E7,AGENT,R4,yes,0,10
+wei2022,2022,Wei,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,E6,LANG,R4,yes,1,19
+ouyang2022,2022,Ouyang,Training language models to follow instructions with human feedback,E6,ALIGN,R1+R4,yes,2,16
+hoffmann2022,2022,Hoffmann,Training Compute-Optimal Large Language Models,E6,SCALE,R1+R4,yes,2,5
+chowdhery2022,2022,Chowdhery,PaLM: Scaling Language Modeling with Pathways,E6,SCALE,R2(10),yes,1,14
+wei2022b,2022,Wei,Emergent Abilities of Large Language Models,E6,SCALE,R2(5),yes,0,7
+bai2022,2022,Bai,Constitutional AI: Harmlessness from AI Feedback,E6,ALIGN,,no,1,1
+kojima2022,2022,Kojima,Large Language Models are Zero-Shot Reasoners,E6,LANG,R4,yes,0,7
+wang2022,2022,Wang,Self-Consistency Improves Chain of Thought Reasoning in Language Models,E6,LANG,R4,yes,0,10
 radford2022,2022,Radford,Robust Speech Recognition via Large-Scale Weak Supervision,E6,SPEECH,,no,1,0
-ahn2022,2022,Ahn,"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",E7,AGENT,R2(5),yes,0,5
-huang2022,2022,Huang,Inner Monologue: Embodied Reasoning through Planning with Language Models,E7,AGENT,R4,yes,0,4
+ahn2022,2022,Ahn,"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",E7,AGENT,R2(9),yes,0,9
+huang2022,2022,Huang,Inner Monologue: Embodied Reasoning through Planning with Language Models,E7,AGENT,R4,yes,0,5
 yao2022,2022,Yao,ReAct: Synergizing Reasoning and Acting in Language Models,E7,AGENT,R4,yes,1,12
-touvron2023,2023,Touvron,LLaMA: Open and Efficient Foundation Language Models,E6,LANG,R2(3),yes,0,3
+touvron2023,2023,Touvron,LLaMA: Open and Efficient Foundation Language Models,E6,LANG,R2(3),yes,0,4
 openai2023,2023,OpenAI,GPT-4 Technical Report,E6,LANG,R2(12),yes,0,12
 rafailov2023,2023,Rafailov,Direct Preference Optimization: Your Language Model is Secretly a Reward Model,E6,ALIGN,,no,1,1
 gu2023,2023,Gu,Mamba: Linear-Time Sequence Modeling with Selective State Spaces,E6,NN,,no,0,0
-schick2023,2023,Schick,Toolformer: Language Models Can Teach Themselves to Use Tools,E7,AGENT,R4,yes,0,8
+schick2023,2023,Schick,Toolformer: Language Models Can Teach Themselves to Use Tools,E7,AGENT,R4,yes,0,9
 shinn2023,2023,Shinn,Reflexion: Language Agents with Verbal Reinforcement Learning,E7,AGENT,R4,yes,0,5
 park2023,2023,Park,Generative Agents: Interactive Simulacra of Human Behavior,E7,AGENT,R4,yes,0,7
 yao2023,2023,Yao,Tree of Thoughts: Deliberate Problem Solving with Large Language Models,E7,AGENT,R4,yes,0,4

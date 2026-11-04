@@ -22,7 +22,7 @@ def read(p):
 
 US = [("behaviour", "behavior"), ("Behaviour", "Behavior"), ("modelling", "modeling"), ("modelled", "modeled"), ("analysed", "analyzed"), ("analyse", "analyze"),
       ("optimisation", "optimization"), ("optimise", "optimize"), ("recognised", "recognized"), ("organised", "organized"), ("labelled", "labeled"), ("labelling", "labeling"),
-      ("colour", "color"), ("centre", "center"), ("favour", "favor"), ("catalogue", "catalog"), ("programme", "program"), ("defence", "defense"), ("licence", "license"), ("summarises", "summarizes"), ("synthesises", "synthesizes"), ("generalises", "generalizes"), ("utilise", "utilize")]
+      ("colour", "color"), ("centre", "center"), ("favour", "favor"), ("catalogue", "catalog"), ("programme", "program"), ("defence", "defense"), ("licence", "license"), ("summarises", "summarizes"), ("characterised", "characterized"), ("characterise", "characterize"), ("licence", "license"), ("Licence", "License"), ("synthesises", "synthesizes"), ("generalises", "generalizes"), ("utilise", "utilize")]
 
 
 def us_spelling(t):
@@ -93,7 +93,7 @@ def main():
             authors += " et al."
         papers.append(OrderedDict([
             ("key", k), ("era", c["era"]), ("theme", c["theme"]),
-            ("first_public_date", fpd), ("first_public_type", r.get("first_public_type", "")), ("other_dates", r.get("other_dates", "")),
+            ("first_public_date", fpd), ("first_public_type", r.get("first_public_type", "")), ("other_dates", us_spelling(r.get("other_dates", ""))),
             ("record_year", c.get("oa_year", "")),
             ("authors", authors), ("authors_short", kk.get("authors_short") or short_authors(authors, c["author"])),
             ("title", c["title"]), ("venue", r.get("venue_full", "") or c.get("oa_venue", "")), ("venue_short", kk.get("venue_short", "") or (r.get("venue_full", "") or c.get("oa_venue", ""))[:40]),

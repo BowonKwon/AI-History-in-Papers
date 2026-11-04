@@ -145,7 +145,7 @@ def METHOD(lang):
 <li><b>R2 계보.</b> 이미 선정된 논문 세 편 이상이 인용(OpenAlex 또는 인용한 논문의 참고문헌 목록으로 확인). ({by_rule.get('R2', 0)}편)</li>
 <li><b>R3 수상.</b> 튜링상·노벨상의 공적 설명이 가리키는 업적의 원 논문. ({by_rule.get('R3', 0)}편)</li>
 <li><b>R4 최근(2021년 이후).</b> 동료 심사 게재(또는 공개된 심사 기록)와 원문 확인. ({by_rule.get('R4', 0)}편)</li></ul>
-<p>그 결과 {n}편이다. 교과서 대조는 참고문헌 텍스트를 제목·저자·연도로 자동 대조한 뒤 표본을 손으로 확인했다. Nilsson 의 책은 저자 공개 PDF 서버가 응답하지 않아 이 판에서는 대조하지 못했다 — 1950–1970년대 논문의 R1 판정이 그만큼 보수적이다. Schmidhuber 의 「Annotated History of Modern AI and Deep Learning」(2022)은 기준 문헌에 넣지 않고 우선권 상자의 한쪽 자료로만 썼다.</p>
+<p>그 결과 {n}편이다. 교과서 대조는 참고문헌 텍스트를 제목·저자·연도로 자동 대조한 뒤 표본을 손으로 확인했다. Nilsson 의 책은 참고문헌을 장 끝의 주(註)에 두므로 책 전문(저자 공개 PDF, Internet Archive 2026-10-11 보존본)을 대조 텍스트로 썼다 — 본문에서 제목이나 저자·연도로 거명한 것도 인용으로 세었다는 뜻이다. Schmidhuber 의 「Annotated History of Modern AI and Deep Learning」(2022)은 기준 문헌에 넣지 않고 우선권 상자의 한쪽 자료로만 썼다.</p>
 <h2>날짜</h2>
 <p>점의 위치는 처음 공개된 날짜다 — 기술 보고서, 학위논문, arXiv v1, 학회 발표 중 기록으로 확인되는 가장 이른 것. 저널 게재일·학회 발표일·재판 연도는 카드에 따로 적는다. OpenAlex 의 발행 연도는 재판이나 학회판 날짜가 섞여 있어 쓰지 않았다(후보 234편 중 23편에서 연도가 달랐다).</p>
 <h2>원문 확인</h2>
@@ -171,7 +171,7 @@ def METHOD(lang):
 <li><b>R2 Lineage.</b> At least three already-selected papers cite it (OpenAlex or the citing paper's reference list). ({by_rule.get('R2', 0)})</li>
 <li><b>R3 Awards.</b> The Turing Award or Nobel Prize citation names the achievement. ({by_rule.get('R3', 0)})</li>
 <li><b>R4 Recent (2021 onward).</b> Peer-reviewed publication or public review record, original text checked. ({by_rule.get('R4', 0)})</li></ul>
-<p>The result is {n} papers. Textbook matching compared bibliography text by title, author and year automatically, with samples checked by hand. Nilsson's book could not be matched in this version because the author's public PDF server did not respond, so R1 is correspondingly conservative for papers of the 1950s–1970s. Schmidhuber's "Annotated History of Modern AI and Deep Learning" (2022) is not a reference work here; it is used only as one side in the priority boxes.</p>
+<p>The result is {n} papers. Textbook matching compared bibliography text by title, author and year automatically, with samples checked by hand. Nilsson's book keeps its references in chapter endnotes, so the whole text (the author's public PDF, Internet Archive capture of 2026-10-11) was used as the comparison text; a work named by title or by author and year in the body counts as cited. Schmidhuber's "Annotated History of Modern AI and Deep Learning" (2022) is not a reference work here; it is used only as one side in the priority boxes.</p>
 <h2>Dates</h2>
 <p>A point sits at the first public date: the earliest documented technical report, thesis, arXiv v1 or conference presentation. Journal issue dates, conference dates and reprint years are listed on the card. OpenAlex publication years were not used because they mix in reprint and conference dates (23 of 234 candidates differed).</p>
 <h2>Checking the originals</h2>

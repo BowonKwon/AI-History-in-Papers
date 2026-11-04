@@ -25,9 +25,10 @@ def main():
     cited_by = collections.defaultdict(set)
     for e in edges:
         cited_by[e["dst"]].add(e["src"])
+    manual = {r["key"] for r in read(ROOT / "docs/manual_r1.csv")}  # hand-confirmed two-textbook hits the matcher missed
     rules = collections.defaultdict(list)
     for k, r in cand.items():
-        if tb.get(k, {}).get("R1") == "pass":
+        if tb.get(k, {}).get("R1") == "pass" or k in manual:
             rules[k].append("R1")
         if k in awards:
             rules[k].append("R3")
