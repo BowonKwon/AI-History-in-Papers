@@ -65,7 +65,7 @@ PAPERS_LEAD = {"ko": "선정된 논문 전체. 열 머리글을 누르면 정렬
 
 WINTER_LEAD = {"ko": "통념의 두 겨울을 세 가지 계열로 다시 본다: 논문 제목에 든 용어의 비율, 학회 참가자 수, 공공 연구비의 기록.", "en": "The two conventional winters re-examined with three series: the share of paper titles containing a term, conference attendance, and public-funding records."}
 WINTER_KEY = {
-    "ko": ["1987년 전후의 두 번째 겨울은 참가자 수에서 뚜렷하다. AAAI 참가자는 1986년 5,334명에서 1992년 1,685명으로 줄었다(AI Index 2019 자료).",
+    "ko": ["1987년 전후의 두 번째 겨울은 참가자 수에서 뚜렷하다. AAAI 참가자는 1986년 5,334명에서 1992년 1,685명으로 줄었다(AI Index 2019 자료; 1997년 1,262명).",
            "제목 수는 몇 년 늦게 따라온다. 「expert system」이 제목에 든 OpenAlex 레코드는 1990년 1,857건이 정점이고 1998년 490건이다. 같은 기간 「neural network」는 1,745건에서 4,243건으로 늘었다.",
            "1974년 전후의 첫 번째 겨울은 수치로 확인하지 못했다. 그 시기의 학회 참가자·연도별 연구비 자료를 찾지 못했고, OpenAlex 제목 수는 건수가 너무 적다."],
     "en": ["The second winter around 1987 is visible in attendance: AAAI attendance fell from 5,334 in 1986 to 1,685 in 1992 (AI Index 2019 data).",
@@ -80,10 +80,10 @@ WINTER_TEXT = {
 <p>제목 수의 하락이 참가자 수의 하락보다 몇 년 늦게 시작하는 것은 출판 지연과 색인 구성의 영향일 수 있다. 이 계열만으로 시점을 정하지 않는다.</p>
 <p>1974년 전후는 이 계열로 판단할 수 없다. 1973–1975년 「artificial intelligence」 제목 레코드는 한 해 34–46건이고, 「perceptron」은 한 자릿수다. 건수가 작아 변동이 잡음에 묻힌다.</p>""",
         h2="학회 참가자", y2="명", cap2="AAAI·IJCAI·NeurIPS 참가자 수. 1984–2019년은 AI Index 2019 보고서 2장의 자료, 2020년 이후는 Our World in Data(AI Index 2026) 자료. IJCAI 는 2014년까지 홀수 해에만 열렸으므로 보고서가 평균으로 메운 짝수 해 값은 뺐다.",
-        t2="""<p>AAAI 참가자는 1986년 5,334명에서 해마다 줄어 1992년 1,685명, 1997년 1,262명이 된다. IJCAI 도 1985년 4,995명에서 1997년 1,325명으로 내려간다. 두 학회가 1980년대 중반의 네 배 가까운 규모를 잃는 동안 NeurIPS 는 작은 규모에서 조금씩 늘어난다(1995년 500명, 2005년 926명). 학회 규모로 보면 두 번째 겨울은 <b>1987년에 시작해 1990년대 말까지 이어진 긴 내리막</b>이고, 2000년대의 회복은 신경망 쪽에서 먼저 왔다. 2010년대 후반의 증가는 세 학회 모두에서 가파르다(NeurIPS 2019년 13,500명).</p>
+        t2="""<p>AAAI 참가자는 1986년 5,334명에서 1992년 1,685명으로 해마다 줄고, 1994년 한 해 반등(1,964명)을 빼면 1997년 1,262명까지 내려간다. IJCAI 도 1985년 4,995명에서 1997년 1,325명으로 내려간다. 두 학회가 1980년대 중반 규모의 4분의 3가량(AAAI 76%, IJCAI 73%)을 잃는 동안 NeurIPS 는 작은 규모에서 조금씩 늘어난다(1995년 500명, 2005년 926명). 학회 규모로 보면 두 번째 겨울은 <b>1987년에 시작해 1990년대 말까지 이어진 긴 내리막</b>이고, 2000년대의 회복은 신경망 쪽에서 먼저 왔다. 2010년대 후반의 증가는 세 학회 모두에서 가파르다(NeurIPS 2019년 13,500명).</p>
 <p>주의할 점이 둘 있다. 첫째, 1995–2001년 NeurIPS 값은 해마다 정확히 30명씩 늘어난다(500, 530, 560, …). 실제 집계라기보다 추정값으로 보이므로 이 구간은 추세로만 읽는다. 둘째, 1984년 이전 참가자 자료는 찾지 못했다. 첫 번째 겨울을 이 계열로 볼 수 없는 이유다.</p>""",
         h3="NeurIPS 채택 논문 수", y3="편(로그)", cap3="proceedings.neurips.cc 에 실린 연도별 논문 수를 2026-11-03 에 직접 센 것. 2025년 목록은 불완전해 뺐다.",
-        t3="""<p>채택 논문 수는 1987년 90편에서 2000년 152편까지 완만히 늘고, 2012년 370편, 2017년 679편, 2020년 1,898편, 2024년 4,493편으로 가팔라진다. 신경망 학회의 규모는 1990년대 「겨울」 동안에도 줄지 않았다.</p>""",
+        t3="""<p>채택 논문 수는 1987년 90편에서 2000년 152편까지 완만히 늘고, 2012년 370편, 2017년 679편, 2020년 1,898편, 2024년 4,493편으로 가팔라진다. 신경망 학회의 규모는 1990년대 「겨울」 동안에도 전체로는 늘었다(해마다 늘지는 않아, 1992·1994·1997년은 전년보다 적다).</p>""",
         h4="공공 연구비 — 기록은 있으나 연도별 표는 없다",
         t4="""<p>연구비 계열은 그림으로 그리지 못했다. 찾은 것은 사건 기록이다.</p>
 <ul>
@@ -101,10 +101,10 @@ WINTER_TEXT = {
 <p>The decline in title counts begins several years after the decline in attendance. Publication lag and index coverage may both contribute, so this series alone does not date the winter.</p>
 <p>The years around 1974 cannot be judged from this series. In 1973–1975 there are only 34–46 records a year with “artificial intelligence” in the title, and single digits for “perceptron”; the counts are too small to separate change from noise.</p>""",
         h2="Conference attendance", y2="attendees", cap2="Attendance at AAAI, IJCAI and NeurIPS. 1984–2019 from the AI Index 2019 report, chapter 2; 2020 onward from Our World in Data (AI Index 2026). IJCAI met only in odd years until 2014; the even-year values the report filled in by averaging are excluded.",
-        t2="""<p>AAAI attendance falls from 5,334 in 1986 year after year to 1,685 in 1992 and 1,262 in 1997. IJCAI falls from 4,995 in 1985 to 1,325 in 1997. While the two conferences lose nearly four fifths of their mid-1980s size, NeurIPS grows slowly from a small base (500 in 1995, 926 in 2005). Measured by attendance, the second winter is <b>a long decline that begins in 1987 and lasts to the end of the 1990s</b>, and the recovery of the 2000s came first on the neural-network side. The late-2010s rise is steep at all three (NeurIPS 13,500 in 2019).</p>
+        t2="""<p>AAAI attendance falls year after year from 5,334 in 1986 to 1,685 in 1992 and, apart from a rise in 1994 (1,964), on to 1,262 in 1997. IJCAI falls from 4,995 in 1985 to 1,325 in 1997. While the two conferences lose about three quarters of their mid-1980s size (AAAI 76%, IJCAI 73%), NeurIPS grows slowly from a small base (500 in 1995, 926 in 2005). Measured by attendance, the second winter is <b>a long decline that begins in 1987 and lasts to the end of the 1990s</b>, and the recovery of the 2000s came first on the neural-network side. The late-2010s rise is steep at all three (NeurIPS 13,500 in 2019).</p>
 <p>Two cautions. First, the NeurIPS values for 1995–2001 increase by exactly 30 a year (500, 530, 560, …); they look like estimates rather than counts, so we read that stretch only as a trend. Second, no attendance data before 1984 was found, which is why the first winter cannot be seen in this series.</p>""",
         h3="Papers accepted at NeurIPS", y3="papers (log scale)", cap3="Papers listed per year on proceedings.neurips.cc, counted on 2026-11-03. The 2025 listing was incomplete and is omitted.",
-        t3="""<p>Accepted papers grow gently from 90 in 1987 to 152 in 2000, then steeply: 370 in 2012, 679 in 2017, 1,898 in 2020, 4,493 in 2024. The neural-network conference did not shrink during the 1990s "winter".</p>""",
+        t3="""<p>Accepted papers grow gently from 90 in 1987 to 152 in 2000, then steeply: 370 in 2012, 679 in 2017, 1,898 in 2020, 4,493 in 2024. The neural-network conference grew overall during the 1990s "winter" (not every year: 1992, 1994 and 1997 were below the year before).</p>""",
         h4="Public funding: records exist, year-by-year tables do not",
         t4="""<p>The funding series could not be drawn. What we found are event records.</p>
 <ul>
