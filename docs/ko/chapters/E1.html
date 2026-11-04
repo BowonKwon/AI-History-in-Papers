@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기원 — 사이버네틱스와 계산 (1943–1956) — 논문으로 읽는 인공지능의 역사</title><meta name="description" content="1943년부터 지금까지, 원 논문으로 따라가는 인공지능 연구의 역사">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html" class="on">시대</a><a href="../../ko/lineage/index.html">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
+<main><div class="eyebrow"><span class="tag">1장 기원 1943–56</span></div><h1>기원 — 사이버네틱스와 계산 (1943–1956)</h1><p class="lead">뇌·기계·정보를 같은 언어로 쓸 수 있는가.</p>
+<div class="glance"><p class="glance-h">핵심</p><ul><li>1943년 McCulloch와 Pitts는 뉴런의 실무율에서 출발해 신경망의 행동을 명제 논리로 쓸 수 있음을 보였다. 이 장의 모든 점은 이 발상 — 생물·기계·논리가 같은 언어를 쓴다 — 의 변주다.</li><li>1948~1950년 Shannon의 두 논문이 정보를 비트로 재는 척도와 「컴퓨터가 체스를 두게 하는 프로그램」이라는 문제를 함께 놓았다. 뒤의 탐색·게임 계보가 여기서 시작한다.</li><li>Hebb(1949)의 한 문장이 「함께 발화하는 세포는 연결이 강해진다」는 학습 규칙의 원문이다. 이 장에서 확인한 인용선은 다섯 편 사이 세 개뿐이다 — 이 시기 문헌은 서로를 거의 인용하지 않는다.</li></ul></div>
+<div class="prose">
+<p>이 사이트의 첫 점은 1943년 12월 『Bulletin of Mathematical Biophysics』에 실린 <a href="#mcculloch1943">McCulloch와 Pitts의 「A logical calculus of the ideas immanent in nervous activity」</a>다. 두 사람은 뉴런이 발화하거나 하지 않거나 둘 중 하나라는 실무율에서 출발해, 신경 사건과 그 관계를 명제 논리로 다룰 수 있다고 썼다. 논문의 결론은 두 방향이다. 어떤 신경망의 행동이든 논리식으로 기술할 수 있고, 조건을 만족하는 논리식이 주어지면 그대로 행동하는 망을 만들 수 있다. 「생각하는 기계」라는 말이 나오기 전에, 생각을 계산으로 쓸 수 있다는 주장이 먼저 나온 셈이다.</p>
+<p>다섯 해 뒤 <a href="#shannon1948">Shannon의 「A Mathematical Theory of Communication」</a>(1948년 7월, 『Bell System Technical Journal』)은 정보를 로그 척도로 재고 밑이 2인 단위를 비트라 불렀다. 논문은 통신의 이론이지 지능의 이론이 아니지만, 이 사이트의 뒤쪽 장들은 이 척도 없이 쓸 수 없다 — 언어 모델의 「혼잡도」, 압축으로서의 학습, 엔트로피 손실 함수가 모두 여기서 나온다. Shannon은 각주에서 Wiener의 「곧 나올 책 『Cybernetics』」를 가리켰다. 이것이 이 장에서 확인된 세 인용선 가운데 하나다.</p>
+<p>Shannon은 바로 이어 다른 문제를 냈다. <a href="#shannon1950">「Programming a computer for playing chess」</a>는 1949년 3월 9일 IRE 총회에서 발표되고 1950년 3월 『Philosophical Magazine』에 실렸다. 범용 컴퓨터가 비수치 문제를 다룰 수 있는지 시험할 사례로 체스를 고르고, 기물·폰 구조·기동성으로 국면을 평가하는 함수와 수 변화를 내다보는 탐색을 결합할 것을 제안했다. 2장의 Samuel, 4장의 Deep Blue, 5장의 AlphaGo로 이어지는 「게임으로 지능을 재는」 계보의 출발점이다.</p>
+<p>같은 해 <a href="#hebb1949">Hebb의 『The Organization of Behavior』</a>(1949, Wiley)가 나왔다. 신경생리학과 심리학을 잇겠다는 책의 62쪽에 한 문장이 있다. 세포 A가 세포 B를 거듭 발화시키면 둘 중 한쪽 또는 양쪽에 변화가 일어나 A의 효율이 높아진다는 문장이다. 뒤의 문헌이 「헤브 규칙」이라 부르는 것의 원문이 이것이고, 2장 Rosenblatt의 퍼셉트론과 3장 Hopfield의 망이 이 책을 인용한다. 책의 참고문헌에는 McCulloch–Pitts가 없다 — 두 전통은 처음에는 따로 흘렀다.</p>
+<p>장의 마지막 점은 신경망도 게임도 아니다. <a href="#chomsky1956">Chomsky의 「Three models for the description of language」</a>(1956년 9월, 『IRE Transactions on Information Theory』)는 상태에서 상태로 옮겨 가며 기호를 내는 유한 상태 마르코프 과정은 영어 문법이 될 수 없다고 썼다. 이 논문이 정보 이론 학술지에 실렸다는 사실, 그리고 Shannon–Weaver의 책을 인용한다는 사실이 이 시기의 공기를 보여 준다. 언어·논리·정보·신경이 한자리에서 논의되던 몇 해였다. 그 자리가 1956년 여름의 다트머스 모임이다. 모임의 제안서(McCarthy 외, 1955년 8월)는 이 판의 선정 기준을 넘지 못해 점으로 찍지 않았으나, 「인공지능」이라는 이름이 거기서 나왔다는 서술은 교과서들이 공통으로 적는다.</p>
+<h3>이 장에서 확인한 것과 못 한 것</h3>
+<p>다섯 편 가운데 원문 게재본을 읽은 것은 Shannon 1948, Hebb 1949, Chomsky 1956 세 편이다. McCulloch–Pitts는 1990년 재수록본(『Bulletin of Mathematical Biology』 52권)으로, Shannon 1950은 재타자본으로 읽었다. 재타자본에는 쪽이 없어 인용문의 쪽을 적지 못했다. Turing의 「Computing Machinery and Intelligence」(1950)는 후보에 있었으나 교과서 2종 기준을 넘지 못했다. Nilsson의 통사를 대조하지 못한 탓일 수 있으며, 방법 면에 적어 두었다.</p>
+</div>
+
+<h2>계보</h2><figure><svg viewBox="0 0 1000 326" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">신경망 학습</text>
+<line class="grid" x1="150" x2="980" y1="156" y2="156"/>
+<text x="142" y="125.0" text-anchor="end">언어·음성</text>
+<line class="grid" x1="150" x2="980" y1="226" y2="226"/>
+<text x="142" y="195.0" text-anchor="end">탐색·계획·지식</text>
+<line class="grid" x1="150" x2="980" y1="296" y2="296"/>
+<text x="142" y="265.0" text-anchor="end">확률·통계·기원</text>
+<line class="ax" x1="305.6" x2="305.6" y1="16" y2="296"/><text x="305.6" y="318" text-anchor="middle">1945</text>
+<line class="ax" x1="565.0" x2="565.0" y1="16" y2="296"/><text x="565.0" y="318" text-anchor="middle">1950</text>
+<line class="ax" x1="824.4" x2="824.4" y1="16" y2="296"/><text x="824.4" y="318" text-anchor="middle">1955</text>
+<path class="edge" data-s="chomsky1956" data-d="shannon1948" d="M487.2,241.5 C699.0,241.5 699.0,101.5 910.8,101.5"/>
+<g class="dot" data-k="mcculloch1943" data-t="A logical calculus of the ideas immanent in nervous activity" data-m="McCulloch &amp; Pitts · 1943" data-w="신경의 실무율(全無律)에 기대어 신경 사건과 그 관계를 명제 논리로 다룬다. 모든 망의 행동을 그 논리로 기술할 수 있고, 조건을 만족하는 논리식마다 그대로 행동하는 망을 만들 수 있음을 보인다." data-href="E1.html#mcculloch1943"><circle cx="249.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="shannon1948" data-t="A Mathematical Theory of Communication" data-m="Shannon · 1948" data-w="나이퀴스트와 하틀리의 통신 이론을 채널 잡음과 메시지의 통계적 구조까지 확장한다. 정보를 로그 척도로 재고, 밑이 2인 단위를 비트라 부른다." data-href="E1.html#shannon1948"><circle cx="487.2" cy="241.5" r="5" fill="var(--s4)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="shannon1950" data-t="Programming a computer for playing chess" data-m="Shannon · 1949" data-w="비수치 문제를 다루는 기계의 시험 사례로 범용 컴퓨터의 체스 프로그램을 구상한다. 기물·폰 구조·기물 위치·기동성으로 국면을 평가하는 함수 f(P)와 수(手) 변화에 대한 앞 내다보기를 결합할 것을 제안한다." data-href="E1.html#shannon1950"><circle cx="521.8" cy="171.5" r="5" fill="var(--s3)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hebb1949" data-t="The Organization of Behavior" data-m="Hebb · 1949" data-w="신경생리학과 심리학을 잇는 행동의 신경심리학 이론을 세운다. 세포 사이의 반복된 활동이 한 세포가 다른 세포를 발화시키는 효율을 높이는 지속적 변화를 낳는다고 제안하고, 이를 세포 집합의 성장에 쓴다." data-href="E1.html#hebb1949"><circle cx="539.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="chomsky1956" data-t="Three models for the description of language" data-m="Chomsky · 1956" data-w="영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다." data-href="E1.html#chomsky1956"><circle cx="910.8" cy="101.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>실선은 인용이 확인된 선(OpenAlex 또는 인용한 논문의 참고문헌 목록), 점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선. 세로 위치는 주제 묶음.</figcaption></figure>
+<h2>논문 목록 (5)</h2><article class="paper" id="mcculloch1943">
+<h3>A logical calculus of the ideas immanent in nervous activity</h3>
+<p class="meta">Warren S. McCulloch, Walter Pitts · <b>첫 공개</b> 1943-12 (journal issue) · 게재: The Bulletin of Mathematical Biophysics, 5(4) · 쪽 99–115 (1990 reprint); original 115–133 · 피인용(OpenAlex) 18,560 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1007/BF02478259">DOI</a> · Bulletin of Mathematical Biology reprint 1990 (vol. 52, pp. 99–115)</p>
+<blockquote>It is found that the behavior of every net can be described in these terms, with the addition of more complicated logical means for nets containing circles; and that for any logical expression satisfying certain conditions, one can find a net behaving in the fashion it describes.<cite>p. 99 (1990 reprint, abstract)</cite></blockquote><p class="src">모든 신경망의 행동은 이 용어들로 기술할 수 있으며(순환을 포함하는 망에는 더 복잡한 논리적 수단을 보태야 한다), 어떤 조건을 만족하는 논리식이 주어지면 그 식이 기술하는 대로 행동하는 망을 찾을 수 있음이 밝혀졌다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 신경의 실무율(全無律)에 기대어 신경 사건과 그 관계를 명제 논리로 다룬다. 모든 망의 행동을 그 논리로 기술할 수 있고, 조건을 만족하는 논리식마다 그대로 행동하는 망을 만들 수 있음을 보인다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E3.html#hopfield1982">Hopfield 1982</a>, <a href="E2.html#rosenblatt1958">Rosenblatt 1958</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="shannon1948">
+<h3>A Mathematical Theory of Communication</h3>
+<p class="meta">Claude E. Shannon · <b>첫 공개</b> 1948-07 (journal issue) · 게재: Bell System Technical Journal, 27(3) and 27(4) · 쪽 379–423; 623–656 · 피인용(OpenAlex) 88,497 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">DOI</a> · Part II: BSTJ 27(4):623–656, October 1948 (Crossref 10.1002/j.1538-7305.1948.tb00917.x published-print 1948-10); Wiley online 2013-07-29</p>
+<blockquote>In the present paper we will extend the theory to include a number of new factors, in particular the effect of noise in the channel, and the savings possible due to the statistical structure of the original message and due to the nature of the final destination of the information.<cite>p. 379</cite></blockquote><p class="src">이 논문에서는 이론을 확장해 여러 새 요인을 다룬다. 특히 채널 잡음의 효과, 원 메시지의 통계적 구조에서 오는 절약, 그리고 정보의 최종 수신처의 성질에서 오는 절약이다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 나이퀴스트와 하틀리의 통신 이론을 채널 잡음과 메시지의 통계적 구조까지 확장한다. 정보를 로그 척도로 재고, 밑이 2인 단위를 비트라 부른다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E6.html#bommasani2021">Bommasani et al. 2021</a>, <a href="E1.html#chomsky1956">Chomsky 1956</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E6.html#touvron2023">Touvron et al. 2023</a></p>
+</article><article class="paper" id="shannon1950">
+<h3>Programming a computer for playing chess</h3>
+<p class="meta">Claude E. Shannon · <b>첫 공개</b> 1949-03-09 (conference) · 게재: The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, Ser. 7, 41(314) · 쪽 18 pp. (transcription); journal pp. 256–275 per Crossref · 피인용(OpenAlex) 618 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1080/14786445008521796">DOI</a> · Philosophical Magazine Ser. 7, 41(314):256–275, March 1950 (Crossref published-print 1950-03); received 8 Nov 1949 (not a public date)</p>
+<blockquote>This paper is concerned with the problem of constructing a computing routine or &quot;program&quot; for a modern general purpose computer which will enable it to play chess.<cite>page unknown (transcription has no journal page numbers; first sentence of Section 1, Introduction)</cite></blockquote><p class="src">이 논문은 현대 범용 컴퓨터가 체스를 둘 수 있게 하는 계산 루틴, 곧 「프로그램」을 구성하는 문제를 다룬다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 비수치 문제를 다루는 기계의 시험 사례로 범용 컴퓨터의 체스 프로그램을 구상한다. 기물·폰 구조·기물 위치·기동성으로 국면을 평가하는 함수 f(P)와 수(手) 변화에 대한 앞 내다보기를 결합할 것을 제안한다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E2.html#samuel1959">Samuel 1959</a>, <a href="E6.html#silver2018">Silver et al. 2018</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a>, <a href="E4.html#tesauro1995">Tesauro 1995</a>, <a href="E2.html#widrow1960">Widrow &amp; Hoff 1960</a></p>
+</article><article class="paper" id="hebb1949">
+<h3>The Organization of Behavior</h3>
+<p class="meta">Donald Olding Hebb · <b>첫 공개</b> 1949 (book) · 게재: New York: John Wiley &amp; Sons; London: Chapman &amp; Hall · 쪽 book (1949 edition scan); key passage on p. 62 · 피인용(OpenAlex) 9,716 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.4324/9781410612403">DOI</a> · Psychology Press / Taylor &amp; Francis ebook 2005-04-11 (Crossref 10.4324/9781410612403, the manifest DOI)</p>
+<blockquote>When an axon of cell A is near enough to excite a cell B and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that A’s efficiency, as one of the cells firing B, is increased.<cite>p. 62</cite></blockquote><p class="src">세포 A의 축삭이 세포 B를 흥분시킬 만큼 가까이 있고 B의 발화에 반복적으로 또는 지속적으로 참여하면, 한쪽 또는 양쪽 세포에 어떤 성장 과정이나 대사 변화가 일어나 B를 발화시키는 세포의 하나로서 A의 효율이 높아진다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 신경생리학과 심리학을 잇는 행동의 신경심리학 이론을 세운다. 세포 사이의 반복된 활동이 한 세포가 다른 세포를 발화시키는 효율을 높이는 지속적 변화를 낳는다고 제안하고, 이를 세포 집합의 성장에 쓴다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E3.html#hopfield1982">Hopfield 1982</a>, <a href="E2.html#minsky1961">Minsky 1961</a>, <a href="E2.html#rosenblatt1958">Rosenblatt 1958</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="chomsky1956">
+<h3>Three models for the description of language</h3>
+<p class="meta">Noam . Auteur du texte Chomsky · <b>첫 공개</b> 1956-09 (journal issue) · 게재: IRE Transactions on Information Theory, 2(3) · 쪽 113–124 · 피인용(OpenAlex) 2,829 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1109/TIT.1956.1056813">DOI</a></p>
+<blockquote>We find that no finite-state Markov process that produces symbols with transition from state to state can serve as an English grammar.<cite>p. 113</cite></blockquote><p class="src">상태에서 상태로 옮겨 가며 기호를 산출하는 어떤 유한 상태 마르코프 과정도 영어 문법 노릇을 할 수 없음을 우리는 발견한다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E1.html#shannon1948">Shannon 1948</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#collobert2011">Collobert et al. 2011</a>, <a href="E5.html#graves2014">Graves et al. 2014</a></p>
+</article></main>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.0 · 생성일 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

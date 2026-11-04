@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>강화학습·게임 — 논문으로 읽는 인공지능의 역사</title><meta name="description" content="1943년부터 지금까지, 원 논문으로 따라가는 인공지능 연구의 역사">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html">시대</a><a href="../../ko/lineage/index.html" class="on">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
+<main><h1>강화학습·게임</h1><p class="lead">동적 계획법과 시간차 학습에서 Q-학습, 정책 경사, 알파고 계열까지.</p>
+<figure><svg viewBox="0 0 1000 116" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">강화학습·게임</text>
+<line class="ax" x1="201.1" x2="201.1" y1="16" y2="86"/><text x="201.1" y="108" text-anchor="middle">1960</text>
+<line class="ax" x1="328.8" x2="328.8" y1="16" y2="86"/><text x="328.8" y="108" text-anchor="middle">1970</text>
+<line class="ax" x1="456.5" x2="456.5" y1="16" y2="86"/><text x="456.5" y="108" text-anchor="middle">1980</text>
+<line class="ax" x1="584.2" x2="584.2" y1="16" y2="86"/><text x="584.2" y="108" text-anchor="middle">1990</text>
+<line class="ax" x1="711.8" x2="711.8" y1="16" y2="86"/><text x="711.8" y="108" text-anchor="middle">2000</text>
+<line class="ax" x1="839.5" x2="839.5" y1="16" y2="86"/><text x="839.5" y="108" text-anchor="middle">2010</text>
+<line class="ax" x1="967.2" x2="967.2" y1="16" y2="86"/><text x="967.2" y="108" text-anchor="middle">2020</text>
+<path class="edge" data-s="sutton1988" data-d="barto1983" d="M503.3,31.5 C534.7,31.5 534.7,31.5 566.1,31.5"/>
+<path class="edge" data-s="sutton1988" data-d="bellman1957" d="M169.2,31.5 C367.6,31.5 367.6,31.5 566.1,31.5"/>
+<path class="edge" data-s="sutton1988" data-d="samuel1959" d="M194.7,31.5 C380.4,31.5 380.4,31.5 566.1,31.5"/>
+<path class="edge" data-s="watkins1992" data-d="watkins1989" d="M575.6,31.5 C594.8,31.5 594.8,31.5 613.9,31.5"/>
+<path class="edge" data-s="williams1992" data-d="barto1983" d="M503.3,31.5 C558.6,31.5 558.6,44.5 613.9,44.5"/>
+<path class="edge" data-s="williams1992" data-d="sutton1988" d="M566.1,31.5 C590.0,31.5 590.0,44.5 613.9,44.5"/>
+<path class="edge" data-s="williams1992" data-d="watkins1989" d="M575.6,31.5 C594.8,31.5 594.8,44.5 613.9,44.5"/>
+<path class="edge" data-s="tesauro1995" data-d="sutton1988" d="M566.1,31.5 C608.1,31.5 608.1,31.5 650.1,31.5"/>
+<path class="edge" data-s="tesauro1995" data-d="samuel1959" d="M194.7,31.5 C422.4,31.5 422.4,31.5 650.1,31.5"/>
+<path class="edge" data-s="sutton1999" data-d="barto1983" d="M503.3,31.5 C604.4,31.5 604.4,31.5 705.5,31.5"/>
+<path class="edge" data-s="sutton1999" data-d="williams1992" d="M613.9,44.5 C659.7,44.5 659.7,31.5 705.5,31.5"/>
+<path class="edge" data-s="mnih2013" data-d="tesauro1995" d="M650.1,31.5 C769.8,31.5 769.8,31.5 889.6,31.5"/>
+<path class="edge" data-s="mnih2015" data-d="tesauro1995" d="M650.1,31.5 C777.3,31.5 777.3,31.5 904.4,31.5"/>
+<path class="edge" data-s="mnih2015" data-d="kaelbling1998" d="M690.6,31.5 C797.5,31.5 797.5,31.5 904.4,31.5"/>
+<path class="edge" data-s="mnih2015" data-d="sutton1998" d="M692.7,44.5 C798.6,44.5 798.6,31.5 904.4,31.5"/>
+<path class="edge" data-s="schulman2015" data-d="barto1983" d="M503.3,31.5 C703.9,31.5 703.9,44.5 904.4,44.5"/>
+<path class="edge" data-s="schulman2015" data-d="mnih2013" d="M889.6,31.5 C897.0,31.5 897.0,44.5 904.4,44.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="mnih2013" d="M889.6,31.5 C900.7,31.5 900.7,31.5 911.9,31.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="mnih2015" d="M904.4,31.5 C908.2,31.5 908.2,31.5 911.9,31.5"/>
+<path class="edge" data-s="silver2016" data-d="sutton1988" d="M566.1,31.5 C741.1,31.5 741.1,31.5 916.2,31.5"/>
+<path class="edge" data-s="silver2016" data-d="williams1992" d="M613.9,44.5 C765.1,44.5 765.1,31.5 916.2,31.5"/>
+<path class="edge" data-s="silver2016" data-d="mnih2015" d="M904.4,31.5 C910.3,31.5 910.3,31.5 916.2,31.5"/>
+<path class="edge" data-s="silver2016" data-d="sutton1999" d="M705.5,31.5 C810.8,31.5 810.8,31.5 916.2,31.5"/>
+<path class="edge" data-s="silver2016" data-d="sutton1998" d="M692.7,44.5 C804.4,44.5 804.4,31.5 916.2,31.5"/>
+<path class="edge" data-s="silver2017" data-d="sutton1988" d="M566.1,31.5 C752.3,31.5 752.3,31.5 938.5,31.5"/>
+<path class="edge" data-s="silver2017" data-d="mnih2015" d="M904.4,31.5 C921.5,31.5 921.5,31.5 938.5,31.5"/>
+<path class="edge" data-s="silver2017" data-d="silver2016" d="M916.2,31.5 C927.3,31.5 927.3,31.5 938.5,31.5"/>
+<path class="edge" data-s="silver2017" data-d="sutton1998" d="M692.7,44.5 C815.6,44.5 815.6,31.5 938.5,31.5"/>
+<path class="edge" data-s="silver2018" data-d="silver2016" d="M916.2,31.5 C934.8,31.5 934.8,31.5 953.4,31.5"/>
+<path class="edge" data-s="silver2018" data-d="silver2017" d="M938.5,31.5 C945.9,31.5 945.9,31.5 953.4,31.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="mnih2015" d="M904.4,31.5 C934.8,31.5 934.8,31.5 965.1,31.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="silver2016" d="M916.2,31.5 C940.6,31.5 940.6,31.5 965.1,31.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="silver2017" d="M938.5,31.5 C951.8,31.5 951.8,31.5 965.1,31.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="silver2018" d="M953.4,31.5 C959.2,31.5 959.2,31.5 965.1,31.5"/>
+<path class="edge" data-s="barto1983" data-d="samuel1959" d="M194.7,31.5 C349.0,31.5 349.0,31.5 503.3,31.5"/>
+<path class="edge" data-s="watkins1989" data-d="barto1983" d="M503.3,31.5 C539.5,31.5 539.5,31.5 575.6,31.5"/>
+<path class="edge" data-s="watkins1989" data-d="samuel1959" d="M194.7,31.5 C385.2,31.5 385.2,31.5 575.6,31.5"/>
+<path class="edge" data-s="watkins1989" data-d="sutton1988" d="M566.1,31.5 C570.9,31.5 570.9,31.5 575.6,31.5"/>
+<path class="edge" data-s="watkins1992" data-d="sutton1988" d="M566.1,31.5 C590.0,31.5 590.0,31.5 613.9,31.5"/>
+<path class="edge" data-s="sutton1998" data-d="bellman1957" d="M169.2,31.5 C430.9,31.5 430.9,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1998" data-d="samuel1959" d="M194.7,31.5 C443.7,31.5 443.7,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1998" data-d="barto1983" d="M503.3,31.5 C598.0,31.5 598.0,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1998" data-d="sutton1988" d="M566.1,31.5 C629.4,31.5 629.4,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1998" data-d="watkins1989" d="M575.6,31.5 C634.2,31.5 634.2,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1998" data-d="watkins1992" d="M613.9,31.5 C653.3,31.5 653.3,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1998" data-d="williams1992" d="M613.9,44.5 C653.3,44.5 653.3,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1998" data-d="tesauro1995" d="M650.1,31.5 C671.4,31.5 671.4,44.5 692.7,44.5"/>
+<path class="edge" data-s="sutton1999" data-d="sutton1998" d="M692.7,44.5 C699.1,44.5 699.1,31.5 705.5,31.5"/>
+<path class="edge" data-s="mnih2013" data-d="sutton1998" d="M692.7,44.5 C791.1,44.5 791.1,31.5 889.6,31.5"/>
+<path class="edge" data-s="mnih2013" data-d="watkins1992" d="M613.9,31.5 C751.8,31.5 751.8,31.5 889.6,31.5"/>
+<path class="edge" data-s="mnih2015" data-d="watkins1992" d="M613.9,31.5 C759.2,31.5 759.2,31.5 904.4,31.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="schulman2015" d="M904.4,44.5 C908.2,44.5 908.2,31.5 911.9,31.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="watkins1992" d="M613.9,31.5 C762.9,31.5 762.9,31.5 911.9,31.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="sutton1998" d="M692.7,44.5 C828.9,44.5 828.9,31.5 965.1,31.5"/>
+<g class="dot" data-k="bellman1957" data-t="Dynamic Programming" data-m="Bellman · 1957" data-w="" data-href="../chapters/E2.html#bellman1957"><circle cx="169.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="samuel1959" data-t="Some Studies in Machine Learning Using the Game of Checkers" data-m="Samuel · 1959" data-w="체커를 재료로 두 가지 기계학습 절차, 곧 암기 학습과 평가 다항식의 항을 조정하는 일반화 절차를 조사한다. 규칙과 방향 감각과 불완전한 매개변수 목록만 받은 프로그램이 8~10시간의 대국 뒤 저자보다 잘 두게 되었다고 보고한다." data-href="../chapters/E2.html#samuel1959"><circle cx="194.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="barto1983" data-t="Neuronlike adaptive elements that can solve difficult learning control problems" data-m="Barto et al. · 1983" data-w="연합 탐색 소자와 적응 비평 소자라는 뉴런형 적응 소자 둘로 이루어진 체계가, 실패 신호만을 피드백으로 받으면서 수레 위 막대를 세우는 법을 학습함을 보인다. 비평 소자는 강화 신호만으로는 얻지 못할 더 많은 정보를 담은 평가를 만들어 낸다." data-href="../chapters/E3.html#barto1983"><circle cx="503.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutton1988" data-t="Learning to predict by the methods of temporal differences" data-m="Sutton · 1988" data-w="시간적으로 잇따르는 예측 사이의 차이로 공로를 배분하는 점진적 예측 학습 절차의 부류로 시간차 방법을 도입하고, 특수한 경우의 수렴과 최적성을 증명한다. 이 방법을 지도학습 절차와 형식적으로 관련짓는다." data-href="../chapters/E3.html#sutton1988"><circle cx="566.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="watkins1989" data-t="Learning from Delayed Rewards" data-m="Watkins · 1989" data-w="마르코프 결정 과정을 동물의 행동 선택 모델로 다루고, 환경 모델 없이 행동의 최적 가치를 직접 학습하는 점진적 몬테카를로 방법을 기술한다. 이 학습법이 작동한다는 증명을 주고 계층적 정책도 다룬다." data-href="../chapters/E3.html#watkins1989"><circle cx="575.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="watkins1992" data-t="Q-learning" data-m="Watkins &amp; Dayan · 1992" data-w="Watkins(1989)가 개요만 적은 Q-학습 수렴 증명을 이 기술 노트에서 상세히 제시한다. 모든 상태에서 모든 행동이 반복 표집되고 행동 가치가 이산이면 확률 1로 최적 행동 가치에 수렴하며, 비할인 흡수 환경과 한 반복에 여러 Q값을 바꾸는 경우로의 확장을 개관한다." data-href="../chapters/E4.html#watkins1992"><circle cx="613.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="williams1992" data-t="Simple statistical gradient-following algorithms for connectionist reinforcement learning" data-m="Williams · 1992" data-w="확률적 단위 망을 위한 연합 강화학습 알고리즘 부류인 REINFORCE를 제시하고, 즉시 강화 과제와 일부 지연 강화 과제에서 그 가중치 조정이 기울기 추정을 명시적으로 계산하지 않고도 기대 강화의 기울기 방향을 따름을 보인다. 역전파와의 결합도 보인다." data-href="../chapters/E4.html#williams1992"><circle cx="613.9" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="tesauro1995" data-t="Temporal difference learning and TD-Gammon" data-m="Tesauro · 1995" data-w="" data-href="../chapters/E4.html#tesauro1995"><circle cx="650.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kaelbling1998" data-t="Planning and acting in partially observable stochastic domains" data-m="Kaelbling et al. · 1998" data-w="마르코프 결정 과정과 부분 관측 MDP에 대한 운영과학 기법을 부분 관측 확률적 영역에서의 행동 선택 문제에 끌어온다. POMDP를 오프라인으로 푸는 알고리즘을 개관하고, 어떤 경우에는 그 해에서 유한 기억 제어기를 끌어낼 수 있음을 보인다." data-href="../chapters/E4.html#kaelbling1998"><circle cx="690.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutton1998" data-t="Reinforcement Learning: An Introduction" data-m="Sutton &amp; Barto · 1998" data-w="강화학습의 핵심 발상과 알고리즘을 주로 인공지능과 공학의 관점에서 설명하는 책이다. 시간차 학습, 동적 계획법, 함수 근사를 목표 달성을 위한 상호작용 학습이라는 하나의 틀 안에 놓는다." data-href="../chapters/E4.html#sutton1998"><circle cx="692.7" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutton1999" data-t="Policy Gradient Methods for Reinforcement Learning with Function Approximation" data-m="Sutton et al. · 1999" data-w="정책을 고유의 함수 근사기로 표현하고 기대 보상의 기울기를 따라 갱신한다. 그 기울기를 근사 행동 가치나 이점 함수로 추정할 수 있음을 보이고, 미분 가능한 함수 근사를 쓰는 정책 반복의 한 판이 국소 최적 정책으로 수렴함을 증명한다." data-href="../chapters/E4.html#sutton1999"><circle cx="705.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mnih2013" data-t="Playing Atari with Deep Reinforcement Learning" data-m="Mnih et al. · 2013" data-w="Q-학습의 변형으로 합성곱 신경망을 훈련해 아타리 2600의 원시 픽셀에서 직접 미래 보상을 추정한다. 같은 구조와 학습 알고리즘을 손보지 않고 일곱 게임에 적용했다." data-href="../chapters/E5.html#mnih2013"><circle cx="889.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mnih2015" data-t="Human-level control through deep reinforcement learning" data-m="Mnih et al. · 2015" data-w="경험 재생과 주기적으로 갱신되는 목표망을 써서 픽셀과 게임 점수로부터 끝에서 끝까지 강화학습으로 제어 정책을 배우는 심층 Q-망을 도입한다. 하나의 알고리즘·구조·초매개변수로 아타리 2600 게임 49개에서 시험했다." data-href="../chapters/E5.html#mnih2015"><circle cx="904.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schulman2015" data-t="Trust Region Policy Optimization" data-m="Schulman et al. · 2015" data-w="단조 개선이 보장되는 반복 정책 최적화 절차와 그 실용적 근사인 TRPO를 기술한다. 자연 정책 기울기 방법과 비슷하며, 모의 로봇의 수영·뜀뛰기·걷기와 화면 영상으로 하는 아타리 게임에서 시험했다." data-href="../chapters/E5.html#schulman2015"><circle cx="904.4" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="lillicrap2015" data-t="Continuous control with deep reinforcement learning" data-m="Lillicrap et al. · 2015" data-w="심층 Q-학습의 발상을 결정적 정책 기울기에 기초한 행위자-비평자 알고리즘으로 연속 행동 영역에 맞춘다. 하나의 알고리즘과 망 설정으로 20개 넘는 모의 물리 과제를 풀며 일부는 원시 픽셀에서 직접 푼다." data-href="../chapters/E5.html#lillicrap2015"><circle cx="911.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="silver2016" data-t="Mastering the game of Go with deep neural networks and tree search" data-m="Silver et al. · 2016" data-w="인간 전문가 기보의 지도학습과 자기 대국 강화학습으로 훈련한 정책망, 가치망, 몬테카를로 트리 탐색을 결합한 알파고를 소개한다. 다른 바둑 프로그램들을 상대로 99.8%를 이기고 유럽 바둑 챔피언을 5대 0으로 이겼다." data-href="../chapters/E5.html#silver2016"><circle cx="916.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="silver2017" data-t="Mastering the game of Go without human knowledge" data-m="Silver et al. · 2017" data-w="무작위 대국에서 출발하는 자기 대국 강화학습만으로, 바둑판의 돌을 입력받는 신경망 하나와 몬테카를로 롤아웃 없는 트리 탐색으로 훈련한 알파고 제로를 소개한다. 앞서 발표된 알파고를 100대 0으로 이겼다." data-href="../chapters/E5.html#silver2017"><circle cx="938.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="silver2018" data-t="A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play" data-m="Silver et al. · 2018" data-w="알파고 제로의 접근을 게임 규칙만 주어진 채 무작위 대국에서 자기 대국 강화학습으로 체스·쇼기·바둑을 배우는 단일 알고리즘 AlphaZero로 일반화한다. 심층 신경망과 범용 몬테카를로 트리 탐색을 쓰며, 세 게임 각각에서 세계 챔피언 프로그램을 이겼다." data-href="../chapters/E6.html#silver2018"><circle cx="953.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schrittwieser2019" data-t="Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model" data-m="Schrittwieser et al. · 2019" data-w="보상·행동 선택 정책·가치 함수를 예측하는 학습된 모델과 트리 기반 탐색을 결합한 MuZero를 제시한다. 아타리 57개 게임에서 새 최고 성능을 세우고, 게임 규칙을 받지 않고도 바둑·체스·쇼기에서 AlphaZero와 맞먹었다." data-href="../chapters/E6.html#schrittwieser2019"><circle cx="965.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>실선은 인용이 확인된 선(OpenAlex 또는 인용한 논문의 참고문헌 목록), 점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선. 세로 위치는 주제 묶음.</figcaption></figure>
+<div class="wrap"><table class="sort"><thead><tr><th>연도</th><th>첫 저자</th><th>제목</th><th>장</th></tr></thead><tbody><tr><td class="nw">1957</td><td>Bellman</td><td><a href="../chapters/E2.html#bellman1957">Dynamic Programming</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1959</td><td>Samuel</td><td><a href="../chapters/E2.html#samuel1959">Some Studies in Machine Learning Using the Game of Checkers</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1983</td><td>Barto et al.</td><td><a href="../chapters/E3.html#barto1983">Neuronlike adaptive elements that can solve difficult learning control problems</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1988</td><td>Sutton</td><td><a href="../chapters/E3.html#sutton1988">Learning to predict by the methods of temporal differences</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1989</td><td>Watkins</td><td><a href="../chapters/E3.html#watkins1989">Learning from Delayed Rewards</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1992</td><td>Watkins &amp; Dayan</td><td><a href="../chapters/E4.html#watkins1992">Q-learning</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1992</td><td>Williams</td><td><a href="../chapters/E4.html#williams1992">Simple statistical gradient-following algorithms for connectionist reinforcement learning</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1995</td><td>Tesauro</td><td><a href="../chapters/E4.html#tesauro1995">Temporal difference learning and TD-Gammon</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1998</td><td>Kaelbling et al.</td><td><a href="../chapters/E4.html#kaelbling1998">Planning and acting in partially observable stochastic domains</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1998</td><td>Sutton &amp; Barto</td><td><a href="../chapters/E4.html#sutton1998">Reinforcement Learning: An Introduction</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1999</td><td>Sutton et al.</td><td><a href="../chapters/E4.html#sutton1999">Policy Gradient Methods for Reinforcement Learning with Function Approximation</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2013</td><td>Mnih et al.</td><td><a href="../chapters/E5.html#mnih2013">Playing Atari with Deep Reinforcement Learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Mnih et al.</td><td><a href="../chapters/E5.html#mnih2015">Human-level control through deep reinforcement learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Schulman et al.</td><td><a href="../chapters/E5.html#schulman2015">Trust Region Policy Optimization</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Lillicrap et al.</td><td><a href="../chapters/E5.html#lillicrap2015">Continuous control with deep reinforcement learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2016</td><td>Silver et al.</td><td><a href="../chapters/E5.html#silver2016">Mastering the game of Go with deep neural networks and tree search</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2017</td><td>Silver et al.</td><td><a href="../chapters/E5.html#silver2017">Mastering the game of Go without human knowledge</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2018</td><td>Silver et al.</td><td><a href="../chapters/E6.html#silver2018">A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2019</td><td>Schrittwieser et al.</td><td><a href="../chapters/E6.html#schrittwieser2019">Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model</a></td><td>6장 사전학습·생성 2017–22</td></tr></tbody></table></div></main>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.0 · 생성일 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

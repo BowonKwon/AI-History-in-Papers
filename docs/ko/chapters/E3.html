@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>지식 시스템과 연결주의의 귀환 (1974–1993) — 논문으로 읽는 인공지능의 역사</title><meta name="description" content="1943년부터 지금까지, 원 논문으로 따라가는 인공지능 연구의 역사">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html" class="on">시대</a><a href="../../ko/lineage/index.html">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
+<main><div class="eyebrow"><span class="tag">3장 지식 시스템과 연결주의 1974–93</span></div><h1>지식 시스템과 연결주의의 귀환 (1974–1993)</h1><p class="lead">전문가의 지식을 규칙으로 옮길 수 있는가, 다층망을 학습시킬 수 있는가.</p>
+<div class="glance"><p class="glance-h">핵심</p><ul><li>이 장에는 두 흐름이 나란히 있다. 프레임(1974)·스크립트(1977)·DENDRAL(1978)·물리적 기호 체계 가설(1976)의 지식 쪽과, 네오코그니트론(1980)·홉필드망(1982)·볼츠만 기계(1985)·역전파(1986)의 연결주의 쪽이다.</li><li>1986년 10월 9일 『Nature』의 역전파 논문은 참고문헌이 네 건뿐이고 그중 하나가 『Perceptrons』다. 역전파를 누가 먼저 썼는가는 이 장의 상자에서 양쪽 서지로만 다룬다.</li><li>시간차 학습(1988)·Q-학습(1989)·보편 근사 정리(1989)·LeNet의 전신(1989)·HMM 개관(1989)이 한 해에 몰려 있다. 이 장이 끝나는 1990년대 초의 「겨울」은 겨울 면의 참가자 수에서 보인다.</li></ul></div>
+<div class="prose">
+<h3>지식을 구조로 쓰다</h3>
+<p>1974년 6월 MIT AI 메모 306호로 나온 <a href="#minsky1974">Minsky의 「A Framework for Representing Knowledge」</a>는 지식을 「프레임」, 곧 정형화된 상황을 기억한 자료 구조로 조직하자고 제안했다. 「프레임은 어떤 종류의 거실에 있는 상황이나 아이의 생일잔치에 가는 상황처럼 정형화된 상황을 표현하는 자료 구조다.」 <a href="#schank1977">Schank–Abelson의 『Scripts, Plans, Goals and Understanding』</a>(1977)은 같은 발상을 사건의 전형적 순서인 스크립트로 전개한 책으로, 이 판에서는 읽지 못했다. <a href="#buchanan1978">Buchanan–Feigenbaum의 「Dendral and Meta-Dendral」</a>(1978년 8월, 『Artificial Intelligence』)은 질량 분석 자료에서 분자 구조를 추론하는 전문가 시스템과 그 규칙을 학습하는 메타 체계를 기술한 것으로, 역시 읽지 못했다. 이 세 편이 1980년대 「전문가 시스템」 붐의 원문이다. 붐의 크기는 겨울 면의 제목 수와 참가자 수로 잴 수 있다.</p>
+<p><a href="#newell1976">Newell–Simon의 「Computer science as empirical inquiry: symbols and search」</a>는 1975년 10월 20일 튜링상 강연으로 발표되고 1976년 3월 『Communications of the ACM』에 실렸다. 「물리적 기호 체계는 일반 지능 행동에 필요하고 충분한 수단을 갖는다.」 이 한 문장이 기호 AI의 강령으로 읽혀 왔고, 참고문헌에는 McCarthy의 LISP와 Turing 1950이 있다.</p>
+<h3>확률과 통계가 들어오다</h3>
+<p><a href="#dempster1977">Dempster–Laird–Rubin의 EM 알고리즘</a>은 1976년 12월 8일 왕립통계학회에서 낭독되고 1977년 『JRSS B』에 실렸다. 불완전 자료의 최대가능도 추정을 기대 단계와 최대화 단계의 반복으로 푸는 이 방법은 3장의 Rabiner와 4장의 Brown 외(통계적 기계 번역)가 인용한다. <a href="#geman1984">Geman 형제의 「Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images」</a>(1984년 11월)는 영상을 마르코프 확률장으로 모델링하고 담금질을 결합한 깁스 표집기로 복원했다. 그 담금질은 <a href="#kirkpatrick1983">Kirkpatrick 외의 「Optimization by Simulated Annealing」</a>(1983년 5월 13일, 『Science』)에서 왔고, 두 논문 모두 Ackley 외의 볼츠만 기계가 인용한다. <a href="#pearl1988">Pearl의 『Probabilistic Reasoning in Intelligent Systems』</a>(1988)은 불확실성 아래의 추론을 신뢰망으로 쓴 책으로, 4장 Hinton 2012가 인용하지만 이 판에서는 읽지 못했다. <a href="#valiant1984">Valiant의 「A theory of the learnable」</a>(1984, STOC 예비판 뒤 『CACM』 11월호)는 「다항식 단계 안에 학습 가능한 개념 부류」라는 물음을 세워 학습 이론의 출발점이 되었고, Cybenko 1989가 인용한다.</p>
+<h3>연결주의의 귀환</h3>
+<p><a href="#fukushima1980">Fukushima의 「Neocognitron」</a>(1980년 4월, 『Biological Cybernetics』)은 S-세포와 C-세포 층을 번갈아 쌓아 패턴의 위치 변화에 영향받지 않는 인식을 교사 없이 학습하는 망이다. 이 장 뒤쪽의 <a href="#lecun1989">LeCun 외(1989)</a>가 이 논문을 인용한다 — 합성곱망의 계보에서 가장 오래된 확인된 인용선이다. <a href="#hopfield1982">Hopfield의 「Neural networks and physical systems with emergent collective computational abilities」</a>(1982년 4월, 『PNAS』)는 비동기로 갱신되는 단위들의 집단 동역학이 안정 상태로 흘러 내용 주소화 기억이 된다는 모델로, McCulloch–Pitts·Hebb·『Perceptrons』를 인용한다. 2024년 노벨 물리학상의 수상 사유가 가리키는 업적이다. <a href="#ackley1985">Ackley–Hinton–Sejnowski의 볼츠만 기계</a>(1985년 1월, 『Cognitive Science』)는 Hopfield의 망에 확률적 단위와 담금질을 넣고, 예를 보는 것만으로 영역의 제약을 학습하는 규칙을 끌어냈다.</p>
+<p><a href="#rumelhart1986">Rumelhart–Hinton–Williams의 「Learning representations by back-propagating errors」</a>는 1986년 10월 9일 『Nature』에 실렸다. 「우리는 뉴런형 단위들의 망을 위한 새 학습 절차인 역전파를 기술한다.」 실제 출력과 바라는 출력의 차를 줄이도록 가중치를 거듭 조정하면 은닉 단위들이 과제의 특징을 표현하게 된다는 것이 논문의 요지다. 참고문헌은 네 건이고 그중 하나가 『Perceptrons』다 — 1969년의 책이 제기한 한계에 대한 답으로 읽힌다. 이 판의 다른 논문 가운데 이 Nature 논문을 참고문헌에서 직접 인용한 것은 Waibel 1989, Cortes 1995 등 몇 편뿐이고, 많은 논문이 같은 해의 PDP 책 장을 대신 인용한다. 카드의 인용선은 그 둘을 구별했다.</p>
+<p><a href="#werbos1982">Werbos의 「Applications of advances in nonlinear sensitivity analysis」</a>(1982, IFIP 회의록)는 그의 1974년 학위논문의 방법을 신경망에 적용한 글로 알려져 있으나 Springer 유료라 읽지 못했다. 역전파의 우선권 상자가 이 아래에 있다.</p>
+<h3>강화학습이 이름을 얻다</h3>
+<p><a href="#barto1983">Barto–Sutton–Anderson의 「Neuronlike adaptive elements」</a>(1983년 9월)는 연합 탐색 소자와 적응 비평 소자 둘로 실패 신호만 받고 수레 위 막대를 세우는 법을 학습했다. 참고문헌에 Hebb·Widrow–Hoff·Minsky 1961·Samuel·McCulloch–Pitts가 있어 1·2장과 가장 많이 이어진다. <a href="#sutton1988">Sutton의 「Learning to predict by the methods of temporal differences」</a>(1988년 8월, 『Machine Learning』)는 잇따르는 예측 사이의 차이로 공로를 배분하는 시간차 방법을 정의하고 특수한 경우의 수렴을 증명했다. 이듬해 <a href="#watkins1989">Watkins의 케임브리지 학위논문 「Learning from Delayed Rewards」</a>(1989년 5월)가 환경 모델 없이 행동의 최적 가치를 직접 학습하는 방법 — 뒤에 Q-학습이라 불린다 — 을 제시했다. 두 사람이 2024년 튜링상을 받은 사유가 이 논문들을 가리킨다.</p>
+<h3>1989년</h3>
+<p>한 해에 다섯 점이 몰린다. <a href="#cybenko1989">Cybenko</a>(12월)와 <a href="#hornik1989">Hornik–Stinchcombe–White</a>(1988년 UCSD 토론 논문으로 먼저 나와 1989년 『Neural Networks』에 게재)는 은닉층 하나의 전방향망이 임의의 연속 함수를 근사할 수 있음을 각각 증명했다(보편 근사 정리). Cybenko는 Hornik의 1988년 예비판을 인용한다. <a href="#lecun1989">LeCun 외의 「Backpropagation Applied to Handwritten Zip Code Recognition」</a>(12월, 『Neural Computation』)은 과제 영역의 제약을 망 구조에 넣어 미국 우정청의 손글씨 우편번호를 인식했다 — 4장 LeNet(1998)의 직접 전신이다. <a href="#rabiner1989">Rabiner의 HMM 개관</a>(2월, 『Proceedings of the IEEE』)은 음성 인식의 은닉 마르코프 모델을 세 문제로 정리한 교과서적 글이고, <a href="#waibel1989">Waibel 외의 시간 지연 신경망</a>은 1987년 10월 ATR 기술 보고서로 먼저 나와 1989년 저널에 실렸다. 1946개 시험 토큰에서 TDNN 98.5% 대 HMM 93.7%라는 문장은 신경망이 음성에서 통계 모델과 겨루기 시작한 기록이다. <a href="#elman1990">Elman의 「Finding Structure in Time」</a>(1990년 3월)은 은닉층의 패턴을 다음 단계의 문맥으로 되먹이는 단순 순환망으로 장을 닫는다.</p>
+<h3>이 장에서 확인한 것과 못 한 것</h3>
+<p>23편 가운데 게재본 또는 그에 준하는 사본을 읽은 것이 17편이다. Schank–Abelson, Buchanan–Feigenbaum, Werbos 1982, Pearl은 읽지 못했고, Minsky 1974는 저자의 웹 판본, Elman은 쪽 없는 재타자본으로 읽었다. 이 시기 후보 가운데 MYCIN(Shortliffe 1975), R1(McDermott 1982), Kohonen의 자기 조직화 지도(1982), Marr의 『Vision』(1982), Brooks의 포섭 구조(1986), Quinlan의 결정 나무(1986)는 기준을 넘지 못했다.</p>
+</div>
+<div class="box"><h3>우선권 — 역전파를 누가 먼저 썼는가</h3><div class="wrap"><p>이 사이트는 판정하지 않는다. 양쪽 원문의 서지와 이 판에서 확인한 사실만 나란히 놓는다.</p>
+<table><thead><tr><th>문헌</th><th>첫 공개</th><th>이 판에서 확인한 것</th></tr></thead><tbody>
+<tr><td>Linnainmaa, S. 「The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors」. 헬싱키대 석사논문(핀란드어)</td><td>1970</td><td>서지는 2차 문헌으로만 확인. 원문·OpenAlex 레코드 없음. 선정 기준 미달</td></tr>
+<tr><td><a href="E2.html#werbos1974">Werbos, P. J. 『Beyond Regression』. 하버드 박사논문</a></td><td>1974</td><td>공개 사본 없음. 5장 LeCun 2015, Schmidhuber 2015와 4장 Williams 1992가 참고문헌에서 인용</td></tr>
+<tr><td><a href="#werbos1982">Werbos, P. J. 「Applications of advances in nonlinear sensitivity analysis」</a>. IFIP 회의록, Springer</td><td>1982</td><td>유료라 읽지 못함. Schmidhuber 2015, Sutton–Barto 1998이 인용</td></tr>
+<tr><td><a href="#rumelhart1986">Rumelhart, Hinton & Williams, 「Learning representations by back-propagating errors」. 『Nature』 323: 533–536</a></td><td>1986-10-09</td><td>원문 읽음. 참고문헌 4건(『Perceptrons』 포함). Werbos·Linnainmaa 인용 없음</td></tr>
+</tbody></table></div><p>Schmidhuber의 「Annotated History」(2022, v3 2025)는 역전파를 Linnainmaa 1970에, 신경망에의 첫 적용을 Werbos 1982에 돌린다. 한쪽의 주장으로 소개한다. 1986년 논문이 처음 쓴 것은 「back-propagation」이라는 이름과, 은닉 단위가 특징을 표현하게 된다는 관찰이다.</p></div><div class="box"><h3>날짜 — 널리 알려진 연도와 원문 연도</h3><div class="wrap"><table><thead><tr><th>업적</th><th>흔히 적는 연도</th><th>원문에서 확인한 날짜</th></tr></thead><tbody>
+<tr><td><a href="#waibel1989">시간 지연 신경망</a></td><td>1989(저널)</td><td>1987-10 ATR 기술 보고서 TR-I-0006(같은 제목·저자)</td></tr>
+<tr><td><a href="#newell1976">물리적 기호 체계 가설</a></td><td>1976(CACM)</td><td>1975-10-20 튜링상 강연</td></tr>
+<tr><td><a href="#dempster1977">EM 알고리즘</a></td><td>1977</td><td>1976-12-08 왕립통계학회 낭독</td></tr>
+<tr><td><a href="#valiant1984">PAC 학습</a></td><td>1984(CACM 11월)</td><td>1984 STOC 예비판(논문 자신이 언급)</td></tr>
+<tr><td><a href="#hornik1989">보편 근사 정리(Hornik 외)</a></td><td>1989</td><td>1988 UCSD 토론 논문 88-45(논문의 자기 인용)</td></tr>
+</tbody></table></div></div>
+<h2>계보</h2><figure><svg viewBox="0 0 1000 466" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">신경망 학습</text>
+<line class="grid" x1="150" x2="980" y1="156" y2="156"/>
+<text x="142" y="125.0" text-anchor="end">강화학습·게임</text>
+<line class="grid" x1="150" x2="980" y1="226" y2="226"/>
+<text x="142" y="195.0" text-anchor="end">언어·음성</text>
+<line class="grid" x1="150" x2="980" y1="296" y2="296"/>
+<text x="142" y="265.0" text-anchor="end">시각·생성</text>
+<line class="grid" x1="150" x2="980" y1="366" y2="366"/>
+<text x="142" y="335.0" text-anchor="end">탐색·계획·지식</text>
+<line class="grid" x1="150" x2="980" y1="436" y2="436"/>
+<text x="142" y="405.0" text-anchor="end">확률·통계·기원</text>
+<line class="ax" x1="237.4" x2="237.4" y1="16" y2="436"/><text x="237.4" y="458" text-anchor="middle">1975</text>
+<line class="ax" x1="455.8" x2="455.8" y1="16" y2="436"/><text x="455.8" y="458" text-anchor="middle">1980</text>
+<line class="ax" x1="674.2" x2="674.2" y1="16" y2="436"/><text x="674.2" y="458" text-anchor="middle">1985</text>
+<line class="ax" x1="892.6" x2="892.6" y1="16" y2="436"/><text x="892.6" y="458" text-anchor="middle">1990</text>
+<path class="edge" data-s="geman1984" data-d="kirkpatrick1983" d="M601.4,311.5 C634.2,311.5 634.2,381.5 666.9,381.5"/>
+<path class="edge" data-s="ackley1985" data-d="geman1984" d="M666.9,381.5 C670.6,381.5 670.6,31.5 674.2,31.5"/>
+<path class="edge" data-s="ackley1985" data-d="kirkpatrick1983" d="M601.4,311.5 C637.8,311.5 637.8,31.5 674.2,31.5"/>
+<path class="edge" data-s="ackley1985" data-d="hopfield1982" d="M554.1,31.5 C614.1,31.5 614.1,31.5 674.2,31.5"/>
+<path class="edge" data-s="pearl1988" data-d="geman1984" d="M666.9,381.5 C747.0,381.5 747.0,381.5 827.1,381.5"/>
+<path class="edge" data-s="pearl1988" data-d="kirkpatrick1983" d="M601.4,311.5 C714.3,311.5 714.3,381.5 827.1,381.5"/>
+<path class="edge" data-s="sutton1988" data-d="barto1983" d="M616.0,101.5 C723.4,101.5 723.4,101.5 830.7,101.5"/>
+<path class="edge" data-s="sutton1988" data-d="ackley1985" d="M674.2,31.5 C752.5,31.5 752.5,101.5 830.7,101.5"/>
+<path class="edge" data-s="lecun1989" data-d="fukushima1980" d="M466.7,241.5 C677.9,241.5 677.9,241.5 889.0,241.5"/>
+<path class="edge" data-s="cybenko1989" data-d="hornik1989" d="M827.1,31.5 C858.0,31.5 858.0,31.5 889.0,31.5"/>
+<path class="edge" data-s="cybenko1989" data-d="valiant1984" d="M652.4,31.5 C770.7,31.5 770.7,31.5 889.0,31.5"/>
+<path class="edge" data-s="hornik1989" data-d="cybenko1989" d="M889.0,31.5 C858.0,31.5 858.0,31.5 827.1,31.5"/>
+<path class="edge" data-s="rabiner1989" data-d="dempster1977" d="M321.1,381.5 C586.8,381.5 586.8,171.5 852.6,171.5"/>
+<path class="edge" data-s="waibel1989" data-d="rumelhart1986" d="M750.7,31.5 C772.5,31.5 772.5,171.5 794.3,171.5"/>
+<path class="edge" data-s="elman1990" data-d="waibel1989" d="M794.3,171.5 C847.1,171.5 847.1,44.5 899.9,44.5"/>
+<path class="edge" data-s="watkins1989" data-d="barto1983" d="M616.0,101.5 C739.7,101.5 739.7,101.5 863.5,101.5"/>
+<path class="edge" data-s="watkins1989" data-d="sutton1988" d="M830.7,101.5 C847.1,101.5 847.1,101.5 863.5,101.5"/>
+<g class="dot" data-k="minsky1974" data-t="A Framework for Representing Knowledge" data-m="Minsky · 1974" data-w="지식을 「프레임」으로 조직할 것을 제안한다. 정형화된 상황을 기억한 자료 구조로, 상위 수준은 고정되고 하위 단말(「슬롯」)에 구체적 사례가 채워지며, 프레임들이 체계로 연결되어 그 변환이 행동이나 관점 변화를 나타낸다." data-href="E3.html#minsky1974"><circle cx="211.9" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="newell1976" data-t="Computer science as empirical inquiry: symbols and search" data-m="Newell &amp; Simon · 1975" data-w="물리적 기호 체계 가설과 휴리스틱 탐색 가설을 질적 구조의 법칙으로 제시하고, 컴퓨터과학(과 AI)을 기호 체계와 탐색에 관한 경험적 탐구로 자리매김한다." data-href="E3.html#newell1976"><circle cx="270.1" cy="381.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="dempster1977" data-t="Maximum Likelihood from Incomplete Data Via the EM Algorithm" data-m="Dempster et al. · 1976" data-w="불완전 자료의 최대가능도 추정을 위한 일반 반복법을 제시한다. 각 반복은 기대 단계와 최대화 단계로 이루어지며(EM 알고리즘), 가능도의 단조 증가와 수렴에 관한 이론을 결측·혼합·분산성분·요인분석 문제의 예와 함께 다룬다." data-href="E3.html#dempster1977"><circle cx="321.1" cy="381.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schank1977" data-t="Scripts, Plans, Goals and Understanding" data-m="Schank &amp; Abelson · 1977" data-w="" data-href="E3.html#schank1977"><circle cx="346.6" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="buchanan1978" data-t="Dendral and Meta-Dendral: Their applications dimension" data-m="Buchanan &amp; Feigenbaum · 1978" data-w="" data-href="E3.html#buchanan1978"><circle cx="393.9" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="fukushima1980" data-t="Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position" data-m="Fukushima · 1980" data-w="S-세포 층과 C-세포 층이 번갈아 쌓인 다층망 「네오코그니트론」을 제안한다. 교사 없이 자기 조직화로 학습하며, 마지막 층의 반응은 패턴의 위치나 모양·크기의 작은 변화에 영향을 받지 않는다." data-href="E3.html#fukushima1980"><circle cx="466.7" cy="241.5" r="5" fill="var(--s4)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hopfield1982" data-t="Neural networks and physical systems with emergent collective computational abilities" data-m="Hopfield · 1982" data-w="비동기로 갱신되는 뉴런형 단위들의 상호작용 모델을 제시한다. 집단 동역학이 안정 상태로 흘러들어 내용 주소화 기억으로 작동하며, 일반화·친숙성 인식·범주화·오류 정정·시간 순서 보존 같은 집단적 성질을 함께 보인다." data-href="E3.html#hopfield1982"><circle cx="554.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="werbos1982" data-t="Applications of advances in nonlinear sensitivity analysis" data-m="Werbos · 1982" data-w="" data-href="E3.html#werbos1982"><circle cx="565.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kirkpatrick1983" data-t="Optimization by Simulated Annealing" data-m="Kirkpatrick et al. · 1983" data-w="통계역학의 메트로폴리스 알고리즘에 온도를 서서히 낮추는 절차를 더한 「모의 담금질」을 조합 최적화의 일반 방법으로 쓴다. 컴퓨터 설계의 분할·배치·배선 문제와 도시 수천 개의 외판원 문제에 적용한다." data-href="E3.html#kirkpatrick1983"><circle cx="601.4" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="barto1983" data-t="Neuronlike adaptive elements that can solve difficult learning control problems" data-m="Barto et al. · 1983" data-w="연합 탐색 소자와 적응 비평 소자라는 뉴런형 적응 소자 둘로 이루어진 체계가, 실패 신호만을 피드백으로 받으면서 수레 위 막대를 세우는 법을 학습함을 보인다. 비평 소자는 강화 신호만으로는 얻지 못할 더 많은 정보를 담은 평가를 만들어 낸다." data-href="E3.html#barto1983"><circle cx="616.0" cy="101.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="valiant1984" data-t="A theory of the learnable" data-m="Valiant · 1984" data-w="학습을 명시적 프로그래밍 없는 지식 획득으로 정의하고, 학습 프로토콜을 정한 뒤 어떤 개념 부류가 다항식 단계 안에 학습되는지를 연구하는 방법론을 제안한다. 몇몇 자명하지 않은 명제 개념 부류가 이 뜻에서 학습 가능함을 보인다." data-href="E3.html#valiant1984"><circle cx="652.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="geman1984" data-t="Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images" data-m="Geman &amp; Geman · 1984" data-w="영상을 깁스 분포(곧 마르코프 확률장)로 모델링하고 경계를 위한 선 과정을 둔다. 담금질을 결합한 병렬 확률 이완 알고리즘(깁스 표집기)으로 손상된 영상의 MAP 복원을 계산하고 수렴 결과를 준다." data-href="E3.html#geman1984"><circle cx="666.9" cy="381.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="ackley1985" data-t="A learning algorithm for Boltzmann machines" data-m="Ackley et al. · 1985" data-w="통계역학에 기초한 병렬 탐색법을 기술하고, 거기서 「볼츠만 기계」의 연결 강도를 조정하는 학습 규칙을 끌어낸다. 망은 보여 준 예들의 확률 분포와 맞는 예를 내는 내부 생성 모델을 만든다." data-href="E3.html#ackley1985"><circle cx="674.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="rumelhart1986" data-t="Learning representations by back-propagating errors" data-m="Rumelhart et al. · 1986" data-w="실제 출력과 바라는 출력 벡터의 차를 줄이도록 연결 가중치를 거듭 조정하는 역전파를 기술한다. 그 결과 은닉 단위들이 과제 영역의 특징을 표현하게 된다." data-href="E3.html#rumelhart1986"><circle cx="750.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="waibel1989" data-t="Phoneme recognition using time-delay neural networks" data-m="Waibel et al. · 1987" data-w="시간 지연 배열로 시간상 위치와 무관한 음향·음소 특징을 학습하는 시간 지연 신경망(TDNN)을 음소 인식에 제시한다. B·D·G의 화자 종속 인식에서 같은 과제로 훈련한 이산 은닉 마르코프 모델과 비교한다." data-href="E3.html#waibel1989"><circle cx="794.3" cy="171.5" r="5" fill="var(--s3)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hornik1989" data-t="Multilayer feedforward networks are universal approximators" data-m="Hornik et al. · 1988" data-w="" data-href="E3.html#hornik1989"><circle cx="827.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="pearl1988" data-t="Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference" data-m="Pearl · 1988" data-w="" data-href="E3.html#pearl1988"><circle cx="827.1" cy="381.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutton1988" data-t="Learning to predict by the methods of temporal differences" data-m="Sutton · 1988" data-w="시간적으로 잇따르는 예측 사이의 차이로 공로를 배분하는 점진적 예측 학습 절차의 부류로 시간차 방법을 도입하고, 특수한 경우의 수렴과 최적성을 증명한다. 이 방법을 지도학습 절차와 형식적으로 관련짓는다." data-href="E3.html#sutton1988"><circle cx="830.7" cy="101.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="rabiner1989" data-t="A tutorial on hidden Markov models and selected applications in speech recognition" data-m="Rabiner · 1989" data-w="이산 마르코프 연쇄에서 가변 지속·연속 밀도 모델까지 은닉 마르코프 모델의 이론을 검토하고 음성 인식 문제에의 적용을 보인다. HMM 설계를 세 가지 기본 문제로 정리한다." data-href="E3.html#rabiner1989"><circle cx="852.6" cy="171.5" r="5" fill="var(--s3)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="watkins1989" data-t="Learning from Delayed Rewards" data-m="Watkins · 1989" data-w="마르코프 결정 과정을 동물의 행동 선택 모델로 다루고, 환경 모델 없이 행동의 최적 가치를 직접 학습하는 점진적 몬테카를로 방법을 기술한다. 이 학습법이 작동한다는 증명을 주고 계층적 정책도 다룬다." data-href="E3.html#watkins1989"><circle cx="863.5" cy="101.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="cybenko1989" data-t="Approximation by superpositions of a sigmoidal function" data-m="Cybenko · 1989" data-w="고정된 일변수 시그모이드 함수와 아핀 함수의 합성을 유한하게 선형 결합한 것이 단위 초입방체 위의 연속 함수 공간에서 조밀함을 보인다. 은닉층 하나와 연속 시그모이드 비선형성을 가진 망이 그런 함수와 임의의 결정 영역을 근사할 수 있다는 뜻이다." data-href="E3.html#cybenko1989"><circle cx="889.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="lecun1989" data-t="Backpropagation Applied to Handwritten Zip Code Recognition" data-m="LeCun et al. · 1989" data-w="과제 영역의 제약을 역전파 망의 구조에 넣고, 미국 우정청의 손글씨 우편번호 숫자에 적용한다. 정규화된 문자 영상에서 최종 분류까지를 망 하나가 맡는다." data-href="E3.html#lecun1989"><circle cx="889.0" cy="241.5" r="5" fill="var(--s4)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="elman1990" data-t="Finding Structure in Time" data-m="Elman · 1990" data-w="은닉 단위 패턴을 문맥으로 망에 되먹여 동적 기억을 주고, 시간을 처리에 미치는 효과로 암묵적으로 표현한다. 시간적 XOR에서 단어 열까지의 모의실험에서 학습된 내부 표현이 어휘 범주와 유형/사례 구분을 담고 있음을 보인다." data-href="E3.html#elman1990"><circle cx="899.9" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>실선은 인용이 확인된 선(OpenAlex 또는 인용한 논문의 참고문헌 목록), 점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선. 세로 위치는 주제 묶음.</figcaption></figure>
+<h2>논문 목록 (23)</h2><article class="paper" id="minsky1974">
+<h3>A Framework for Representing Knowledge</h3>
+<p class="meta">Marvin Minsky · <b>첫 공개</b> 1974-06 (tech report) · 게재: MIT Artificial Intelligence Laboratory, AI Memo 306 · 쪽 page unknown (HTML version) · 피인용(OpenAlex) 4,535 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1016/b978-1-4832-1446-7.50018-2">DOI</a> · Reprinted in P. Winston (ed.), The Psychology of Computer Vision (McGraw-Hill, 1975); shorter versions in Haugeland (ed.), Mind Design (1981) and Readings in Cognitive Science (1988, pp. 156-189; manifest DOI 10.1016/b978-1-4832-1446-7.50018-2)</p>
+<blockquote>A frame is a data-structure for representing a stereotyped situation, like being in a certain kind of living room, or going to a child&#x27;s birthday party.<cite>page unknown</cite></blockquote><p class="src">프레임은 어떤 종류의 거실에 있는 상황이나 아이의 생일잔치에 가는 상황처럼 정형화된 상황을 표현하는 자료 구조다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 지식을 「프레임」으로 조직할 것을 제안한다. 정형화된 상황을 기억한 자료 구조로, 상위 수준은 고정되고 하위 단말(「슬롯」)에 구체적 사례가 채워지며, 프레임들이 체계로 연결되어 그 변환이 행동이나 관점 변화를 나타낸다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E2.html#minsky1969">Minsky &amp; Papert 1969</a><br>이 목록의 논문 중 이 논문을 인용한 것: 없음</p>
+</article><article class="paper" id="newell1976">
+<h3>Computer science as empirical inquiry: symbols and search</h3>
+<p class="meta">Allen Newell, Herbert A. Simon · <b>첫 공개</b> 1975-10-20 (conference) · 게재: Communications of the ACM 19(3) · 쪽 113–126 · 피인용(OpenAlex) 2,354 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1145/360018.360022">DOI</a> · Communications of the ACM 19(3), March 1976 (published text of the Turing lecture)</p>
+<blockquote>A physical symbol system has the necessary and sufficient means for general intelligent action.<cite>116</cite></blockquote><p class="src">물리적 기호 체계는 일반 지능 행동에 필요하고 충분한 수단을 갖는다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 물리적 기호 체계 가설과 휴리스틱 탐색 가설을 질적 구조의 법칙으로 제시하고, 컴퓨터과학(과 AI)을 기호 체계와 탐색에 관한 경험적 탐구로 자리매김한다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E2.html#mccarthy1960">McCarthy 1960</a><br>이 목록의 논문 중 이 논문을 인용한 것: 없음</p>
+</article><article class="paper" id="dempster1977">
+<h3>Maximum Likelihood from Incomplete Data Via the EM Algorithm</h3>
+<p class="meta">A. P. Dempster, Nan M. Laird, Donald B. Rubin · <b>첫 공개</b> 1976-12-08 (conference) · 게재: Journal of the Royal Statistical Society, Series B (Methodological) 39(1) · 쪽 1–38 (paper 1–22, discussion and reply 22–38) · 피인용(OpenAlex) 50,443 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1111/j.2517-6161.1977.tb01600.x">DOI</a> · JRSS Series B 39(1), 1977 (journal publication with discussion)</p>
+<blockquote>A broadly applicable algorithm for computing maximum likelihood estimates from incomplete data is presented at various levels of generality.<cite>1</cite></blockquote><p class="src">불완전 자료에서 최대가능도 추정값을 계산하는 널리 적용 가능한 알고리즘을 여러 수준의 일반성으로 제시한다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 불완전 자료의 최대가능도 추정을 위한 일반 반복법을 제시한다. 각 반복은 기대 단계와 최대화 단계로 이루어지며(EM 알고리즘), 가능도의 단조 증가와 수렴에 관한 이론을 결측·혼합·분산성분·요인분석 문제의 예와 함께 다룬다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#brown1990">Brown et al. 1990</a>, <a href="E3.html#rabiner1989">Rabiner 1989</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="schank1977">
+<h3>Scripts, Plans, Goals and Understanding</h3>
+<p class="meta">Roger C. Schank, Robert P. Abelson · <b>첫 공개</b> 1977 (book) · 게재: Lawrence Erlbaum Associates, Hillsdale, NJ (book, Schank &amp; Abelson) · 피인용(OpenAlex) 4,536 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1016/b978-1-4832-1446-7.50019-4">DOI</a> · Excerpt reprinted in Readings in Cognitive Science (1988), pp. 190-223 (manifest DOI 10.1016/b978-1-4832-1446-7.50019-4); related earlier paper Schank &amp; Abelson, &#x27;Scripts, Plans and Knowledge&#x27;, IJCAI 1975</p>
+
+<p class="wc"><b>무엇을 바꿨나.</b> </p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: 없음</p>
+</article><article class="paper" id="buchanan1978">
+<h3>Dendral and Meta-Dendral: Their applications dimension</h3>
+<p class="meta">Bruce G. Buchanan, Edward A. Feigenbaum · <b>첫 공개</b> 1978-08 (journal issue) · 게재: Artificial Intelligence 11(1-2) · 쪽 5–24 · 피인용(OpenAlex) 471 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1016/0004-3702(78)90010-3">DOI</a> · Stanford Heuristic Programming Project memo HPP-78-1 / Stanford CS report STAN-CS-78-649 (1978, month unverified); reprinted in Webber &amp; Nilsson (eds.), Readings in Artificial Intelligence (1981), pp. 313-322</p>
+
+<p class="wc"><b>무엇을 바꿨나.</b> </p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: 없음</p>
+</article><article class="paper" id="fukushima1980">
+<h3>Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position</h3>
+<p class="meta">Kunihiko Fukushima · <b>첫 공개</b> 1980-04 (journal issue) · 게재: Biological Cybernetics 36(4) · 쪽 193–202 · 피인용(OpenAlex) 5,723 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1007/BF00344251">DOI</a> · Earlier version: Fukushima, &#x27;Self-organization of a neural network which gives position-invariant response&#x27;, Proc. 6th IJCAI, Tokyo, Aug 20-23 1979, pp. 291-293, and IECE Japan technical papers 1979 (cited in the paper&#x27;s reference list)</p>
+<blockquote>A neural network model for a mechanism of visual pattern recognition is proposed in this paper.<cite>193</cite></blockquote><p class="src">이 논문에서는 시각 패턴 인식 기제의 신경망 모델을 제안한다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> S-세포 층과 C-세포 층이 번갈아 쌓인 다층망 「네오코그니트론」을 제안한다. 교사 없이 자기 조직화로 학습하며, 마지막 층의 반응은 패턴의 위치나 모양·크기의 작은 변화에 영향을 받지 않는다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E5.html#ciresan2012">Ciresan et al. 2012</a>, <a href="E5.html#girshick2014">Girshick et al. 2013</a>, <a href="E3.html#lecun1989">LeCun et al. 1989</a>, <a href="E5.html#mnih2015">Mnih et al. 2015</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E5.html#silver2017">Silver et al. 2017</a></p>
+</article><article class="paper" id="hopfield1982">
+<h3>Neural networks and physical systems with emergent collective computational abilities</h3>
+<p class="meta">J. J. Hopfield · <b>첫 공개</b> 1982-04 (journal issue) · 게재: Proceedings of the National Academy of Sciences USA 79(8) · 쪽 2554–2558 · 피인용(OpenAlex) 19,264 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1073/pnas.79.8.2554">DOI</a> · CaltechAUTHORS record gives publication date April 15, 1982</p>
+<blockquote>The collective properties of this model produce a content-addressable memory which correctly yields an entire memory from any subpart of sufficient size.<cite>2554</cite></blockquote><p class="src">이 모델의 집단적 성질은 충분한 크기의 어떤 부분으로부터도 기억 전체를 올바르게 끌어내는 내용 주소화 기억을 만든다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 비동기로 갱신되는 뉴런형 단위들의 상호작용 모델을 제시한다. 집단 동역학이 안정 상태로 흘러들어 내용 주소화 기억으로 작동하며, 일반화·친숙성 인식·범주화·오류 정정·시간 순서 보존 같은 집단적 성질을 함께 보인다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E1.html#hebb1949">Hebb 1949</a>, <a href="E1.html#mcculloch1943">McCulloch &amp; Pitts 1943</a>, <a href="E2.html#minsky1969">Minsky &amp; Papert 1969</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#ackley1985">Ackley et al. 1985</a>, <a href="E5.html#graves2014">Graves et al. 2014</a>, <a href="E4.html#hinton2006b">Hinton &amp; Salakhutdinov 2006</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="werbos1982">
+<h3>Applications of advances in nonlinear sensitivity analysis</h3>
+<p class="meta">Paul J. Werbos · <b>첫 공개</b> 1982 (book) · 게재: R. F. Drenick &amp; F. Kozin (eds.), System Modeling and Optimization, Lecture Notes in Control and Information Sciences 38, Springer · 쪽 762–770 · 피인용(OpenAlex) 259 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1007/bfb0006203">DOI</a> · Presented at the 10th IFIP Conference on System Modeling and Optimization, New York, 1981 (from later citations; not verified from the volume)</p>
+
+<p class="wc"><b>무엇을 바꿨나.</b> </p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a></p>
+</article><article class="paper" id="kirkpatrick1983">
+<h3>Optimization by Simulated Annealing</h3>
+<p class="meta">Scott Kirkpatrick, C. D. Gelatt, Mario P. Vecchi · <b>첫 공개</b> 1983-05-13 (journal issue) · 게재: Science 220(4598) · 쪽 671–680 · 피인용(OpenAlex) 45,141 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1126/science.220.4598.671">DOI</a> · IBM Thomas J. Watson Research Center report of the same title, 1982 (as cited in Geman &amp; Geman 1984, ref. [40]; not seen directly)</p>
+<blockquote>A detailed analogy with annealing in solids provides a framework for optimization of the properties of very large and complex systems.<cite>671</cite></blockquote><p class="src">고체의 담금질과의 상세한 유비가 매우 크고 복잡한 체계의 성질을 최적화하는 틀을 준다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 통계역학의 메트로폴리스 알고리즘에 온도를 서서히 낮추는 절차를 더한 「모의 담금질」을 조합 최적화의 일반 방법으로 쓴다. 컴퓨터 설계의 분할·배치·배선 문제와 도시 수천 개의 외판원 문제에 적용한다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#ackley1985">Ackley et al. 1985</a>, <a href="E4.html#bengio1994">Bengio et al. 1994</a>, <a href="E3.html#geman1984">Geman &amp; Geman 1984</a>, <a href="E3.html#pearl1988">Pearl 1988</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a></p>
+</article><article class="paper" id="barto1983">
+<h3>Neuronlike adaptive elements that can solve difficult learning control problems</h3>
+<p class="meta">Andrew G. Barto, Richard S. Sutton, Charles W. Anderson · <b>첫 공개</b> 1983-09 (journal issue) · 게재: IEEE Transactions on Systems, Man, and Cybernetics SMC-13(5) · 쪽 834–846 · 피인용(OpenAlex) 3,237 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1109/TSMC.1983.6313077">DOI</a></p>
+<blockquote>The learning system consists of a single associative search element (ASE) and a single adaptive critic element (ACE).<cite>834</cite></blockquote><p class="src">학습 체계는 하나의 연합 탐색 소자(ASE)와 하나의 적응 비평 소자(ACE)로 이루어진다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 연합 탐색 소자와 적응 비평 소자라는 뉴런형 적응 소자 둘로 이루어진 체계가, 실패 신호만을 피드백으로 받으면서 수레 위 막대를 세우는 법을 학습함을 보인다. 비평 소자는 강화 신호만으로는 얻지 못할 더 많은 정보를 담은 평가를 만들어 낸다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E1.html#hebb1949">Hebb 1949</a>, <a href="E1.html#mcculloch1943">McCulloch &amp; Pitts 1943</a>, <a href="E2.html#minsky1961">Minsky 1961</a>, <a href="E2.html#samuel1959">Samuel 1959</a>, <a href="E2.html#widrow1960">Widrow &amp; Hoff 1960</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#hochreiter1991">Hochreiter 1991</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E5.html#schulman2015">Schulman et al. 2015</a>, <a href="E3.html#sutton1988">Sutton 1988</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a>, <a href="E4.html#sutton1999">Sutton et al. 1999</a>, <a href="E3.html#watkins1989">Watkins 1989</a>, <a href="E4.html#williams1992">Williams 1992</a></p>
+</article><article class="paper" id="valiant1984">
+<h3>A theory of the learnable</h3>
+<p class="meta">Leslie Gabriel Valiant · <b>첫 공개</b> 1984 (conference) · 게재: Communications of the ACM 27(11) · 쪽 1134–1142 · 피인용(OpenAlex) 3,279 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1145/1968.1972">DOI</a> · STOC 1984 preliminary version (pp. 436-445; month not checked); Communications of the ACM issue Nov 1984; Received 1/84, revised 6/84, accepted 7/84</p>
+<blockquote>We give a precise methodology for studying this phenomenon from a computational viewpoint.<cite>1134</cite></blockquote><p class="src">이 현상을 계산의 관점에서 연구하는 정밀한 방법론을 제시한다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 학습을 명시적 프로그래밍 없는 지식 획득으로 정의하고, 학습 프로토콜을 정한 뒤 어떤 개념 부류가 다항식 단계 안에 학습되는지를 연구하는 방법론을 제안한다. 몇몇 자명하지 않은 명제 개념 부류가 이 뜻에서 학습 가능함을 보인다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: 없음<br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#cybenko1989">Cybenko 1989</a></p>
+</article><article class="paper" id="geman1984">
+<h3>Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images</h3>
+<p class="meta">Stuart Geman, Donald Geman · <b>첫 공개</b> 1984-11 (journal issue) · 게재: IEEE Transactions on Pattern Analysis and Machine Intelligence PAMI-6(6) · 쪽 721–741 · 피인용(OpenAlex) 17,943 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1109/TPAMI.1984.4767596">DOI</a></p>
+<blockquote>We establish convergence properties of the algorithm and we experiment with some simple pictures, for which good restorations are obtained at low signal-to-noise ratios.<cite>721</cite></blockquote><p class="src">우리는 이 알고리즘의 수렴 성질을 확립하고, 낮은 신호 대 잡음비에서도 좋은 복원을 얻는 간단한 그림들로 실험한다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 영상을 깁스 분포(곧 마르코프 확률장)로 모델링하고 경계를 위한 선 과정을 둔다. 담금질을 결합한 병렬 확률 이완 알고리즘(깁스 표집기)으로 손상된 영상의 MAP 복원을 계산하고 수렴 결과를 준다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#kirkpatrick1983">Kirkpatrick et al. 1983</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#ackley1985">Ackley et al. 1985</a>, <a href="E4.html#hinton2002">Hinton 2000</a>, <a href="E3.html#pearl1988">Pearl 1988</a></p>
+</article><article class="paper" id="ackley1985">
+<h3>A learning algorithm for Boltzmann machines</h3>
+<p class="meta">David H. Ackley, Geoffrey E. Hinton, Terrence J. Sejnowski A B · <b>첫 공개</b> 1985-01 (journal issue) · 게재: Cognitive Science 9(1) · 쪽 147–169 · 피인용(OpenAlex) 3,402 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1207/s15516709cog0901_7">DOI</a> · Related earlier tech report cited in the paper: Hinton, Sejnowski &amp; Ackley (1984, May) &#x27;Boltzmann Machines: Constraint satisfaction networks that learn&#x27;, CMU-CS-84-119; Wiley online 2010-02-11</p>
+<blockquote>This paper presents a type of parallel constraint satisfaction network which we call a “Boltzmann Machine” that is capable of learning the underlying constraints that characterize a domain simply by being shown examples from the domain.<cite>148</cite></blockquote><p class="src">이 논문은 「볼츠만 기계」라 부르는 병렬 제약 충족 망을 제시한다. 이 망은 어떤 영역의 예들을 보는 것만으로 그 영역을 특징짓는 바탕 제약을 학습할 수 있다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 통계역학에 기초한 병렬 탐색법을 기술하고, 거기서 「볼츠만 기계」의 연결 강도를 조정하는 학습 규칙을 끌어낸다. 망은 보여 준 예들의 확률 분포와 맞는 예를 내는 내부 생성 모델을 만든다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#geman1984">Geman &amp; Geman 1984</a>, <a href="E3.html#hopfield1982">Hopfield 1982</a>, <a href="E3.html#kirkpatrick1983">Kirkpatrick et al. 1983</a>, <a href="E2.html#minsky1969">Minsky &amp; Papert 1969</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#lecun1998">LeCun et al. 1998</a>, <a href="E3.html#sutton1988">Sutton 1988</a>, <a href="E6.html#wang2022">Wang et al. 2022</a></p>
+</article><article class="paper" id="rumelhart1986">
+<h3>Learning representations by back-propagating errors</h3>
+<p class="meta">David E. Rumelhart, Geoffrey E. Hinton, Ronald J. Williams · <b>첫 공개</b> 1986-10-09 (journal issue) · 게재: Nature 323(6088) · 쪽 533–536 · 피인용(OpenAlex) 31,903 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1038/323533a0">DOI</a> · Received 1 May 1986; accepted 31 July 1986</p>
+<blockquote>We describe a new learning procedure, back-propagation, for networks of neurone-like units.<cite>533</cite></blockquote><p class="src">우리는 뉴런형 단위들의 망을 위한 새 학습 절차인 역전파를 기술한다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 실제 출력과 바라는 출력 벡터의 차를 줄이도록 연결 가중치를 거듭 조정하는 역전파를 기술한다. 그 결과 은닉 단위들이 과제 영역의 특징을 표현하게 된다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E2.html#minsky1969">Minsky &amp; Papert 1969</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#cortes1995">Cortes &amp; Vapnik 1995</a>, <a href="E4.html#glorot2010">Glorot &amp; Bengio 2010</a>, <a href="E5.html#hinton2012">Hinton et al. 2012</a>, <a href="E5.html#lecun2015">LeCun et al. 2015</a>, <a href="E5.html#mikolov2013">Mikolov et al. 2013</a>, <a href="E5.html#mikolov2013b">Mikolov et al. 2013</a>, <a href="E5.html#sutskever2014">Sutskever et al. 2014</a>, <a href="E3.html#waibel1989">Waibel et al. 1987</a></p>
+</article><article class="paper" id="waibel1989">
+<h3>Phoneme recognition using time-delay neural networks</h3>
+<p class="meta">Alexander H. Waibel, Toshiyuki Hanazawa, Geoffrey E. Hinton, Kiyohiro Shikano, K.J. Lang · <b>첫 공개</b> 1987-10 (tech report) · 게재: IEEE Transactions on Acoustics, Speech, and Signal Processing 37(3) · 쪽 328–339 · 피인용(OpenAlex) 2,642 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1109/29.21701">DOI</a> · ATR Technical Report TR-I-0006 (Oct 1987); IEEE TASSP March 1989; manuscript received November 3, 1987; revised January 3, 1988</p>
+<blockquote>Performance evaluation over 1946 testing tokens from three speakers showed that the TDNN achieves a recognition rate of 98.5 percent correct while the rate obtained by the best of our HMM&#x27;s was only 93.7 percent.<cite>328</cite></blockquote><p class="src">세 화자의 시험 토큰 1946개로 성능을 평가한 결과 TDNN은 98.5%의 정확한 인식률을 얻은 반면, 우리의 최선의 HMM이 얻은 비율은 93.7%에 그쳤다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 시간 지연 배열로 시간상 위치와 무관한 음향·음소 특징을 학습하는 시간 지연 신경망(TDNN)을 음소 인식에 제시한다. B·D·G의 화자 종속 인식에서 같은 과제로 훈련한 이산 은닉 마르코프 모델과 비교한다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#rumelhart1986">Rumelhart et al. 1986</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#collobert2011">Collobert et al. 2011</a>, <a href="E3.html#elman1990">Elman 1990</a>, <a href="E4.html#lecun1998">LeCun et al. 1998</a>, <a href="E5.html#lecun2015">LeCun et al. 2015</a>, <a href="E4.html#schuster1997">Schuster &amp; Paliwal 1997</a></p>
+</article><article class="paper" id="hornik1989">
+<h3>Multilayer feedforward networks are universal approximators</h3>
+<p class="meta">Kurt Hornik, Maxwell B. Stinchcombe, Halbert White · <b>첫 공개</b> 1988 (tech report) · 게재: Neural Networks, 2(5) · 쪽 359–366 · 피인용(OpenAlex) 21,724 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1016/0893-6080(89)90020-8">DOI</a> · Neural Networks 2(5), 1989 (journal; Crossref published-print 1989-01, probably year-only); received 16 Sep 1988, revised and accepted 9 Mar 1989 (not public dates)</p>
+<blockquote>We show that multilayer feedforward networks with as few as one hidden layer are indeed capable of universal approximation in a very precise and satisfactory sense.<cite>p. 359</cite></blockquote>
+<p class="wc"><b>무엇을 바꿨나.</b> </p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#cybenko1989">Cybenko 1989</a>, <a href="E2.html#minsky1969">Minsky &amp; Papert 1969</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#cybenko1989">Cybenko 1989</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E4.html#tesauro1995">Tesauro 1995</a></p>
+</article><article class="paper" id="pearl1988">
+<h3>Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference</h3>
+<p class="meta">Judea Pearl · <b>첫 공개</b> 1988 (book) · 게재: Morgan Kaufmann (Morgan Kaufmann Series in Representation and Reasoning) · 피인용(OpenAlex) 16,575 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://archive.org/details/probabilisticrea00pear">URL</a> · Elsevier shop listing gives &#x27;1st Edition - September 1, 1988&#x27; (shop metadata, not verified against the book); ScienceDirect DOI 10.1016/C2009-0-27609-4</p>
+
+<p class="wc"><b>무엇을 바꿨나.</b> </p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#geman1984">Geman &amp; Geman 1984</a>, <a href="E3.html#kirkpatrick1983">Kirkpatrick et al. 1983</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#collobert2011">Collobert et al. 2011</a>, <a href="E4.html#hinton2006">Hinton et al. 2006</a>, <a href="E5.html#hinton2012">Hinton et al. 2012</a></p>
+</article><article class="paper" id="sutton1988">
+<h3>Learning to predict by the methods of temporal differences</h3>
+<p class="meta">Richard S. Sutton · <b>첫 공개</b> 1988-08 (journal issue) · 게재: Machine Learning 3(1) · 쪽 9–44 · 피인용(OpenAlex) 5,131 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1007/BF00115009">DOI</a> · Received April 22, 1987; revised February 4, 1988</p>
+<blockquote>Here we prove their convergence and optimality for special cases and relate them to supervised-learning methods.<cite>9</cite></blockquote><p class="src">여기서 우리는 특수한 경우에 대한 그 수렴과 최적성을 증명하고, 그것을 지도학습 방법과 관련짓는다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 시간적으로 잇따르는 예측 사이의 차이로 공로를 배분하는 점진적 예측 학습 절차의 부류로 시간차 방법을 도입하고, 특수한 경우의 수렴과 최적성을 증명한다. 이 방법을 지도학습 절차와 형식적으로 관련짓는다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#ackley1985">Ackley et al. 1985</a>, <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E2.html#bellman1957">Bellman 1957</a>, <a href="E2.html#samuel1959">Samuel 1959</a>, <a href="E2.html#widrow1960">Widrow &amp; Hoff 1960</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#coulom2006">Coulom 2006</a>, <a href="E5.html#silver2016">Silver et al. 2016</a>, <a href="E5.html#silver2017">Silver et al. 2017</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a>, <a href="E4.html#tesauro1995">Tesauro 1995</a>, <a href="E3.html#watkins1989">Watkins 1989</a>, <a href="E4.html#watkins1992">Watkins &amp; Dayan 1992</a>, <a href="E4.html#williams1992">Williams 1992</a></p>
+</article><article class="paper" id="rabiner1989">
+<h3>A tutorial on hidden Markov models and selected applications in speech recognition</h3>
+<p class="meta">L. R. Rabiner · <b>첫 공개</b> 1989-02 (journal issue) · 게재: Proceedings of the IEEE 77(2) · 쪽 257–286 · 피인용(OpenAlex) 22,745 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1109/5.18626">DOI</a> · Manuscript received January 15, 1988; revised October 4, 1988</p>
+<blockquote>In this paper we attempt to carefully and methodically review the theoretical aspects of this type of statistical modeling and show how they have been applied to selected problems in machine recognition of speech.<cite>257</cite></blockquote><p class="src">이 논문에서 우리는 이런 종류의 통계 모델링의 이론적 측면을 신중하고 체계적으로 검토하고, 그것이 기계의 음성 인식에서 선택된 문제들에 어떻게 적용되어 왔는지를 보이려 한다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 이산 마르코프 연쇄에서 가변 지속·연속 밀도 모델까지 은닉 마르코프 모델의 이론을 검토하고 음성 인식 문제에의 적용을 보인다. HMM 설계를 세 가지 기본 문제로 정리한다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#dempster1977">Dempster et al. 1976</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#collobert2011">Collobert et al. 2011</a>, <a href="E4.html#kaelbling1998">Kaelbling et al. 1998</a>, <a href="E4.html#lecun1998">LeCun et al. 1998</a></p>
+</article><article class="paper" id="watkins1989">
+<h3>Learning from Delayed Rewards</h3>
+<p class="meta">Chris Watkins · <b>첫 공개</b> 1989-05 (thesis) · 게재: PhD thesis, King&#x27;s College, University of Cambridge · 쪽 234 numbered pp. (241 PDF pages) · 피인용(OpenAlex) 5,624 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.17863/cam.132164">DOI</a> · Apollo repository deposit/issue 2026-07-10; Watkins &amp; Dayan, Q-learning, Machine Learning 1992 (separate paper)</p>
+<blockquote>In particular, there is an incremental Monte-Carlo method that enables the optimal values ( or &#x27;canonical costs&#x27;) of actions to be learned directly, without any requirement for the animal to model its environment, or to remember situations and actions for more than a short period of time.<cite>page unknown (unnumbered Summary page; PDF p. 4)</cite></blockquote><p class="src">특히 동물이 환경을 모델링하거나 상황과 행동을 짧은 기간 이상 기억할 필요 없이, 행동의 최적 가치(또는 「정준 비용」)를 직접 학습하게 하는 점진적 몬테카를로 방법이 있다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 마르코프 결정 과정을 동물의 행동 선택 모델로 다루고, 환경 모델 없이 행동의 최적 가치를 직접 학습하는 점진적 몬테카를로 방법을 기술한다. 이 학습법이 작동한다는 증명을 주고 계층적 정책도 다룬다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E2.html#samuel1959">Samuel 1959</a>, <a href="E3.html#sutton1988">Sutton 1988</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a>, <a href="E4.html#watkins1992">Watkins &amp; Dayan 1992</a>, <a href="E4.html#williams1992">Williams 1992</a></p>
+</article><article class="paper" id="cybenko1989">
+<h3>Approximation by superpositions of a sigmoidal function</h3>
+<p class="meta">George V. Cybenko · <b>첫 공개</b> 1989-12 (journal issue) · 게재: Mathematics of Control, Signals, and Systems 2(4) · 쪽 303–314 · 피인용(OpenAlex) 13,875 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1007/BF02551274">DOI</a> · Date received October 21, 1988; date revised February 17, 1989</p>
+<blockquote>In particular, we show that arbitrary decision regions can be arbitrarily well approximated by continuous feedforward neural networks with only a single internal, hidden layer and any continuous sigmoidal nonlinearity.<cite>303</cite></blockquote><p class="src">특히 우리는 임의의 결정 영역이, 내부 은닉층 하나와 임의의 연속 시그모이드 비선형성만을 갖는 연속 전방향 신경망으로 임의로 잘 근사될 수 있음을 보인다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 고정된 일변수 시그모이드 함수와 아핀 함수의 합성을 유한하게 선형 결합한 것이 단위 초입방체 위의 연속 함수 공간에서 조밀함을 보인다. 은닉층 하나와 연속 시그모이드 비선형성을 가진 망이 그런 함수와 임의의 결정 영역을 근사할 수 있다는 뜻이다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#hornik1989">Hornik et al. 1988</a>, <a href="E2.html#minsky1969">Minsky &amp; Papert 1969</a>, <a href="E3.html#valiant1984">Valiant 1984</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E3.html#hornik1989">Hornik et al. 1988</a>, <a href="E4.html#lecun1998">LeCun et al. 1998</a></p>
+</article><article class="paper" id="lecun1989">
+<h3>Backpropagation Applied to Handwritten Zip Code Recognition</h3>
+<p class="meta">Yann LeCun, Bernhard E. Boser, John S. Denker, D. Henderson, Richard E. Howard, W. Hubbard et al. · <b>첫 공개</b> 1989-12 (journal issue) · 게재: Neural Computation 1(4) · 쪽 541–551 · 피인용(OpenAlex) 11,882 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1162/neco.1989.1.4.541">DOI</a> · Received 7 July 1989; accepted 12 September 1989</p>
+<blockquote>This paper demonstrates how such constraints can be integrated into a backpropagation network through the architecture of the network.<cite>541</cite></blockquote><p class="src">이 논문은 그런 제약을 망의 구조를 통해 역전파 망에 통합하는 방법을 보여 준다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 과제 영역의 제약을 역전파 망의 구조에 넣고, 미국 우정청의 손글씨 우편번호 숫자에 적용한다. 정규화된 문자 영상에서 최종 분류까지를 망 하나가 맡는다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#fukushima1980">Fukushima 1980</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E5.html#girshick2014">Girshick et al. 2013</a>, <a href="E5.html#he2015">He et al. 2015</a>, <a href="E4.html#lecun1998">LeCun et al. 1998</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E5.html#simonyan2014">Simonyan &amp; Zisserman 2014</a>, <a href="E5.html#srivastava2014">Srivastava et al. 2014</a>, <a href="E5.html#szegedy2014">Szegedy et al. 2014</a></p>
+</article><article class="paper" id="elman1990">
+<h3>Finding Structure in Time</h3>
+<p class="meta">Jeffrey L. Elman · <b>첫 공개</b> 1990-03 (journal issue) · 게재: Cognitive Science 14(2) · 쪽 179–211 (journal); copy has 28 pp. with its own pagination · 피인용(OpenAlex) 11,132 (조회 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1207/s15516709cog1402_1">DOI</a> · Wiley online 2010-02-11; earlier related report cited in the paper: Elman (1989) CRL Technical Report 8901 (different title)</p>
+<blockquote>The current report develops a proposal along these lines first described by Jordan (1986) which involves the use of recurrent links in order to provide networks with a dynamic memory.<cite>p. 1 of the retyped copy (journal p. 179 assumed for the abstract, not seen)</cite></blockquote><p class="src">이 보고는 Jordan(1986)이 처음 기술한 노선의 제안을 발전시킨 것으로, 망에 동적 기억을 주기 위해 순환 연결을 쓴다.</p>
+<p class="wc"><b>무엇을 바꿨나.</b> 은닉 단위 패턴을 문맥으로 망에 되먹여 동적 기억을 주고, 시간을 처리에 미치는 효과로 암묵적으로 표현한다. 시간적 XOR에서 단어 열까지의 모의실험에서 학습된 내부 표현이 어휘 범주와 유형/사례 구분을 담고 있음을 보인다.</p>
+<p class="rel">이 목록의 논문 중 인용한 것: <a href="E3.html#waibel1989">Waibel et al. 1987</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#bengio2003">Bengio et al. 2003</a>, <a href="E4.html#hochreiter1997">Hochreiter &amp; Schmidhuber 1997</a>, <a href="E4.html#mikolov2010">Mikolov et al. 2010</a>, <a href="E5.html#mikolov2013">Mikolov et al. 2013</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E6.html#touvron2023">Touvron et al. 2023</a></p>
+</article></main>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.0 · 생성일 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

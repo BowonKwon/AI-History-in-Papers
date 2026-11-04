@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>확률·통계·기원 — 논문으로 읽는 인공지능의 역사</title><meta name="description" content="1943년부터 지금까지, 원 논문으로 따라가는 인공지능 연구의 역사">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html">시대</a><a href="../../ko/lineage/index.html" class="on">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
+<main><h1>확률·통계·기원</h1><p class="lead">사이버네틱스·정보 이론·PAC 학습·SVM·앙상블·베이지안 망.</p>
+<figure><svg viewBox="0 0 1000 116" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">확률·통계·기원</text>
+<line class="ax" x1="182.8" x2="182.8" y1="16" y2="86"/><text x="182.8" y="108" text-anchor="middle">1950</text>
+<line class="ax" x1="292.0" x2="292.0" y1="16" y2="86"/><text x="292.0" y="108" text-anchor="middle">1960</text>
+<line class="ax" x1="401.2" x2="401.2" y1="16" y2="86"/><text x="401.2" y="108" text-anchor="middle">1970</text>
+<line class="ax" x1="510.4" x2="510.4" y1="16" y2="86"/><text x="510.4" y="108" text-anchor="middle">1980</text>
+<line class="ax" x1="619.6" x2="619.6" y1="16" y2="86"/><text x="619.6" y="108" text-anchor="middle">1990</text>
+<line class="ax" x1="728.8" x2="728.8" y1="16" y2="86"/><text x="728.8" y="108" text-anchor="middle">2000</text>
+<line class="ax" x1="838.0" x2="838.0" y1="16" y2="86"/><text x="838.0" y="108" text-anchor="middle">2010</text>
+<line class="ax" x1="947.2" x2="947.2" y1="16" y2="86"/><text x="947.2" y="108" text-anchor="middle">2020</text>
+<path class="edge" data-s="pearl1988" data-d="geman1984" d="M563.2,31.5 C583.2,31.5 583.2,31.5 603.2,31.5"/>
+<path class="edge" data-s="cortes1995" data-d="boser1992" d="M646.9,31.5 C664.2,31.5 664.2,44.5 681.5,44.5"/>
+<path class="edge" data-s="schmidhuber2015" data-d="minsky1961" d="M302.9,31.5 C593.7,31.5 593.7,31.5 884.4,31.5"/>
+<path class="edge" data-s="schmidhuber2015" data-d="shannon1948" d="M166.4,31.5 C525.4,31.5 525.4,31.5 884.4,31.5"/>
+<path class="edge" data-s="schmidhuber2015" data-d="dempster1977" d="M476.7,31.5 C680.6,31.5 680.6,31.5 884.4,31.5"/>
+<path class="edge" data-s="bommasani2021" data-d="shannon1948" d="M166.4,31.5 C565.5,31.5 565.5,44.5 964.5,44.5"/>
+<path class="edge" data-s="bommasani2021" data-d="lecun2015" d="M896.3,31.5 C930.4,31.5 930.4,44.5 964.5,44.5"/>
+<path class="edge" data-s="schmidhuber2015" data-d="russell1995" d="M679.7,31.5 C782.1,31.5 782.1,31.5 884.4,31.5"/>
+<path class="edge" data-s="bommasani2021" data-d="russell1995" d="M679.7,31.5 C822.1,31.5 822.1,44.5 964.5,44.5"/>
+<g class="dot" data-k="shannon1948" data-t="A Mathematical Theory of Communication" data-m="Shannon · 1948" data-w="나이퀴스트와 하틀리의 통신 이론을 채널 잡음과 메시지의 통계적 구조까지 확장한다. 정보를 로그 척도로 재고, 밑이 2인 단위를 비트라 부른다." data-href="../chapters/E1.html#shannon1948"><circle cx="166.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="minsky1961" data-t="Steps toward Artificial Intelligence" data-m="Minsky · 1961" data-w="" data-href="../chapters/E2.html#minsky1961"><circle cx="302.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="newell1976" data-t="Computer science as empirical inquiry: symbols and search" data-m="Newell &amp; Simon · 1975" data-w="물리적 기호 체계 가설과 휴리스틱 탐색 가설을 질적 구조의 법칙으로 제시하고, 컴퓨터과학(과 AI)을 기호 체계와 탐색에 관한 경험적 탐구로 자리매김한다." data-href="../chapters/E3.html#newell1976"><circle cx="464.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="dempster1977" data-t="Maximum Likelihood from Incomplete Data Via the EM Algorithm" data-m="Dempster et al. · 1976" data-w="불완전 자료의 최대가능도 추정을 위한 일반 반복법을 제시한다. 각 반복은 기대 단계와 최대화 단계로 이루어지며(EM 알고리즘), 가능도의 단조 증가와 수렴에 관한 이론을 결측·혼합·분산성분·요인분석 문제의 예와 함께 다룬다." data-href="../chapters/E3.html#dempster1977"><circle cx="476.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="geman1984" data-t="Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images" data-m="Geman &amp; Geman · 1984" data-w="영상을 깁스 분포(곧 마르코프 확률장)로 모델링하고 경계를 위한 선 과정을 둔다. 담금질을 결합한 병렬 확률 이완 알고리즘(깁스 표집기)으로 손상된 영상의 MAP 복원을 계산하고 수렴 결과를 준다." data-href="../chapters/E3.html#geman1984"><circle cx="563.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="pearl1988" data-t="Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference" data-m="Pearl · 1988" data-w="" data-href="../chapters/E3.html#pearl1988"><circle cx="603.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="boser1992" data-t="A training algorithm for optimal margin classifiers" data-m="Boser et al. · 1992" data-w="" data-href="../chapters/E4.html#boser1992"><circle cx="646.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="russell1995" data-t="Artificial Intelligence: A Modern Approach" data-m="Russell &amp; Norvig · 1995" data-w="환경에서 지각을 받아 행동하는 지능 에이전트라는 발상을 중심으로 AI를 조직하고, 에이전트 함수를 표현하는 여러 방식을 다루는 교과서다(인용문은 1995년판이 아니라 4판 서문에서 가져왔다)." data-href="../chapters/E4.html#russell1995"><circle cx="679.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="cortes1995" data-t="Support-vector networks" data-m="Cortes &amp; Vapnik · 1995" data-w="입력 벡터를 매우 높은 차원의 특징 공간으로 비선형 사상하고 거기서 선형 결정면을 만드는 서포트 벡터 망을 기술하고, 분리 가능한 훈련 자료에 쓰이던 방법을 분리 불가능한 자료로 확장한다. 다항식 입력 변환 결과와 OCR 벤치마크에서의 고전 알고리즘과의 비교를 보고한다." data-href="../chapters/E4.html#cortes1995"><circle cx="681.5" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="tibshirani1996" data-t="Regression Shrinkage and Selection Via the Lasso" data-m="Tibshirani · 1996" data-w="계수 절댓값의 합이 상수 이하라는 제약 아래 잔차 제곱합을 최소화해 일부 계수가 정확히 0이 되게 하는 라소를 제안하고, 부분집합 선택·능형 회귀와 비교한 모의실험을 보고한다." data-href="../chapters/E4.html#tibshirani1996"><circle cx="690.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="breiman2001" data-t="Random Forests" data-m="Breiman · 2001" data-w="독립 동일 분포의 확률 벡터로 키운 나무들이 가장 많은 표를 받은 부류를 고르는 앙상블로 랜덤 포레스트를 정의한다. 나무를 더할수록 일반화 오류가 수렴함을 보이고, 그것을 나무의 강도와 상관에 관련짓고, 아웃오브백 추정과 변수 중요도를 도입한다. 회귀도 다룬다." data-href="../chapters/E4.html#breiman2001"><circle cx="747.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="blei2003" data-t="Latent Dirichlet Allocation" data-m="Blei et al. · 2003" data-w="각 문서를 주제들의 혼합으로 보는 3수준 계층 베이즈 모델인 잠재 디리클레 할당을 도입한다. 변분 추론과 매개변수 추정을 위한 EM 절차를 주고, 문서 모델링·텍스트 분류·협업 필터링 결과를 보고한다." data-href="../chapters/E4.html#blei2003"><circle cx="761.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schmidhuber2015" data-t="Deep learning in neural networks: An overview" data-m="Schmidhuber · 2014" data-w="지도학습(역전파의 역사 포함), 비지도학습, 강화학습, 진화 계산, 망을 부호화하는 프로그램의 간접 탐색까지 신경망 딥러닝의 역사를 개관한다. 얕은 학습기와 깊은 학습기를 공로 배분 경로의 깊이로 구별한다." data-href="../chapters/E5.html#schmidhuber2015"><circle cx="884.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="lecun2015" data-t="Deep learning" data-m="LeCun et al. · 2015" data-w="딥러닝을 역전파로 훈련하는 다수준 표현 학습으로 기술하는 리뷰다. 영상·비디오·음성·오디오를 위한 합성곱망과 텍스트·음성 같은 순서 자료를 위한 순환망을 다룬다." data-href="../chapters/E5.html#lecun2015"><circle cx="896.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="jumper2021" data-t="Highly accurate protein structure prediction with AlphaFold" data-m="Jumper et al. · 2021" data-w="단백질 구조와 다중 서열 정렬에 관한 물리·생물학적 지식을 딥러닝 설계에 넣어 완전히 다시 설계한 AlphaFold 신경망을 기술한다. CASP14에서 다수의 경우 실험 구조에 견줄 정확도로 구조를 예측했다." data-href="../chapters/E6.html#jumper2021"><circle cx="963.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="bommasani2021" data-t="On the Opportunities and Risks of Foundation Models" data-m="Bommasani et al. · 2021" data-w="" data-href="../chapters/E6.html#bommasani2021"><circle cx="964.5" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>실선은 인용이 확인된 선(OpenAlex 또는 인용한 논문의 참고문헌 목록), 점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선. 세로 위치는 주제 묶음.</figcaption></figure>
+<div class="wrap"><table class="sort"><thead><tr><th>연도</th><th>첫 저자</th><th>제목</th><th>장</th></tr></thead><tbody><tr><td class="nw">1948</td><td>Shannon</td><td><a href="../chapters/E1.html#shannon1948">A Mathematical Theory of Communication</a></td><td>1장 기원 1943–56</td></tr><tr><td class="nw">1961</td><td>Minsky</td><td><a href="../chapters/E2.html#minsky1961">Steps toward Artificial Intelligence</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1975</td><td>Newell &amp; Simon</td><td><a href="../chapters/E3.html#newell1976">Computer science as empirical inquiry: symbols and search</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1976</td><td>Dempster et al.</td><td><a href="../chapters/E3.html#dempster1977">Maximum Likelihood from Incomplete Data Via the EM Algorithm</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1984</td><td>Geman &amp; Geman</td><td><a href="../chapters/E3.html#geman1984">Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1988</td><td>Pearl</td><td><a href="../chapters/E3.html#pearl1988">Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1992</td><td>Boser et al.</td><td><a href="../chapters/E4.html#boser1992">A training algorithm for optimal margin classifiers</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1995</td><td>Russell &amp; Norvig</td><td><a href="../chapters/E4.html#russell1995">Artificial Intelligence: A Modern Approach</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1995</td><td>Cortes &amp; Vapnik</td><td><a href="../chapters/E4.html#cortes1995">Support-vector networks</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1996</td><td>Tibshirani</td><td><a href="../chapters/E4.html#tibshirani1996">Regression Shrinkage and Selection Via the Lasso</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2001</td><td>Breiman</td><td><a href="../chapters/E4.html#breiman2001">Random Forests</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2003</td><td>Blei et al.</td><td><a href="../chapters/E4.html#blei2003">Latent Dirichlet Allocation</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2014</td><td>Schmidhuber</td><td><a href="../chapters/E5.html#schmidhuber2015">Deep learning in neural networks: An overview</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>LeCun et al.</td><td><a href="../chapters/E5.html#lecun2015">Deep learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2021</td><td>Jumper et al.</td><td><a href="../chapters/E6.html#jumper2021">Highly accurate protein structure prediction with AlphaFold</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2021</td><td>Bommasani et al.</td><td><a href="../chapters/E6.html#bommasani2021">On the Opportunities and Risks of Foundation Models</a></td><td>6장 사전학습·생성 2017–22</td></tr></tbody></table></div></main>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.0 · 생성일 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

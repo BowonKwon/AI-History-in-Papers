@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>탐색·계획·지식 — 논문으로 읽는 인공지능의 역사</title><meta name="description" content="1943년부터 지금까지, 원 논문으로 따라가는 인공지능 연구의 역사">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html">시대</a><a href="../../ko/lineage/index.html" class="on">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
+<main><h1>탐색·계획·지식</h1><p class="lead">논리 이론가·GPS·A*·STRIPS·전문가 시스템·MCTS.</p>
+<figure><svg viewBox="0 0 1000 116" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">탐색·계획·지식</text>
+<line class="ax" x1="177.7" x2="177.7" y1="16" y2="86"/><text x="177.7" y="108" text-anchor="middle">1950</text>
+<line class="ax" x1="316.0" x2="316.0" y1="16" y2="86"/><text x="316.0" y="108" text-anchor="middle">1960</text>
+<line class="ax" x1="454.3" x2="454.3" y1="16" y2="86"/><text x="454.3" y="108" text-anchor="middle">1970</text>
+<line class="ax" x1="592.7" x2="592.7" y1="16" y2="86"/><text x="592.7" y="108" text-anchor="middle">1980</text>
+<line class="ax" x1="731.0" x2="731.0" y1="16" y2="86"/><text x="731.0" y="108" text-anchor="middle">1990</text>
+<line class="ax" x1="869.3" x2="869.3" y1="16" y2="86"/><text x="869.3" y="108" text-anchor="middle">2000</text>
+<g class="dot" data-k="shannon1950" data-t="Programming a computer for playing chess" data-m="Shannon · 1949" data-w="비수치 문제를 다루는 기계의 시험 사례로 범용 컴퓨터의 체스 프로그램을 구상한다. 기물·폰 구조·기물 위치·기동성으로 국면을 평가하는 함수 f(P)와 수(手) 변화에 대한 앞 내다보기를 결합할 것을 제안한다." data-href="../chapters/E1.html#shannon1950"><circle cx="166.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mccarthy1960" data-t="Recursive functions of symbolic expressions and their computation by machine, Part I" data-m="McCarthy · 1960" data-w="IBM 704용 프로그래밍 체계 LISP를 기호식(S-식)에 대한 재귀 함수와 조건식의 형식 체계로 기술한다. 보편 S-함수 apply와 S-식의 리스트 구조 메모리 표현을 제시한다." data-href="../chapters/E2.html#mccarthy1960"><circle cx="319.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="minsky1974" data-t="A Framework for Representing Knowledge" data-m="Minsky · 1974" data-w="지식을 「프레임」으로 조직할 것을 제안한다. 정형화된 상황을 기억한 자료 구조로, 상위 수준은 고정되고 하위 단말(「슬롯」)에 구체적 사례가 채워지며, 프레임들이 체계로 연결되어 그 변환이 행동이나 관점 변화를 나타낸다." data-href="../chapters/E3.html#minsky1974"><circle cx="515.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schank1977" data-t="Scripts, Plans, Goals and Understanding" data-m="Schank &amp; Abelson · 1977" data-w="" data-href="../chapters/E3.html#schank1977"><circle cx="558.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="buchanan1978" data-t="Dendral and Meta-Dendral: Their applications dimension" data-m="Buchanan &amp; Feigenbaum · 1978" data-w="" data-href="../chapters/E3.html#buchanan1978"><circle cx="573.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kirkpatrick1983" data-t="Optimization by Simulated Annealing" data-m="Kirkpatrick et al. · 1983" data-w="통계역학의 메트로폴리스 알고리즘에 온도를 서서히 낮추는 절차를 더한 「모의 담금질」을 조합 최적화의 일반 방법으로 쓴다. 컴퓨터 설계의 분할·배치·배선 문제와 도시 수천 개의 외판원 문제에 적용한다." data-href="../chapters/E3.html#kirkpatrick1983"><circle cx="638.8" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="campbell2002" data-t="Deep Blue" data-m="Campbell et al. · 2002" data-w="1997년 6국 대국에서 가리 카스파로프를 이긴 체스 기계를 기술한다. 단일 칩 탐색 엔진, 다수준 병렬 체계, 탐색 확장, 복잡한 평가 함수, 그랜드마스터 기보 데이터베이스를 다루고, 전신 기계들과 설계 결정의 이유를 함께 적는다." data-href="../chapters/E4.html#campbell2002"><circle cx="897.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="coulom2006" data-t="Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search" data-m="Coulom · 2006" data-w="모의실험 수가 늘수록 평균에서 최소최대로 옮겨 가는 백업 연산자로 트리 탐색과 몬테카를로 평가를 결합해 모의실험 하나하나의 수준에서 선택성을 얻는다. 이 방법을 쓴 9×9 바둑 프로그램 크레이지 스톤이 제10회 KGS 컴퓨터 바둑 대회에서 우승했다고 보고한다." data-href="../chapters/E4.html#coulom2006"><circle cx="956.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kocsis2006" data-t="Bandit Based Monte-Carlo Planning" data-m="Kocsis &amp; Szepesvári · 2006" data-w="밴딧 발상을 몬테카를로 계획의 안내에 적용한 알고리즘 UCT를 도입한다. 유한 지평 또는 할인 MDP에서 일관성을 보이고 추정 오차의 유한 표본 한계를 준다." data-href="../chapters/E4.html#kocsis2006"><circle cx="961.6" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>실선은 인용이 확인된 선(OpenAlex 또는 인용한 논문의 참고문헌 목록), 점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선. 세로 위치는 주제 묶음.</figcaption></figure>
+<div class="wrap"><table class="sort"><thead><tr><th>연도</th><th>첫 저자</th><th>제목</th><th>장</th></tr></thead><tbody><tr><td class="nw">1949</td><td>Shannon</td><td><a href="../chapters/E1.html#shannon1950">Programming a computer for playing chess</a></td><td>1장 기원 1943–56</td></tr><tr><td class="nw">1960</td><td>McCarthy</td><td><a href="../chapters/E2.html#mccarthy1960">Recursive functions of symbolic expressions and their computation by machine, Part I</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1974</td><td>Minsky</td><td><a href="../chapters/E3.html#minsky1974">A Framework for Representing Knowledge</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1977</td><td>Schank &amp; Abelson</td><td><a href="../chapters/E3.html#schank1977">Scripts, Plans, Goals and Understanding</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1978</td><td>Buchanan &amp; Feigenbaum</td><td><a href="../chapters/E3.html#buchanan1978">Dendral and Meta-Dendral: Their applications dimension</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1983</td><td>Kirkpatrick et al.</td><td><a href="../chapters/E3.html#kirkpatrick1983">Optimization by Simulated Annealing</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">2002</td><td>Campbell et al.</td><td><a href="../chapters/E4.html#campbell2002">Deep Blue</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2006</td><td>Coulom</td><td><a href="../chapters/E4.html#coulom2006">Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2006</td><td>Kocsis &amp; Szepesvári</td><td><a href="../chapters/E4.html#kocsis2006">Bandit Based Monte-Carlo Planning</a></td><td>4장 통계 학습 1990–2011</td></tr></tbody></table></div></main>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.0 · 생성일 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

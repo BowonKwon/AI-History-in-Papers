@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Winters and booms — AI History in Papers</title><meta name="description" content="The history of AI research from 1943 to today, followed through its original papers">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../en/index.html">AI History in Papers</a><nav><a href="../en/index.html">Home</a><a href="../en/chapters/index.html">Eras</a><a href="../en/lineage/index.html">Lineage</a><a href="../en/winters.html" class="on">Winters and booms</a><a href="../en/papers.html">Paper list</a><a href="../en/method.html">Method and limits</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../ko/index.html">한국어</a></div></header>
+<main><h1>Winters and booms</h1><p class="lead">The two conventional winters re-examined with three series: the share of paper titles containing a term, conference attendance, and public-funding records.</p><div class="glance"><p class="glance-h">Key point</p><ul><li>The second winter around 1987 is visible in attendance: AAAI attendance fell from 5,334 in 1986 to 1,685 in 1992 (AI Index 2019 data).</li><li>Title counts lag by several years. OpenAlex records with “expert system” in the title peak at 1,857 in 1990 and fall to 490 in 1998; over the same years “neural network” rises from 1,745 to 4,243.</li><li>The first winter around 1974 could not be confirmed with numbers: no attendance or year-by-year funding series for that period was found, and OpenAlex title counts are too small.</li></ul></div>
+<div class="prose"><p>An "AI winter" is a period in which funding and attention cooled. By convention there were two: the first around the 1973 Lighthill report in Britain and the contraction of DARPA support in the United States, the second after the expert-system and Lisp-machine markets collapsed around 1987. This page re-examines that convention with numbers. We write "confirmed" only where the series point the same way, and we say so where there is no data.</p></div>
+<h2>Terms in paper titles</h2><figure><div class="legend"><span style="--c:var(--s1)">“artificial intelligence”</span><span style="--c:var(--s2)">“expert system”</span><span style="--c:var(--s3)">“neural network”</span></div><svg viewBox="0 0 900 300" role="img" aria-label="line chart">
+<line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">0</text>
+<line class="grid" x1="60" x2="880" y1="206.5" y2="206.5"/><text x="54" y="210.5" text-anchor="end">11.9556</text>
+<line class="grid" x1="60" x2="880" y1="143.0" y2="143.0"/><text x="54" y="147.0" text-anchor="end">23.9111</text>
+<line class="grid" x1="60" x2="880" y1="79.5" y2="79.5"/><text x="54" y="83.5" text-anchor="end">35.8667</text>
+<line class="grid" x1="60" x2="880" y1="16.0" y2="16.0"/><text x="54" y="20.0" text-anchor="end">47.8223</text>
+<text x="60.0" y="292" text-anchor="middle">1960</text>
+<text x="188.1" y="292" text-anchor="middle">1970</text>
+<text x="316.2" y="292" text-anchor="middle">1980</text>
+<text x="444.4" y="292" text-anchor="middle">1990</text>
+<text x="572.5" y="292" text-anchor="middle">2000</text>
+<text x="700.6" y="292" text-anchor="middle">2010</text>
+<text x="828.8" y="292" text-anchor="middle">2020</text>
+<line class="ax" x1="60" x2="880" y1="270" y2="270"/>
+<path d="M60.0,269.8 L72.8,269.4 L85.6,268.5 L98.4,269.4 L111.2,269.7 L124.1,269.7 L136.9,269.0 L149.7,269.6 L162.5,269.1 L175.3,268.6 L200.9,268.1 L213.8,268.8 L226.6,268.2 L239.4,267.6 L252.2,267.7 L265.0,267.5 L277.8,268.2 L290.6,267.7 L303.4,268.2 L316.2,266.8 L329.1,267.0 L341.9,266.5 L354.7,264.0 L367.5,261.3 L380.3,257.3 L393.1,252.4 L405.9,252.0 L418.8,252.9 L431.6,254.6 L444.4,255.5 L457.2,258.2 L470.0,259.5 L482.8,260.0 L495.6,261.4 L508.4,262.7 L521.2,263.5 L534.1,264.9 L546.9,265.2 L559.7,265.3 L572.5,265.5 L585.3,265.3 L598.1,264.3 L610.9,265.1 L623.8,265.1 L636.6,264.4 L649.4,265.0 L662.2,265.4 L675.0,265.7 L687.8,265.3 L700.6,265.9 L713.4,265.4 L726.2,265.2 L739.1,265.0 L751.9,265.0 L764.7,265.1 L777.5,263.6 L790.3,259.3 L803.1,246.5 L815.9,230.8 L828.8,210.7 L841.6,189.2 L854.4,168.6 L867.2,120.1 L880.0,28.5" fill="none" stroke="var(--s1)" stroke-width="2"/>
+<circle cx="60.0" cy="269.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1960: 0.039</title></circle>
+<circle cx="72.8" cy="269.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1961: 0.12</title></circle>
+<circle cx="85.6" cy="268.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1962: 0.285</title></circle>
+<circle cx="98.4" cy="269.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1963: 0.121</title></circle>
+<circle cx="111.2" cy="269.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1964: 0.065</title></circle>
+<circle cx="124.1" cy="269.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1965: 0.06</title></circle>
+<circle cx="136.9" cy="269.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1966: 0.185</title></circle>
+<circle cx="149.7" cy="269.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1967: 0.066</title></circle>
+<circle cx="162.5" cy="269.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1968: 0.161</title></circle>
+<circle cx="175.3" cy="268.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1969: 0.258</title></circle>
+<circle cx="200.9" cy="268.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1971: 0.367</title></circle>
+<circle cx="213.8" cy="268.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1972: 0.217</title></circle>
+<circle cx="226.6" cy="268.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1973: 0.343</title></circle>
+<circle cx="239.4" cy="267.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1974: 0.445</title></circle>
+<circle cx="252.2" cy="267.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1975: 0.428</title></circle>
+<circle cx="265.0" cy="267.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1976: 0.466</title></circle>
+<circle cx="277.8" cy="268.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1977: 0.342</title></circle>
+<circle cx="290.6" cy="267.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1978: 0.428</title></circle>
+<circle cx="303.4" cy="268.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1979: 0.339</title></circle>
+<circle cx="316.2" cy="266.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1980: 0.596</title></circle>
+<circle cx="329.1" cy="267.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1981: 0.556</title></circle>
+<circle cx="341.9" cy="266.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1982: 0.659</title></circle>
+<circle cx="354.7" cy="264.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1983: 1.135</title></circle>
+<circle cx="367.5" cy="261.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1984: 1.635</title></circle>
+<circle cx="380.3" cy="257.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1985: 2.398</title></circle>
+<circle cx="393.1" cy="252.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1986: 3.316</title></circle>
+<circle cx="405.9" cy="252.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1987: 3.381</title></circle>
+<circle cx="418.8" cy="252.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1988: 3.22</title></circle>
+<circle cx="431.6" cy="254.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1989: 2.899</title></circle>
+<circle cx="444.4" cy="255.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1990: 2.726</title></circle>
+<circle cx="457.2" cy="258.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1991: 2.222</title></circle>
+<circle cx="470.0" cy="259.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1992: 1.98</title></circle>
+<circle cx="482.8" cy="260.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1993: 1.875</title></circle>
+<circle cx="495.6" cy="261.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1994: 1.618</title></circle>
+<circle cx="508.4" cy="262.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1995: 1.367</title></circle>
+<circle cx="521.2" cy="263.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1996: 1.23</title></circle>
+<circle cx="534.1" cy="264.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1997: 0.958</title></circle>
+<circle cx="546.9" cy="265.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1998: 0.902</title></circle>
+<circle cx="559.7" cy="265.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1999: 0.889</title></circle>
+<circle cx="572.5" cy="265.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2000: 0.84</title></circle>
+<circle cx="585.3" cy="265.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2001: 0.876</title></circle>
+<circle cx="598.1" cy="264.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2002: 1.065</title></circle>
+<circle cx="610.9" cy="265.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2003: 0.931</title></circle>
+<circle cx="623.8" cy="265.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2004: 0.92</title></circle>
+<circle cx="636.6" cy="264.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2005: 1.052</title></circle>
+<circle cx="649.4" cy="265.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2006: 0.942</title></circle>
+<circle cx="662.2" cy="265.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2007: 0.857</title></circle>
+<circle cx="675.0" cy="265.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2008: 0.806</title></circle>
+<circle cx="687.8" cy="265.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2009: 0.891</title></circle>
+<circle cx="700.6" cy="265.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2010: 0.775</title></circle>
+<circle cx="713.4" cy="265.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2011: 0.875</title></circle>
+<circle cx="726.2" cy="265.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2012: 0.898</title></circle>
+<circle cx="739.1" cy="265.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2013: 0.943</title></circle>
+<circle cx="751.9" cy="265.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2014: 0.949</title></circle>
+<circle cx="764.7" cy="265.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2015: 0.925</title></circle>
+<circle cx="777.5" cy="263.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2016: 1.199</title></circle>
+<circle cx="790.3" cy="259.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2017: 2.021</title></circle>
+<circle cx="803.1" cy="246.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2018: 4.431</title></circle>
+<circle cx="815.9" cy="230.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2019: 7.38</title></circle>
+<circle cx="828.8" cy="210.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2020: 11.167</title></circle>
+<circle cx="841.6" cy="189.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2021: 15.212</title></circle>
+<circle cx="854.4" cy="168.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2022: 19.086</title></circle>
+<circle cx="867.2" cy="120.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2023: 28.214</title></circle>
+<circle cx="880.0" cy="28.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2024: 45.468</title></circle>
+<path d="M60.0,270.0 L72.8,269.9 L85.6,270.0 L98.4,270.0 L111.2,270.0 L124.1,270.0 L136.9,270.0 L149.7,270.0 L162.5,269.9 L175.3,270.0 L200.9,270.0 L213.8,270.0 L226.6,270.0 L239.4,270.0 L252.2,270.0 L265.0,270.0 L277.8,270.0 L290.6,270.0 L303.4,269.9 L316.2,269.7 L329.1,269.1 L341.9,268.4 L354.7,265.5 L367.5,260.8 L380.3,251.3 L393.1,238.0 L405.9,226.1 L418.8,220.8 L431.6,222.0 L444.4,222.6 L457.2,229.3 L470.0,234.3 L482.8,243.0 L495.6,248.3 L508.4,253.2 L521.2,255.8 L534.1,259.0 L546.9,261.2 L559.7,262.1 L572.5,262.3 L585.3,263.0 L598.1,255.0 L610.9,259.3 L623.8,263.6 L636.6,261.6 L649.4,263.9 L662.2,264.6 L675.0,264.4 L687.8,264.6 L700.6,264.6 L713.4,265.2 L726.2,265.7 L739.1,266.1 L751.9,266.6 L764.7,267.1 L777.5,267.3 L790.3,266.8 L803.1,266.6 L815.9,266.4 L828.8,266.8 L841.6,267.0 L854.4,267.1 L867.2,267.0 L880.0,266.9" fill="none" stroke="var(--s2)" stroke-width="2"/>
+<circle cx="60.0" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1960: 0</title></circle>
+<circle cx="72.8" cy="269.9" r="2.2" fill="var(--s2)"><title>“expert system” 1961: 0.02</title></circle>
+<circle cx="85.6" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1962: 0</title></circle>
+<circle cx="98.4" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1963: 0</title></circle>
+<circle cx="111.2" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1964: 0</title></circle>
+<circle cx="124.1" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1965: 0</title></circle>
+<circle cx="136.9" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1966: 0</title></circle>
+<circle cx="149.7" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1967: 0</title></circle>
+<circle cx="162.5" cy="269.9" r="2.2" fill="var(--s2)"><title>“expert system” 1968: 0.012</title></circle>
+<circle cx="175.3" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1969: 0</title></circle>
+<circle cx="200.9" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1971: 0</title></circle>
+<circle cx="213.8" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1972: 0</title></circle>
+<circle cx="226.6" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1973: 0</title></circle>
+<circle cx="239.4" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1974: 0</title></circle>
+<circle cx="252.2" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1975: 0.009</title></circle>
+<circle cx="265.0" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1976: 0.009</title></circle>
+<circle cx="277.8" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1977: 0.009</title></circle>
+<circle cx="290.6" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1978: 0.008</title></circle>
+<circle cx="303.4" cy="269.9" r="2.2" fill="var(--s2)"><title>“expert system” 1979: 0.024</title></circle>
+<circle cx="316.2" cy="269.7" r="2.2" fill="var(--s2)"><title>“expert system” 1980: 0.052</title></circle>
+<circle cx="329.1" cy="269.1" r="2.2" fill="var(--s2)"><title>“expert system” 1981: 0.178</title></circle>
+<circle cx="341.9" cy="268.4" r="2.2" fill="var(--s2)"><title>“expert system” 1982: 0.304</title></circle>
+<circle cx="354.7" cy="265.5" r="2.2" fill="var(--s2)"><title>“expert system” 1983: 0.843</title></circle>
+<circle cx="367.5" cy="260.8" r="2.2" fill="var(--s2)"><title>“expert system” 1984: 1.734</title></circle>
+<circle cx="380.3" cy="251.3" r="2.2" fill="var(--s2)"><title>“expert system” 1985: 3.523</title></circle>
+<circle cx="393.1" cy="238.0" r="2.2" fill="var(--s2)"><title>“expert system” 1986: 6.02</title></circle>
+<circle cx="405.9" cy="226.1" r="2.2" fill="var(--s2)"><title>“expert system” 1987: 8.266</title></circle>
+<circle cx="418.8" cy="220.8" r="2.2" fill="var(--s2)"><title>“expert system” 1988: 9.26</title></circle>
+<circle cx="431.6" cy="222.0" r="2.2" fill="var(--s2)"><title>“expert system” 1989: 9.036</title></circle>
+<circle cx="444.4" cy="222.6" r="2.2" fill="var(--s2)"><title>“expert system” 1990: 8.928</title></circle>
+<circle cx="457.2" cy="229.3" r="2.2" fill="var(--s2)"><title>“expert system” 1991: 7.668</title></circle>
+<circle cx="470.0" cy="234.3" r="2.2" fill="var(--s2)"><title>“expert system” 1992: 6.729</title></circle>
+<circle cx="482.8" cy="243.0" r="2.2" fill="var(--s2)"><title>“expert system” 1993: 5.09</title></circle>
+<circle cx="495.6" cy="248.3" r="2.2" fill="var(--s2)"><title>“expert system” 1994: 4.08</title></circle>
+<circle cx="508.4" cy="253.2" r="2.2" fill="var(--s2)"><title>“expert system” 1995: 3.164</title></circle>
+<circle cx="521.2" cy="255.8" r="2.2" fill="var(--s2)"><title>“expert system” 1996: 2.67</title></circle>
+<circle cx="534.1" cy="259.0" r="2.2" fill="var(--s2)"><title>“expert system” 1997: 2.062</title></circle>
+<circle cx="546.9" cy="261.2" r="2.2" fill="var(--s2)"><title>“expert system” 1998: 1.65</title></circle>
+<circle cx="559.7" cy="262.1" r="2.2" fill="var(--s2)"><title>“expert system” 1999: 1.481</title></circle>
+<circle cx="572.5" cy="262.3" r="2.2" fill="var(--s2)"><title>“expert system” 2000: 1.452</title></circle>
+<circle cx="585.3" cy="263.0" r="2.2" fill="var(--s2)"><title>“expert system” 2001: 1.321</title></circle>
+<circle cx="598.1" cy="255.0" r="2.2" fill="var(--s2)"><title>“expert system” 2002: 2.833</title></circle>
+<circle cx="610.9" cy="259.3" r="2.2" fill="var(--s2)"><title>“expert system” 2003: 2.019</title></circle>
+<circle cx="623.8" cy="263.6" r="2.2" fill="var(--s2)"><title>“expert system” 2004: 1.198</title></circle>
+<circle cx="636.6" cy="261.6" r="2.2" fill="var(--s2)"><title>“expert system” 2005: 1.583</title></circle>
+<circle cx="649.4" cy="263.9" r="2.2" fill="var(--s2)"><title>“expert system” 2006: 1.148</title></circle>
+<circle cx="662.2" cy="264.6" r="2.2" fill="var(--s2)"><title>“expert system” 2007: 1.01</title></circle>
+<circle cx="675.0" cy="264.4" r="2.2" fill="var(--s2)"><title>“expert system” 2008: 1.048</title></circle>
+<circle cx="687.8" cy="264.6" r="2.2" fill="var(--s2)"><title>“expert system” 2009: 1.026</title></circle>
+<circle cx="700.6" cy="264.6" r="2.2" fill="var(--s2)"><title>“expert system” 2010: 1.008</title></circle>
+<circle cx="713.4" cy="265.2" r="2.2" fill="var(--s2)"><title>“expert system” 2011: 0.908</title></circle>
+<circle cx="726.2" cy="265.7" r="2.2" fill="var(--s2)"><title>“expert system” 2012: 0.801</title></circle>
+<circle cx="739.1" cy="266.1" r="2.2" fill="var(--s2)"><title>“expert system” 2013: 0.734</title></circle>
+<circle cx="751.9" cy="266.6" r="2.2" fill="var(--s2)"><title>“expert system” 2014: 0.647</title></circle>
+<circle cx="764.7" cy="267.1" r="2.2" fill="var(--s2)"><title>“expert system” 2015: 0.543</title></circle>
+<circle cx="777.5" cy="267.3" r="2.2" fill="var(--s2)"><title>“expert system” 2016: 0.51</title></circle>
+<circle cx="790.3" cy="266.8" r="2.2" fill="var(--s2)"><title>“expert system” 2017: 0.607</title></circle>
+<circle cx="803.1" cy="266.6" r="2.2" fill="var(--s2)"><title>“expert system” 2018: 0.635</title></circle>
+<circle cx="815.9" cy="266.4" r="2.2" fill="var(--s2)"><title>“expert system” 2019: 0.686</title></circle>
+<circle cx="828.8" cy="266.8" r="2.2" fill="var(--s2)"><title>“expert system” 2020: 0.599</title></circle>
+<circle cx="841.6" cy="267.0" r="2.2" fill="var(--s2)"><title>“expert system” 2021: 0.571</title></circle>
+<circle cx="854.4" cy="267.1" r="2.2" fill="var(--s2)"><title>“expert system” 2022: 0.554</title></circle>
+<circle cx="867.2" cy="267.0" r="2.2" fill="var(--s2)"><title>“expert system” 2023: 0.573</title></circle>
+<circle cx="880.0" cy="266.9" r="2.2" fill="var(--s2)"><title>“expert system” 2024: 0.581</title></circle>
+<path d="M60.0,270.0 L72.8,270.0 L85.6,269.7 L98.4,269.9 L111.2,269.9 L124.1,269.9 L136.9,269.3 L149.7,269.5 L162.5,269.5 L175.3,269.4 L200.9,269.5 L213.8,269.6 L226.6,269.4 L239.4,269.3 L252.2,269.2 L265.0,269.4 L277.8,269.7 L290.6,269.6 L303.4,269.4 L316.2,269.2 L329.1,269.6 L341.9,269.3 L354.7,269.6 L367.5,269.4 L380.3,268.8 L393.1,266.8 L405.9,263.5 L418.8,249.5 L431.6,241.9 L444.4,225.4 L457.2,204.3 L470.0,194.1 L482.8,191.1 L495.6,186.7 L508.4,187.6 L521.2,190.6 L534.1,191.4 L546.9,194.1 L559.7,199.0 L572.5,202.1 L585.3,204.4 L598.1,123.9 L610.9,175.4 L623.8,192.7 L636.6,179.9 L649.4,182.0 L662.2,191.7 L675.0,191.8 L687.8,192.7 L700.6,195.7 L713.4,201.1 L726.2,204.2 L739.1,208.9 L751.9,211.0 L764.7,212.2 L777.5,204.0 L790.3,182.6 L803.1,145.0 L815.9,115.2 L828.8,100.8 L841.6,68.4 L854.4,53.9 L867.2,48.8 L880.0,28.1" fill="none" stroke="var(--s3)" stroke-width="2"/>
+<circle cx="60.0" cy="270.0" r="2.2" fill="var(--s3)"><title>“neural network” 1960: 0</title></circle>
+<circle cx="72.8" cy="270.0" r="2.2" fill="var(--s3)"><title>“neural network” 1961: 0</title></circle>
+<circle cx="85.6" cy="269.7" r="2.2" fill="var(--s3)"><title>“neural network” 1962: 0.057</title></circle>
+<circle cx="98.4" cy="269.9" r="2.2" fill="var(--s3)"><title>“neural network” 1963: 0.017</title></circle>
+<circle cx="111.2" cy="269.9" r="2.2" fill="var(--s3)"><title>“neural network” 1964: 0.016</title></circle>
+<circle cx="124.1" cy="269.9" r="2.2" fill="var(--s3)"><title>“neural network” 1965: 0.015</title></circle>
+<circle cx="136.9" cy="269.3" r="2.2" fill="var(--s3)"><title>“neural network” 1966: 0.128</title></circle>
+<circle cx="149.7" cy="269.5" r="2.2" fill="var(--s3)"><title>“neural network” 1967: 0.092</title></circle>
+<circle cx="162.5" cy="269.5" r="2.2" fill="var(--s3)"><title>“neural network” 1968: 0.099</title></circle>
+<circle cx="175.3" cy="269.4" r="2.2" fill="var(--s3)"><title>“neural network” 1969: 0.117</title></circle>
+<circle cx="200.9" cy="269.5" r="2.2" fill="var(--s3)"><title>“neural network” 1971: 0.086</title></circle>
+<circle cx="213.8" cy="269.6" r="2.2" fill="var(--s3)"><title>“neural network” 1972: 0.083</title></circle>
+<circle cx="226.6" cy="269.4" r="2.2" fill="var(--s3)"><title>“neural network” 1973: 0.121</title></circle>
+<circle cx="239.4" cy="269.3" r="2.2" fill="var(--s3)"><title>“neural network” 1974: 0.126</title></circle>
+<circle cx="252.2" cy="269.2" r="2.2" fill="var(--s3)"><title>“neural network” 1975: 0.158</title></circle>
+<circle cx="265.0" cy="269.4" r="2.2" fill="var(--s3)"><title>“neural network” 1976: 0.11</title></circle>
+<circle cx="277.8" cy="269.7" r="2.2" fill="var(--s3)"><title>“neural network” 1977: 0.053</title></circle>
+<circle cx="290.6" cy="269.6" r="2.2" fill="var(--s3)"><title>“neural network” 1978: 0.076</title></circle>
+<circle cx="303.4" cy="269.4" r="2.2" fill="var(--s3)"><title>“neural network” 1979: 0.121</title></circle>
+<circle cx="316.2" cy="269.2" r="2.2" fill="var(--s3)"><title>“neural network” 1980: 0.155</title></circle>
+<circle cx="329.1" cy="269.6" r="2.2" fill="var(--s3)"><title>“neural network” 1981: 0.082</title></circle>
+<circle cx="341.9" cy="269.3" r="2.2" fill="var(--s3)"><title>“neural network” 1982: 0.138</title></circle>
+<circle cx="354.7" cy="269.6" r="2.2" fill="var(--s3)"><title>“neural network” 1983: 0.077</title></circle>
+<circle cx="367.5" cy="269.4" r="2.2" fill="var(--s3)"><title>“neural network” 1984: 0.106</title></circle>
+<circle cx="380.3" cy="268.8" r="2.2" fill="var(--s3)"><title>“neural network” 1985: 0.231</title></circle>
+<circle cx="393.1" cy="266.8" r="2.2" fill="var(--s3)"><title>“neural network” 1986: 0.606</title></circle>
+<circle cx="405.9" cy="263.5" r="2.2" fill="var(--s3)"><title>“neural network” 1987: 1.22</title></circle>
+<circle cx="418.8" cy="249.5" r="2.2" fill="var(--s3)"><title>“neural network” 1988: 3.863</title></circle>
+<circle cx="431.6" cy="241.9" r="2.2" fill="var(--s3)"><title>“neural network” 1989: 5.292</title></circle>
+<circle cx="444.4" cy="225.4" r="2.2" fill="var(--s3)"><title>“neural network” 1990: 8.389</title></circle>
+<circle cx="457.2" cy="204.3" r="2.2" fill="var(--s3)"><title>“neural network” 1991: 12.367</title></circle>
+<circle cx="470.0" cy="194.1" r="2.2" fill="var(--s3)"><title>“neural network” 1992: 14.286</title></circle>
+<circle cx="482.8" cy="191.1" r="2.2" fill="var(--s3)"><title>“neural network” 1993: 14.864</title></circle>
+<circle cx="495.6" cy="186.7" r="2.2" fill="var(--s3)"><title>“neural network” 1994: 15.683</title></circle>
+<circle cx="508.4" cy="187.6" r="2.2" fill="var(--s3)"><title>“neural network” 1995: 15.518</title></circle>
+<circle cx="521.2" cy="190.6" r="2.2" fill="var(--s3)"><title>“neural network” 1996: 14.94</title></circle>
+<circle cx="534.1" cy="191.4" r="2.2" fill="var(--s3)"><title>“neural network” 1997: 14.799</title></circle>
+<circle cx="546.9" cy="194.1" r="2.2" fill="var(--s3)"><title>“neural network” 1998: 14.287</title></circle>
+<circle cx="559.7" cy="199.0" r="2.2" fill="var(--s3)"><title>“neural network” 1999: 13.361</title></circle>
+<circle cx="572.5" cy="202.1" r="2.2" fill="var(--s3)"><title>“neural network” 2000: 12.78</title></circle>
+<circle cx="585.3" cy="204.4" r="2.2" fill="var(--s3)"><title>“neural network” 2001: 12.359</title></circle>
+<circle cx="598.1" cy="123.9" r="2.2" fill="var(--s3)"><title>“neural network” 2002: 27.503</title></circle>
+<circle cx="610.9" cy="175.4" r="2.2" fill="var(--s3)"><title>“neural network” 2003: 17.812</title></circle>
+<circle cx="623.8" cy="192.7" r="2.2" fill="var(--s3)"><title>“neural network” 2004: 14.548</title></circle>
+<circle cx="636.6" cy="179.9" r="2.2" fill="var(--s3)"><title>“neural network” 2005: 16.962</title></circle>
+<circle cx="649.4" cy="182.0" r="2.2" fill="var(--s3)"><title>“neural network” 2006: 16.564</title></circle>
+<circle cx="662.2" cy="191.7" r="2.2" fill="var(--s3)"><title>“neural network” 2007: 14.742</title></circle>
+<circle cx="675.0" cy="191.8" r="2.2" fill="var(--s3)"><title>“neural network” 2008: 14.722</title></circle>
+<circle cx="687.8" cy="192.7" r="2.2" fill="var(--s3)"><title>“neural network” 2009: 14.556</title></circle>
+<circle cx="700.6" cy="195.7" r="2.2" fill="var(--s3)"><title>“neural network” 2010: 13.98</title></circle>
+<circle cx="713.4" cy="201.1" r="2.2" fill="var(--s3)"><title>“neural network” 2011: 12.973</title></circle>
+<circle cx="726.2" cy="204.2" r="2.2" fill="var(--s3)"><title>“neural network” 2012: 12.385</title></circle>
+<circle cx="739.1" cy="208.9" r="2.2" fill="var(--s3)"><title>“neural network” 2013: 11.512</title></circle>
+<circle cx="751.9" cy="211.0" r="2.2" fill="var(--s3)"><title>“neural network” 2014: 11.116</title></circle>
+<circle cx="764.7" cy="212.2" r="2.2" fill="var(--s3)"><title>“neural network” 2015: 10.88</title></circle>
+<circle cx="777.5" cy="204.0" r="2.2" fill="var(--s3)"><title>“neural network” 2016: 12.425</title></circle>
+<circle cx="790.3" cy="182.6" r="2.2" fill="var(--s3)"><title>“neural network” 2017: 16.462</title></circle>
+<circle cx="803.1" cy="145.0" r="2.2" fill="var(--s3)"><title>“neural network” 2018: 23.538</title></circle>
+<circle cx="815.9" cy="115.2" r="2.2" fill="var(--s3)"><title>“neural network” 2019: 29.148</title></circle>
+<circle cx="828.8" cy="100.8" r="2.2" fill="var(--s3)"><title>“neural network” 2020: 31.855</title></circle>
+<circle cx="841.6" cy="68.4" r="2.2" fill="var(--s3)"><title>“neural network” 2021: 37.958</title></circle>
+<circle cx="854.4" cy="53.9" r="2.2" fill="var(--s3)"><title>“neural network” 2022: 40.686</title></circle>
+<circle cx="867.2" cy="48.8" r="2.2" fill="var(--s3)"><title>“neural network” 2023: 41.654</title></circle>
+<circle cx="880.0" cy="28.1" r="2.2" fill="var(--s3)"><title>“neural network” 2024: 45.545</title></circle>
+<text x="60" y="12" font-size="10">per 10,000 works</text>
+</svg><figcaption>OpenAlex records whose title contains the phrase, divided by all OpenAlex records of that year, per 10,000 (read 2026-11-03). The 1970 value is omitted because undated records appear to have been assigned to that year.</figcaption></figure>
+<div class="prose"><p>The three phrases tell different stories. “Expert system” rises steeply from 1984, peaks in 1988–1990 at about 9 per 10,000, and falls through the 1990s to 1.5 in 2000. “Artificial intelligence” also declines after a 1987 peak (3.4) to 0.84 in 2000. “Neural network”, by contrast, surges from 1988 to 15.7 in 1994 and does not fall much afterwards. The 1990s "winter" was therefore not a winter for the whole field but <b>a winter for the words symbolic AI and expert system</b>; neural-network research grew in the same years.</p>
+<p>The decline in title counts begins several years after the decline in attendance. Publication lag and index coverage may both contribute, so this series alone does not date the winter.</p>
+<p>The years around 1974 cannot be judged from this series. In 1973–1975 there are only 34–46 records a year with “artificial intelligence” in the title, and single digits for “perceptron”; the counts are too small to separate change from noise.</p></div>
+<h2>Conference attendance</h2><figure><div class="legend"><span style="--c:var(--s1)">AAAI</span><span style="--c:var(--s2)">IJCAI</span><span style="--c:var(--s3)">NeurIPS</span></div><svg viewBox="0 0 900 300" role="img" aria-label="line chart">
+<line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">0</text>
+<line class="grid" x1="60" x2="880" y1="206.5" y2="206.5"/><text x="54" y="210.5" text-anchor="end">6925.28</text>
+<line class="grid" x1="60" x2="880" y1="143.0" y2="143.0"/><text x="54" y="147.0" text-anchor="end">13850.6</text>
+<line class="grid" x1="60" x2="880" y1="79.5" y2="79.5"/><text x="54" y="83.5" text-anchor="end">20775.8</text>
+<line class="grid" x1="60" x2="880" y1="16.0" y2="16.0"/><text x="54" y="20.0" text-anchor="end">27701.1</text>
+<text x="80.0" y="292" text-anchor="middle">1985</text>
+<text x="180.0" y="292" text-anchor="middle">1990</text>
+<text x="280.0" y="292" text-anchor="middle">1995</text>
+<text x="380.0" y="292" text-anchor="middle">2000</text>
+<text x="480.0" y="292" text-anchor="middle">2005</text>
+<text x="580.0" y="292" text-anchor="middle">2010</text>
+<text x="680.0" y="292" text-anchor="middle">2015</text>
+<text x="780.0" y="292" text-anchor="middle">2020</text>
+<text x="880.0" y="292" text-anchor="middle">2025</text>
+<line class="ax" x1="60" x2="880" y1="270" y2="270"/>
+<path d="M60.0,239.7 L80.0,230.4 L100.0,221.1 L120.0,226.6 L140.0,233.6 L160.0,239.0 L180.0,244.3 L200.0,252.1 L220.0,254.5 L240.0,257.4 L260.0,252.0 L280.0,254.7 L300.0,257.4 L320.0,258.4 L340.0,257.0 L360.0,258.5 L380.0,257.5 L400.0,257.4 L420.0,257.2 L440.0,256.6 L460.0,255.9 L480.0,259.8 L500.0,258.4 L520.0,260.2 L540.0,259.8 L560.0,260.7 L580.0,261.6 L600.0,259.8 L620.0,261.4 L640.0,262.6 L660.0,260.7 L680.0,257.3 L700.0,258.2 L720.0,253.1 L740.0,249.4 L760.0,240.4 L780.0,225.2 L800.0,232.5 L820.0,237.4 L840.0,229.0 L860.0,222.8 L880.0,212.3" fill="none" stroke="var(--s1)" stroke-width="2"/>
+<circle cx="60.0" cy="239.7" r="2.2" fill="var(--s1)"><title>AAAI 1984: 3300</title></circle>
+<circle cx="80.0" cy="230.4" r="2.2" fill="var(--s1)"><title>AAAI 1985: 4317</title></circle>
+<circle cx="100.0" cy="221.1" r="2.2" fill="var(--s1)"><title>AAAI 1986: 5334</title></circle>
+<circle cx="120.0" cy="226.6" r="2.2" fill="var(--s1)"><title>AAAI 1987: 4733</title></circle>
+<circle cx="140.0" cy="233.6" r="2.2" fill="var(--s1)"><title>AAAI 1988: 3970</title></circle>
+<circle cx="160.0" cy="239.0" r="2.2" fill="var(--s1)"><title>AAAI 1989: 3385</title></circle>
+<circle cx="180.0" cy="244.3" r="2.2" fill="var(--s1)"><title>AAAI 1990: 2800</title></circle>
+<circle cx="200.0" cy="252.1" r="2.2" fill="var(--s1)"><title>AAAI 1991: 1950</title></circle>
+<circle cx="220.0" cy="254.5" r="2.2" fill="var(--s1)"><title>AAAI 1992: 1685</title></circle>
+<circle cx="240.0" cy="257.4" r="2.2" fill="var(--s1)"><title>AAAI 1993: 1379</title></circle>
+<circle cx="260.0" cy="252.0" r="2.2" fill="var(--s1)"><title>AAAI 1994: 1964</title></circle>
+<circle cx="280.0" cy="254.7" r="2.2" fill="var(--s1)"><title>AAAI 1995: 1667</title></circle>
+<circle cx="300.0" cy="257.4" r="2.2" fill="var(--s1)"><title>AAAI 1996: 1371</title></circle>
+<circle cx="320.0" cy="258.4" r="2.2" fill="var(--s1)"><title>AAAI 1997: 1262</title></circle>
+<circle cx="340.0" cy="257.0" r="2.2" fill="var(--s1)"><title>AAAI 1998: 1417</title></circle>
+<circle cx="360.0" cy="258.5" r="2.2" fill="var(--s1)"><title>AAAI 1999: 1250</title></circle>
+<circle cx="380.0" cy="257.5" r="2.2" fill="var(--s1)"><title>AAAI 2000: 1358</title></circle>
+<circle cx="400.0" cy="257.4" r="2.2" fill="var(--s1)"><title>AAAI 2001: 1378</title></circle>
+<circle cx="420.0" cy="257.2" r="2.2" fill="var(--s1)"><title>AAAI 2002: 1399</title></circle>
+<circle cx="440.0" cy="256.6" r="2.2" fill="var(--s1)"><title>AAAI 2003: 1466</title></circle>
+<circle cx="460.0" cy="255.9" r="2.2" fill="var(--s1)"><title>AAAI 2004: 1534</title></circle>
+<circle cx="480.0" cy="259.8" r="2.2" fill="var(--s1)"><title>AAAI 2005: 1116</title></circle>
+<circle cx="500.0" cy="258.4" r="2.2" fill="var(--s1)"><title>AAAI 2006: 1263</title></circle>
+<circle cx="520.0" cy="260.2" r="2.2" fill="var(--s1)"><title>AAAI 2007: 1064</title></circle>
+<circle cx="540.0" cy="259.8" r="2.2" fill="var(--s1)"><title>AAAI 2008: 1113</title></circle>
+<circle cx="560.0" cy="260.7" r="2.2" fill="var(--s1)"><title>AAAI 2009: 1015</title></circle>
+<circle cx="580.0" cy="261.6" r="2.2" fill="var(--s1)"><title>AAAI 2010: 918</title></circle>
+<circle cx="600.0" cy="259.8" r="2.2" fill="var(--s1)"><title>AAAI 2011: 1108</title></circle>
+<circle cx="620.0" cy="261.4" r="2.2" fill="var(--s1)"><title>AAAI 2012: 934</title></circle>
+<circle cx="640.0" cy="262.6" r="2.2" fill="var(--s1)"><title>AAAI 2013: 807</title></circle>
+<circle cx="660.0" cy="260.7" r="2.2" fill="var(--s1)"><title>AAAI 2014: 1019</title></circle>
+<circle cx="680.0" cy="257.3" r="2.2" fill="var(--s1)"><title>AAAI 2015: 1380</title></circle>
+<circle cx="700.0" cy="258.2" r="2.2" fill="var(--s1)"><title>AAAI 2016: 1289</title></circle>
+<circle cx="720.0" cy="253.1" r="2.2" fill="var(--s1)"><title>AAAI 2017: 1838</title></circle>
+<circle cx="740.0" cy="249.4" r="2.2" fill="var(--s1)"><title>AAAI 2018: 2251</title></circle>
+<circle cx="760.0" cy="240.4" r="2.2" fill="var(--s1)"><title>AAAI 2019: 3227</title></circle>
+<circle cx="780.0" cy="225.2" r="2.2" fill="var(--s1)"><title>AAAI 2020: 4884</title></circle>
+<circle cx="800.0" cy="232.5" r="2.2" fill="var(--s1)"><title>AAAI 2021: 4086</title></circle>
+<circle cx="820.0" cy="237.4" r="2.2" fill="var(--s1)"><title>AAAI 2022: 3560</title></circle>
+<circle cx="840.0" cy="229.0" r="2.2" fill="var(--s1)"><title>AAAI 2023: 4474</title></circle>
+<circle cx="860.0" cy="222.8" r="2.2" fill="var(--s1)"><title>AAAI 2024: 5149</title></circle>
+<circle cx="880.0" cy="212.3" r="2.2" fill="var(--s1)"><title>AAAI 2025: 6289</title></circle>
+<path d="M80.0,224.2 L120.0,231.5 L160.0,236.1 L200.0,241.6 L240.0,247.1 L280.0,251.1 L320.0,257.9 L360.0,257.4 L400.0,259.5 L440.0,260.4 L480.0,260.7 L520.0,258.9 L560.0,258.4 L600.0,256.3 L640.0,261.6 L680.0,259.6 L700.0,254.7 L720.0,250.9 L740.0,246.6 L760.0,242.4 L800.0,252.5 L820.0,251.5 L840.0,251.8 L860.0,243.9 L880.0,248.3" fill="none" stroke="var(--s2)" stroke-width="2"/>
+<circle cx="80.0" cy="224.2" r="2.2" fill="var(--s2)"><title>IJCAI 1985: 4995</title></circle>
+<circle cx="120.0" cy="231.5" r="2.2" fill="var(--s2)"><title>IJCAI 1987: 4200</title></circle>
+<circle cx="160.0" cy="236.1" r="2.2" fill="var(--s2)"><title>IJCAI 1989: 3700</title></circle>
+<circle cx="200.0" cy="241.6" r="2.2" fill="var(--s2)"><title>IJCAI 1991: 3100</title></circle>
+<circle cx="240.0" cy="247.1" r="2.2" fill="var(--s2)"><title>IJCAI 1993: 2500</title></circle>
+<circle cx="280.0" cy="251.1" r="2.2" fill="var(--s2)"><title>IJCAI 1995: 2059</title></circle>
+<circle cx="320.0" cy="257.9" r="2.2" fill="var(--s2)"><title>IJCAI 1997: 1325</title></circle>
+<circle cx="360.0" cy="257.4" r="2.2" fill="var(--s2)"><title>IJCAI 1999: 1373</title></circle>
+<circle cx="400.0" cy="259.5" r="2.2" fill="var(--s2)"><title>IJCAI 2001: 1150</title></circle>
+<circle cx="440.0" cy="260.4" r="2.2" fill="var(--s2)"><title>IJCAI 2003: 1050</title></circle>
+<circle cx="480.0" cy="260.7" r="2.2" fill="var(--s2)"><title>IJCAI 2005: 1018</title></circle>
+<circle cx="520.0" cy="258.9" r="2.2" fill="var(--s2)"><title>IJCAI 2007: 1215</title></circle>
+<circle cx="560.0" cy="258.4" r="2.2" fill="var(--s2)"><title>IJCAI 2009: 1265</title></circle>
+<circle cx="600.0" cy="256.3" r="2.2" fill="var(--s2)"><title>IJCAI 2011: 1493</title></circle>
+<circle cx="640.0" cy="261.6" r="2.2" fill="var(--s2)"><title>IJCAI 2013: 920</title></circle>
+<circle cx="680.0" cy="259.6" r="2.2" fill="var(--s2)"><title>IJCAI 2015: 1134</title></circle>
+<circle cx="700.0" cy="254.7" r="2.2" fill="var(--s2)"><title>IJCAI 2016: 1671</title></circle>
+<circle cx="720.0" cy="250.9" r="2.2" fill="var(--s2)"><title>IJCAI 2017: 2085</title></circle>
+<circle cx="740.0" cy="246.6" r="2.2" fill="var(--s2)"><title>IJCAI 2018: 2550</title></circle>
+<circle cx="760.0" cy="242.4" r="2.2" fill="var(--s2)"><title>IJCAI 2019: 3015</title></circle>
+<circle cx="800.0" cy="252.5" r="2.2" fill="var(--s2)"><title>IJCAI 2021: 1904</title></circle>
+<circle cx="820.0" cy="251.5" r="2.2" fill="var(--s2)"><title>IJCAI 2022: 2014</title></circle>
+<circle cx="840.0" cy="251.8" r="2.2" fill="var(--s2)"><title>IJCAI 2023: 1988</title></circle>
+<circle cx="860.0" cy="243.9" r="2.2" fill="var(--s2)"><title>IJCAI 2024: 2841</title></circle>
+<circle cx="880.0" cy="248.3" r="2.2" fill="var(--s2)"><title>IJCAI 2025: 2365</title></circle>
+<path d="M280.0,265.4 L300.0,265.1 L320.0,264.9 L340.0,264.6 L360.0,264.3 L380.0,264.0 L400.0,263.8 L420.0,263.5 L440.0,263.4 L460.0,262.5 L480.0,261.5 L500.0,261.6 L520.0,260.4 L540.0,260.8 L560.0,258.6 L580.0,257.6 L600.0,256.7 L620.0,254.6 L640.0,251.7 L660.0,246.3 L680.0,234.7 L700.0,222.0 L720.0,198.9 L740.0,196.6 L760.0,146.2 L780.0,60.7 L800.0,113.3 L820.0,128.9 L840.0,119.8 L860.0,88.9 L880.0,28.1" fill="none" stroke="var(--s3)" stroke-width="2"/>
+<circle cx="280.0" cy="265.4" r="2.2" fill="var(--s3)"><title>NeurIPS 1995: 500</title></circle>
+<circle cx="300.0" cy="265.1" r="2.2" fill="var(--s3)"><title>NeurIPS 1996: 530</title></circle>
+<circle cx="320.0" cy="264.9" r="2.2" fill="var(--s3)"><title>NeurIPS 1997: 560</title></circle>
+<circle cx="340.0" cy="264.6" r="2.2" fill="var(--s3)"><title>NeurIPS 1998: 590</title></circle>
+<circle cx="360.0" cy="264.3" r="2.2" fill="var(--s3)"><title>NeurIPS 1999: 620</title></circle>
+<circle cx="380.0" cy="264.0" r="2.2" fill="var(--s3)"><title>NeurIPS 2000: 650</title></circle>
+<circle cx="400.0" cy="263.8" r="2.2" fill="var(--s3)"><title>NeurIPS 2001: 680</title></circle>
+<circle cx="420.0" cy="263.5" r="2.2" fill="var(--s3)"><title>NeurIPS 2002: 708</title></circle>
+<circle cx="440.0" cy="263.4" r="2.2" fill="var(--s3)"><title>NeurIPS 2003: 721</title></circle>
+<circle cx="460.0" cy="262.5" r="2.2" fill="var(--s3)"><title>NeurIPS 2004: 815</title></circle>
+<circle cx="480.0" cy="261.5" r="2.2" fill="var(--s3)"><title>NeurIPS 2005: 926</title></circle>
+<circle cx="500.0" cy="261.6" r="2.2" fill="var(--s3)"><title>NeurIPS 2006: 913</title></circle>
+<circle cx="520.0" cy="260.4" r="2.2" fill="var(--s3)"><title>NeurIPS 2007: 1050</title></circle>
+<circle cx="540.0" cy="260.8" r="2.2" fill="var(--s3)"><title>NeurIPS 2008: 1000</title></circle>
+<circle cx="560.0" cy="258.6" r="2.2" fill="var(--s3)"><title>NeurIPS 2009: 1239</title></circle>
+<circle cx="580.0" cy="257.6" r="2.2" fill="var(--s3)"><title>NeurIPS 2010: 1354</title></circle>
+<circle cx="600.0" cy="256.7" r="2.2" fill="var(--s3)"><title>NeurIPS 2011: 1452</title></circle>
+<circle cx="620.0" cy="254.6" r="2.2" fill="var(--s3)"><title>NeurIPS 2012: 1676</title></circle>
+<circle cx="640.0" cy="251.7" r="2.2" fill="var(--s3)"><title>NeurIPS 2013: 1994</title></circle>
+<circle cx="660.0" cy="246.3" r="2.2" fill="var(--s3)"><title>NeurIPS 2014: 2581</title></circle>
+<circle cx="680.0" cy="234.7" r="2.2" fill="var(--s3)"><title>NeurIPS 2015: 3852</title></circle>
+<circle cx="700.0" cy="222.0" r="2.2" fill="var(--s3)"><title>NeurIPS 2016: 5230</title></circle>
+<circle cx="720.0" cy="198.9" r="2.2" fill="var(--s3)"><title>NeurIPS 2017: 7755</title></circle>
+<circle cx="740.0" cy="196.6" r="2.2" fill="var(--s3)"><title>NeurIPS 2018: 8000</title></circle>
+<circle cx="760.0" cy="146.2" r="2.2" fill="var(--s3)"><title>NeurIPS 2019: 13500</title></circle>
+<circle cx="780.0" cy="60.7" r="2.2" fill="var(--s3)"><title>NeurIPS 2020: 22823</title></circle>
+<circle cx="800.0" cy="113.3" r="2.2" fill="var(--s3)"><title>NeurIPS 2021: 17091</title></circle>
+<circle cx="820.0" cy="128.9" r="2.2" fill="var(--s3)"><title>NeurIPS 2022: 15390</title></circle>
+<circle cx="840.0" cy="119.8" r="2.2" fill="var(--s3)"><title>NeurIPS 2023: 16382</title></circle>
+<circle cx="860.0" cy="88.9" r="2.2" fill="var(--s3)"><title>NeurIPS 2024: 19756</title></circle>
+<circle cx="880.0" cy="28.1" r="2.2" fill="var(--s3)"><title>NeurIPS 2025: 26382</title></circle>
+<text x="60" y="12" font-size="10">attendees</text>
+</svg><figcaption>Attendance at AAAI, IJCAI and NeurIPS. 1984–2019 from the AI Index 2019 report, chapter 2; 2020 onward from Our World in Data (AI Index 2026). IJCAI met only in odd years until 2014; the even-year values the report filled in by averaging are excluded.</figcaption></figure>
+<div class="prose"><p>AAAI attendance falls from 5,334 in 1986 year after year to 1,685 in 1992 and 1,262 in 1997. IJCAI falls from 4,995 in 1985 to 1,325 in 1997. While the two conferences lose nearly four fifths of their mid-1980s size, NeurIPS grows slowly from a small base (500 in 1995, 926 in 2005). Measured by attendance, the second winter is <b>a long decline that begins in 1987 and lasts to the end of the 1990s</b>, and the recovery of the 2000s came first on the neural-network side. The late-2010s rise is steep at all three (NeurIPS 13,500 in 2019).</p>
+<p>Two cautions. First, the NeurIPS values for 1995–2001 increase by exactly 30 a year (500, 530, 560, …); they look like estimates rather than counts, so we read that stretch only as a trend. Second, no attendance data before 1984 was found, which is why the first winter cannot be seen in this series.</p></div>
+<h2>Papers accepted at NeurIPS</h2><figure><div class="legend"><span style="--c:var(--s1)">NeurIPS</span></div><svg viewBox="0 0 900 300" role="img" aria-label="line chart">
+<line class="grid" x1="60" x2="880" y1="355.4" y2="355.4"/><text x="54" y="359.4" text-anchor="end">10</text>
+<line class="grid" x1="60" x2="880" y1="233.2" y2="233.2"/><text x="54" y="237.2" text-anchor="end">100</text>
+<line class="grid" x1="60" x2="880" y1="111.1" y2="111.1"/><text x="54" y="115.1" text-anchor="end">1000</text>
+<text x="126.5" y="292" text-anchor="middle">1990</text>
+<text x="237.3" y="292" text-anchor="middle">1995</text>
+<text x="348.1" y="292" text-anchor="middle">2000</text>
+<text x="458.9" y="292" text-anchor="middle">2005</text>
+<text x="569.7" y="292" text-anchor="middle">2010</text>
+<text x="680.5" y="292" text-anchor="middle">2015</text>
+<text x="791.4" y="292" text-anchor="middle">2020</text>
+<line class="ax" x1="60" x2="880" y1="270" y2="270"/>
+<path d="M60.0,238.8 L82.2,236.5 L104.3,232.7 L126.5,214.2 L148.6,213.9 L170.8,220.5 L193.0,209.0 L215.1,215.4 L237.3,211.0 L259.5,211.0 L281.6,211.7 L303.8,211.4 L325.9,211.7 L348.1,211.0 L370.3,197.3 L392.4,194.6 L414.6,197.0 L436.8,194.6 L458.9,194.6 L481.1,195.4 L503.2,192.1 L525.4,184.6 L547.6,182.1 L569.7,176.4 L591.9,173.9 L614.1,163.8 L636.2,165.3 L658.4,158.2 L680.5,159.3 L702.7,141.0 L724.9,131.6 L747.0,110.6 L769.2,92.2 L791.4,77.1 L813.5,66.1 L835.7,55.8 L857.8,44.0 L880.0,31.3" fill="none" stroke="var(--s1)" stroke-width="2"/>
+<circle cx="60.0" cy="238.8" r="2.2" fill="var(--s1)"><title>NeurIPS 1987: 90</title></circle>
+<circle cx="82.2" cy="236.5" r="2.2" fill="var(--s1)"><title>NeurIPS 1988: 94</title></circle>
+<circle cx="104.3" cy="232.7" r="2.2" fill="var(--s1)"><title>NeurIPS 1989: 101</title></circle>
+<circle cx="126.5" cy="214.2" r="2.2" fill="var(--s1)"><title>NeurIPS 1990: 143</title></circle>
+<circle cx="148.6" cy="213.9" r="2.2" fill="var(--s1)"><title>NeurIPS 1991: 144</title></circle>
+<circle cx="170.8" cy="220.5" r="2.2" fill="var(--s1)"><title>NeurIPS 1992: 127</title></circle>
+<circle cx="193.0" cy="209.0" r="2.2" fill="var(--s1)"><title>NeurIPS 1993: 158</title></circle>
+<circle cx="215.1" cy="215.4" r="2.2" fill="var(--s1)"><title>NeurIPS 1994: 140</title></circle>
+<circle cx="237.3" cy="211.0" r="2.2" fill="var(--s1)"><title>NeurIPS 1995: 152</title></circle>
+<circle cx="259.5" cy="211.0" r="2.2" fill="var(--s1)"><title>NeurIPS 1996: 152</title></circle>
+<circle cx="281.6" cy="211.7" r="2.2" fill="var(--s1)"><title>NeurIPS 1997: 150</title></circle>
+<circle cx="303.8" cy="211.4" r="2.2" fill="var(--s1)"><title>NeurIPS 1998: 151</title></circle>
+<circle cx="325.9" cy="211.7" r="2.2" fill="var(--s1)"><title>NeurIPS 1999: 150</title></circle>
+<circle cx="348.1" cy="211.0" r="2.2" fill="var(--s1)"><title>NeurIPS 2000: 152</title></circle>
+<circle cx="370.3" cy="197.3" r="2.2" fill="var(--s1)"><title>NeurIPS 2001: 197</title></circle>
+<circle cx="392.4" cy="194.6" r="2.2" fill="var(--s1)"><title>NeurIPS 2002: 207</title></circle>
+<circle cx="414.6" cy="197.0" r="2.2" fill="var(--s1)"><title>NeurIPS 2003: 198</title></circle>
+<circle cx="436.8" cy="194.6" r="2.2" fill="var(--s1)"><title>NeurIPS 2004: 207</title></circle>
+<circle cx="458.9" cy="194.6" r="2.2" fill="var(--s1)"><title>NeurIPS 2005: 207</title></circle>
+<circle cx="481.1" cy="195.4" r="2.2" fill="var(--s1)"><title>NeurIPS 2006: 204</title></circle>
+<circle cx="503.2" cy="192.1" r="2.2" fill="var(--s1)"><title>NeurIPS 2007: 217</title></circle>
+<circle cx="525.4" cy="184.6" r="2.2" fill="var(--s1)"><title>NeurIPS 2008: 250</title></circle>
+<circle cx="547.6" cy="182.1" r="2.2" fill="var(--s1)"><title>NeurIPS 2009: 262</title></circle>
+<circle cx="569.7" cy="176.4" r="2.2" fill="var(--s1)"><title>NeurIPS 2010: 292</title></circle>
+<circle cx="591.9" cy="173.9" r="2.2" fill="var(--s1)"><title>NeurIPS 2011: 306</title></circle>
+<circle cx="614.1" cy="163.8" r="2.2" fill="var(--s1)"><title>NeurIPS 2012: 370</title></circle>
+<circle cx="636.2" cy="165.3" r="2.2" fill="var(--s1)"><title>NeurIPS 2013: 360</title></circle>
+<circle cx="658.4" cy="158.2" r="2.2" fill="var(--s1)"><title>NeurIPS 2014: 411</title></circle>
+<circle cx="680.5" cy="159.3" r="2.2" fill="var(--s1)"><title>NeurIPS 2015: 403</title></circle>
+<circle cx="702.7" cy="141.0" r="2.2" fill="var(--s1)"><title>NeurIPS 2016: 569</title></circle>
+<circle cx="724.9" cy="131.6" r="2.2" fill="var(--s1)"><title>NeurIPS 2017: 679</title></circle>
+<circle cx="747.0" cy="110.6" r="2.2" fill="var(--s1)"><title>NeurIPS 2018: 1009</title></circle>
+<circle cx="769.2" cy="92.2" r="2.2" fill="var(--s1)"><title>NeurIPS 2019: 1428</title></circle>
+<circle cx="791.4" cy="77.1" r="2.2" fill="var(--s1)"><title>NeurIPS 2020: 1898</title></circle>
+<circle cx="813.5" cy="66.1" r="2.2" fill="var(--s1)"><title>NeurIPS 2021: 2334</title></circle>
+<circle cx="835.7" cy="55.8" r="2.2" fill="var(--s1)"><title>NeurIPS 2022: 2834</title></circle>
+<circle cx="857.8" cy="44.0" r="2.2" fill="var(--s1)"><title>NeurIPS 2023: 3540</title></circle>
+<circle cx="880.0" cy="31.3" r="2.2" fill="var(--s1)"><title>NeurIPS 2024: 4493</title></circle>
+<text x="60" y="12" font-size="10">papers (log scale)</text>
+</svg><figcaption>Papers listed per year on proceedings.neurips.cc, counted on 2026-11-03. The 2025 listing was incomplete and is omitted.</figcaption></figure>
+<div class="prose"><p>Accepted papers grow gently from 90 in 1987 to 152 in 2000, then steeply: 370 in 2012, 679 in 2017, 1,898 in 2020, 4,493 in 2024. The neural-network conference did not shrink during the 1990s "winter".</p></div>
+<h2>Public funding: records exist, year-by-year tables do not</h2><div class="prose"><p>The funding series could not be drawn. What we found are event records.</p>
+<ul>
+<li><b>The Mansfield Amendment (1969).</b> Section 203 of U.S. Public Law 91-121 provides that none of the funds authorized "may be used to carry out any research project or study unless such project or study has a direct and apparent relationship to a specific military function or operation" (83 Stat. 206). It is often cited as redirecting basic research money, but no year-by-year table of AI funding in the following years was found.</li>
+<li><b>The Lighthill report (1973).</b> "Artificial Intelligence: A General Survey", written for the UK Science Research Council, together with the published replies and commentaries, is available in full (Chilton Computing). The statement that it cut British AI support is widely accepted; the source does not give yearly amounts.</li>
+<li><b>DARPA's Strategic Computing Initiative (1983–1993).</b> Usually given as about one billion dollars (Roland & Shiman, <i>Strategic Computing</i>, 2002). Yearly outlays are in the book's appendices or budget documents and were not found as an online table.</li>
+<li><b>Japan's Fifth Generation Computer project (1982–1992).</b> The IPSJ Computer Museum states "approximately ¥54 billion was invested in the project over 11 years". No yearly table.</li>
+</ul>
+<p>The conclusion of this page is therefore: the second winter is confirmed by attendance and by title counts. The first winter has event records but no numerical series to confirm it. That does not mean there was no winter; it means we have not found the data to say so with numbers.</p></div>
+<p class="files"><a href="../data/winter_title_phrases.csv">winter_title_phrases.csv</a> <a href="../data/winter_attendance.csv">winter_attendance.csv</a> <a href="../data/winter_neurips_accepted.csv">winter_neurips_accepted.csv</a></p></main>
+<footer>AI History in Papers · Version 1.0 · Built 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

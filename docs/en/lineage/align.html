@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scale, alignment and safety — AI History in Papers</title><meta name="description" content="The history of AI research from 1943 to today, followed through its original papers">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../en/index.html">AI History in Papers</a><nav><a href="../../en/index.html">Home</a><a href="../../en/chapters/index.html">Eras</a><a href="../../en/lineage/index.html" class="on">Lineage</a><a href="../../en/winters.html">Winters and booms</a><a href="../../en/papers.html">Paper list</a><a href="../../en/method.html">Method and limits</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../ko/index.html">한국어</a></div></header>
+<main><h1>Scale, alignment and safety</h1><p class="lead">Scaling laws, reinforcement learning from human feedback, and the safety agenda.</p>
+<figure><svg viewBox="0 0 1000 116" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">Scale, alignment and safety</text>
+<line class="ax" x1="150.0" x2="150.0" y1="16" y2="86"/><text x="150.0" y="108" text-anchor="middle">2012</text>
+<line class="ax" x1="219.2" x2="219.2" y1="16" y2="86"/><text x="219.2" y="108" text-anchor="middle">2013</text>
+<line class="ax" x1="288.3" x2="288.3" y1="16" y2="86"/><text x="288.3" y="108" text-anchor="middle">2014</text>
+<line class="ax" x1="357.5" x2="357.5" y1="16" y2="86"/><text x="357.5" y="108" text-anchor="middle">2015</text>
+<line class="ax" x1="426.7" x2="426.7" y1="16" y2="86"/><text x="426.7" y="108" text-anchor="middle">2016</text>
+<line class="ax" x1="495.8" x2="495.8" y1="16" y2="86"/><text x="495.8" y="108" text-anchor="middle">2017</text>
+<line class="ax" x1="565.0" x2="565.0" y1="16" y2="86"/><text x="565.0" y="108" text-anchor="middle">2018</text>
+<line class="ax" x1="634.2" x2="634.2" y1="16" y2="86"/><text x="634.2" y="108" text-anchor="middle">2019</text>
+<line class="ax" x1="703.3" x2="703.3" y1="16" y2="86"/><text x="703.3" y="108" text-anchor="middle">2020</text>
+<line class="ax" x1="772.5" x2="772.5" y1="16" y2="86"/><text x="772.5" y="108" text-anchor="middle">2021</text>
+<line class="ax" x1="841.7" x2="841.7" y1="16" y2="86"/><text x="841.7" y="108" text-anchor="middle">2022</text>
+<line class="ax" x1="910.8" x2="910.8" y1="16" y2="86"/><text x="910.8" y="108" text-anchor="middle">2023</text>
+<line class="ax" x1="980.0" x2="980.0" y1="16" y2="86"/><text x="980.0" y="108" text-anchor="middle">2024</text>
+<path class="edge" data-s="amodei2016" data-d="szegedy2013" d="M282.6,31.5 C369.0,31.5 369.0,31.5 455.5,31.5"/>
+<path class="edge" data-s="kaplan2020" data-d="hestness2017" d="M559.2,31.5 C631.3,31.5 631.3,31.5 703.3,31.5"/>
+<path class="edge" data-s="ouyang2022" data-d="bender2021" d="M784.0,31.5 C818.6,31.5 818.6,44.5 853.2,44.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="kaplan2020" d="M703.3,31.5 C778.3,31.5 778.3,31.5 853.2,31.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="bender2021" d="M784.0,31.5 C818.6,31.5 818.6,31.5 853.2,31.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="bender2021" d="M784.0,31.5 C821.5,31.5 821.5,57.5 859.0,57.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="hoffmann2022" d="M853.2,31.5 C856.1,31.5 856.1,57.5 859.0,57.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="kaplan2020" d="M703.3,31.5 C781.1,31.5 781.1,57.5 859.0,57.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="ouyang2022" d="M853.2,44.5 C856.1,44.5 856.1,57.5 859.0,57.5"/>
+<path class="edge" data-s="wei2022b" data-d="bender2021" d="M784.0,31.5 C827.3,31.5 827.3,31.5 870.5,31.5"/>
+<path class="edge" data-s="wei2022b" data-d="chowdhery2022" d="M859.0,57.5 C864.7,57.5 864.7,31.5 870.5,31.5"/>
+<path class="edge" data-s="wei2022b" data-d="hoffmann2022" d="M853.2,31.5 C861.8,31.5 861.8,31.5 870.5,31.5"/>
+<path class="edge" data-s="wei2022b" data-d="kaplan2020" d="M703.3,31.5 C786.9,31.5 786.9,31.5 870.5,31.5"/>
+<path class="edge" data-s="wei2022b" data-d="ouyang2022" d="M853.2,44.5 C861.8,44.5 861.8,31.5 870.5,31.5"/>
+<g class="dot" data-k="szegedy2013" data-t="Intriguing properties of neural networks" data-m="Szegedy et al. · 2013" data-w="Reports two properties of deep networks. The semantic information in high layers is carried by the space of units rather than by individual units, and hardly perceptible input perturbations found by maximizing prediction error can make a network misclassify an image, sometimes transferring across networks." data-href="../chapters/E5.html#szegedy2013"><circle cx="282.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="amodei2016" data-t="Concrete Problems in AI Safety" data-m="Amodei et al. · 2016" data-w="The paper sets out five practical research problems on accident risk in machine learning systems (avoiding side effects, avoiding reward hacking, scalable supervision, safe exploration, distributional shift), reviews prior work on each and proposes experiments." data-href="../chapters/E5.html#amodei2016"><circle cx="455.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hestness2017" data-t="Deep Learning Scaling is Predictable, Empirically" data-m="Hestness et al. · 2017" data-w="Measured learning curves in machine translation, language modeling, image classification and speech recognition and found that generalization error falls as a power law in training set size, with exponents (usually between -0.07 and -0.35) that model improvements shift in intercept but not in exponent. It also reported that model size grows sublinearly with data size." data-href="../chapters/E6.html#hestness2017"><circle cx="559.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kaplan2020" data-t="Scaling Laws for Neural Language Models" data-m="Kaplan et al. · 2020" data-w="Measured how Transformer language-model cross-entropy loss depends on model size, dataset size and training compute, and fitted power laws to these trends. Used the fits to derive the allocation of a fixed compute budget, finding that compute-efficient training uses very large models stopped well before convergence." data-href="../chapters/E6.html#kaplan2020"><circle cx="703.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="bender2021" data-t="On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?" data-m="Bender et al. · 2021" data-w="Asked what risks are associated with ever larger language models and what paths are available for mitigating them. Recommended weighing environmental and financial costs first, curating and documenting datasets, pre-development exercises tied to stakeholder values, and research directions beyond ever larger language models." data-href="../chapters/E6.html#bender2021"><circle cx="784.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hoffmann2022" data-t="Training Compute-Optimal Large Language Models" data-m="Hoffmann et al. · 2022" data-w="Estimated, from over 400 trained language models, how model size and number of training tokens should grow with a fixed compute budget, finding they should be scaled in equal proportions. Tested this with Chinchilla (70B parameters, 4x more data than Gopher at the same compute), which outperformed Gopher, GPT-3, Jurassic-1 and Megatron-Turing NLG on many downstream tasks." data-href="../chapters/E6.html#hoffmann2022"><circle cx="853.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="ouyang2022" data-t="Training language models to follow instructions with human feedback" data-m="Ouyang et al. · 2022" data-w="Fine-tuned GPT-3 first with supervised learning on labeler demonstrations and then with reinforcement learning from human feedback on labeler rankings of outputs, producing InstructGPT. Labelers preferred outputs of the 1.3B InstructGPT model to those of the 175B GPT-3, with improvements in truthfulness and reductions in toxic output." data-href="../chapters/E6.html#ouyang2022"><circle cx="853.2" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="chowdhery2022" data-t="PaLM: Scaling Language Modeling with Pathways" data-m="Chowdhery et al. · 2022" data-w="Trained PaLM, a 540-billion-parameter dense Transformer language model, on 6144 TPU v4 chips using the Pathways system, and reported few-shot results on hundreds of language understanding, generation, reasoning, multilingual and code benchmarks. Also analyzed bias, toxicity and training-data memorization with respect to model scale." data-href="../chapters/E6.html#chowdhery2022"><circle cx="859.0" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wei2022b" data-t="Emergent Abilities of Large Language Models" data-m="Wei et al. · 2022" data-w="Defined emergent abilities of large language models as abilities absent in smaller models but present in larger ones, so that they cannot be predicted by extrapolating smaller-model performance. Surveyed such abilities reported in prior work in few-shot prompting and augmented prompting settings." data-href="../chapters/E6.html#wei2022b"><circle cx="870.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>Solid lines are confirmed citations (OpenAlex or the citing paper&#x27;s own reference list); dotted lines are influences stated in textbooks without a confirmed citation. Vertical position is the theme group.</figcaption></figure>
+<div class="wrap"><table class="sort"><thead><tr><th>Year</th><th>First author</th><th>Title</th><th>Era</th></tr></thead><tbody><tr><td class="nw">2013</td><td>Szegedy et al.</td><td><a href="../chapters/E5.html#szegedy2013">Intriguing properties of neural networks</a></td><td>Ch. 5 Deep learning 2012–17</td></tr><tr><td class="nw">2016</td><td>Amodei et al.</td><td><a href="../chapters/E5.html#amodei2016">Concrete Problems in AI Safety</a></td><td>Ch. 5 Deep learning 2012–17</td></tr><tr><td class="nw">2017</td><td>Hestness et al.</td><td><a href="../chapters/E6.html#hestness2017">Deep Learning Scaling is Predictable, Empirically</a></td><td>Ch. 6 Pretraining and generation 2017–22</td></tr><tr><td class="nw">2020</td><td>Kaplan et al.</td><td><a href="../chapters/E6.html#kaplan2020">Scaling Laws for Neural Language Models</a></td><td>Ch. 6 Pretraining and generation 2017–22</td></tr><tr><td class="nw">2021</td><td>Bender et al.</td><td><a href="../chapters/E6.html#bender2021">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?</a></td><td>Ch. 6 Pretraining and generation 2017–22</td></tr><tr><td class="nw">2022</td><td>Hoffmann et al.</td><td><a href="../chapters/E6.html#hoffmann2022">Training Compute-Optimal Large Language Models</a></td><td>Ch. 6 Pretraining and generation 2017–22</td></tr><tr><td class="nw">2022</td><td>Ouyang et al.</td><td><a href="../chapters/E6.html#ouyang2022">Training language models to follow instructions with human feedback</a></td><td>Ch. 6 Pretraining and generation 2017–22</td></tr><tr><td class="nw">2022</td><td>Chowdhery et al.</td><td><a href="../chapters/E6.html#chowdhery2022">PaLM: Scaling Language Modeling with Pathways</a></td><td>Ch. 6 Pretraining and generation 2017–22</td></tr><tr><td class="nw">2022</td><td>Wei et al.</td><td><a href="../chapters/E6.html#wei2022b">Emergent Abilities of Large Language Models</a></td><td>Ch. 6 Pretraining and generation 2017–22</td></tr></tbody></table></div></main>
+<footer>AI History in Papers · Version 1.0 · Built 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

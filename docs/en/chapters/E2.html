@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Symbolic AI and the first neural networks (1956–1974) — AI History in Papers</title><meta name="description" content="The history of AI research from 1943 to today, followed through its original papers">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../en/index.html">AI History in Papers</a><nav><a href="../../en/index.html">Home</a><a href="../../en/chapters/index.html" class="on">Eras</a><a href="../../en/lineage/index.html">Lineage</a><a href="../../en/winters.html">Winters and booms</a><a href="../../en/papers.html">Paper list</a><a href="../../en/method.html">Method and limits</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../ko/index.html">한국어</a></div></header>
+<main><div class="eyebrow"><span class="tag">Ch. 2 Symbols and perceptrons 1956–74</span></div><h1>Symbolic AI and the first neural networks (1956–1974)</h1><p class="lead">Can intelligence be written as search and logic, and how much can a perceptron learn?</p>
+<div class="glance"><p class="glance-h">Key point</p><ul><li>The perceptron of 1958 and LISP of 1960 share a chapter. A learning machine written in probability and symbol processing written in recursive functions: the two later traditions each got their original text within two years.</li><li>Samuel's checkers program (1959) left the sentence that it learned to play better than its author, and Widrow and Hoff's adaptive element (1960) described training by examples. Both are cited by the reinforcement-learning papers of chapter 3.</li><li>Minsky and Papert's <i>Perceptrons</i> (1969) and Werbos's thesis (1974) could not be obtained for this version, which is why their cards carry no quotation. Whether the chapter ends in a "first winter" is examined with numbers on the winters page.</li></ul></div>
+<div class="prose">
+<p><a href="#bellman1957">Bellman's <i>Dynamic Programming</i></a> (Princeton, 1957) opens the chapter. The book could not be read for this version and its card is empty, but Sutton (1988) in chapter 3 and the Sutton–Barto textbook (1998) in chapter 4 cite it in their reference lists. It is placed as the root of the reinforcement-learning lineage.</p>
+<p><a href="#rosenblatt1958">Rosenblatt's "The perceptron"</a> appeared in <i>Psychological Review</i> in November 1958. What McCulloch and Pitts had written in symbolic logic, Rosenblatt rewrote in probability theory: for "a hypothetical nervous system, or machine, called a perceptron", a system of randomly connected units can learn to associate specific responses with specific stimuli. Its references list both Hebb 1949 and McCulloch–Pitts 1943; the two traditions that ran separately in chapter 1 meet here.</p>
+<p>The next year <a href="#samuel1959">Samuel's "Some Studies in Machine Learning Using the Game of Checkers"</a> (July 1959, <i>IBM Journal</i>) applied two procedures to checkers, rote learning and a generalization procedure that adjusts the coefficients of a scoring polynomial. The sentence is cautious and clear: enough work has been done to verify that a computer can be programmed to learn to play a better game of checkers than the person who wrote the program. Samuel cited Shannon's chess paper and Rosenblatt; Sutton (1988) and Watkins (1989) in chapter 3 cite Samuel. These four papers are the oldest solid lines of the reinforcement-learning lineage.</p>
+<p>Two points fall in 1960. In the April <i>Communications of the ACM</i>, <a href="#mccarthy1960">McCarthy's "Recursive functions of symbolic expressions"</a> described LISP, a programming system for the IBM 704, through recursive functions of symbolic expressions and conditional expressions; the quotation comes from the author's own re-typeset copy, as the ACM printing could not be opened. <a href="#widrow1960">Widrow and Hoff's "Adaptive switching circuits"</a>, a technical report of 30 June, proposed an adaptive neuron element whose gains are adjusted to minimize average error, trained by "showing it examples of inputs and desired outputs". Sutton 1988 and Barto 1983 in chapter 3 cite the report.</p>
+<p><a href="#minsky1961">Minsky's "Steps toward Artificial Intelligence"</a> (1961, <i>Proceedings of the IRE</i>) surveyed search, pattern recognition, learning, planning and induction in one article and is cited by Barto 1983. It appeared in the January 1961 issue.</p>
+<p><a href="#minsky1969">Minsky and Papert's <i>Perceptrons</i></a> (1969, MIT Press) is the most-cited book in this chapter: Rumelhart 1986, Hopfield 1982, Ackley 1985, Cybenko 1989 and Minsky 1974 all cite it. It is known for showing geometrically which functions a single-layer perceptron cannot represent, but this version could not open the 1969 printing, so the card carries no quotation; the 1988 expanded edition is in an archive but its text and pagination may differ, and it was not used.</p>
+<p>Language and backpropagation close the chapter. <a href="#winograd1972">Winograd's "Understanding natural language"</a> first appeared as MIT AI Technical Report 235 in January 1971 and in <i>Cognitive Psychology</i> in 1972: a system (SHRDLU) that handles English dialogue about a simple robot world with knowledge represented as procedures. <a href="#werbos1974">Werbos's Harvard thesis "Beyond Regression"</a> (1974) is known for applying chain-rule adjustment of multilayer-network weights to prediction problems in the behavioral sciences; no public copy exists, the card is empty, and the full text is in a 1994 Wiley volume. The priority of backpropagation is treated in a box in chapter 3.</p>
+<h3>What was and was not checked</h3>
+<p>Of the nine papers, the journal printings of Rosenblatt, Samuel and Widrow–Hoff were read; McCarthy in the author's re-typeset copy, Winograd in the technical-report version. Bellman, Minsky–Papert and Werbos were not read. Among the period's candidates, Newell, Shaw and Simon's Logic Theorist (1956) and GPS (1959), ELIZA (1966), A* (1968), STRIPS (1971), and the multilayer learning of Ivakhnenko (1965) and Amari (1967) did not pass the two-textbook rule. The absence of several symbolic-AI classics is, we think, largely an effect of the missing Nilsson comparison.</p>
+</div>
+
+<h2>Lineage</h2><figure><svg viewBox="0 0 1000 396" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">Neural network learning</text>
+<line class="grid" x1="150" x2="980" y1="156" y2="156"/>
+<text x="142" y="125.0" text-anchor="end">Reinforcement learning and games</text>
+<line class="grid" x1="150" x2="980" y1="226" y2="226"/>
+<text x="142" y="195.0" text-anchor="end">Language and speech</text>
+<line class="grid" x1="150" x2="980" y1="296" y2="296"/>
+<text x="142" y="265.0" text-anchor="end">Search, planning and knowledge</text>
+<line class="grid" x1="150" x2="980" y1="366" y2="366"/>
+<text x="142" y="335.0" text-anchor="end">Probability, statistics and origins</text>
+<line class="ax" x1="316.0" x2="316.0" y1="16" y2="366"/><text x="316.0" y="388" text-anchor="middle">1960</text>
+<line class="ax" x1="523.5" x2="523.5" y1="16" y2="366"/><text x="523.5" y="388" text-anchor="middle">1965</text>
+<line class="ax" x1="731.0" x2="731.0" y1="16" y2="366"/><text x="731.0" y="388" text-anchor="middle">1970</text>
+<line class="ax" x1="938.5" x2="938.5" y1="16" y2="366"/><text x="938.5" y="388" text-anchor="middle">1975</text>
+<path class="edge" data-s="minsky1961" data-d="samuel1959" d="M295.2,101.5 C326.4,101.5 326.4,311.5 357.5,311.5"/>
+<path class="edge" data-s="samuel1959" data-d="rosenblatt1958" d="M267.6,31.5 C281.4,31.5 281.4,101.5 295.2,101.5"/>
+<path class="edge" data-s="widrow1960" data-d="samuel1959" d="M295.2,101.5 C314.3,101.5 314.3,31.5 333.3,31.5"/>
+<path class="edge" data-s="minsky1961" data-d="bellman1957" d="M212.2,101.5 C284.9,101.5 284.9,311.5 357.5,311.5"/>
+<path class="edge" data-s="minsky1961" data-d="mccarthy1960" d="M326.4,241.5 C341.9,241.5 341.9,311.5 357.5,311.5"/>
+<g class="dot" data-k="bellman1957" data-t="Dynamic Programming" data-m="Bellman · 1957" data-w="" data-href="E2.html#bellman1957"><circle cx="212.2" cy="101.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="rosenblatt1958" data-t="The perceptron: A probabilistic model for information storage and organization in the brain" data-m="Rosenblatt · 1958" data-w="Presents a theory, formulated with probability theory rather than symbolic logic, of how information is stored and how it affects recognition, using a hypothetical nervous system called a perceptron. Concludes that a system of randomly connected units can learn to associate specific responses with specific stimuli." data-href="E2.html#rosenblatt1958"><circle cx="267.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="samuel1959" data-t="Some Studies in Machine Learning Using the Game of Checkers" data-m="Samuel · 1959" data-w="Investigates two machine-learning procedures, rote learning and a generalization procedure that adjusts the terms of a scoring polynomial, using checkers. Reports that a program given the rules, a sense of direction, and an incomplete list of parameters learned to play better than its author in 8 to 10 hours of machine-playing time." data-href="E2.html#samuel1959"><circle cx="295.2" cy="101.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mccarthy1960" data-t="Recursive functions of symbolic expressions and their computation by machine, Part I" data-m="McCarthy · 1960" data-w="Describes LISP, a programming system for the IBM 704, through a formalism of recursive functions of symbolic expressions (S-expressions and S-functions) using conditional expressions. Presents the universal S-function apply and the list-structure representation of S-expressions in memory." data-href="E2.html#mccarthy1960"><circle cx="326.4" cy="241.5" r="5" fill="var(--s4)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="widrow1960" data-t="Adaptive switching circuits" data-m="Widrow &amp; Hoff · 1960" data-w="Proposes adaptive switching circuits designed to minimize the average number of errors, using an adaptive neuron element whose gains are set during a training procedure by performance feedback. The designer trains the system by showing it examples of inputs and desired outputs." data-href="E2.html#widrow1960"><circle cx="333.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="minsky1961" data-t="Steps toward Artificial Intelligence" data-m="Minsky · 1961" data-w="Organized the problems of heuristic programming into five areas (Search, Pattern-Recognition, Learning, Planning, and Induction) and reviewed the problem-solving programs and literature of the time under that scheme. The paper argues that pattern recognition, learning, and planning reduce the search a problem-solving machine must otherwise perform." data-href="E2.html#minsky1961"><circle cx="357.5" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="minsky1969" data-t="Perceptrons: An Introduction to Computational Geometry" data-m="Minsky &amp; Papert · 1969" data-w="" data-href="E2.html#minsky1969"><circle cx="710.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="winograd1972" data-t="Understanding natural language" data-m="Winograd · 1971" data-w="Describes a system that answers questions, executes commands, and accepts information in English dialog about a simple robot world, using semantic information and context. Represents knowledge as procedures, with special procedural languages for grammar, semantics, and deductive logic." data-href="E2.html#winograd1972"><circle cx="772.5" cy="171.5" r="5" fill="var(--s3)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="werbos1974" data-t="Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences" data-m="Werbos · 1974" data-w="" data-href="E2.html#werbos1974"><circle cx="917.8" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>Solid lines are confirmed citations (OpenAlex or the citing paper&#x27;s own reference list); dotted lines are influences stated in textbooks without a confirmed citation. Vertical position is the theme group.</figcaption></figure>
+<h2>Paper list (9)</h2><article class="paper" id="bellman1957">
+<h3>Dynamic Programming</h3>
+<p class="meta">Richard Bellman · <b>First public</b> 1957 (book) · Venue: Princeton University Press (A RAND Corporation research study) · Citations (OpenAlex) 14,589 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://www.rand.org/pubs/reports/R295.html">URL</a> · Dover reprint 2003; manifest DOI 10.1126/science.153.3731.34 is a different work: Bellman, &#x27;Dynamic Programming&#x27;, Science 153(3731):34–37, July 1966 (Crossref)</p>
+
+<p class="wc"><b>What changed.</b> </p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E2.html#minsky1961">Minsky 1961</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E3.html#sutton1988">Sutton 1988</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a></p>
+</article><article class="paper" id="rosenblatt1958">
+<h3>The perceptron: A probabilistic model for information storage and organization in the brain</h3>
+<p class="meta">Frank F. Rosenblatt · <b>First public</b> 1958-11 (journal issue) · Venue: Psychological Review, 65(6) · Pages 386–408 · Citations (OpenAlex) 12,279 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1037/h0042519">DOI</a> · Received 23 Apr 1958 (not a public date); Cornell Aeronautical Laboratory report VG-1196-G-1, 1958 (ref. 15, called the first full report in footnote 1; date not checked)</p>
+<blockquote>The theory has been developed for a hypothetical nervous system, or machine, called a perceptron.<cite>p. 387</cite></blockquote>
+<p class="wc"><b>What changed.</b> Presents a theory, formulated with probability theory rather than symbolic logic, of how information is stored and how it affects recognition, using a hypothetical nervous system called a perceptron. Concludes that a system of randomly connected units can learn to associate specific responses with specific stimuli.</p>
+<p class="rel">Cites (within this list): <a href="E1.html#hebb1949">Hebb 1949</a>, <a href="E1.html#mcculloch1943">McCulloch &amp; Pitts 1943</a><br>Cited by (within this list): <a href="E2.html#samuel1959">Samuel 1959</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="samuel1959">
+<h3>Some Studies in Machine Learning Using the Game of Checkers</h3>
+<p class="meta">Arthur L. Samuel · <b>First public</b> 1959-07 (journal issue) · Venue: IBM Journal of Research and Development, 3(3) · Pages 210–229 · Citations (OpenAlex) 4,444 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1147/rd.33.0210">DOI</a> · Reprinted IBM J. Res. Dev. 44(1/2), 2000 (not checked); book reprint pp. 535ff marked &#x27;Originally published in IBM Journal, Vol. 3, No. 3, July, 1959&#x27;</p>
+<blockquote>Enough work has been done to verify the fact that a computer can be programmed so that it will learn to play a better game of checkers than can be played by the person who wrote the program.<cite>p. 211</cite></blockquote>
+<p class="wc"><b>What changed.</b> Investigates two machine-learning procedures, rote learning and a generalization procedure that adjusts the terms of a scoring polynomial, using checkers. Reports that a program given the rules, a sense of direction, and an incomplete list of parameters learned to play better than its author in 8 to 10 hours of machine-playing time.</p>
+<p class="rel">Cites (within this list): <a href="E2.html#rosenblatt1958">Rosenblatt 1958</a>, <a href="E1.html#shannon1950">Shannon 1949</a><br>Cited by (within this list): <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E4.html#hochreiter1991">Hochreiter 1991</a>, <a href="E2.html#minsky1961">Minsky 1961</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E3.html#sutton1988">Sutton 1988</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a>, <a href="E4.html#tesauro1995">Tesauro 1995</a>, <a href="E3.html#watkins1989">Watkins 1989</a>, <a href="E2.html#widrow1960">Widrow &amp; Hoff 1960</a></p>
+</article><article class="paper" id="mccarthy1960">
+<h3>Recursive functions of symbolic expressions and their computation by machine, Part I</h3>
+<p class="meta">John McCarthy · <b>First public</b> 1960-04 (journal issue) · Venue: Communications of the ACM, 3(4) · Pages 34 pp. (author&#x27;s version); CACM pp. 184–195 · Citations (OpenAlex) 1,387 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1145/367177.367199">DOI</a></p>
+<blockquote>A programming system called LISP (for LISt Processor) has been developed for the IBM 704 computer by the Artificial Intelligence group at M.I.T.<cite>p. 1 (author&#x27;s version)</cite></blockquote>
+<p class="wc"><b>What changed.</b> Describes LISP, a programming system for the IBM 704, through a formalism of recursive functions of symbolic expressions (S-expressions and S-functions) using conditional expressions. Presents the universal S-function apply and the list-structure representation of S-expressions in memory.</p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E2.html#minsky1961">Minsky 1961</a>, <a href="E3.html#newell1976">Newell &amp; Simon 1975</a></p>
+</article><article class="paper" id="widrow1960">
+<h3>Adaptive switching circuits</h3>
+<p class="meta">Bernard Carlos Widrow, Marcian E. Hoff · <b>First public</b> 1960-06-30 (tech report) · Venue: IRE WESCON Convention Record, 1960, Part 4 · Pages 96–104 · Citations (OpenAlex) 4,009 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.21236/ad0241531">DOI</a> · 1960 IRE WESCON Convention Record, Part 4, pp. 96–104 (1960; month not printed on copy)</p>
+<blockquote>An approach to such problems is taken in this paper which does not require an explicit use of the truth table.<cite>p. 96</cite></blockquote>
+<p class="wc"><b>What changed.</b> Proposes adaptive switching circuits designed to minimize the average number of errors, using an adaptive neuron element whose gains are set during a training procedure by performance feedback. The designer trains the system by showing it examples of inputs and desired outputs.</p>
+<p class="rel">Cites (within this list): <a href="E2.html#samuel1959">Samuel 1959</a>, <a href="E1.html#shannon1950">Shannon 1949</a><br>Cited by (within this list): <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E3.html#sutton1988">Sutton 1988</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a></p>
+</article><article class="paper" id="minsky1961">
+<h3>Steps toward Artificial Intelligence</h3>
+<p class="meta">Marvin Minsky · <b>First public</b> 1961-01 (journal issue) · Venue: Proceedings of the IRE, 49(1) · Pages 8–30 · Citations (OpenAlex) 1,704 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1109/JRPROC.1961.287775">DOI</a> · Received by the IRE 24 Oct 1960 (footnote, not a public date)</p>
+<blockquote>Summary—The problems of heuristic programming—of making computers solve really difficult problems—are divided into five main areas: Search, Pattern-Recognition, Learning, Planning, and Induction.<cite>p. 8</cite></blockquote>
+<p class="wc"><b>What changed.</b> Organized the problems of heuristic programming into five areas (Search, Pattern-Recognition, Learning, Planning, and Induction) and reviewed the problem-solving programs and literature of the time under that scheme. The paper argues that pattern recognition, learning, and planning reduce the search a problem-solving machine must otherwise perform.</p>
+<p class="rel">Cites (within this list): <a href="E2.html#bellman1957">Bellman 1957</a>, <a href="E1.html#hebb1949">Hebb 1949</a>, <a href="E2.html#mccarthy1960">McCarthy 1960</a>, <a href="E2.html#samuel1959">Samuel 1959</a><br>Cited by (within this list): <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a></p>
+</article><article class="paper" id="minsky1969">
+<h3>Perceptrons: An Introduction to Computational Geometry</h3>
+<p class="meta">Marvin Minsky, Seymour A. Papert · <b>First public</b> 1969 (book) · Venue: MIT Press (Cambridge, Mass.) · Citations (OpenAlex) 3,248 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://archive.org/details/perceptronsintro00mins">URL</a> · Expanded edition, MIT Press 1988; MIT Press ebook listed on IEEE Xplore (document 8093962)</p>
+
+<p class="wc"><b>What changed.</b> </p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E3.html#ackley1985">Ackley et al. 1985</a>, <a href="E3.html#cybenko1989">Cybenko 1989</a>, <a href="E4.html#hochreiter1991">Hochreiter 1991</a>, <a href="E3.html#hopfield1982">Hopfield 1982</a>, <a href="E3.html#hornik1989">Hornik et al. 1988</a>, <a href="E3.html#minsky1974">Minsky 1974</a>, <a href="E3.html#rumelhart1986">Rumelhart et al. 1986</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="winograd1972">
+<h3>Understanding natural language</h3>
+<p class="meta">Terry A. Winograd · <b>First public</b> 1971-01 (tech report) · Venue: Cognitive Psychology, 3(1) (journal); read as MIT Artificial Intelligence Laboratory TR-235 · Pages 461 pp. scan (TR); journal pp. 1–191 · Citations (OpenAlex) 2,807 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1016/0010-0285(72)90002-3">DOI</a> · Dissertation submitted 24 Aug 1970 (not a public date); Cognitive Psychology 3(1):1–191, Jan 1972 (Crossref 10.1016/0010-0285(72)90002-3 published-print 1972-01); Academic Press book 1972</p>
+<blockquote>This paper describes a system for the computer understanding of English.<cite>p. 3 (TR-235, Abstract)</cite></blockquote>
+<p class="wc"><b>What changed.</b> Describes a system that answers questions, executes commands, and accepts information in English dialog about a simple robot world, using semantic information and context. Represents knowledge as procedures, with special procedural languages for grammar, semantics, and deductive logic.</p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E7.html#ahn2022">Ahn et al. 2022</a></p>
+</article><article class="paper" id="werbos1974">
+<h3>Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences</h3>
+<p class="meta">Paul J. Werbos · <b>First public</b> 1974 (thesis) · Venue: Ph.D. thesis, Harvard University · Citations (OpenAlex) 2,784 (checked 2026-11-03)</p>
+<p class="meta"> · Thesis text republished in P. J. Werbos, The Roots of Backpropagation (Wiley, 1994)</p>
+
+<p class="wc"><b>What changed.</b> </p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E4.html#ciresan2010">Ciresan et al. 2010</a>, <a href="E5.html#ciresan2012">Ciresan et al. 2012</a>, <a href="E5.html#lecun2015">LeCun et al. 2015</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E4.html#williams1992">Williams 1992</a></p>
+</article></main>
+<footer>AI History in Papers · Version 1.0 · Built 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

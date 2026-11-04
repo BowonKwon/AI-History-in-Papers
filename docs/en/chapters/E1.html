@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Origins: cybernetics and computation (1943–1956) — AI History in Papers</title><meta name="description" content="The history of AI research from 1943 to today, followed through its original papers">
+<script>(function(){var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f8f7f4;--bg2:#efede8;--card:#ffffff;--line:#dedbd3;--line2:#ebe8e1;--fg:#1d1f24;--fg2:#5a5e68;--fg3:#8a8e98;
+  --accent:#3f6a9e;--accent2:#b5833f;--s1:#3a6fb0;--s2:#b5833f;--s3:#7f63ad;--s4:#4f8a6b;--grid:#e6e3dc;
+  --shadow:0 1px 2px rgba(30,32,40,.05),0 6px 18px rgba(30,32,40,.05);
+  --display:"Noto Serif KR","Source Serif 4",Georgia,"Times New Roman",serif;--body:"Noto Sans KR",-apple-system,"Segoe UI","Apple SD Gothic Neo",Roboto,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1c1f;--bg2:#222326;--card:#232428;--line:#34363c;--line2:#2b2d32;--fg:#ebe9e4;--fg2:#b3b1aa;--fg3:#80827f;--accent:#7ea4d6;--accent2:#d1a35f;--s1:#5a8ccf;--s2:#b5863a;--s3:#9078c4;--s4:#5f9f7d;--grid:#2e3035;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;font:16px/1.7 var(--body);background:var(--bg);color:var(--fg);overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.55rem 1.1rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em}
+header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
+header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
+header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
+.theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
+main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.015em;margin:.3rem 0 .5rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.3;margin:2.4rem 0 .8rem;padding-bottom:.35rem;border-bottom:1px solid var(--line);text-wrap:balance}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+.eyebrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.04em;padding:.1rem .55rem;border-radius:999px;color:var(--fg2);background:var(--bg2);border:1px solid var(--line2)}
+.lead{color:var(--fg2);font-size:1.05rem;max-width:70ch;margin:0 0 1.2rem}
+.hero{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.hero h1{font-size:clamp(1.9rem,4vw,2.7rem)}.hero .lead{font-size:1.12rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.8rem;margin:.9rem 0 1.4rem}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem .9rem;box-shadow:var(--shadow);color:var(--fg);transition:transform .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--fg3)}
+.card b{display:block;margin-bottom:.25rem;font-size:.98rem;color:var(--accent)}.card small{color:var(--fg2);font-size:.86rem;line-height:1.5;display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.8rem;margin:1.2rem 0 1.6rem}
+.stat{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg)}
+.stat .n{font-family:var(--display);font-size:2rem;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.stat small{display:block;color:var(--fg2);margin-top:.35rem;font-size:.86rem;line-height:1.45}
+:lang(ko) p,:lang(ko) li,:lang(ko) .lead,:lang(ko) .glance dd,:lang(ko) .card small,:lang(ko) figcaption,:lang(ko) .paper,:lang(ko) .box{word-break:keep-all;overflow-wrap:anywhere}
+.glance{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.6rem 0 1.1rem;max-width:78ch}.glance-h{margin:0 0 .4rem;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--fg2)}.glance ul{margin:0;padding-left:1.1rem}.glance li{margin:.2rem 0}
+.box{background:color-mix(in srgb,var(--accent2) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 30%,var(--line));border-left:4px solid var(--accent2);border-radius:8px;padding:.8rem 1.1rem;margin:1.4rem 0;font-size:.95rem;max-width:78ch}.box h3{margin:.1rem 0 .5rem;font-size:.98rem}
+.box table{font-size:.88rem}.box .wrap{background:transparent;border:none;padding:0;margin:.4rem 0}.box .wrap p{margin:.6rem 0}.box thead th{white-space:normal}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:var(--shadow);scroll-margin-top:4rem}
+.paper h3{margin:0 0 .25rem;font-size:1.05rem;font-family:var(--display)}.paper .meta{color:var(--fg2);font-size:.88rem;margin:0 0 .5rem}.paper .meta a{margin-right:.6rem}
+.paper blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--accent2);background:var(--bg2);border-radius:0 8px 8px 0;font-size:.93rem;color:var(--fg)}.paper blockquote cite{display:block;color:var(--fg3);font-size:.8rem;font-style:normal;margin-top:.2rem}
+.paper .wc{margin:.4rem 0}.paper .rel{font-size:.84rem;color:var(--fg2);margin-top:.5rem}.paper .rel a{margin-right:.5rem}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.4rem;margin:0}dt{color:var(--fg3);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}dd{margin:0;min-width:0}
+@media(max-width:640px){dl{grid-template-columns:1fr}dt{margin-top:.5rem}}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}th,td{border-bottom:1px solid var(--line2);padding:.42rem .6rem;text-align:left;vertical-align:top}
+thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--line)}thead th:hover{color:var(--fg)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
+svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
+.note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
+.prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
+.src{color:var(--fg2);font-size:.92rem}.files a{display:inline-block;font-size:.85rem;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;padding:.15rem .55rem;margin:.2rem .3rem .2rem 0;color:var(--fg2)}.files a:hover{color:var(--fg);text-decoration:none;border-color:var(--fg3)}
+footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;padding:1.2rem;text-align:center}
+.filter{margin:.5rem 0}.filter input{padding:.4rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:min(100%,340px);font:inherit;font-size:.9rem}
+.filter input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
+@media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
+@media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+</style></head><body>
+<header><a class="brand" href="../../en/index.html">AI History in Papers</a><nav><a href="../../en/index.html">Home</a><a href="../../en/chapters/index.html" class="on">Eras</a><a href="../../en/lineage/index.html">Lineage</a><a href="../../en/winters.html">Winters and booms</a><a href="../../en/papers.html">Paper list</a><a href="../../en/method.html">Method and limits</a></nav>
+<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../ko/index.html">한국어</a></div></header>
+<main><div class="eyebrow"><span class="tag">Ch. 1 Origins 1943–56</span></div><h1>Origins: cybernetics and computation (1943–1956)</h1><p class="lead">Can brain, machine and information be written in one language?</p>
+<div class="glance"><p class="glance-h">Key point</p><ul><li>In 1943 McCulloch and Pitts started from the all-or-none firing of neurons and showed that the behavior of a neural net can be written in propositional logic. Every point in this chapter varies that idea: biology, machine and logic share one language.</li><li>Shannon's two papers of 1948–1950 set down the measure of information in bits and the problem of "programming a computer for playing chess". The later lineage of search and games begins here.</li><li>One sentence of Hebb (1949) is the original text of the rule that cells firing together strengthen their connection. Only three confirmed citation lines connect the five papers of this chapter: the literature of this period rarely cited itself.</li></ul></div>
+<div class="prose">
+<p>The first point on this site is <a href="#mcculloch1943">McCulloch and Pitts, "A logical calculus of the ideas immanent in nervous activity"</a>, in the December 1943 issue of the <i>Bulletin of Mathematical Biophysics</i>. Starting from the all-or-none character of nervous activity, they treated neural events and their relations by propositional logic. The paper concludes in both directions: the behavior of any net can be described in these terms, and for any logical expression satisfying certain conditions a net can be found that behaves as it describes. Before the phrase "thinking machine" was current, the claim that thinking can be written as computation was already in print.</p>
+<p>Five years later <a href="#shannon1948">Shannon's "A Mathematical Theory of Communication"</a> (July 1948, <i>Bell System Technical Journal</i>) measured information on a logarithmic scale and named the base-2 unit the bit. It is a theory of communication, not of intelligence, but the later chapters of this site cannot be written without it: the perplexity of language models, learning as compression, entropy loss functions all come from here. In a footnote Shannon pointed to Wiener's "forthcoming book <i>Cybernetics</i>", one of the three citation lines confirmed in this chapter.</p>
+<p>Shannon immediately set another problem. <a href="#shannon1950">"Programming a computer for playing chess"</a> was read at the IRE convention on 9 March 1949 and printed in the <i>Philosophical Magazine</i> in March 1950. Chess was chosen as a test of whether a general-purpose computer could handle non-numerical problems; the paper proposes an evaluation function of positions (material, pawn structure, mobility) combined with look-ahead over move variations. The lineage of measuring intelligence by games — Samuel in chapter 2, Deep Blue in chapter 4, AlphaGo in chapter 5 — starts here.</p>
+<p>The same year brought <a href="#hebb1949">Hebb's <i>The Organization of Behavior</i></a> (1949, Wiley). On page 62 of a book meant to connect neurophysiology and psychology is one sentence: when cell A repeatedly takes part in firing cell B, a change takes place in one or both cells such that A's efficiency is increased. That sentence is the original text of what later literature calls the Hebb rule; Rosenblatt's perceptron in chapter 2 and Hopfield's network in chapter 3 cite the book. Its bibliography does not list McCulloch–Pitts: the two traditions at first ran separately.</p>
+<p>The chapter's last point is neither a network nor a game. <a href="#chomsky1956">Chomsky's "Three models for the description of language"</a> (September 1956, <i>IRE Transactions on Information Theory</i>) states that no finite-state Markov process producing symbols state by state can serve as an English grammar. That it appeared in an information-theory journal, and cites Shannon and Weaver's book, shows the air of the period: language, logic, information and neurons were discussed in one room for a few years. That room was the Dartmouth meeting of summer 1956. Its proposal (McCarthy et al., August 1955) did not pass this version's selection rule and has no point, but the textbooks agree that the name "artificial intelligence" was coined there.</p>
+<h3>What was and was not checked</h3>
+<p>Of the five papers, the original printings of Shannon 1948, Hebb 1949 and Chomsky 1956 were read. McCulloch–Pitts was read in the 1990 reprint (<i>Bulletin of Mathematical Biology</i> vol. 52), Shannon 1950 in a retyped copy without page numbers, so no page is given for its quotation. Turing's "Computing Machinery and Intelligence" (1950) was a candidate but did not pass the two-textbook rule; the missing Nilsson comparison may be the reason, and the method page says so.</p>
+</div>
+
+<h2>Lineage</h2><figure><svg viewBox="0 0 1000 326" role="img" aria-label="lineage">
+<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
+<text x="142" y="55.0" text-anchor="end">Neural network learning</text>
+<line class="grid" x1="150" x2="980" y1="156" y2="156"/>
+<text x="142" y="125.0" text-anchor="end">Language and speech</text>
+<line class="grid" x1="150" x2="980" y1="226" y2="226"/>
+<text x="142" y="195.0" text-anchor="end">Search, planning and knowledge</text>
+<line class="grid" x1="150" x2="980" y1="296" y2="296"/>
+<text x="142" y="265.0" text-anchor="end">Probability, statistics and origins</text>
+<line class="ax" x1="305.6" x2="305.6" y1="16" y2="296"/><text x="305.6" y="318" text-anchor="middle">1945</text>
+<line class="ax" x1="565.0" x2="565.0" y1="16" y2="296"/><text x="565.0" y="318" text-anchor="middle">1950</text>
+<line class="ax" x1="824.4" x2="824.4" y1="16" y2="296"/><text x="824.4" y="318" text-anchor="middle">1955</text>
+<path class="edge" data-s="chomsky1956" data-d="shannon1948" d="M487.2,241.5 C699.0,241.5 699.0,101.5 910.8,101.5"/>
+<g class="dot" data-k="mcculloch1943" data-t="A logical calculus of the ideas immanent in nervous activity" data-m="McCulloch &amp; Pitts · 1943" data-w="Treats neural events and their relations by means of propositional logic, based on the all-or-none character of nervous activity. Shows that the behavior of every net can be described in these terms and that for logical expressions satisfying certain conditions a net can be constructed that behaves as described." data-href="E1.html#mcculloch1943"><circle cx="249.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="shannon1948" data-t="A Mathematical Theory of Communication" data-m="Shannon · 1948" data-w="Extends the theory of communication of Nyquist and Hartley to include the effect of noise in the channel and the statistical structure of the message. Uses a logarithmic measure of information, with base-2 units called bits." data-href="E1.html#shannon1948"><circle cx="487.2" cy="241.5" r="5" fill="var(--s4)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="shannon1950" data-t="Programming a computer for playing chess" data-m="Shannon · 1949" data-w="Considers how to construct a program for a general-purpose computer to play chess, as a test case for machines that handle non-numerical problems. Proposes an evaluation function f(P) of positions (material, pawn formation, piece positions, mobility) combined with look-ahead over move variations." data-href="E1.html#shannon1950"><circle cx="521.8" cy="171.5" r="5" fill="var(--s3)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hebb1949" data-t="The Organization of Behavior" data-m="Hebb · 1949" data-w="Sets out a neuropsychological theory of behavior meant to connect neurophysiology and psychology. Proposes that repeated activity between cells leads to lasting cellular changes that make one cell more effective in firing another, and uses this for the growth of cell assemblies." data-href="E1.html#hebb1949"><circle cx="539.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="chomsky1956" data-t="Three models for the description of language" data-m="Chomsky · 1956" data-w="Compares finite-state Markov grammars, phrase-structure grammars, and transformational grammars as descriptions of English. Argues that finite-state processes cannot serve as an English grammar and that a kernel of simple sentences plus transformations simplifies the grammar." data-href="E1.html#chomsky1956"><circle cx="910.8" cy="101.5" r="5" fill="var(--s2)" stroke="var(--card)" stroke-width="1"/></g>
+</svg><figcaption>Solid lines are confirmed citations (OpenAlex or the citing paper&#x27;s own reference list); dotted lines are influences stated in textbooks without a confirmed citation. Vertical position is the theme group.</figcaption></figure>
+<h2>Paper list (5)</h2><article class="paper" id="mcculloch1943">
+<h3>A logical calculus of the ideas immanent in nervous activity</h3>
+<p class="meta">Warren S. McCulloch, Walter Pitts · <b>First public</b> 1943-12 (journal issue) · Venue: The Bulletin of Mathematical Biophysics, 5(4) · Pages 99–115 (1990 reprint); original 115–133 · Citations (OpenAlex) 18,560 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1007/BF02478259">DOI</a> · Bulletin of Mathematical Biology reprint 1990 (vol. 52, pp. 99–115)</p>
+<blockquote>It is found that the behavior of every net can be described in these terms, with the addition of more complicated logical means for nets containing circles; and that for any logical expression satisfying certain conditions, one can find a net behaving in the fashion it describes.<cite>p. 99 (1990 reprint, abstract)</cite></blockquote>
+<p class="wc"><b>What changed.</b> Treats neural events and their relations by means of propositional logic, based on the all-or-none character of nervous activity. Shows that the behavior of every net can be described in these terms and that for logical expressions satisfying certain conditions a net can be constructed that behaves as described.</p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E3.html#hopfield1982">Hopfield 1982</a>, <a href="E2.html#rosenblatt1958">Rosenblatt 1958</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="shannon1948">
+<h3>A Mathematical Theory of Communication</h3>
+<p class="meta">Claude E. Shannon · <b>First public</b> 1948-07 (journal issue) · Venue: Bell System Technical Journal, 27(3) and 27(4) · Pages 379–423; 623–656 · Citations (OpenAlex) 88,497 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">DOI</a> · Part II: BSTJ 27(4):623–656, October 1948 (Crossref 10.1002/j.1538-7305.1948.tb00917.x published-print 1948-10); Wiley online 2013-07-29</p>
+<blockquote>In the present paper we will extend the theory to include a number of new factors, in particular the effect of noise in the channel, and the savings possible due to the statistical structure of the original message and due to the nature of the final destination of the information.<cite>p. 379</cite></blockquote>
+<p class="wc"><b>What changed.</b> Extends the theory of communication of Nyquist and Hartley to include the effect of noise in the channel and the statistical structure of the message. Uses a logarithmic measure of information, with base-2 units called bits.</p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E6.html#bommasani2021">Bommasani et al. 2021</a>, <a href="E1.html#chomsky1956">Chomsky 1956</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a>, <a href="E6.html#touvron2023">Touvron et al. 2023</a></p>
+</article><article class="paper" id="shannon1950">
+<h3>Programming a computer for playing chess</h3>
+<p class="meta">Claude E. Shannon · <b>First public</b> 1949-03-09 (conference) · Venue: The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, Ser. 7, 41(314) · Pages 18 pp. (transcription); journal pp. 256–275 per Crossref · Citations (OpenAlex) 618 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1080/14786445008521796">DOI</a> · Philosophical Magazine Ser. 7, 41(314):256–275, March 1950 (Crossref published-print 1950-03); received 8 Nov 1949 (not a public date)</p>
+<blockquote>This paper is concerned with the problem of constructing a computing routine or &quot;program&quot; for a modern general purpose computer which will enable it to play chess.<cite>page unknown (transcription has no journal page numbers; first sentence of Section 1, Introduction)</cite></blockquote>
+<p class="wc"><b>What changed.</b> Considers how to construct a program for a general-purpose computer to play chess, as a test case for machines that handle non-numerical problems. Proposes an evaluation function f(P) of positions (material, pawn formation, piece positions, mobility) combined with look-ahead over move variations.</p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E2.html#samuel1959">Samuel 1959</a>, <a href="E6.html#silver2018">Silver et al. 2018</a>, <a href="E4.html#sutton1998">Sutton &amp; Barto 1998</a>, <a href="E4.html#tesauro1995">Tesauro 1995</a>, <a href="E2.html#widrow1960">Widrow &amp; Hoff 1960</a></p>
+</article><article class="paper" id="hebb1949">
+<h3>The Organization of Behavior</h3>
+<p class="meta">Donald Olding Hebb · <b>First public</b> 1949 (book) · Venue: New York: John Wiley &amp; Sons; London: Chapman &amp; Hall · Pages book (1949 edition scan); key passage on p. 62 · Citations (OpenAlex) 9,716 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.4324/9781410612403">DOI</a> · Psychology Press / Taylor &amp; Francis ebook 2005-04-11 (Crossref 10.4324/9781410612403, the manifest DOI)</p>
+<blockquote>When an axon of cell A is near enough to excite a cell B and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that A’s efficiency, as one of the cells firing B, is increased.<cite>p. 62</cite></blockquote>
+<p class="wc"><b>What changed.</b> Sets out a neuropsychological theory of behavior meant to connect neurophysiology and psychology. Proposes that repeated activity between cells leads to lasting cellular changes that make one cell more effective in firing another, and uses this for the growth of cell assemblies.</p>
+<p class="rel">Cites (within this list): none<br>Cited by (within this list): <a href="E3.html#barto1983">Barto et al. 1983</a>, <a href="E3.html#hopfield1982">Hopfield 1982</a>, <a href="E2.html#minsky1961">Minsky 1961</a>, <a href="E2.html#rosenblatt1958">Rosenblatt 1958</a>, <a href="E5.html#schmidhuber2015">Schmidhuber 2014</a></p>
+</article><article class="paper" id="chomsky1956">
+<h3>Three models for the description of language</h3>
+<p class="meta">Noam . Auteur du texte Chomsky · <b>First public</b> 1956-09 (journal issue) · Venue: IRE Transactions on Information Theory, 2(3) · Pages 113–124 · Citations (OpenAlex) 2,829 (checked 2026-11-03)</p>
+<p class="meta"><a href="https://doi.org/10.1109/TIT.1956.1056813">DOI</a></p>
+<blockquote>We find that no finite-state Markov process that produces symbols with transition from state to state can serve as an English grammar.<cite>p. 113</cite></blockquote>
+<p class="wc"><b>What changed.</b> Compares finite-state Markov grammars, phrase-structure grammars, and transformational grammars as descriptions of English. Argues that finite-state processes cannot serve as an English grammar and that a kernel of simple sentences plus transformations simplifies the grammar.</p>
+<p class="rel">Cites (within this list): <a href="E1.html#shannon1948">Shannon 1948</a><br>Cited by (within this list): <a href="E4.html#collobert2011">Collobert et al. 2011</a>, <a href="E5.html#graves2014">Graves et al. 2014</a></p>
+</article></main>
+<footer>AI History in Papers · Version 1.0 · Built 2026-11-04 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<script>
+(function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
+document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
+ var rows=Array.from(t.tBodies[0].rows),asc=th.dataset.asc!=='1';th.dataset.asc=asc?'1':'0';
+ rows.sort(function(a,b){var x=a.cells[i].dataset.v||a.cells[i].textContent,y=b.cells[i].dataset.v||b.cells[i].textContent;var nx=parseFloat(x),ny=parseFloat(y);if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;return asc?x.localeCompare(y):y.localeCompare(x)});
+ rows.forEach(function(r){t.tBodies[0].appendChild(r)})})})});
+document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase(),t=document.getElementById(inp.dataset.target);Array.from(t.tBodies[0].rows).forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
+(function(){var pop=document.createElement('div');pop.className='pop';document.body.appendChild(pop);
+ document.querySelectorAll('svg .dot').forEach(function(g){
+  g.addEventListener('mouseenter',function(e){pop.innerHTML='<b>'+g.dataset.t+'</b>'+g.dataset.m+(g.dataset.w?'<br>'+g.dataset.w:'');pop.style.display='block';
+   var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){var on=p.dataset.s===g.dataset.k||p.dataset.d===g.dataset.k;p.classList.toggle('hi',on);p.classList.toggle('dim',!on)});g.classList.add('on')});
+  g.addEventListener('mousemove',function(e){var x=e.pageX+14,y=e.pageY+14;if(x+330>window.scrollX+window.innerWidth)x=e.pageX-334;pop.style.left=x+'px';pop.style.top=y+'px'});
+  g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
+  g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
+ var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
+</script></body></html>

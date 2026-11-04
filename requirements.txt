@@ -1,0 +1,1 @@
+PyMuPDF  # import fitz; used only in textbook_match helpers and page extraction

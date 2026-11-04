@@ -1,0 +1,16 @@
+key,award,year,laureates,how_named,evidence_to_verify
+minsky1969,Turing,1969,Marvin Minsky,ACM citation names work in AI and perceptrons? (verify citation text),amturing.acm.org/award_winners/minsky_7440781.cfm
+mccarthy1960,Turing,1971,John McCarthy,ACM citation names LISP (verify),amturing.acm.org/award_winners/mccarthy_1118322.cfm
+newell1976,Turing,1975,"Allen Newell, Herbert A. Simon",Turing lecture is this paper (CACM 1976),doi:10.1145/360018.360022
+buchanan1978,Turing,1994,"Edward Feigenbaum, Raj Reddy",ACM citation names large-scale AI systems / DENDRAL (verify),amturing.acm.org/award_winners/feigenbaum_4167235.cfm
+pearl1988,Turing,2011,Judea Pearl,ACM citation names probabilistic and causal reasoning (verify),amturing.acm.org/award_winners/pearl_2658896.cfm
+valiant1984,Turing,2010,Leslie Valiant,ACM citation names PAC learning (verify),amturing.acm.org/award_winners/valiant_2612174.cfm
+rumelhart1986,Turing,2018,"Yoshua Bengio, Geoffrey Hinton, Yann LeCun",ACM citation names backpropagation (verify),amturing.acm.org/award_winners/hinton_4791679.cfm
+lecun1989,Turing,2018,"Yoshua Bengio, Geoffrey Hinton, Yann LeCun",ACM citation names convolutional networks (verify),amturing.acm.org/award_winners/lecun_6017366.cfm
+bengio2003,Turing,2018,"Yoshua Bengio, Geoffrey Hinton, Yann LeCun",ACM citation names probabilistic models of sequences / word embeddings (verify),amturing.acm.org/award_winners/bengio_3406375.cfm
+sutton1988,Turing,2024,"Andrew Barto, Richard Sutton",ACM citation names temporal-difference learning (verify),amturing.acm.org/award_winners/sutton_0160594.cfm
+barto1983,Turing,2024,"Andrew Barto, Richard Sutton",ACM citation names actor-critic / foundations of RL (verify),amturing.acm.org/award_winners/barto_8135436.cfm
+sutton1998,Turing,2024,"Andrew Barto, Richard Sutton",ACM citation names the textbook (verify),amturing.acm.org/award_winners/sutton_0160594.cfm
+hopfield1982,Nobel Physics,2024,"John J. Hopfield, Geoffrey Hinton",Nobel scientific background names Hopfield network 1982 (verify in Scientific Background PDF),https://www.nobelprize.org/prizes/physics/2024/advanced-information/
+ackley1985,Nobel Physics,2024,"John J. Hopfield, Geoffrey Hinton",Nobel scientific background names Boltzmann machine (verify),https://www.nobelprize.org/prizes/physics/2024/advanced-information/
+jumper2021,Nobel Chemistry,2024,"Demis Hassabis, John Jumper",Nobel motivation: protein structure prediction (AlphaFold2 paper),https://www.nobelprize.org/prizes/chemistry/2024/advanced-information/

@@ -1,0 +1,1165 @@
+﻿src,dst,kind,evidence
+rosenblatt1958,hebb1949,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+rosenblatt1958,mcculloch1943,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mccarthy1960,mccarthy1959,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+minsky1961,samuel1959,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+solomonoff1964,chomsky1956,OA,OpenAlex referenced_works (2026-11-03)
+mccarthy1969,newell1959,OA,OpenAlex referenced_works (2026-11-03)
+mccarthy1969,minsky1961,OA,OpenAlex referenced_works (2026-11-03)
+mccarthy1969,turing1950,OA,OpenAlex referenced_works (2026-11-03)
+mccarthy1969,mccarthy1959,OA,OpenAlex referenced_works (2026-11-03)
+fikes1971,mccarthy1969,OA,OpenAlex referenced_works (2026-11-03)
+winograd1972,robinson1965,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+winograd1972,weizenbaum1966,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+shortliffe1975,zadeh1965,OA,OpenAlex referenced_works (2026-11-03)
+newell1976,turing1950,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+newell1976,mccarthy1960,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+searle1980,schank1977,OA,OpenAlex referenced_works (2026-11-03)
+searle1980,weizenbaum1966,OA,OpenAlex referenced_works (2026-11-03)
+hopfield1982,minsky1969,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kohonen1982,hebb1949,OA,OpenAlex referenced_works (2026-11-03)
+geman1984,kirkpatrick1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ackley1985,geman1984,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ackley1985,kirkpatrick1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ackley1985,hopfield1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+pearl1988,shortliffe1975,OA,OpenAlex referenced_works (2026-11-03)
+pearl1988,hart1968,OA,OpenAlex referenced_works (2026-11-03)
+pearl1988,geman1984,OA,OpenAlex referenced_works (2026-11-03)
+pearl1988,kirkpatrick1983,OA,OpenAlex referenced_works (2026-11-03)
+pearl1988,mccarthy1969,OA,OpenAlex referenced_works (2026-11-03)
+sutton1988,widrow1960,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutton1988,barto1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutton1988,ackley1985,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutton1988,bellman1957,OA,OpenAlex referenced_works (2026-11-03)
+sutton1988,samuel1959,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1989,fukushima1980,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+cybenko1989,hornik1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+cybenko1989,valiant1984,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hornik1989,cybenko1989,OA,OpenAlex referenced_works (2026-11-03)
+rabiner1989,dempster1977,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+waibel1989,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+elman1990,waibel1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown1990,dempster1977,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schapire1990,valiant1984,OA,OpenAlex referenced_works (2026-11-03)
+watkins1992,watkins1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+williams1992,werbos1974,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+williams1992,barto1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+williams1992,sutton1988,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+williams1992,watkins1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bengio1994,kirkpatrick1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+tesauro1995,sutton1988,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+tesauro1995,hornik1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+tesauro1995,samuel1959,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+cortes1995,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+cortes1995,boser1992,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+freund1997,schapire1990,OA,OpenAlex referenced_works (2026-11-03)
+hochreiter1997,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schuster1997,waibel1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kaelbling1998,kalman1960,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kaelbling1998,rabiner1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,amari1967,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,ackley1985,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,boser1992,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,cybenko1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,waibel1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,rabiner1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,lecun1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun1998,schapire1990,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutton1999,barto1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutton1999,williams1992,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+friedman2001,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03)
+lafferty2001,freund1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+viola2001,freund1997,OA,OpenAlex referenced_works (2026-11-03)
+breiman2001b,breiman2001,OA,OpenAlex referenced_works (2026-11-03)
+hinton2002,geman1984,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bengio2003,elman1990,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bengio2003,hinton2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+coulom2006,sutton1988,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+coulom2006,sutton1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2006,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2006,hinton2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2006,pearl1988,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2006b,hopfield1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2006b,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bengio2007,hinton2006b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bengio2007,hinton2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bengio2007,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schaeffer2007,shannon1950,OA,OpenAlex referenced_works (2026-11-03)
+raina2009,hinton2006b,OA,OpenAlex referenced_works (2026-11-03)
+raina2009,bengio2007,OA,OpenAlex referenced_works (2026-11-03)
+raina2009,hinton2002,OA,OpenAlex referenced_works (2026-11-03)
+raina2009,tibshirani1996,OA,OpenAlex referenced_works (2026-11-03)
+raina2009,hinton2006,OA,OpenAlex referenced_works (2026-11-03)
+glorot2010,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+glorot2010,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+glorot2010,bengio2007,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+glorot2010,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+glorot2010,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+nair2010,hinton2006b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+nair2010,hinton2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+nair2010,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2010,werbos1974,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2010,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2010,hinton2006b,OA,OpenAlex referenced_works (2026-11-03)
+ciresan2010,bengio2007,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2010,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mikolov2010,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mikolov2010,elman1990,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ferrucci2010,jacobs1991,OA,OpenAlex referenced_works (2026-11-03)
+collobert2011,bengio2007,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+collobert2011,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+collobert2011,waibel1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+collobert2011,chomsky1956,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+collobert2011,rabiner1989,OA,OpenAlex referenced_works (2026-11-03)
+collobert2011,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+collobert2011,bengio2003,OA,OpenAlex referenced_works (2026-11-03)
+collobert2011,lafferty2001,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+collobert2011,pearl1988,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2012,fukushima1980,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2012,werbos1974,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2012,bengio2007,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2012,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ciresan2012,ciresan2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2012,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2012,glorot2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2012,hinton2006b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2012,hinton2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2012,ciresan2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2012,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mikolov2013b,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mikolov2013b,mikolov2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2013,nair2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2013,tesauro1995,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2013,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2013,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+szegedy2013,mikolov2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+szegedy2013,girshick2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+szegedy2013,deng2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+szegedy2013,hinton2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+girshick2014,fukushima1980,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+girshick2014,deng2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+girshick2014,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+girshick2014,lecun1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+cho2014,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+cho2014,mikolov2013b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,mikolov2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,graves2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,ciresan2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sutskever2014,cho2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bahdanau2014,graves2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bahdanau2014,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bahdanau2014,schuster1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bahdanau2014,cho2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+pennington2014,mikolov2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+pennington2014,mikolov2013b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+pennington2014,collobert2011,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+simonyan2014,girshick2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+simonyan2014,deng2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+simonyan2014,lecun1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+simonyan2014,szegedy2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+szegedy2014,girshick2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+szegedy2014,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+szegedy2014,lecun1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kingma2014,graves2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kingma2014,hinton2006b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kingma2014,hinton2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2014,graves2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2014,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2014,chomsky1956,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2014,hopfield1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2014,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+graves2014,bahdanau2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ioffe2015,glorot2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ioffe2015,nair2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ioffe2015,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ioffe2015,szegedy2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2015,fukushima1980,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2015,nair2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2015,hinton2006b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2015,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2015,tesauro1995,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2015,kaelbling1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2015,sutton1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,rumelhart1986,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,xu2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,werbos1974,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,hinton2006b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,waibel1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,raina2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,mnih2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,collobert2011,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lecun2015,hinton2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,werbos1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hebb1949,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,watkins1992,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,kohonen1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,minsky1961,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,fukushima1980,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,holland1975,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,ivakhnenko1965,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,werbos1974,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,barto1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,nair2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,mnih2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,mcculloch1943,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,shannon1948,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,amari1967,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,rosenblatt1958,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,dempster1977,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hinton2006b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,girshick2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,kalman1960,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,elman1990,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,bengio2007,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,lecun1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hinton2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,williams1992,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,raina2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,lowe1999,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hopfield1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,schuster1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,ciresan2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hornik1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,ciresan2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,lecun1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,sutton1999,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,hinton2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,kaelbling1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,bellman1957,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,schapire1990,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,watkins1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,samuel1959,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,breiman1996,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,solomonoff1964,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schmidhuber2015,sutton1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,ren2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,glorot2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,nair2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,simonyan2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,ioffe2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,girshick2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,bengio1994,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,lecun1989,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+he2015,srivastava2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ronneberger2015,simonyan2014,OA,OpenAlex referenced_works (2026-11-03)
+ronneberger2015,girshick2014,OA,OpenAlex referenced_works (2026-11-03)
+ronneberger2015,lecun1989,OA,OpenAlex referenced_works (2026-11-03)
+ren2015,nair2010,OA,OpenAlex referenced_works (2026-11-03)
+ren2015,simonyan2014,OA,OpenAlex referenced_works (2026-11-03)
+ren2015,girshick2014,OA,OpenAlex referenced_works (2026-11-03)
+ren2015,lecun1989,OA,OpenAlex referenced_works (2026-11-03)
+redmon2015,ren2015,OA,OpenAlex referenced_works (2026-11-03)
+redmon2015,girshick2014,OA,OpenAlex referenced_works (2026-11-03)
+redmon2015,lowe1999,OA,OpenAlex referenced_works (2026-11-03)
+redmon2015,szegedy2014,OA,OpenAlex referenced_works (2026-11-03)
+sohldickstein2015,hinton2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+luong2015,xu2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+luong2015,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+xu2015,simonyan2014,OA,OpenAlex referenced_works (2026-11-03)
+xu2015,graves2013,OA,OpenAlex referenced_works (2026-11-03)
+xu2015,kingma2013,OA,OpenAlex referenced_works (2026-11-03)
+xu2015,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03)
+xu2015,williams1992,OA,OpenAlex referenced_works (2026-11-03)
+xu2015,sutskever2014,OA,OpenAlex referenced_works (2026-11-03)
+schulman2015,barto1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schulman2015,mnih2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lillicrap2015,kingma2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lillicrap2015,mnih2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lillicrap2015,mnih2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+radford2015,kingma2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+radford2015,deng2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+radford2015,sohldickstein2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2015,jacobs1991,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hinton2015,hinton2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+sennrich2015,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,kocsis2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,coulom2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,sutton1988,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,williams1992,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,mnih2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,sutton1999,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,campbell2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,lecun2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2016,sutton1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+mnih2016,kingma2014,OA,OpenAlex referenced_works (2026-11-03)
+mnih2016,mnih2013,OA,OpenAlex referenced_works (2026-11-03)
+mnih2016,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03)
+mnih2016,williams1992,OA,OpenAlex referenced_works (2026-11-03)
+mnih2016,mnih2015,OA,OpenAlex referenced_works (2026-11-03)
+mnih2016,lillicrap2015,OA,OpenAlex referenced_works (2026-11-03)
+amodei2016,szegedy2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+amodei2016,mnih2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+amodei2016,kaelbling1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+amodei2016,silver2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ba2016,simonyan2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ba2016,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ba2016,hinton2012,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+jouppi2017,silver2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+jouppi2017,wu2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+vaswani2017,graves2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+vaswani2017,wu2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,fukushima1980,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,kocsis2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,coulom2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,sutton1988,OA,OpenAlex referenced_works (2026-11-03)
+silver2017,mnih2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,silver2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,mnih2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,moravcik2017,OA,OpenAlex referenced_works (2026-11-03)
+silver2017,jouppi2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,lecun2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2017,sutton1998,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schulman2017,kingma2014,OA,OpenAlex referenced_works (2026-11-03)
+schulman2017,schulman2015,OA,OpenAlex referenced_works (2026-11-03)
+schulman2017,mnih2015,OA,OpenAlex referenced_works (2026-11-03)
+schulman2017,mnih2016,OA,OpenAlex referenced_works (2026-11-03)
+christiano2017,mnih2013,OA,OpenAlex referenced_works (2026-11-03)
+christiano2017,mnih2016,OA,OpenAlex referenced_works (2026-11-03)
+christiano2017,amodei2016,OA,OpenAlex referenced_works (2026-11-03)
+moravcik2017,kocsis2006,OA,OpenAlex referenced_works (2026-11-03)
+moravcik2017,tesauro1995,OA,OpenAlex referenced_works (2026-11-03)
+moravcik2017,mnih2015,OA,OpenAlex referenced_works (2026-11-03)
+moravcik2017,hinton2012,OA,OpenAlex referenced_works (2026-11-03)
+moravcik2017,silver2016,OA,OpenAlex referenced_works (2026-11-03)
+moravcik2017,campbell2002,OA,OpenAlex referenced_works (2026-11-03)
+moravcik2017,samuel1959,OA,OpenAlex referenced_works (2026-11-03)
+peters2018,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+peters2018,lafferty2001,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+peters2018,pennington2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+peters2018,ba2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+devlin2018,deng2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+devlin2018,mikolov2013b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+devlin2018,pennington2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+devlin2018,wu2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+devlin2018,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+devlin2018,peters2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+devlin2018,howard2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2018,shannon1950,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2018,silver2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2018,silver2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+silver2018,campbell2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ha2018,werbos1982,OA,OpenAlex referenced_works (2026-11-03)
+ha2018,vandenoord2016,OA,OpenAlex referenced_works (2026-11-03)
+ha2018,shazeer2017,OA,OpenAlex referenced_works (2026-11-03)
+karras2018,kingma2014,OA,OpenAlex referenced_works (2026-11-03)
+karras2018,simonyan2014,OA,OpenAlex referenced_works (2026-11-03)
+karras2018,ioffe2015,OA,OpenAlex referenced_works (2026-11-03)
+karras2018,kingma2013,OA,OpenAlex referenced_works (2026-11-03)
+raffel2019,mikolov2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,graves2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,hinton2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,deng2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,mikolov2013b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,pennington2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,wu2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,hestness2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,peters2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+raffel2019,howard2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+vinyals2019,mikolov2010,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,sutton1988,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,mnih2015,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,silver2016,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,mnih2016,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,jouppi2017,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,christiano2017,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,silver2018,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,campbell2002,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,lecun2015,OA,OpenAlex referenced_works (2026-11-03)
+vinyals2019,sutton1998,OA,OpenAlex referenced_works (2026-11-03)
+brown2019,tesauro1995,OA,OpenAlex referenced_works (2026-11-03)
+brown2019,silver2016,OA,OpenAlex referenced_works (2026-11-03)
+brown2019,moravcik2017,OA,OpenAlex referenced_works (2026-11-03)
+brown2019,silver2017,OA,OpenAlex referenced_works (2026-11-03)
+brown2019,campbell2002,OA,OpenAlex referenced_works (2026-11-03)
+schrittwieser2019,kocsis2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,coulom2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,mnih2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,silver2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,moravcik2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,silver2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,silver2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,campbell2002,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+schrittwieser2019,vinyals2019,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kaplan2020,kingma2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kaplan2020,sennrich2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+kaplan2020,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,mikolov2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,hinton2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,pennington2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,hestness2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,howard2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,kaplan2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+brown2020,lewis2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+ho2020,vandenoord2016,OA,OpenAlex referenced_works (2026-11-03)
+ho2020,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+ho2020,karras2018,OA,OpenAlex referenced_works (2026-11-03)
+dosovitskiy2020,deng2009,OA,OpenAlex referenced_works (2026-11-03)
+dosovitskiy2020,lecun1989,OA,OpenAlex referenced_works (2026-11-03)
+dosovitskiy2020,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+dosovitskiy2020,brown2020,OA,OpenAlex referenced_works (2026-11-03)
+lewis2020,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+lewis2020,raffel2019,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+song2020,karras2018,OA,OpenAlex referenced_works (2026-11-03)
+stiennon2020,kingma2014,OA,OpenAlex referenced_works (2026-11-03)
+stiennon2020,glorot2010,OA,OpenAlex referenced_works (2026-11-03)
+stiennon2020,wu2016,OA,OpenAlex referenced_works (2026-11-03)
+stiennon2020,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+stiennon2020,schulman2017,OA,OpenAlex referenced_works (2026-11-03)
+stiennon2020,raffel2019,OA,OpenAlex referenced_works (2026-11-03)
+stiennon2020,brown2020,OA,OpenAlex referenced_works (2026-11-03)
+jumper2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+radford2021,kingma2014,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,blei2003,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,deng2009,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,mikolov2013b,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,pennington2014,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,hestness2017,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,peters2018,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,howard2018,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,raffel2019,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,kaplan2020,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,brown2020,OA,OpenAlex referenced_works (2026-11-03)
+radford2021,dosovitskiy2020,OA,OpenAlex referenced_works (2026-11-03)
+ramesh2021,kingma2014,OA,OpenAlex referenced_works (2026-11-03)
+ramesh2021,deng2009,OA,OpenAlex referenced_works (2026-11-03)
+ramesh2021,lecun1998,OA,OpenAlex referenced_works (2026-11-03)
+ramesh2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+ramesh2021,radford2021,OA,OpenAlex referenced_works (2026-11-03)
+chen2021,graves2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,sutskever2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,mikolov2013b,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,vandenoord2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,peters2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,kaplan2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,stiennon2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,ramesh2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,bender2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+chen2021,radford2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bender2021,pennington2014,OA,OpenAlex referenced_works (2026-11-03)
+bender2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bender2021,peters2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bender2021,raffel2019,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,mikolov2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,glorot2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,marr1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,mikolov2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,nair2010,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,simonyan2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,hinton2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,kingma2013,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,shannon1948,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,girshick2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,deng2009,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,lowe1999,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,sohldickstein2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,hinton2006,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,pennington2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,silver2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,amodei2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,vandenoord2016,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,jouppi2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,hestness2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,peters2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,howard2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,lecun2015,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,kaplan2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,brown2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,ho2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,stiennon2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,fedus2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,ramesh2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,bender2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,radford2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,hu2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+bommasani2021,chen2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+hu2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+hu2021,brown2020,OA,OpenAlex referenced_works (2026-11-03)
+gu2021,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03)
+gu2021,vandenoord2016,OA,OpenAlex referenced_works (2026-11-03)
+gu2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+gu2021,dosovitskiy2020,OA,OpenAlex referenced_works (2026-11-03)
+fedus2021,hinton2015,OA,OpenAlex referenced_works (2026-11-03)
+fedus2021,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03)
+fedus2021,jacobs1991,OA,OpenAlex referenced_works (2026-11-03)
+fedus2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+fedus2021,raffel2019,OA,OpenAlex referenced_works (2026-11-03)
+fedus2021,kaplan2020,OA,OpenAlex referenced_works (2026-11-03)
+fedus2021,brown2020,OA,OpenAlex referenced_works (2026-11-03)
+wei2022,hochreiter1997,OA,OpenAlex referenced_works (2026-11-03)
+wei2022,graves2014,OA,OpenAlex referenced_works (2026-11-03)
+wei2022,vaswani2017,OA,OpenAlex referenced_works (2026-11-03)
+wei2022,brown2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+park2023,vinyals2019,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+park2023,weizenbaum1966,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+deepseek2025,schulman2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+deepseek2025,kaplan2020,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+deepseek2025,openai2023,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+shannon1948,wiener1948,original,reference list of shannon1948 (journal)
+shannon1950,wiener1948,original,reference list of shannon1950 (retyped transcription of the journal text)
+chomsky1956,shannon1948,original,reference list of chomsky1956 (journal)
+samuel1959,rosenblatt1958,original,reference list of samuel1959 (journal)
+samuel1959,shannon1950,original,reference list of samuel1959 (journal)
+widrow1960,shannon1950,original,"reference list of widrow1960 (conference (reprint from 1960 IRE WESCON Convention Record, Part 4))"
+widrow1960,samuel1959,original,"reference list of widrow1960 (conference (reprint from 1960 IRE WESCON Convention Record, Part 4))"
+minsky1961,bellman1957,original,reference list of minsky1961 (journal)
+minsky1961,hebb1949,original,reference list of minsky1961 (journal)
+minsky1961,mccarthy1959,original,reference list of minsky1961 (journal)
+minsky1961,mccarthy1960,original,reference list of minsky1961 (journal)
+minsky1961,newell1956,original,reference list of minsky1961 (journal)
+minsky1961,newell1959,original,reference list of minsky1961 (journal)
+minsky1961,selfridge1959,original,reference list of minsky1961 (journal)
+minsky1961,turing1950,original,reference list of minsky1961 (journal)
+minsky1961,wiener1948,original,reference list of minsky1961 (journal)
+winograd1972,quillian1968,original,"reference list of winograd1972 (technical report (MIT AI TR-235, revised version of the 1970 PhD dissertation))"
+minsky1974,minsky1969,original,reference list of minsky1974 (technical report (author's HTML web version of MIT AI Memo 306))
+hopfield1982,mcculloch1943,original,reference list of hopfield1982 (journal)
+hopfield1982,hebb1949,original,reference list of hopfield1982 (journal)
+barto1983,hebb1949,original,reference list of barto1983 (journal)
+barto1983,widrow1960,original,reference list of barto1983 (journal)
+barto1983,minsky1961,original,reference list of barto1983 (journal)
+barto1983,samuel1959,original,reference list of barto1983 (journal)
+barto1983,mcculloch1943,original,reference list of barto1983 (journal)
+ackley1985,minsky1969,original,reference list of ackley1985 (journal)
+rumelhart1986,minsky1969,original,reference list of rumelhart1986 (journal)
+cybenko1989,minsky1969,original,reference list of cybenko1989 (journal)
+hornik1989,minsky1969,original,reference list of hornik1989 (journal)
+watkins1989,barto1983,original,reference list of watkins1989 (thesis)
+watkins1989,samuel1959,original,reference list of watkins1989 (thesis)
+watkins1989,sutton1988,original,reference list of watkins1989 (thesis)
+hochreiter1991,barto1983,original,reference list of hochreiter1991 (thesis)
+hochreiter1991,minsky1969,original,reference list of hochreiter1991 (thesis)
+hochreiter1991,samuel1959,original,reference list of hochreiter1991 (thesis)
+watkins1992,sutton1988,original,reference list of watkins1992 (journal)
+tesauro1995,shannon1950,original,"reference list of tesauro1995 (journal text (HTML transcription by Tom Keith, copied with permission of the ACM))"
+hochreiter1997,elman1990,original,reference list of hochreiter1997 (journal)
+hochreiter1997,hochreiter1991,original,reference list of hochreiter1997 (journal)
+sutton1998,shannon1950,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,bellman1957,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,samuel1959,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,widrow1960,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,minsky1961,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,holland1975,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,werbos1982,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,kirkpatrick1983,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,barto1983,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,sutton1988,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,watkins1989,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,watkins1992,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,williams1992,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,tesauro1995,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,russell1995,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1998,hochreiter1997,original,"reference list of sutton1998 (book (1st ed., author-hosted HTML edition))"
+sutton1999,sutton1998,original,reference list of sutton1999 (conference)
+breiman2001,breiman1996,original,reference list of breiman2001 (journal)
+lafferty2001,lecun1998,original,reference list of lafferty2001 (author postprint (posted by permission of ACM))
+hinton2006b,hinton2002,original,reference list of hinton2006b (journal (Science typeset pages on author site))
+ciresan2010,hochreiter1991,original,reference list of ciresan2010 (arXiv v1)
+ciresan2010,russell1995,original,reference list of ciresan2010 (arXiv v1)
+mikolov2010,bengio2003,original,reference list of mikolov2010 (conference)
+krizhevsky2012,breiman2001,original,reference list of krizhevsky2012 (conference)
+krizhevsky2012,ciresan2012,original,reference list of krizhevsky2012 (conference)
+krizhevsky2012,deng2009,original,reference list of krizhevsky2012 (conference)
+krizhevsky2012,nair2010,original,reference list of krizhevsky2012 (conference)
+hinton2012,pearl1988,original,reference list of hinton2012 (author-hosted IEEE page proof)
+le2012,bengio2007,original,reference list of le2012 (conference (ICML 2012))
+le2012,ciresan2010,original,reference list of le2012 (conference (ICML 2012))
+le2012,deng2009,original,reference list of le2012 (conference (ICML 2012))
+le2012,hinton2006,original,reference list of le2012 (conference (ICML 2012))
+le2012,hinton2006b,original,reference list of le2012 (conference (ICML 2012))
+le2012,lecun1998,original,reference list of le2012 (conference (ICML 2012))
+le2012,raina2009,original,reference list of le2012 (conference (ICML 2012))
+mikolov2013,bengio2003,original,reference list of mikolov2013 (arXiv v3)
+mikolov2013,collobert2011,original,reference list of mikolov2013 (arXiv v3)
+mikolov2013,elman1990,original,reference list of mikolov2013 (arXiv v3)
+mikolov2013,mikolov2010,original,reference list of mikolov2013 (arXiv v3)
+mikolov2013,mikolov2013b,original,reference list of mikolov2013 (arXiv v3)
+mikolov2013,rumelhart1986,original,reference list of mikolov2013 (arXiv v3)
+mikolov2013b,bengio2003,original,reference list of mikolov2013b (arXiv v1)
+mnih2013,krizhevsky2012,original,reference list of mnih2013 (arXiv v1)
+mnih2013,sutton1998,original,reference list of mnih2013 (arXiv v1)
+mnih2013,watkins1992,original,reference list of mnih2013 (arXiv v1)
+szegedy2013,krizhevsky2012,original,reference list of szegedy2013 (arXiv v4)
+szegedy2013,le2012,original,reference list of szegedy2013 (arXiv v4)
+girshick2014,krizhevsky2012,original,reference list of girshick2014 (arXiv v5 (tech report))
+girshick2014,simonyan2014,original,reference list of girshick2014 (arXiv v5 (tech report))
+goodfellow2014,hinton2006,original,reference list of goodfellow2014 (arXiv v1)
+goodfellow2014,hinton2012,original,reference list of goodfellow2014 (arXiv v1)
+goodfellow2014,kingma2013,original,reference list of goodfellow2014 (arXiv v1)
+goodfellow2014,krizhevsky2012,original,reference list of goodfellow2014 (arXiv v1)
+goodfellow2014,lecun1998,original,reference list of goodfellow2014 (arXiv v1)
+srivastava2014,hinton2006,original,reference list of srivastava2014 (journal)
+srivastava2014,hinton2006b,original,reference list of srivastava2014 (journal)
+srivastava2014,krizhevsky2012,original,reference list of srivastava2014 (journal)
+srivastava2014,lecun1989,original,reference list of srivastava2014 (journal)
+srivastava2014,tibshirani1996,original,reference list of srivastava2014 (journal)
+cho2014,bengio2003,original,reference list of cho2014 (arXiv v3)
+cho2014,krizhevsky2012,original,reference list of cho2014 (arXiv v3)
+sutskever2014,bahdanau2014,original,reference list of sutskever2014 (arXiv v3)
+sutskever2014,bengio2003,original,reference list of sutskever2014 (arXiv v3)
+sutskever2014,hinton2012,original,reference list of sutskever2014 (arXiv v3)
+sutskever2014,hochreiter1991,original,reference list of sutskever2014 (arXiv v3)
+sutskever2014,krizhevsky2012,original,reference list of sutskever2014 (arXiv v3)
+sutskever2014,le2012,original,reference list of sutskever2014 (arXiv v3)
+bahdanau2014,bengio1994,original,reference list of bahdanau2014 (arXiv v7)
+bahdanau2014,bengio2003,original,reference list of bahdanau2014 (arXiv v7)
+bahdanau2014,hochreiter1991,original,reference list of bahdanau2014 (arXiv v7)
+bahdanau2014,hochreiter1997,original,reference list of bahdanau2014 (arXiv v7)
+pennington2014,bengio2003,original,reference list of pennington2014 (conference)
+simonyan2014,glorot2010,original,reference list of simonyan2014 (arXiv v6)
+simonyan2014,krizhevsky2012,original,reference list of simonyan2014 (arXiv v6)
+szegedy2014,krizhevsky2012,original,reference list of szegedy2014 (arXiv v1)
+kingma2014,kingma2013,original,reference list of kingma2014 (arXiv v9)
+kingma2014,krizhevsky2012,original,reference list of kingma2014 (arXiv v9)
+ioffe2015,srivastava2014,original,reference list of ioffe2015 (arXiv v3)
+mnih2015,krizhevsky2012,original,reference list of mnih2015 (journal)
+mnih2015,watkins1992,original,reference list of mnih2015 (journal)
+lecun2015,bahdanau2014,original,reference list of lecun2015 (journal)
+lecun2015,bengio2003,original,reference list of lecun2015 (journal)
+lecun2015,bengio2007,original,reference list of lecun2015 (journal)
+lecun2015,cho2014,original,reference list of lecun2015 (journal)
+lecun2015,girshick2014,original,reference list of lecun2015 (journal)
+lecun2015,graves2014,original,reference list of lecun2015 (journal)
+lecun2015,hochreiter1991,original,reference list of lecun2015 (journal)
+lecun2015,krizhevsky2012,original,reference list of lecun2015 (journal)
+lecun2015,mikolov2013b,original,reference list of lecun2015 (journal)
+lecun2015,selfridge1959,original,reference list of lecun2015 (journal)
+lecun2015,simonyan2014,original,reference list of lecun2015 (journal)
+lecun2015,srivastava2014,original,reference list of lecun2015 (journal)
+lecun2015,sutskever2014,original,reference list of lecun2015 (journal)
+lecun2015,szegedy2014,original,reference list of lecun2015 (journal)
+lecun2015,weston2014,original,reference list of lecun2015 (journal)
+schmidhuber2015,hochreiter1991,original,reference list of schmidhuber2015 (arXiv v4 (Technical Report IDSIA-03-14))
+schmidhuber2015,krizhevsky2012,original,reference list of schmidhuber2015 (arXiv v4 (Technical Report IDSIA-03-14))
+schmidhuber2015,le2012,original,reference list of schmidhuber2015 (arXiv v4 (Technical Report IDSIA-03-14))
+schmidhuber2015,linnainmaa1970,original,reference list of schmidhuber2015 (arXiv v4 (Technical Report IDSIA-03-14))
+schmidhuber2015,minsky1969,original,reference list of schmidhuber2015 (arXiv v4 (Technical Report IDSIA-03-14))
+schmidhuber2015,russell1995,original,reference list of schmidhuber2015 (arXiv v4 (Technical Report IDSIA-03-14))
+schmidhuber2015,szegedy2014,original,reference list of schmidhuber2015 (arXiv v4 (Technical Report IDSIA-03-14))
+he2015,krizhevsky2012,original,reference list of he2015 (arXiv v1)
+he2015,szegedy2014,original,reference list of he2015 (arXiv v1)
+sohldickstein2015,goodfellow2014,original,reference list of sohldickstein2015 (arXiv v8)
+sohldickstein2015,kingma2013,original,reference list of sohldickstein2015 (arXiv v8)
+luong2015,bahdanau2014,original,reference list of luong2015 (arXiv v5 (EMNLP 2015 camera-ready))
+luong2015,cho2014,original,reference list of luong2015 (arXiv v5 (EMNLP 2015 camera-ready))
+lillicrap2015,ioffe2015,original,reference list of lillicrap2015 (arXiv v6)
+lillicrap2015,krizhevsky2012,original,reference list of lillicrap2015 (arXiv v6)
+lillicrap2015,schulman2015,original,reference list of lillicrap2015 (arXiv v6)
+lillicrap2015,watkins1992,original,reference list of lillicrap2015 (arXiv v6)
+radford2015,goodfellow2014,original,reference list of radford2015 (arXiv v2)
+radford2015,ioffe2015,original,reference list of radford2015 (arXiv v2)
+radford2015,kingma2013,original,reference list of radford2015 (arXiv v2)
+radford2015,mikolov2013b,original,reference list of radford2015 (arXiv v2)
+radford2015,nair2010,original,reference list of radford2015 (arXiv v2)
+hinton2015,krizhevsky2012,original,reference list of hinton2015 (arXiv v1)
+hinton2015,srivastava2014,original,reference list of hinton2015 (arXiv v1)
+sennrich2015,bahdanau2014,original,reference list of sennrich2015 (arXiv v5)
+sennrich2015,cho2014,original,reference list of sennrich2015 (arXiv v5)
+sennrich2015,luong2015,original,reference list of sennrich2015 (arXiv v5)
+silver2016,krizhevsky2012,original,reference list of silver2016 (journal (publisher PDF hosted on DeepMind site))
+vandenoord2016,he2015,original,reference list of vandenoord2016 (arXiv v2)
+vandenoord2016,hochreiter1997,original,reference list of vandenoord2016 (arXiv v2)
+vandenoord2016,nair2010,original,reference list of vandenoord2016 (arXiv v2)
+wu2016,bahdanau2014,original,reference list of wu2016 (arXiv v2)
+wu2016,brown1990,original,reference list of wu2016 (arXiv v2)
+wu2016,cho2014,original,reference list of wu2016 (arXiv v2)
+wu2016,he2015,original,reference list of wu2016 (arXiv v2)
+wu2016,hochreiter1997,original,reference list of wu2016 (arXiv v2)
+wu2016,kingma2014,original,reference list of wu2016 (arXiv v2)
+wu2016,luong2015,original,reference list of wu2016 (arXiv v2)
+wu2016,schuster1997,original,reference list of wu2016 (arXiv v2)
+wu2016,sennrich2015,original,reference list of wu2016 (arXiv v2)
+wu2016,srivastava2015,original,reference list of wu2016 (arXiv v2)
+wu2016,sutskever2014,original,reference list of wu2016 (arXiv v2)
+amodei2016,solomonoff1964,original,reference list of amodei2016 (arXiv v2)
+amodei2016,mccarthy1969,original,reference list of amodei2016 (arXiv v2)
+amodei2016,sutton1998,original,reference list of amodei2016 (arXiv v2)
+amodei2016,krizhevsky2012,original,reference list of amodei2016 (arXiv v2)
+amodei2016,goodfellow2014,original,reference list of amodei2016 (arXiv v2)
+amodei2016,graves2014,original,reference list of amodei2016 (arXiv v2)
+ba2016,krizhevsky2012,original,reference list of ba2016 (arXiv v1)
+ba2016,ioffe2015,original,reference list of ba2016 (arXiv v1)
+ba2016,cho2014,original,reference list of ba2016 (arXiv v1)
+ba2016,kingma2014,original,reference list of ba2016 (arXiv v1)
+ba2016,mikolov2013,original,reference list of ba2016 (arXiv v1)
+ba2016,graves2013,original,reference list of ba2016 (arXiv v1)
+jouppi2017,krizhevsky2012,original,reference list of jouppi2017 (arXiv v1)
+jouppi2017,szegedy2014,original,reference list of jouppi2017 (arXiv v1)
+vaswani2017,ba2016,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,bahdanau2014,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,cho2014,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,he2015,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,hochreiter1997,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,kingma2014,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,luong2015,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,sennrich2015,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,shazeer2017,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,srivastava2014,original,reference list of vaswani2017 (arXiv v7)
+vaswani2017,sutskever2014,original,reference list of vaswani2017 (arXiv v7)
+silver2017,krizhevsky2012,original,"reference list of silver2017 (author preprint (unformatted accepted manuscript, UCL Discovery))"
+silver2017,he2015,original,"reference list of silver2017 (author preprint (unformatted accepted manuscript, UCL Discovery))"
+silver2017,ioffe2015,original,"reference list of silver2017 (author preprint (unformatted accepted manuscript, UCL Discovery))"
+hestness2017,he2015,original,reference list of hestness2017 (arXiv v1)
+hestness2017,luong2015,original,reference list of hestness2017 (arXiv v1)
+hestness2017,sennrich2015,original,reference list of hestness2017 (arXiv v1)
+peters2018,collobert2011,original,reference list of peters2018 (arXiv v2)
+peters2018,kingma2014,original,reference list of peters2018 (arXiv v2)
+peters2018,mikolov2013b,original,reference list of peters2018 (arXiv v2)
+peters2018,srivastava2014,original,reference list of peters2018 (arXiv v2)
+howard2018,he2015,original,reference list of howard2018 (arXiv v5)
+howard2018,ioffe2015,original,reference list of howard2018 (arXiv v5)
+howard2018,mikolov2013b,original,reference list of howard2018 (arXiv v5)
+howard2018,peters2018,original,reference list of howard2018 (arXiv v5)
+radford2018,ba2016,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,bengio2007,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,collobert2011,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,hinton2006,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,howard2018,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,kingma2014,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,mikolov2013b,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,pennington2014,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,peters2018,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,sennrich2015,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+radford2018,vaswani2017,original,"reference list of radford2018 (technical report (OpenAI preprint marked ""Preprint. Work in progress.""))"
+devlin2018,radford2018,original,reference list of devlin2018 (arXiv v2)
+silver2018,jouppi2017,original,"reference list of silver2018 (author preprint (accepted manuscript, UCL Discovery))"
+radford2019,ba2016,original,reference list of radford2019 (technical report)
+radford2019,bengio2003,original,reference list of radford2019 (technical report)
+radford2019,collobert2011,original,reference list of radford2019 (technical report)
+radford2019,devlin2018,original,reference list of radford2019 (technical report)
+radford2019,hestness2017,original,reference list of radford2019 (technical report)
+radford2019,howard2018,original,reference list of radford2019 (technical report)
+radford2019,krizhevsky2012,original,reference list of radford2019 (technical report)
+radford2019,mikolov2013b,original,reference list of radford2019 (technical report)
+radford2019,pennington2014,original,reference list of radford2019 (technical report)
+radford2019,peters2018,original,reference list of radford2019 (technical report)
+radford2019,radford2018,original,reference list of radford2019 (technical report)
+radford2019,sennrich2015,original,reference list of radford2019 (technical report)
+radford2019,sutskever2014,original,reference list of radford2019 (technical report)
+radford2019,vaswani2017,original,reference list of radford2019 (technical report)
+raffel2019,srivastava2014,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,bahdanau2014,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,he2015,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,sennrich2015,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,ba2016,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,shazeer2017,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,radford2018,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,devlin2018,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,radford2019,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+raffel2019,sutton2019,original,reference list of raffel2019 (arXiv v4 (JMLR-formatted))
+schrittwieser2019,sutton1998,original,reference list of schrittwieser2019 (arXiv v2)
+schrittwieser2019,krizhevsky2012,original,reference list of schrittwieser2019 (arXiv v2)
+schrittwieser2019,ha2018,original,reference list of schrittwieser2019 (arXiv v2)
+kaplan2020,devlin2018,original,reference list of kaplan2020 (arXiv v1)
+kaplan2020,hestness2017,original,reference list of kaplan2020 (arXiv v1)
+kaplan2020,krizhevsky2012,original,reference list of kaplan2020 (arXiv v1)
+kaplan2020,radford2018,original,reference list of kaplan2020 (arXiv v1)
+kaplan2020,radford2019,original,reference list of kaplan2020 (arXiv v1)
+kaplan2020,raffel2019,original,reference list of kaplan2020 (arXiv v1)
+brown2020,shazeer2017,original,reference list of brown2020 (arXiv v4)
+brown2020,radford2018,original,reference list of brown2020 (arXiv v4)
+brown2020,devlin2018,original,reference list of brown2020 (arXiv v4)
+brown2020,radford2019,original,reference list of brown2020 (arXiv v4)
+brown2020,raffel2019,original,reference list of brown2020 (arXiv v4)
+lewis2020,devlin2018,original,reference list of lewis2020 (arXiv v4)
+lewis2020,kingma2014,original,reference list of lewis2020 (arXiv v4)
+lewis2020,radford2018,original,reference list of lewis2020 (arXiv v4)
+lewis2020,radford2019,original,reference list of lewis2020 (arXiv v4)
+lewis2020,weston2014,original,reference list of lewis2020 (arXiv v4)
+jumper2021,he2015,original,reference list of jumper2021 (journal)
+jumper2021,devlin2018,original,reference list of jumper2021 (journal)
+chen2021,brown2020,original,reference list of chen2021 (arXiv v2)
+chen2021,devlin2018,original,reference list of chen2021 (arXiv v2)
+chen2021,graves2014,original,reference list of chen2021 (arXiv v2)
+chen2021,radford2018,original,reference list of chen2021 (arXiv v2)
+chen2021,radford2019,original,reference list of chen2021 (arXiv v2)
+chen2021,raffel2019,original,reference list of chen2021 (arXiv v2)
+bender2021,mikolov2013b,original,reference list of bender2021 (conference (abstract and metadata only))
+bender2021,hinton2015,original,reference list of bender2021 (conference (abstract and metadata only))
+bender2021,radford2019,original,reference list of bender2021 (conference (abstract and metadata only))
+bender2021,brown2020,original,reference list of bender2021 (conference (abstract and metadata only))
+bender2021,fedus2021,original,reference list of bender2021 (conference (abstract and metadata only))
+bommasani2021,bahdanau2014,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,devlin2018,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,dosovitskiy2020,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,goodfellow2014,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,graves2014,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,he2015,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,krizhevsky2012,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,lewis2020,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,radford2018,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,radford2019,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,raffel2019,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,russell1995,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,sennrich2015,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,shazeer2017,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,szegedy2013,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,szegedy2014,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,turing1950,original,reference list of bommasani2021 (arXiv v3)
+bommasani2021,weston2014,original,reference list of bommasani2021 (arXiv v3)
+nakano2021,ferrucci2010,original,reference list of nakano2021 (arXiv v3)
+nakano2021,schulman2017,original,reference list of nakano2021 (arXiv v3)
+nakano2021,brown2020,original,reference list of nakano2021 (arXiv v3)
+nakano2021,lewis2020,original,reference list of nakano2021 (arXiv v3)
+nakano2021,stiennon2020,original,reference list of nakano2021 (arXiv v3)
+wei2022,peters2018,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,devlin2018,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,raffel2019,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,kaplan2020,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,chen2021,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,ouyang2022,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,wei2022b,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,wang2022,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+wei2022,ahn2022,original,reference list of wei2022 (arXiv v6 (NeurIPS 2022 format))
+ouyang2022,schulman2017,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,christiano2017,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,silver2018,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,radford2019,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,brown2020,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,stiennon2020,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,chen2021,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,bender2021,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,bommasani2021,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,fedus2021,original,reference list of ouyang2022 (arXiv v1)
+ouyang2022,nakano2021,original,reference list of ouyang2022 (arXiv v1)
+hoffmann2022,kingma2014,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,jouppi2017,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,vaswani2017,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,raffel2019,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,kaplan2020,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,brown2020,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,lewis2020,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,bender2021,original,reference list of hoffmann2022 (arXiv v1)
+hoffmann2022,fedus2021,original,reference list of hoffmann2022 (arXiv v1)
+chowdhery2022,bender2021,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,bommasani2021,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,brown2020,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,chen2021,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,devlin2018,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,fedus2021,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,hoffmann2022,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,kaplan2020,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,kingma2014,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,ouyang2022,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,radford2018,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,raffel2019,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,shazeer2017,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,vaswani2017,original,reference list of chowdhery2022 (arXiv v5)
+chowdhery2022,wei2022,original,reference list of chowdhery2022 (arXiv v5)
+wei2022b,ahn2022,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,bender2021,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,bommasani2021,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,brown2020,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,chowdhery2022,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,devlin2018,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,fedus2021,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,hoffmann2022,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,kaplan2020,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,kojima2022,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,ouyang2022,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,radford2019,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,raffel2019,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,wang2022,original,reference list of wei2022b (arXiv v2 (TMLR version))
+wei2022b,wei2022,original,reference list of wei2022b (arXiv v2 (TMLR version))
+kojima2022,vaswani2017,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,devlin2018,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,radford2019,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,raffel2019,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,brown2020,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,wei2022,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,ouyang2022,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,chowdhery2022,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,wang2022,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+kojima2022,ahn2022,original,reference list of kojima2022 (arXiv v4 (NeurIPS 2022 camera-ready format))
+wang2022,ackley1985,original,reference list of wang2022 (arXiv v4 (ICLR 2023 camera-ready))
+wang2022,radford2019,original,reference list of wang2022 (arXiv v4 (ICLR 2023 camera-ready))
+wang2022,brown2020,original,reference list of wang2022 (arXiv v4 (ICLR 2023 camera-ready))
+wang2022,chen2021,original,reference list of wang2022 (arXiv v4 (ICLR 2023 camera-ready))
+wang2022,wei2022,original,reference list of wang2022 (arXiv v4 (ICLR 2023 camera-ready))
+wang2022,chowdhery2022,original,reference list of wang2022 (arXiv v4 (ICLR 2023 camera-ready))
+wang2022,kojima2022,original,reference list of wang2022 (arXiv v4 (ICLR 2023 camera-ready))
+ahn2022,bender2021,original,reference list of ahn2022 (arXiv v2)
+ahn2022,bommasani2021,original,reference list of ahn2022 (arXiv v2)
+ahn2022,brown2020,original,reference list of ahn2022 (arXiv v2)
+ahn2022,chowdhery2022,original,reference list of ahn2022 (arXiv v2)
+ahn2022,devlin2018,original,reference list of ahn2022 (arXiv v2)
+ahn2022,fikes1971,original,reference list of ahn2022 (arXiv v2)
+ahn2022,huang2022,original,reference list of ahn2022 (arXiv v2)
+ahn2022,ouyang2022,original,reference list of ahn2022 (arXiv v2)
+ahn2022,radford2021,original,reference list of ahn2022 (arXiv v2)
+ahn2022,raffel2019,original,reference list of ahn2022 (arXiv v2)
+ahn2022,vaswani2017,original,reference list of ahn2022 (arXiv v2)
+ahn2022,wei2022,original,reference list of ahn2022 (arXiv v2)
+ahn2022,winograd1972,original,reference list of ahn2022 (arXiv v2)
+huang2022,fikes1971,original,reference list of huang2022 (arXiv v1)
+huang2022,ren2015,original,reference list of huang2022 (arXiv v1)
+huang2022,devlin2018,original,reference list of huang2022 (arXiv v1)
+huang2022,brown2020,original,reference list of huang2022 (arXiv v1)
+huang2022,radford2021,original,reference list of huang2022 (arXiv v1)
+huang2022,chen2021,original,reference list of huang2022 (arXiv v1)
+huang2022,wei2022,original,reference list of huang2022 (arXiv v1)
+huang2022,ouyang2022,original,reference list of huang2022 (arXiv v1)
+huang2022,chowdhery2022,original,reference list of huang2022 (arXiv v1)
+huang2022,kojima2022,original,reference list of huang2022 (arXiv v1)
+huang2022,ahn2022,original,reference list of huang2022 (arXiv v1)
+yao2022,brown2020,original,reference list of yao2022 (arXiv v3)
+yao2022,lewis2020,original,reference list of yao2022 (arXiv v3)
+yao2022,nakano2021,original,reference list of yao2022 (arXiv v3)
+yao2022,wei2022,original,reference list of yao2022 (arXiv v3)
+yao2022,chowdhery2022,original,reference list of yao2022 (arXiv v3)
+yao2022,kojima2022,original,reference list of yao2022 (arXiv v3)
+yao2022,wang2022,original,reference list of yao2022 (arXiv v3)
+yao2022,ahn2022,original,reference list of yao2022 (arXiv v3)
+yao2022,huang2022,original,reference list of yao2022 (arXiv v3)
+touvron2023,bengio2003,original,reference list of touvron2023 (arXiv v1)
+touvron2023,brown1990,original,reference list of touvron2023 (arXiv v1)
+touvron2023,brown2020,original,reference list of touvron2023 (arXiv v1)
+touvron2023,chen2021,original,reference list of touvron2023 (arXiv v1)
+touvron2023,chowdhery2022,original,reference list of touvron2023 (arXiv v1)
+touvron2023,devlin2018,original,reference list of touvron2023 (arXiv v1)
+touvron2023,elman1990,original,reference list of touvron2023 (arXiv v1)
+touvron2023,graves2013,original,reference list of touvron2023 (arXiv v1)
+touvron2023,hestness2017,original,reference list of touvron2023 (arXiv v1)
+touvron2023,hochreiter1997,original,reference list of touvron2023 (arXiv v1)
+touvron2023,hoffmann2022,original,reference list of touvron2023 (arXiv v1)
+touvron2023,kaplan2020,original,reference list of touvron2023 (arXiv v1)
+touvron2023,mikolov2010,original,reference list of touvron2023 (arXiv v1)
+touvron2023,ouyang2022,original,reference list of touvron2023 (arXiv v1)
+touvron2023,radford2018,original,reference list of touvron2023 (arXiv v1)
+touvron2023,radford2019,original,reference list of touvron2023 (arXiv v1)
+touvron2023,raffel2019,original,reference list of touvron2023 (arXiv v1)
+touvron2023,sennrich2015,original,reference list of touvron2023 (arXiv v1)
+touvron2023,shannon1948,original,reference list of touvron2023 (arXiv v1)
+touvron2023,turing1950,original,reference list of touvron2023 (arXiv v1)
+touvron2023,vaswani2017,original,reference list of touvron2023 (arXiv v1)
+touvron2023,wang2022,original,reference list of touvron2023 (arXiv v1)
+touvron2023,wei2022b,original,reference list of touvron2023 (arXiv v1)
+openai2023,ba2016,original,reference list of openai2023 (arXiv v6)
+openai2023,bai2022,original,reference list of openai2023 (arXiv v6)
+openai2023,bender2021,original,reference list of openai2023 (arXiv v6)
+openai2023,bommasani2021,original,reference list of openai2023 (arXiv v6)
+openai2023,brown2020,original,reference list of openai2023 (arXiv v6)
+openai2023,chen2021,original,reference list of openai2023 (arXiv v6)
+openai2023,chowdhery2022,original,reference list of openai2023 (arXiv v6)
+openai2023,christiano2017,original,reference list of openai2023 (arXiv v6)
+openai2023,devlin2018,original,reference list of openai2023 (arXiv v6)
+openai2023,hestness2017,original,reference list of openai2023 (arXiv v6)
+openai2023,hoffmann2022,original,reference list of openai2023 (arXiv v6)
+openai2023,kaplan2020,original,reference list of openai2023 (arXiv v6)
+openai2023,kojima2022,original,reference list of openai2023 (arXiv v6)
+openai2023,ouyang2022,original,reference list of openai2023 (arXiv v6)
+openai2023,radford2018,original,reference list of openai2023 (arXiv v6)
+openai2023,radford2019,original,reference list of openai2023 (arXiv v6)
+openai2023,raffel2019,original,reference list of openai2023 (arXiv v6)
+openai2023,schick2023,original,reference list of openai2023 (arXiv v6)
+openai2023,schulman2017,original,reference list of openai2023 (arXiv v6)
+openai2023,shazeer2017,original,reference list of openai2023 (arXiv v6)
+openai2023,touvron2023,original,reference list of openai2023 (arXiv v6)
+openai2023,vaswani2017,original,reference list of openai2023 (arXiv v6)
+openai2023,wei2022,original,reference list of openai2023 (arXiv v6)
+openai2023,wei2022b,original,reference list of openai2023 (arXiv v6)
+schick2023,devlin2018,original,reference list of schick2023 (arXiv v1)
+schick2023,radford2019,original,reference list of schick2023 (arXiv v1)
+schick2023,brown2020,original,reference list of schick2023 (arXiv v1)
+schick2023,nakano2021,original,reference list of schick2023 (arXiv v1)
+schick2023,chowdhery2022,original,reference list of schick2023 (arXiv v1)
+schick2023,wei2022b,original,reference list of schick2023 (arXiv v1)
+schick2023,yao2022,original,reference list of schick2023 (arXiv v1)
+shinn2023,sutton1998,original,reference list of shinn2023 (arXiv v4)
+shinn2023,chen2021,original,reference list of shinn2023 (arXiv v4)
+shinn2023,nakano2021,original,reference list of shinn2023 (arXiv v4)
+shinn2023,wei2022,original,reference list of shinn2023 (arXiv v4)
+shinn2023,ahn2022,original,reference list of shinn2023 (arXiv v4)
+shinn2023,yao2022,original,reference list of shinn2023 (arXiv v4)
+shinn2023,openai2023,original,reference list of shinn2023 (arXiv v4)
+shinn2023,schick2023,original,reference list of shinn2023 (arXiv v4)
+shinn2023,park2023,original,reference list of shinn2023 (arXiv v4)
+shinn2023,shen2023,original,reference list of shinn2023 (arXiv v4)
+park2023,brown2020,original,reference list of park2023 (arXiv v2)
+park2023,bommasani2021,original,reference list of park2023 (arXiv v2)
+park2023,wei2022,original,reference list of park2023 (arXiv v2)
+park2023,ouyang2022,original,reference list of park2023 (arXiv v2)
+park2023,huang2022,original,reference list of park2023 (arXiv v2)
+yao2023,brown2020,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,campbell2002,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,chowdhery2022,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,hart1968,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,huang2022,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,newell1959,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,openai2023,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,radford2018,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,radford2019,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,shinn2023,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,silver2017,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,touvron2023,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,wang2022,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,wei2022,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+yao2023,yao2022,original,reference list of yao2023 (arXiv v2 (NeurIPS 2023 camera-ready))
+wang2023,mnih2013,original,reference list of wang2023 (arXiv v2)
+wang2023,lillicrap2015,original,reference list of wang2023 (arXiv v2)
+wang2023,mnih2016,original,reference list of wang2023 (arXiv v2)
+wang2023,schulman2017,original,reference list of wang2023 (arXiv v2)
+wang2023,raffel2019,original,reference list of wang2023 (arXiv v2)
+wang2023,brown2020,original,reference list of wang2023 (arXiv v2)
+wang2023,chen2021,original,reference list of wang2023 (arXiv v2)
+wang2023,bommasani2021,original,reference list of wang2023 (arXiv v2)
+wang2023,wei2022,original,reference list of wang2023 (arXiv v2)
+wang2023,chowdhery2022,original,reference list of wang2023 (arXiv v2)
+wang2023,wei2022b,original,reference list of wang2023 (arXiv v2)
+wang2023,ahn2022,original,reference list of wang2023 (arXiv v2)
+wang2023,huang2022,original,reference list of wang2023 (arXiv v2)
+wang2023,yao2022,original,reference list of wang2023 (arXiv v2)
+wang2023,touvron2023,original,reference list of wang2023 (arXiv v2)
+wang2023,openai2023,original,reference list of wang2023 (arXiv v2)
+wang2023,park2023,original,reference list of wang2023 (arXiv v2)
+shen2023,brown2020,original,reference list of shen2023 (arXiv v4)
+shen2023,dosovitskiy2020,original,reference list of shen2023 (arXiv v4)
+shen2023,wei2022,original,reference list of shen2023 (arXiv v4)
+shen2023,ouyang2022,original,reference list of shen2023 (arXiv v4)
+shen2023,chowdhery2022,original,reference list of shen2023 (arXiv v4)
+shen2023,wei2022b,original,reference list of shen2023 (arXiv v4)
+shen2023,kojima2022,original,reference list of shen2023 (arXiv v4)
+shen2023,wang2022,original,reference list of shen2023 (arXiv v4)
+shen2023,touvron2023,original,reference list of shen2023 (arXiv v4)
+shen2023,openai2023,original,reference list of shen2023 (arXiv v4)
+shen2023,schick2023,original,reference list of shen2023 (arXiv v4)
+greshake2023,brown2020,original,reference list of greshake2023 (arXiv v2)
+greshake2023,bender2021,original,reference list of greshake2023 (arXiv v2)
+greshake2023,bommasani2021,original,reference list of greshake2023 (arXiv v2)
+greshake2023,wei2022,original,reference list of greshake2023 (arXiv v2)
+greshake2023,ouyang2022,original,reference list of greshake2023 (arXiv v2)
+greshake2023,yao2022,original,reference list of greshake2023 (arXiv v2)
+greshake2023,openai2023,original,reference list of greshake2023 (arXiv v2)
+greshake2023,schick2023,original,reference list of greshake2023 (arXiv v2)
+greshake2023,park2023,original,reference list of greshake2023 (arXiv v2)
+greshake2023,shen2023,original,reference list of greshake2023 (arXiv v2)
+hong2023,chen2021,original,reference list of hong2023 (arXiv v7)
+hong2023,wei2022,original,reference list of hong2023 (arXiv v7)
+hong2023,chowdhery2022,original,reference list of hong2023 (arXiv v7)
+hong2023,wang2022,original,reference list of hong2023 (arXiv v7)
+hong2023,yao2022,original,reference list of hong2023 (arXiv v7)
+hong2023,openai2023,original,reference list of hong2023 (arXiv v7)
+hong2023,schick2023,original,reference list of hong2023 (arXiv v7)
+hong2023,park2023,original,reference list of hong2023 (arXiv v7)
+hong2023,wang2023,original,reference list of hong2023 (arXiv v7)
+hong2023,zhou2023,original,reference list of hong2023 (arXiv v7)
+packer2023,vaswani2017,original,reference list of packer2023 (arXiv v2)
+packer2023,devlin2018,original,reference list of packer2023 (arXiv v2)
+packer2023,brown2020,original,reference list of packer2023 (arXiv v2)
+packer2023,lewis2020,original,reference list of packer2023 (arXiv v2)
+packer2023,nakano2021,original,reference list of packer2023 (arXiv v2)
+packer2023,wei2022,original,reference list of packer2023 (arXiv v2)
+packer2023,ouyang2022,original,reference list of packer2023 (arXiv v2)
+packer2023,yao2022,original,reference list of packer2023 (arXiv v2)
+packer2023,schick2023,original,reference list of packer2023 (arXiv v2)
+packer2023,park2023,original,reference list of packer2023 (arXiv v2)
+packer2023,liu2023,original,reference list of packer2023 (arXiv v2)
+jimenez2023,chen2021,original,reference list of jimenez2023 (arXiv v3)
+jimenez2023,hu2021,original,reference list of jimenez2023 (arXiv v3)
+jimenez2023,zhou2023,original,reference list of jimenez2023 (arXiv v3)
+jimenez2023,liu2023,original,reference list of jimenez2023 (arXiv v3)
+zhou2023,chen2021,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,nakano2021,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,openai2023,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,ouyang2022,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,shinn2023,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,wang2023,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,wei2022,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,yao2022,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+zhou2023,yao2023,original,reference list of zhou2023 (arXiv v4 (ICLR 2024 version))
+liu2023,devlin2018,original,reference list of liu2023 (arXiv v3)
+liu2023,brown2020,original,reference list of liu2023 (arXiv v3)
+liu2023,chen2021,original,reference list of liu2023 (arXiv v3)
+liu2023,wei2022,original,reference list of liu2023 (arXiv v3)
+liu2023,ouyang2022,original,reference list of liu2023 (arXiv v3)
+liu2023,hoffmann2022,original,reference list of liu2023 (arXiv v3)
+liu2023,chowdhery2022,original,reference list of liu2023 (arXiv v3)
+liu2023,wang2022,original,reference list of liu2023 (arXiv v3)
+liu2023,ahn2022,original,reference list of liu2023 (arXiv v3)
+liu2023,yao2022,original,reference list of liu2023 (arXiv v3)
+liu2023,openai2023,original,reference list of liu2023 (arXiv v3)
+liu2023,park2023,original,reference list of liu2023 (arXiv v3)
+liu2023,yao2023,original,reference list of liu2023 (arXiv v3)
+liu2023,wang2023,original,reference list of liu2023 (arXiv v3)
+liu2023,hong2023,original,reference list of liu2023 (arXiv v3)
+mialon2023,brown2020,original,reference list of mialon2023 (arXiv v1)
+mialon2023,nakano2021,original,reference list of mialon2023 (arXiv v1)
+mialon2023,ouyang2022,original,reference list of mialon2023 (arXiv v1)
+mialon2023,openai2023,original,reference list of mialon2023 (arXiv v1)
+mialon2023,schick2023,original,reference list of mialon2023 (arXiv v1)
+mialon2023,shen2023,original,reference list of mialon2023 (arXiv v1)
+mialon2023,liu2023,original,reference list of mialon2023 (arXiv v1)
+mialon2023,hong2023,original,reference list of mialon2023 (arXiv v1)
+yang2024,chen2021,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,hong2023,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,jimenez2023,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,nakano2021,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,openai2023,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,packer2023,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,shinn2023,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,xie2024,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,yao2022,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+yang2024,zhou2023,original,reference list of yang2024 (arXiv v3 (NeurIPS 2024 version))
+xie2024,jimenez2023,original,reference list of xie2024 (arXiv v2)
+xie2024,liu2023,original,reference list of xie2024 (arXiv v2)
+xie2024,mialon2023,original,reference list of xie2024 (arXiv v2)
+xie2024,nakano2021,original,reference list of xie2024 (arXiv v2)
+xie2024,openai2023,original,reference list of xie2024 (arXiv v2)
+xie2024,zhou2023,original,reference list of xie2024 (arXiv v2)
+yao2024,ahn2022,original,reference list of yao2024 (arXiv v1)
+yao2024,chen2021,original,reference list of yao2024 (arXiv v1)
+yao2024,jimenez2023,original,reference list of yao2024 (arXiv v1)
+yao2024,liu2023,original,reference list of yao2024 (arXiv v1)
+yao2024,park2023,original,reference list of yao2024 (arXiv v1)
+yao2024,schick2023,original,reference list of yao2024 (arXiv v1)
+yao2024,shinn2023,original,reference list of yao2024 (arXiv v1)
+yao2024,yao2022,original,reference list of yao2024 (arXiv v1)
+yao2024,yao2023,original,reference list of yao2024 (arXiv v1)
+yao2024,zhou2023,original,reference list of yao2024 (arXiv v1)
+kapoor2024,chen2021,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,jimenez2023,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,liu2023,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,mialon2023,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,russell1995,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,shinn2023,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,yang2024,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,yao2024,original,reference list of kapoor2024 (arXiv v1)
+kapoor2024,zhou2023,original,reference list of kapoor2024 (arXiv v1)
+deepseek2025,brown2020,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,chen2021,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,christiano2017,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,hinton2015,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,kojima2022,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,nakano2021,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,ouyang2022,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,radford2019,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,rafailov2023,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,schick2023,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,silver2017,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,wang2022,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,wei2022,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,wei2022b,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,yao2022,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"
+deepseek2025,yao2023,original,"reference list of deepseek2025 (arXiv v2 (Nature-aligned revision, 4 Jan 2026))"

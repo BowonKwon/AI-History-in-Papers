@@ -1,0 +1,67 @@
+{
+ "name": "ai-history-in-papers",
+ "version": "1.0",
+ "created": "2026-11-04",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0",
+   "path": "https://creativecommons.org/licenses/by/4.0/"
+  }
+ ],
+ "resources": [
+  {
+   "name": "papers",
+   "path": "papers.csv",
+   "description": "One row per selected paper: first-public date and type, identifiers, venue, pages, a verbatim sentence with page, what changed (en/ko), OpenAlex id and citation count with the date read, selection rules, source status.",
+   "sources": [
+    "original papers",
+    "OpenAlex (CC0)",
+    "Crossref",
+    "arXiv metadata (CC0)"
+   ]
+  },
+  {
+   "name": "edges",
+   "path": "edges.csv",
+   "description": "Citation lineage among selected papers; kind = OA (OpenAlex referenced_works), original (seen in the citing paper's reference list), notion (textbook attribution without a confirmed citation).",
+   "sources": [
+    "OpenAlex (CC0)",
+    "original papers"
+   ]
+  },
+  {
+   "name": "winter_title_phrases",
+   "path": "winter_title_phrases.csv",
+   "description": "OpenAlex records per year with a phrase in the title, and per 10,000 of all records (read 2026-11-03).",
+   "sources": [
+    "OpenAlex (CC0)"
+   ]
+  },
+  {
+   "name": "winter_attendance",
+   "path": "winter_attendance.csv",
+   "description": "Conference attendance 1984–2025; source column names the AI Index 2019 sheet or Our World in Data (AI Index 2026, CC BY).",
+   "sources": [
+    "AI Index 2019",
+    "Our World in Data"
+   ]
+  },
+  {
+   "name": "winter_neurips_accepted",
+   "path": "winter_neurips_accepted.csv",
+   "description": "Papers per year on proceedings.neurips.cc, counted 2026-11-03.",
+   "sources": [
+    "proceedings.neurips.cc"
+   ]
+  },
+  {
+   "name": "awards",
+   "path": "awards.csv",
+   "description": "Turing Award laureates (Wikidata, CC0) and 2024 Nobel laureates (Nobel API, CC0) linked to papers in the list.",
+   "sources": [
+    "Wikidata (CC0)",
+    "Nobel Prize API (CC0)"
+   ]
+  }
+ ]
+}
