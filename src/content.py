@@ -149,7 +149,7 @@ def METHOD(lang):
 <h2>날짜</h2>
 <p>점의 위치는 처음 공개된 날짜다 — 기술 보고서, 학위논문, arXiv v1, 학회 발표 중 기록으로 확인되는 가장 이른 것. 저널 게재일·학회 발표일·재판 연도는 카드에 따로 적는다. OpenAlex 의 발행 연도는 재판이나 학회판 날짜가 섞여 있어 쓰지 않았다(후보 234편 중 23편에서 연도가 달랐다).</p>
 <h2>원문 확인</h2>
-<p>카드의 인용문과 쪽은 그 판본을 직접 읽고 옮긴 것이다. 읽은 판본은 카드에 적혀 있다(저널판·학회판·arXiv 판 번호). 상태별로 확인 {status['verified']}편, 부분 확인 {status['partial']}편, 접근 불가 {status['not_accessible']}편이다. 접근 불가는 합법적 공개 사본을 찾지 못한 경우이며, 그 카드에는 인용문이 없다.</p>
+<p>카드의 인용문과 쪽은 그 판본을 직접 읽고 옮긴 것이다. 읽은 판본은 카드에 적혀 있다(저널판·학회판·arXiv 판 번호). 상태별로 확인 {status['verified']}편, 부분 확인 {status['partial']}편, 접근 불가 {status['not_accessible']}편이다. 접근 불가는 합법적 공개 사본을 찾지 못한 경우이며, 그 카드에는 인용문이 없다. 공개 사본이 없는 몇 편(예: Werbos 1974 박사논문, Werbos 1982 학회 논문집 장)은 엮은이가 구한 출판본·원본 사본으로 읽었고, 카드의 「읽은 판본」에 그렇게 적었다.</p>
 <h2>계보선</h2>
 <p>세 종류다. OpenAlex 의 참고문헌 목록에 있는 것({kinds['OA']}건), OpenAlex 에는 없으나 인용한 논문의 참고문헌 목록에서 직접 확인한 것({kinds['original']}건), 교과서가 영향을 말하지만 인용이 확인되지 않은 것({kinds['notion']}건, 점선). OpenAlex 만으로는 선이 크게 빈다 — 후보 목록에서 1990년 이전 레코드의 30%, arXiv 레코드의 40%가 참고문헌 0건이었다.</p>
 <h2>우선권 논쟁</h2>
@@ -175,7 +175,7 @@ def METHOD(lang):
 <h2>Dates</h2>
 <p>A point sits at the first public date: the earliest documented technical report, thesis, arXiv v1 or conference presentation. Journal issue dates, conference dates and reprint years are listed on the card. OpenAlex publication years were not used because they mix in reprint and conference dates (23 of 234 candidates differed).</p>
 <h2>Checking the originals</h2>
-<p>Each card's quotation and page were read from the stated version (journal, conference, or arXiv version number). By status: {status['verified']} verified, {status['partial']} partially checked, {status['not_accessible']} not accessible. "Not accessible" means no legitimate public copy was found; those cards carry no quotation.</p>
+<p>Each card's quotation and page were read from the stated version (journal, conference, or arXiv version number). By status: {status['verified']} verified, {status['partial']} partially checked, {status['not_accessible']} not accessible. "Not accessible" means no legitimate public copy was found; those cards carry no quotation. A few papers with no public copy (for example Werbos's 1974 thesis and his 1982 proceedings chapter) were read from copies of the printed or original text obtained by the editor, as the card's "version read" says.</p>
 <h2>Lineage lines</h2>
 <p>Three kinds: in OpenAlex's reference list ({kinds['OA']}), not in OpenAlex but seen in the citing paper's own reference list ({kinds['original']}), and stated in a textbook without a confirmed citation ({kinds['notion']}, dotted). OpenAlex alone leaves large gaps: among the candidates, 30% of pre-1990 records and 40% of arXiv records had zero references.</p>
 <h2>Priority disputes</h2>

@@ -35,6 +35,10 @@ The history of AI research from 1943 to today, followed through its original pap
 
 The selection rules were registered before the list was made (`method/selection-criteria.md`, 2026-11-03): at least two of six reference textbooks cite the original (R1), or three already-selected papers cite it (R2), or an award citation names it (R3), or, for 2021 onward, peer review plus a checked original (R4). Dates are first-public dates read from the originals; OpenAlex years are stored separately. Each card's quotation was read from the stated version (`method/reading-protocol.md`). Limits — the missing Nilsson comparison, inaccessible originals, late arXiv revisions, English-textbook bias — are stated on the site's method page.
 
+## Changes · 바뀐 것
+
+- **1.0.1 (2026-11-06)** — Eight cards re-read from the published or original texts: Werbos 1974 and 1982, Boser et al. 1992, Buchanan & Feigenbaum 1978 (previously not accessible), and McCarthy 1960, Winograd 1972, Campbell et al. 2002, Bender et al. 2021 (previously read from other versions or the abstract). Quotations, pages and lineage lines updated. 카드 8편을 출판본·원본으로 다시 읽어 인용문·쪽·계보선을 고쳤다(접근 불가 4편 해소, 다른 판본으로 읽었던 4편 출판본 대조).
+
 ## Rebuild · 다시 만들기
 
 ```

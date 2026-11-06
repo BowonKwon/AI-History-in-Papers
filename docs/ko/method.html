@@ -82,9 +82,9 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <h2>날짜</h2>
 <p>점의 위치는 처음 공개된 날짜다 — 기술 보고서, 학위논문, arXiv v1, 학회 발표 중 기록으로 확인되는 가장 이른 것. 저널 게재일·학회 발표일·재판 연도는 카드에 따로 적는다. OpenAlex 의 발행 연도는 재판이나 학회판 날짜가 섞여 있어 쓰지 않았다(후보 234편 중 23편에서 연도가 달랐다).</p>
 <h2>원문 확인</h2>
-<p>카드의 인용문과 쪽은 그 판본을 직접 읽고 옮긴 것이다. 읽은 판본은 카드에 적혀 있다(저널판·학회판·arXiv 판 번호). 상태별로 확인 166편, 부분 확인 14편, 접근 불가 11편이다. 접근 불가는 합법적 공개 사본을 찾지 못한 경우이며, 그 카드에는 인용문이 없다.</p>
+<p>카드의 인용문과 쪽은 그 판본을 직접 읽고 옮긴 것이다. 읽은 판본은 카드에 적혀 있다(저널판·학회판·arXiv 판 번호). 상태별로 확인 174편, 부분 확인 10편, 접근 불가 7편이다. 접근 불가는 합법적 공개 사본을 찾지 못한 경우이며, 그 카드에는 인용문이 없다. 공개 사본이 없는 몇 편(예: Werbos 1974 박사논문, Werbos 1982 학회 논문집 장)은 엮은이가 구한 출판본·원본 사본으로 읽었고, 카드의 「읽은 판본」에 그렇게 적었다.</p>
 <h2>계보선</h2>
-<p>세 종류다. OpenAlex 의 참고문헌 목록에 있는 것(425건), OpenAlex 에는 없으나 인용한 논문의 참고문헌 목록에서 직접 확인한 것(683건), 교과서가 영향을 말하지만 인용이 확인되지 않은 것(0건, 점선). OpenAlex 만으로는 선이 크게 빈다 — 후보 목록에서 1990년 이전 레코드의 30%, arXiv 레코드의 40%가 참고문헌 0건이었다.</p>
+<p>세 종류다. OpenAlex 의 참고문헌 목록에 있는 것(425건), OpenAlex 에는 없으나 인용한 논문의 참고문헌 목록에서 직접 확인한 것(685건), 교과서가 영향을 말하지만 인용이 확인되지 않은 것(0건, 점선). OpenAlex 만으로는 선이 크게 빈다 — 후보 목록에서 1990년 이전 레코드의 30%, arXiv 레코드의 40%가 참고문헌 0건이었다.</p>
 <h2>우선권 논쟁</h2>
 <p>역전파·합성곱망·심층망 학습·잔차 연결처럼 「누가 먼저인가」가 다투어지는 자리에는 양쪽 원 논문의 서지와 원문 문장만 나란히 놓는다. 판정하는 문장은 쓰지 않는다. 판정이 담긴 2차 문헌은 「이런 주장이 있다」로 출처와 함께 소개한다.</p>
 <h2>편중</h2>
@@ -96,7 +96,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <li>Wikidata(튜링상 수상자, CC0)·노벨상 API(CC0).</li>
 <li>AI Index 2019 보고서 2장의 참가자 자료, Our World in Data(CC BY), proceedings.neurips.cc.</li></ul>
 <p>이 사이트의 글은 CC BY-NC 4.0, 코드는 PolyForm Noncommercial 1.0.0, 데이터 편집물은 CC BY 4.0(원자료는 CC0 또는 CC BY)이다. 논문 본문은 재배포하지 않고 짧은 인용과 링크만 한다.</p></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.0 · 생성일 2026-11-05 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.0.1 · 생성일 2026-11-06 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

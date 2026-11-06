@@ -456,7 +456,7 @@ chen2021,stiennon2020,OA,OpenAlex referenced_works (2026-11-03); also in referen
 chen2021,ramesh2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 chen2021,bender2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 chen2021,radford2021,OA,OpenAlex referenced_works (2026-11-03); also in reference list
-bender2021,pennington2014,OA,OpenAlex referenced_works (2026-11-03)
+bender2021,pennington2014,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 bender2021,vaswani2017,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 bender2021,peters2018,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 bender2021,raffel2019,OA,OpenAlex referenced_works (2026-11-03); also in reference list
@@ -538,8 +538,9 @@ minsky1961,turing1950,original,reference list of minsky1961 (journal)
 minsky1961,wiener1948,original,reference list of minsky1961 (journal)
 hart1968,samuel1959,original,reference list of hart1968 (journal)
 mccarthy1969,shannon1950,original,reference list of mccarthy1969 (author's web version (retypeset))
-winograd1972,quillian1968,original,"reference list of winograd1972 (technical report (MIT AI TR-235, revised version of the 1970 PhD dissertation))"
+winograd1972,quillian1968,original,reference list of winograd1972 (journal)
 lighthill1973,winograd1972,original,reference list of lighthill1973 (government report (web transcription of the SRC paper symposium))
+werbos1974,wiener1948,original,reference list of werbos1974 (thesis)
 minsky1974,minsky1969,original,reference list of minsky1974 (technical report (author's HTML web version of MIT AI Memo 306))
 hopfield1982,mcculloch1943,original,reference list of hopfield1982 (journal)
 hopfield1982,hebb1949,original,reference list of hopfield1982 (journal)
@@ -844,11 +845,12 @@ chen2021,graves2014,original,reference list of chen2021 (arXiv v2)
 chen2021,radford2018,original,reference list of chen2021 (arXiv v2)
 chen2021,radford2019,original,reference list of chen2021 (arXiv v2)
 chen2021,raffel2019,original,reference list of chen2021 (arXiv v2)
-bender2021,mikolov2013b,original,reference list of bender2021 (conference (abstract and metadata only))
-bender2021,hinton2015,original,reference list of bender2021 (conference (abstract and metadata only))
-bender2021,radford2019,original,reference list of bender2021 (conference (abstract and metadata only))
-bender2021,brown2020,original,reference list of bender2021 (conference (abstract and metadata only))
-bender2021,fedus2021,original,reference list of bender2021 (conference (abstract and metadata only))
+bender2021,brown2020,original,reference list of bender2021 (conference)
+bender2021,devlin2018,original,reference list of bender2021 (conference)
+bender2021,fedus2021,original,reference list of bender2021 (conference)
+bender2021,hinton2015,original,reference list of bender2021 (conference)
+bender2021,mikolov2013b,original,reference list of bender2021 (conference)
+bender2021,radford2019,original,reference list of bender2021 (conference)
 bommasani2021,bahdanau2014,original,reference list of bommasani2021 (arXiv v3)
 bommasani2021,devlin2018,original,reference list of bommasani2021 (arXiv v3)
 bommasani2021,dosovitskiy2020,original,reference list of bommasani2021 (arXiv v3)

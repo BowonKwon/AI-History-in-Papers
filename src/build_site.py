@@ -22,7 +22,7 @@ import content as C  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 D = ROOT / "data/derived"
 SITE = ROOT / "site"
-VERSION = "1.0"
+VERSION = "1.0.1"
 BUILD_DATE = date.today().isoformat()
 REPO = "https://github.com/BowonKwon/AI-History-in-Papers"
 
