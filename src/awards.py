@@ -1,5 +1,5 @@
 """awards.csv: Turing Award laureates (Wikidata SPARQL, CC0) and Nobel Prizes 2024 (Nobel API, CC0)
-that name a paper in the list, joined through docs/awards_named_works.csv (hand-checked mapping)."""
+that name a paper in the list, joined through method/awards_named_works.csv (hand-checked mapping)."""
 import csv, json
 from pathlib import Path
 
@@ -9,7 +9,7 @@ A = ROOT / "data/raw/awards"
 
 def main():
     turing = list(csv.DictReader(open(A / "turing_wikidata.csv", encoding="utf-8")))
-    named = list(csv.DictReader(open(ROOT / "docs/awards_named_works.csv", encoding="utf-8")))
+    named = list(csv.DictReader(open(ROOT / "method/awards_named_works.csv", encoding="utf-8")))
     rows = []
     by_year = {}
     for t in turing:

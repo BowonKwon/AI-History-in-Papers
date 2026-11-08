@@ -3,7 +3,7 @@
   python src/build_site.py
 
 Inputs
-  data/derived/papers.csv      one row per selected paper (see docs/data-schema.md)
+  data/derived/papers.csv      one row per selected paper (see method/data-schema.md)
   data/derived/edges.csv       src,dst,kind (OA | original | notion), evidence
   data/derived/awards.csv      year,award,laureates,named_key,note
   data/derived/winter_*.csv    title-phrase counts, attendance, NeurIPS accepted
@@ -22,7 +22,7 @@ import content as C  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 D = ROOT / "data/derived"
 SITE = ROOT / "site"
-VERSION = "1.0.1"
+VERSION = "1.1"
 BUILD_DATE = date.today().isoformat()
 REPO = "https://github.com/BowonKwon/AI-History-in-Papers"
 

@@ -11,6 +11,11 @@ OA = ROOT / "data/raw/api/oa"
 def main():
     rows = list(csv.DictReader(open(ROOT / "data/derived/candidates_v0.csv", encoding="utf-8-sig")))
     key_by_id = {r["oa_id"]: r["key"] for r in rows if r.get("oa_id")}
+    # second OpenAlex records of the same work (e.g. arXiv and journal), added 2026-11-07
+    al = ROOT / "method/oa_aliases.csv"
+    if al.exists():
+        for a in csv.DictReader(open(al, encoding="utf-8-sig")):
+            key_by_id.setdefault(a["oa_id"], a["key"])
     edges, access = [], []
     for r in rows:
         oid = r.get("oa_id")

@@ -1,0 +1,55 @@
+﻿key,field,value,reason
+bellman1957,doi,,candidate list carried the DOI of Bellman's 1966 Science article; the 1957 book has no DOI
+bellman1957,url,https://www.rand.org/pubs/reports/R295.html,RAND report page for the book (Princeton University Press 1957; RAND R-295) — not verified as a full text
+minsky1969,doi,,book; no DOI
+kaplan2020,authors_short,Kaplan et al.,OpenAlex display name of the first author is malformed
+vandenoord2016,authors_short,van den Oord et al.,surname particle
+sohldickstein2015,authors_short,Sohl-Dickstein et al.,ASCII hyphen
+krizhevsky2012,authors_short,Krizhevsky et al.,three authors (Krizhevsky; Sutskever; Hinton)
+srivastava2014,authors_short,Srivastava et al.,five authors
+radford2018,authors_short,Radford et al.,four authors
+radford2019,authors_short,Radford et al.,six authors
+le2012,authors_short,Le et al.,nine authors
+deepseek2025,authors_short,DeepSeek-AI,corporate author on the arXiv version
+openai2023,authors_short,OpenAI,corporate author
+lighthill1973,authors,James Lighthill,the OpenAlex record matched by title search is a different 2026 paper
+lighthill1973,authors_short,Lighthill,same
+lighthill1973,openalex_id,,same
+lighthill1973,oa_cited_by,,same
+lighthill1973,oa_checked,,same
+lighthill1973,url,https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/contents.htm,full text (Chilton Computing / UKRI STFC)
+coulom2006,first_public_date,2006-05-29,Outside check, round 1: the CG 2006 proceedings give the conference dates 29–31 May 2006 (Springer book page); first day used
+coulom2006,first_public_type,conference,same
+kocsis2006,first_public_date,2006-09-18,Outside check, round 1: ECML 2006 proceedings give 18–22 September 2006; first day used
+elman1990,first_public_date,1988,Outside check, round 1: Hochreiter–Schmidhuber 1997 (author copy p. 30) cites the same title and author as CRL Technical Report 8801 (1988); report itself not opened
+elman1990,first_public_type,tech report,same
+elman1990,other_dates,Cognitive Science 14(2) March 1990 (journal issue); CRL TR 8801 (1988) known only from a citation,same
+hochreiter1997,first_public_date,1995,"Outside check, round 1: Schmidhuber's publication list states the 1997 article is ""Based on TR FKI-207-95, TUM (1995)"" (people.idsia.ch/~juergen/rnn.html, read 2026-11-04); report not opened"
+hochreiter1997,first_public_type,tech report,same
+hochreiter1997,other_dates,"Neural Computation 9(8), 1 November 1997 (journal issue); TU Munich technical report FKI-207-95 (1995), known from the authors' publication list",same
+wiener1948,openalex_id,,manifest OpenAlex id W4230145681 is a 1949 Physics Today review of the book
+wiener1948,oa_cited_by,,same
+wiener1948,oa_checked,,same
+wiener1948,authors,Norbert Wiener,same
+wiener1948,authors_short,Wiener,same
+newell1959,first_public_date,1959-02,"RAND P-1584 cover: 30 December 1958, revised 9 February 1959; the copy read is the February 1959 revision, so the revision date is used"
+marcus1993,authors,"Mitchell P. Marcus, Beatrice Santorini, Mary Ann Marcinkiewicz","printed author block, CL 19(2) p. 313: Marcus and Santorini in the first row, Marcinkiewicz below; footnote marks * † ‡ follow the same order (ACL Anthology J93-2004 agrees). OpenAlex record W1632114991 is a one-author DTIC report"
+marcus1993,authors_short,Marcus et al.,three authors
+marcus1993,doi,,"10.21236/ada273556 is a DTIC report record (Crossref type report, 1993-04-30), not the Computational Linguistics article; the ACL Anthology record of the article gives no DOI"
+marcus1993,url,https://aclanthology.org/J93-2004/,landing page of the journal article read (ACL Anthology)
+marcus1993,other_dates,"A DTIC report with the same title is dated 1993-04-30 (Crossref, DOI 10.21236/ada273556); it was not read and is not compared with the journal text",keeps the report identifier without presenting it as the article's DOI
+rosenblatt1962,authors,Frank Rosenblatt,"title page of Report No. VG-1196-G-8 (PDF p. 7): 'BY: Frank Rosenblatt'. OpenAlex W2322002063 is A. A. Mullin's 1963 review of the book, whose reviewer was merged into the author list"
+rosenblatt1962,authors_short,Rosenblatt,one author
+rosenblatt1962,doi,,"10.2307/2312103 is A. A. Mullin's review 'Principles of Neurodynamics', American Mathematical Monthly 70(5): 586, May 1963 (Crossref), not the report or the book"
+rosenblatt1962,url,https://papers.baulab.info/papers/also/Rosenblatt-1961.pdf,copy read: ASTIA/DTIC scan (AD 256582) of the 1961 report
+rosenblatt1962,other_dates,"Published as a book, Principles of Neurodynamics, Spartan Books, Washington, D.C., 1962 (per manifest; book not read); reviewed by A. A. Mullin, American Mathematical Monthly 70(5): 586, May 1963 (DOI 10.2307/2312103), the OpenAlex record that carries this work's citations",adds where the former DOI and second author came from
+ronneberger2015,authors,"Olaf Ronneberger, Philipp Fischer, Thomas Brox","arXiv v1 p. 1; OpenAlex stores the second name as 'Fischer, Philipp'"
+ronneberger2015,doi,10.1007/978-3-319-24574-4_28,MICCAI 2015 chapter DOI (Crossref book-chapter; Springer page); quote and pages remain from arXiv v1
+ronneberger2015,venue,"Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015, Lecture Notes in Computer Science 9351 (Springer), 234–241; read as arXiv:1505.04597v1",LNCS volume 9351 per Springer chapter page; DOI moved to the doi field
+krizhevsky2009,doi,,"10.57702/zp44cu3g is not in Crossref or DataCite (404); its handle (admin 10.admin/codata, registered 2024-12-02) points to a TIB dataset page that returns 404. Nothing ties it to the 2009 report"
+krizhevsky2009,url,https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf,copy read (author's page)
+rajpurkar2016,arxiv,1606.05250,"arXiv abstract page: v1 16 Jun 2016, the first_public_date already given"
+deerwester1990,pages,"391–407 (journal); author copy: unnumbered abstract page, pp. 1–30, then contents and lists of figures and tables pp. i–iii (34 PDF pages)",PDF pp. 32–34 carry pp. i–iii
+ren2015,doi,,"10.1109/TPAMI.2016.2577031 identifies the extended journal version (IEEE TPAMI 39(6): 1137–1149, June 2017, Crossref), not the NIPS 2015 paper the card quotes; NIPS 2015 papers have no DOI"
+ren2015,other_dates,"NIPS 2015, Advances in Neural Information Processing Systems 28 (proceedings page citation_publication_date 2015); arXiv v3 2016-01-06 extended tech report; IEEE TPAMI 39(6): 1137–1149, June 2017 (DOI 10.1109/TPAMI.2016.2577031), journal version",journal DOI kept here
+bengio2003,authors,"Yoshua Bengio, Réjean Ducharme, Pascal Vincent, Christian Jauvin","JMLR 3 (2003) p. 1137 prints four authors and below them 'Editors: Jaz Kandola, Thomas Hofmann, Tomaso Poggio and John Shawe-Taylor'; OpenAlex lists the editors as authors"

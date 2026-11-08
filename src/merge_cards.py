@@ -4,7 +4,7 @@ and OpenAlex records into data/derived/papers.csv and data/derived/edges.csv.
 Translations (key_sentence_ko, what_changed_ko) and venue_short come from data/derived/cards_ko.csv
 (key, key_sentence_ko, what_changed_ko, venue_short, authors_short) written by hand in stage 2;
 missing rows leave the fields empty so the site can still build.
-Edges: OA (edges_oa.csv) + original (refs_to_candidates from reading) + notion (docs/notion_edges.csv).
+Edges: OA (edges_oa.csv) + original (refs_to_candidates from reading) + notion (method/notion_edges.csv).
 """
 import csv, json, re, glob
 from collections import OrderedDict
@@ -22,7 +22,7 @@ def read(p):
 
 US = [("behaviour", "behavior"), ("Behaviour", "Behavior"), ("modelling", "modeling"), ("modelled", "modeled"), ("analysed", "analyzed"), ("analyse", "analyze"),
       ("optimisation", "optimization"), ("optimise", "optimize"), ("recognised", "recognized"), ("organised", "organized"), ("labelled", "labeled"), ("labelling", "labeling"),
-      ("colour", "color"), ("centre", "center"), ("favour", "favor"), ("catalogue", "catalog"), ("programme", "program"), ("defence", "defense"), ("licence", "license"), ("summarises", "summarizes"), ("characterised", "characterized"), ("characterise", "characterize"), ("licence", "license"), ("Licence", "License"), ("synthesises", "synthesizes"), ("generalises", "generalizes"), ("utilise", "utilize")]
+      ("colour", "color"), ("centre", "center"), ("favour", "favor"), ("catalogue", "catalog"), ("programme", "program"), ("defence", "defense"), ("licence", "license"), ("summarises", "summarizes"), ("characterised", "characterized"), ("characterise", "characterize"), ("licence", "license"), ("Licence", "License"), ("synthesises", "synthesizes"), ("generalises", "generalizes"), ("utilise", "utilize"), ("organises", "organizes")]
 
 
 def us_spelling(t):
@@ -30,6 +30,24 @@ def us_spelling(t):
     for a, b in US:
         t = t.replace(a, b)
     return t
+
+
+# OpenAlex stores some names as "Surname, Given" (e.g. "Brown, Tom B."), which reads as two people once the
+# names are joined with commas. Added 2026-11-07 after a check found 29 selected papers with such names (30 with
+# ronneberger2015, fixed by hand before). method/author_names.csv maps other malformed display names (trailing
+# affiliation letters, a dropped surname, all capitals) to the name printed on the paper, with the evidence.
+SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
+NAME_FIX = {r["openalex_name"]: r["printed_name"] for r in read(ROOT / "method/author_names.csv")}
+
+
+def printed_name(n):
+    n = (n or "").strip()
+    if n in NAME_FIX:
+        return NAME_FIX[n]
+    parts = [x.strip() for x in n.split(",")]
+    if len(parts) == 2 and all(parts) and parts[1].lower() not in SUFFIXES:
+        return f"{parts[1]} {parts[0]}"
+    return n
 
 
 def short_authors(authors, first):
@@ -53,8 +71,8 @@ def main():
     cand = {r["key"]: r for r in read(D / "candidates_v0.csv")}
     sel = {r["key"]: r for r in read(D / "selection_v1.csv")}
     ko = {r["key"]: r for r in read(D / "cards_ko.csv")}
-    # docs/cards_ko.txt: blocks "## key / Q: translation / W: Korean what-changed"
-    kt = ROOT / "docs/cards_ko.txt"
+    # method/cards_ko.txt: blocks "## key / Q: translation / W: Korean what-changed"
+    kt = ROOT / "method/cards_ko.txt"
     if kt.exists():
         cur = None
         for line in kt.read_text(encoding="utf-8").splitlines():
@@ -88,7 +106,7 @@ def main():
         if not url and not doi and not arxiv:
             url = c.get("oa_doi", "") and f"https://doi.org/{c['oa_doi']}" or ""
         fpd = r.get("first_public_date", "") or c["year"]
-        authors = ", ".join(a["author"]["display_name"] for a in (oa.get("authorships") or [])[:6]) if oa else c["author"]
+        authors = ", ".join(printed_name(a["author"]["display_name"]) for a in (oa.get("authorships") or [])[:6]) if oa else c["author"]
         if oa and len(oa.get("authorships") or []) > 6:
             authors += " et al."
         papers.append(OrderedDict([
@@ -106,12 +124,12 @@ def main():
         for dst in [x.strip() for x in (r.get("refs_to_candidates") or "").split(";") if x.strip()]:
             if dst in cand and dst != k:
                 edges.append({"src": k, "dst": dst, "kind": "original", "evidence": f"reference list of {k} ({r.get('version_used', '')})"})
-    # hand overrides (docs/card_overrides.csv: key,field,value,reason) — e.g. a wrong DOI in the candidate list
-    for o in read(ROOT / "docs/card_overrides.csv"):
+    # hand overrides (method/card_overrides.csv: key,field,value,reason) — e.g. a wrong DOI in the candidate list
+    for o in read(ROOT / "method/card_overrides.csv"):
         for p in papers:
             if p["key"] == o["key"] and o["field"] in p:
                 p[o["field"]] = o["value"]
-    for e in read(ROOT / "docs/notion_edges.csv"):
+    for e in read(ROOT / "method/notion_edges.csv"):
         edges.append({"src": e["src"], "dst": e["dst"], "kind": "notion", "evidence": e["evidence"]})
     # de-duplicate: OA and original for same pair both kept? keep one row per (src,dst) preferring OA
     seen, dedup = {}, []
@@ -122,6 +140,10 @@ def main():
                 seen[key]["evidence"] += "; also in reference list"
             continue
         seen[key] = e; dedup.append(e)
+    # edges.csv is "citation lineage among selected papers" (method/data-schema.md): drop rows whose citing or
+    # cited paper is a candidate that was not selected (2026-11-07; before, 87 such rows were published)
+    chosen = {p["key"] for p in papers}
+    dedup = [e for e in dedup if e["src"] in chosen and e["dst"] in chosen]
     papers.sort(key=lambda p: (p["first_public_date"][:4], p["key"]))
     with open(D / "papers.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(papers[0].keys())); w.writeheader(); w.writerows(papers)

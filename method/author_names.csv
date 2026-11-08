@@ -1,0 +1,7 @@
+openalex_name,printed_name,evidence
+Jared Kaplan A,Jared Kaplan,"arXiv 2001.08361 v1 p. 1 and arXiv 2005.14165 p. 1 print 'Jared Kaplan'; the trailing letter is an affiliation mark"
+Izhak Shafran J,Izhak Shafran,"arXiv 2210.03629 p. 1 and arXiv 2305.10601 p. 1 print 'Izhak Shafran'"
+Ed H.,Ed H. Chi,"arXiv 2203.11171 p. 1 prints 'Ed H. Chi'; OpenAlex dropped the surname"
+Terrence J. Sejnowski A B,Terrence J. Sejnowski,"Crossref 10.1207/s15516709cog0901_7 (given 'Terrence J.', family 'Sejnowski'); the trailing letters are affiliation marks"
+NEIL R. BURCH,Neil Burch,"Crossref 10.1126/science.1144079 (given 'Neil', family 'Burch')"
+Mark I-Cheng Chen,Mark Chen,"arXiv 2107.03374 p. 1 prints 'Mark Chen'"

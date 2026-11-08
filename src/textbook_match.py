@@ -2,8 +2,19 @@
 bibliography of T2..T6 (T1 Nilsson pending)?  Output data/derived/textbook_matches.csv
 
 Match = normalized title substring (first 6+ words) found in the normalized bibliography
-text, OR (first-author surname AND year AND 3 rarest title words within 300 chars).
+text, OR (first-author surname AND year AND 3 rarest title words within 300 chars),
+OR (for titles with a subtitle: surname, exact year and the title before the colon within 250
+characters of the squeezed text — added 2026-11-07, because T1 and T3 cite Rosenblatt 1962 by the
+short title only). Running page footers inside a bibliography are removed first (T7 prints one at
+every page break, which split the Rajpurkar 2016 entry).
 Each hit is recorded with the kind of evidence so it can be audited.
+
+method/textbook_overrides.csv (key,book,action,evidence) records hits checked by hand: action
+`remove` drops a hit the proximity rule made from a neighboring entry (the rule cannot be narrowed
+without losing true hits such as Nilsson's "LotfiZadeh"); `add` records a hit no rule can see;
+`keep` records a hit checked by hand and kept, with the reason (added 2026-11-07, e.g. a book that cites an
+earlier version of the same work); the run warns if a kept hit is no longer found.
+Removed hits are written as `removed` and not counted.
 """
 import csv, re, unicodedata, collections
 from pathlib import Path
@@ -25,6 +36,8 @@ def load_text(name):
     if not p.exists():
         return None
     t = p.read_text(encoding="utf-8", errors="ignore")
+    for pat in FOOTERS.get(name, ()):
+        t = re.sub(pat, "", t)
     for a, b in (("↵", "ff"), ("ﬀ", "ff"), ("ﬁ", "fi"), ("ﬂ", "fl"), ("ﬃ", "ffi"), ("ﬄ", "ffl")):
         t = t.replace(a, b)
     if name.endswith(".html"):
@@ -38,6 +51,11 @@ def squeeze(s):
     return s.replace(" ", "")
 
 
+# running page footers to drop before matching (regex on the raw text)
+FOOTERS = {
+    "t7_murphy_pml1_refs.txt": [r"Author: Kevin P\. Murphy\. \(C\) MIT Press\. CC-BY-NC-ND license\s*\n\s*\d{3}\s*\n\s*BIBLIOGRAPHY\s*\n"],
+}
+
 BOOKS = {
     "T1": "t1_nilsson_qai_refs.txt",  # Nilsson cites in chapter endnotes; the whole book text is matched (web PDF, Wayback 2026-10-11)
     "T2": "t2_aima4e.bib",
@@ -45,6 +63,7 @@ BOOKS = {
     "T4": "t4_sutton_barto_2020_refs.txt",
     "T5": "t5_prince_udl_refs.txt",
     "T6": "t6_jurafsky_slp3_refs.txt",
+    "T7": "t7_murphy_pml1_refs.txt",  # added 2026-11-07 (1.1): Murphy, PML: An Introduction, MIT Press 2022; author draft PDF 2025-04-18
 }
 
 
@@ -52,6 +71,11 @@ def main():
     texts = {k: load_text(v) for k, v in BOOKS.items()}
     sq = {k: squeeze(t) if t else None for k, t in texts.items()}
     rows = list(csv.DictReader(open(ROOT / "data/derived/candidates_v0.csv", encoding="utf-8-sig")))
+    ovr = {}
+    op = ROOT / "method/textbook_overrides.csv"
+    if op.exists():
+        for o in csv.DictReader(open(op, encoding="utf-8-sig")):
+            ovr[(o["key"], o["book"])] = o["action"]
     # word rarity across all candidate titles for picking distinctive words
     out = []
     for r in rows:
@@ -78,8 +102,23 @@ def main():
                             if dw and all(w in win for w in dw):
                                 ev = "author+year+words"
                                 break
+                if not ev and ":" in r["title"] and sur:
+                    short = squeeze(norm(r["title"].split(":")[0]))
+                    if len(short) >= 12:
+                        for m in re.finditer(re.escape(sur), sq[k]):
+                            win = sq[k][m.start(): m.start() + 250]
+                            if short in win and yr in win:
+                                ev = "author+year+short-title"
+                                break
+            act = ovr.get((r["key"], k))
+            if act == "remove" and ev not in ("", "n/a"):
+                ev = "removed"
+            elif act == "add" and ev in ("", "n/a"):
+                ev = "manual"
+            elif act == "keep" and ev in ("", "n/a"):
+                print("WARNING kept hit not found:", r["key"], k)
             rec[k] = ev
-            if ev and ev != "n/a":
+            if ev and ev not in ("n/a", "removed"):
                 hits += 1
         rec["n_hits"] = hits
         rec["R1"] = "pass" if hits >= 2 else ("one" if hits == 1 else "none")
@@ -89,7 +128,8 @@ def main():
     c = collections.Counter(o["R1"] for o in out)
     print(len(out), dict(c))
     for k in BOOKS:
-        print(k, sum(1 for o in out if o[k] not in ("", "n/a")))
+        print(k, sum(1 for o in out if o[k] not in ("", "n/a", "removed")))
+    print("overrides:", {f"{k}:{b}": a for (k, b), a in ovr.items()})
 
 
 if __name__ == "__main__":
