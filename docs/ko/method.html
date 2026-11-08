@@ -79,6 +79,8 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <li><b>R3 수상.</b> 튜링상·노벨상의 공적 설명이 가리키는 업적의 원 논문. (15편)</li>
 <li><b>R4 최근(2021년 이후).</b> 동료 심사 게재(또는 공개된 심사 기록)와 원문 확인. (28편)</li></ul>
 <p>그 결과 214편이다. 교과서 대조는 참고문헌 텍스트를 제목·저자·연도로 자동 대조한 뒤 표본을 손으로 확인했다. 손으로 바로잡은 적중은 근거와 함께 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>에 적었다. Nilsson 의 책은 참고문헌을 장 끝의 주(註)에 두므로 책 전문(저자 공개 PDF, Internet Archive 2026-10-11 보존본)을 대조 텍스트로 썼다 — 본문에서 제목이나 저자·연도로 거명한 것도 인용으로 세었다는 뜻이다. Schmidhuber 의 「Annotated History of Modern AI and Deep Learning」(2022)은 기준 문헌에 넣지 않고 우선권 상자의 한쪽 자료로만 썼다.</p>
+<h2>1.1.1 — 2026-11-08</h2>
+<p>한국어판에서 우리말로 옮긴 용어는 쪽마다 처음 나올 때 원어를 괄호로 붙였다(예: 생각의 사슬(chain of thought)). 대응표는 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/glossary_ko.csv">glossary_ko.csv</a>에 있다. 선정과 카드 내용은 바뀌지 않았다.</p>
 <h2>1.1 개정 — 2026-11-07</h2>
 <p>두 가지를 바꿨다. 첫째, 통계적 기계학습 쪽 교과서가 빠져 있어 Murphy 『Probabilistic Machine Learning: An Introduction』(MIT Press 2022)을 일곱 번째 기준 문헌으로 더했다. 대조에는 저자가 공개한 초고 PDF(2025-04-18판)의 참고문헌을 썼다. 둘째, 후보를 넓혔다. 이미 선정된 논문 세 편 이상이 OpenAlex 에서 인용하고 기준 문헌 세 종 이상이 참고문헌에 올린 논문 가운데 후보에 없던 것을 더했다. 교과서·개관 논문, 이미 있는 점과 같은 업적의 다른 판본은 넣지 않았다. 더한 논문도 위 네 규칙으로만 선정했다. 더한 16편과 각 편의 인용 수·기준 문헌은 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/pool-1.1-added.csv">pool-1.1-added.csv</a>에 있다. 그 가운데 Jelinek 1976은 한 기준 문헌(Jurafsky & Martin)의 적중이 같은 저자의 다른 논문을 잡은 것으로 뒤에 밝혀졌다. 바로잡으면 기준 문헌이 두 종이라 확장 조건(세 종)에 못 미치므로, 등록한 조건대로 후보에서 빼고 선정하지 않았다. 후보에 남은 것은 15편이다.</p>
 <h2>날짜</h2>
@@ -88,7 +90,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <h2>계보선</h2>
 <p>세 종류다. OpenAlex 의 참고문헌 목록에 있는 것(548건), OpenAlex 에는 없으나 인용한 논문의 참고문헌 목록에서 직접 확인한 것(721건), 교과서가 영향을 말하지만 인용이 확인되지 않은 것(0건, 점선). OpenAlex 만으로는 선이 크게 빈다 — 후보 목록에서 1990년 이전 레코드의 30%, arXiv 레코드의 40%가 참고문헌 0건이었다.</p>
 <h2>우선권 논쟁</h2>
-<p>역전파·합성곱망·심층망 학습·잔차 연결처럼 「누가 먼저인가」가 다투어지는 자리에는 양쪽 원 논문의 서지와 원문 문장만 나란히 놓는다. 판정하는 문장은 쓰지 않는다. 판정이 담긴 2차 문헌은 「이런 주장이 있다」로 출처와 함께 소개한다.</p>
+<p>역전파(backpropagation)·합성곱망(convolutional network)·심층망 학습·잔차 연결(residual connection)처럼 「누가 먼저인가」가 다투어지는 자리에는 양쪽 원 논문의 서지와 원문 문장만 나란히 놓는다. 판정하는 문장은 쓰지 않는다. 판정이 담긴 2차 문헌은 「이런 주장이 있다」로 출처와 함께 소개한다.</p>
 <h2>편중</h2>
 <p>기준 문헌이 영어 교과서라는 점에서 오는 편중을 숨기지 않는다. 소련·일본의 초기 신경망 연구(Ivakhnenko, Amari, Fukushima)와 핀란드의 Linnainmaa 는 교과서 두 종 기준을 넘지 못한 경우가 있고, 그런 논문은 우선권 상자에서 다룬다. 선정 논문의 저자 소속 국가 분포는 이 판의 papers.csv 와 OpenAlex 레코드로 계산할 수 있다.</p>
 <h2>자료원과 이용 조건</h2>
@@ -98,7 +100,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <li>Wikidata(튜링상 수상자, CC0)·노벨상 API(CC0).</li>
 <li>AI Index 2019 보고서 2장의 참가자 자료, Our World in Data(CC BY), proceedings.neurips.cc.</li></ul>
 <p>이 사이트의 글은 CC BY-NC 4.0, 코드는 PolyForm Noncommercial 1.0.0, 데이터 편집물은 CC BY 4.0(원자료는 CC0 또는 CC BY)이다. 논문 본문은 재배포하지 않고 짧은 인용과 링크만 한다.</p></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1 · 생성일 2026-11-08 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.1 · 생성일 2026-11-08 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

@@ -22,7 +22,7 @@ import content as C  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 D = ROOT / "data/derived"
 SITE = ROOT / "site"
-VERSION = "1.1"
+VERSION = "1.1.1"
 BUILD_DATE = date.today().isoformat()
 REPO = "https://github.com/BowonKwon/AI-History-in-Papers"
 
@@ -146,9 +146,74 @@ def read_csv(name):
     return list(csv.DictReader(open(p, encoding="utf-8-sig"))) if p.exists() else []
 
 
+# ----------------------------------------------------------------- ko glossary
+# 한국어로 옮긴 용어는 쪽마다 처음 나올 때 원어를 괄호로 붙인다(2026-11-08 — 「생각의 사슬」만
+# 보고는 무엇인지 따로 떠올려야 한다). 사전은 method/glossary_ko.csv. 뜻이 갈리는 낱말(정렬·정규화 등)은
+# 사전에 넣지 않고, 뜻이 하나로 정해지는 복합어나 문맥 구절만 넣는다. 태그 속성·svg·script·style·제목(h1–h3)은
+# 건드리지 않는다. 바로 뒤에 괄호가 이미 있으면(「(2022년 1월)」「(RNN)」) 그 괄호 안 앞에 원어를 넣는다.
+GLOSS = [(r["ko"], r["en"]) for r in csv.DictReader(open(ROOT / "method/glossary_ko.csv", encoding="utf-8"))] \
+    if (ROOT / "method/glossary_ko.csv").exists() else []
+GLOSS.sort(key=lambda kv: -len(kv[0]))
+GLOSS_RE = re.compile("|".join(re.escape(k) for k, _ in GLOSS)) if GLOSS else None
+GLOSS_EN = dict(GLOSS)
+SKIP_TAGS = ("svg", "script", "style", "h1", "h2", "h3", "code")
+
+
+def gloss_ko(body):
+    if not GLOSS_RE:
+        return body
+    done = set()
+    out, i, skip = [], 0, []
+    for m in re.finditer(r"<[^>]+>", body):
+        text = body[i:m.start()]
+        out.append(text if skip else _gloss_text(text, done))
+        tag = m.group(0)
+        name = re.match(r"</?\s*([a-zA-Z0-9]+)", tag)
+        if name:
+            n = name.group(1).lower()
+            if n == "span" and 'class="tag"' in tag:
+                n = "span.tag"          # 장 머리의 장 이름 꼬리표
+            elif n == "span" and tag.startswith("</") and skip and skip[-1] == "span.tag":
+                n = "span.tag"
+            if (n in SKIP_TAGS or n == "span.tag") and not tag.endswith("/>"):
+                if tag.startswith("</"):
+                    if skip and skip[-1] == n:
+                        skip.pop()
+                else:
+                    skip.append(n)
+        out.append(tag)
+        i = m.end()
+    out.append(_gloss_text(body[i:], done) if not skip else body[i:])
+    return "".join(out)
+
+
+def _gloss_text(text, done):
+    out, i = [], 0
+    for m in GLOSS_RE.finditer(text):
+        ko = m.group(0)
+        out.append(text[i:m.end()])
+        i = m.end()
+        if ko in done:
+            continue
+        done.add(ko)
+        en = GLOSS_EN[ko]
+        if text.startswith("(", i):
+            close = text.find(")", i)
+            inner = text[i + 1:close] if close > 0 else ""
+            if en.lower() not in inner.lower():
+                out.append(f"({en}, ")
+                i += 1                      # 원래 「(」는 위에서 새로 연 괄호가 대신한다
+        else:
+            out.append(f"({en})")
+    out.append(text[i:])
+    return "".join(out)
+
+
 # ----------------------------------------------------------------- page shell
 
 def page(lang, title, body, depth=1, desc="", active=""):
+    if lang == "ko":
+        body = gloss_ko(body)
     t = T[lang]
     root = "../" * depth
     other = "en" if lang == "ko" else "ko"

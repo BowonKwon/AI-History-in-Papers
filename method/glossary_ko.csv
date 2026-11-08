@@ -1,0 +1,118 @@
+ko,en
+생각의 사슬,chain of thought
+생각의 나무,Tree of Thoughts
+자기 일관성,self-consistency
+탐욕적 복호화,greedy decoding
+복호화,decoding
+깁스 표집,Gibbs sampling
+표집,sampling
+주변화,marginalization
+비표지,unlabeled
+미세 조정,fine-tuning
+사전훈련,pre-training
+층별 사전훈련,layer-wise pre-training
+잔차 연결,residual connection
+잔차 학습,residual learning
+잔차,residual
+은닉 마르코프 모델,hidden Markov model
+은닉층,hidden layer
+은닉 단위,hidden unit
+희소,sparse
+변분,variational
+모의 담금질,simulated annealing
+담금질,annealing
+하류 과제,downstream task
+하류,downstream
+내용 주소화 기억,content-addressable memory
+수용장,receptive field
+부분경사,subgradient
+최소최대,minimax
+거듭제곱 법칙,power law
+다열,multi-column
+판별적,discriminative
+증강,augmentation
+행위자-비평자,actor-critic
+비평자,critic
+행위자,actor
+시간차,temporal difference
+조건부 확률장,conditional random field
+확률장,random field
+심층 신뢰망,deep belief network
+신뢰망,belief network
+배치 정규화,batch normalization
+층 정규화,layer normalization
+국소 대비 정규화,local contrast normalization
+길이 정규화,length normalization
+정류 선형 단위,rectified linear unit
+정류 단위,rectified unit
+문맥 창,context window
+일화 기억,episodic memory
+폐루프,closed loop
+가상 문맥 관리,virtual context management
+질의응답,question answering
+개체명 인식,named entity recognition
+품사 태깅,part-of-speech tagging
+확산 모델,diffusion model
+역전파,backpropagation
+합성곱,convolution
+순환 신경망,recurrent neural network
+순환망,recurrent network
+기울기 소실,vanishing gradient
+기울기,gradient
+최대가능도,maximum likelihood
+몬테카를로 트리 탐색,Monte Carlo tree search
+정책망,policy network
+가치망,value network
+가치 함수,value function
+강화학습,reinforcement learning
+지도학습,supervised learning
+비지도,unsupervised
+자기 지도,self-supervised
+매개변수,parameters
+말뭉치,corpus
+가중치,weights
+마르코프 결정 과정,Markov decision process
+동적 계획법,dynamic programming
+일반화,generalization
+연결주의,connectionism
+볼츠만 기계,Boltzmann machine
+잠재 디리클레 할당,latent Dirichlet allocation
+다층 퍼셉트론,multilayer perceptron
+자기회귀,autoregressive
+양방향,bidirectional
+장단기 기억,long short-term memory
+전방향,feedforward
+보상 모델,reward model
+근접 정책 최적화,proximal policy optimization
+인간 피드백,human feedback
+보편 근사,universal approximation
+전문가 시스템,expert system
+프레임 문제,frame problem
+정리 증명,theorem proving
+결정 나무,decision tree
+랜덤 포레스트,random forest
+베이지안 망,Bayesian network
+드롭아웃,dropout
+정책 경사,policy gradient
+희소 게이트 전문가 혼합,sparsely-gated mixture of experts
+전문가 혼합,mixture of experts
+신경 기계 번역,neural machine translation
+통계적 기계 번역,statistical machine translation
+기계 번역,machine translation
+주의 기제,attention mechanism
+경사 하강,gradient descent
+결정 경계,decision boundary
+결정 영역,decision region
+다중 서열 정렬,multiple sequence alignment
+표현 학습,representation learning
+다중 모달,multimodal
+피드백으로 정렬,alignment
+의도에 정렬,alignment
+정렬 연구,alignment research
+정렬 절차,alignment procedure
+깁스 표집기,Gibbs sampler
+전방향망,feedforward network
+합성곱망,convolutional network
+합성곱 신경망,convolutional neural network
+매개변수적,parametric
+비지도학습,unsupervised learning
