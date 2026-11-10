@@ -21,10 +21,10 @@ ackley1985,geman1984,OA,OpenAlex referenced_works (2026-11-03); also in referenc
 ackley1985,kirkpatrick1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 ackley1985,hopfield1982,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 rumelhart1986,rosenblatt1962,OA,OpenAlex referenced_works (2026-11-03)
-pearl1988,hart1968,OA,OpenAlex referenced_works (2026-11-03)
-pearl1988,geman1984,OA,OpenAlex referenced_works (2026-11-03)
-pearl1988,kirkpatrick1983,OA,OpenAlex referenced_works (2026-11-03)
-pearl1988,mccarthy1969,OA,OpenAlex referenced_works (2026-11-03)
+pearl1988,hart1968,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+pearl1988,geman1984,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+pearl1988,kirkpatrick1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
+pearl1988,mccarthy1969,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 sutton1988,widrow1960,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 sutton1988,barto1983,OA,OpenAlex referenced_works (2026-11-03); also in reference list
 sutton1988,ackley1985,OA,OpenAlex referenced_works (2026-11-03); also in reference list
