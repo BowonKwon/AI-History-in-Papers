@@ -22,7 +22,7 @@ import content as C  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 D = ROOT / "data/derived"
 SITE = ROOT / "site"
-VERSION = "1.1.3"
+VERSION = "1.1.4"
 BUILD_DATE = date.today().isoformat()
 REPO = "https://github.com/BowonKwon/AI-History-in-Papers"
 
@@ -42,6 +42,7 @@ T = {
                download="CSV 내려받기", filter="찾기", year="연도", author="첫 저자", title="제목", chapter="장", theme="주제", papers="편",
                timeline_cap="점 하나가 논문 한 편이다. 가로축은 첫 공개 연도(2012년을 경계로 앞 70년과 뒤 14년이 비슷한 너비를 차지한다), 세로줄은 주제 묶음. 점 위에 마우스를 올리면 카드가 뜬다.",
                lineage_cap="실선은 인용이 확인된 선(OpenAlex 또는 인용한 논문의 참고문헌 목록), 점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선. 세로 위치는 주제 묶음.",
+               lineage_cap_solid="선은 인용이 확인된 것만 그었다(OpenAlex 또는 인용한 논문의 참고문헌 목록). 세로 위치는 주제 묶음.",
                theme_names={"neural": "신경망 학습", "rl": "강화학습·게임", "lang": "언어·음성", "vision": "시각·생성", "search": "탐색·계획·지식", "stat": "확률·통계·기원", "align": "규모·정렬·안전", "agent": "에이전트"}),
     "en": dict(site="AI History in Papers", lang_other="한국어", tagline="The history of AI research from 1943 to today, followed through its original papers",
                nav_home="Home", nav_chapters="Eras", nav_lineage="Lineage", nav_winters="Winters and booms", nav_papers="Paper list", nav_method="Method and limits",
@@ -51,6 +52,7 @@ T = {
                download="Download CSV", filter="Filter", year="Year", author="First author", title="Title", chapter="Era", theme="Theme", papers="papers",
                timeline_cap="One dot per paper. Horizontal position is the first public year (the axis gives the 70 years before 2012 and the 14 years after it similar widths); rows are theme groups. Hover a dot for its card.",
                lineage_cap="Solid lines are confirmed citations (OpenAlex or the citing paper's own reference list); dotted lines are influences stated in textbooks without a confirmed citation. Vertical position is the theme group.",
+               lineage_cap_solid="Lines are confirmed citations only (OpenAlex or the citing paper's own reference list). Vertical position is the theme group.",
                theme_names={"neural": "Neural network learning", "rl": "Reinforcement learning and games", "lang": "Language and speech", "vision": "Vision and generative models", "search": "Search, planning and knowledge", "stat": "Probability, statistics and origins", "align": "Scale, alignment and safety", "agent": "Agents"}),
 }
 
@@ -282,9 +284,14 @@ def x_of(y, y0, y1, left, right, knee=None):
 KNEE = (2012, 0.55)  # home timeline: 1943–2012 on 55% of the width, 2012–2026 on 45%
 
 
+def _label_w(text):
+    """Rough width of a label at the chart font size (CJK glyphs are about twice as wide as Latin ones)."""
+    return sum(12.5 if ord(ch) > 0x2E80 else 6.6 for ch in text)
+
+
 def timeline_svg(papers, lang, y0=1942, y1=2026, width=1000, lane_h=42, chapter_links=True):
     lanes = [l for l, _ in LANES]
-    left, right, top = 150, width - 20, 36
+    left, right, top = max(150, int(max(_label_w(T[lang]["theme_names"][l]) for l in lanes)) + 18), width - 20, 40
     h = top + lane_h * len(lanes) + 30
     out = [f'<svg viewBox="0 0 {width} {h}" role="img" aria-label="timeline">']
     # era bands
@@ -292,12 +299,12 @@ def timeline_svg(papers, lang, y0=1942, y1=2026, width=1000, lane_h=42, chapter_
         a, b = C.ERA_SPAN[e]
         xa, xb = x_of(a, y0, y1, left, right, KNEE), x_of(min(b, y1), y0, y1, left, right, KNEE)
         out.append(f'<rect class="band{" alt" if i % 2 else ""}" x="{xa:.1f}" y="{top}" width="{xb - xa:.1f}" height="{lane_h * len(lanes)}"/>')
-        out.append(f'<text x="{(xa + xb) / 2:.1f}" y="{top - (8 if i % 2 == 0 else 20)}" text-anchor="middle" font-size="10">{esc(C.ERA_SHORT[lang][e])}</text>')
+        out.append(f'<text x="{(xa + xb) / 2:.1f}" y="{top - (6 if i % 2 == 0 else 23)}" text-anchor="middle" font-size="10">{esc(C.ERA_SHORT[lang][e])}</text>')
     for i, lane in enumerate(lanes):
         y = top + i * lane_h
         out.append(f'<line class="grid" x1="{left}" x2="{right}" y1="{y + lane_h}" y2="{y + lane_h}"/>')
         out.append(f'<text x="{left - 8}" y="{y + lane_h / 2 + 4}" text-anchor="end">{esc(T[lang]["theme_names"][lane])}</text>')
-    for yr in list(range(1950, 2011, 10)) + list(range(2012, 2027, 2)):
+    for yr in list(range(1950, 2001, 10)) + list(range(2010, 2027, 4)):
         x = x_of(yr, y0, y1, left, right, KNEE)
         out.append(f'<line class="ax" x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{top + lane_h * len(lanes)}"/><text x="{x:.1f}" y="{h - 8}" text-anchor="middle">{yr}</text>')
     # dots with slight vertical jitter by index within lane-year
@@ -320,7 +327,7 @@ def lineage_svg(papers, edges, lang, width=1000, lane_h=70, href_prefix=""):
     lanes = [l for l, _ in LANES if any(p["lane"] == l for p in papers)]
     y0 = math.floor(min(p["yearf"] for p in papers)) - 1
     y1 = math.ceil(max(p["yearf"] for p in papers)) + 1
-    left, right, top = 150, width - 20, 16
+    left, right, top = max(150, int(max(_label_w(T[lang]["theme_names"][l]) for l in lanes)) + 18), width - 20, 16
     h = top + lane_h * len(lanes) + 30
     pos = {}
     seen = defaultdict(int)
@@ -353,21 +360,45 @@ def lineage_svg(papers, edges, lang, width=1000, lane_h=70, href_prefix=""):
     return "\n".join(out)
 
 
-def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, logy=False, xr=None):
+def lineage_cap(t, es):
+    """The caption explains dotted lines only when the figure has any (edges of kind 'notion')."""
+    return t["lineage_cap"] if any(e["kind"] == "notion" for e in es) else t["lineage_cap_solid"]
+
+
+def _nice(ya, yb, n=4):
+    """Round ticks from ya up to the first round value at or above yb (0, 10, 20 … rather than 0, 11.9556, 23.9111 …)."""
+    span = yb - ya
+    step = 10 ** math.floor(math.log10(span / n))
+    for m in (1, 2, 2.5, 5, 10):
+        if span / (step * m) <= n:
+            step *= m
+            break
+    top = ya + math.ceil((yb - ya) / step - 1e-9) * step
+    return [ya + step * i for i in range(int(round((top - ya) / step)) + 1)], top
+
+
+def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, logy=False, xr=None, breaks=()):
     """series: list of (label, [(x,y)], color_idx, dashed)"""
     pts = [p for _, ps, _, _ in series for p in ps]
     if not pts:
         return ""
     xa = xr[0] if xr else min(p[0] for p in pts); xb = xr[1] if xr else max(p[0] for p in pts)
     ya = y0 if y0 is not None else 0; yb = y1 if y1 is not None else max(p[1] for p in pts) * 1.05
-    left, right, top, bot = 60, width - 20, 16, height - 30
+    lin_ticks = None
+    if not logy:
+        lin_ticks, top = _nice(ya, y1 if y1 is not None else max(p[1] for p in pts))
+        if y1 is None:
+            yb = top
+        else:
+            lin_ticks = [v for v in lin_ticks if v <= y1 + 1e-9]
+    left, right, top, bot = 60, width - 20, 24, height - 30
     def X(x): return left + (x - xa) / (xb - xa) * (right - left)
     def Y(y):
         if logy:
             return bot - (math.log10(max(y, 1)) - math.log10(max(ya, 1))) / (math.log10(yb) - math.log10(max(ya, 1))) * (bot - top)
         return bot - (y - ya) / (yb - ya) * (bot - top)
     out = [f'<svg viewBox="0 0 {width} {height}" role="img" aria-label="line chart">']
-    ticks = [10 ** k for k in range(int(math.log10(max(ya, 1))), int(math.log10(yb)) + 1)] if logy else [ya + (yb - ya) * i / 4 for i in range(5)]
+    ticks = [10 ** k for k in range(int(math.log10(max(ya, 1))), int(math.log10(yb)) + 1) if 10 ** k >= ya] if logy else lin_ticks
     for tv in ticks:
         out.append(f'<line class="grid" x1="{left}" x2="{right}" y1="{Y(tv):.1f}" y2="{Y(tv):.1f}"/><text x="{left - 6}" y="{Y(tv) + 4:.1f}" text-anchor="end">{tv:g}</text>')
     step = 5 if xb - xa <= 50 else 10
@@ -376,12 +407,14 @@ def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, l
     out.append(f'<line class="ax" x1="{left}" x2="{right}" y1="{bot}" y2="{bot}"/>')
     for label, ps, ci, dashed in series:
         ps = sorted(ps)
-        d = " ".join(f"{'M' if i == 0 else 'L'}{X(x):.1f},{Y(y):.1f}" for i, (x, y) in enumerate(ps))
+        # a year named in `breaks` was left out on purpose; the line stops there instead of joining its neighbors
+        cut = lambda i: i == 0 or any(ps[i - 1][0] < b < ps[i][0] for b in breaks)  # noqa: E731
+        d = " ".join(f"{'M' if cut(i) else 'L'}{X(x):.1f},{Y(y):.1f}" for i, (x, y) in enumerate(ps))
         out.append(f'<path d="{d}" fill="none" stroke="var(--s{ci})" stroke-width="2"{" stroke-dasharray=\"4 3\"" if dashed else ""}/>')
         for x, y in ps:
             out.append(f'<circle cx="{X(x):.1f}" cy="{Y(y):.1f}" r="2.2" fill="var(--s{ci})"><title>{esc(label)} {x}: {y:g}</title></circle>')
     if ylabel:
-        out.append(f'<text x="{left}" y="{top - 4}" font-size="10">{esc(ylabel)}</text>')
+        out.append(f'<text x="{left}" y="{top - 8}" font-size="10">{esc(ylabel)}</text>')
     out.append("</svg>")
     legend = '<div class="legend">' + "".join(f'<span style="--c:var(--s{ci})">{esc(l)}</span>' for l, _, ci, _ in series) + "</div>"
     return legend + "\n".join(out)
@@ -447,7 +480,7 @@ def build_lang(lang, papers, edges):
 {glance(lang, C.ERA_KEY[lang][e])}
 <div class="prose">{C.ERA_TEXT[lang][e]}</div>
 {boxes}
-<h2>{t['nav_lineage']}</h2><figure>{lineage_svg(ps, es, lang)}<figcaption>{esc(t['lineage_cap'])}</figcaption></figure>
+<h2>{t['nav_lineage']}</h2><figure>{lineage_svg(ps, es, lang)}<figcaption>{esc(lineage_cap(t, es))}</figcaption></figure>
 <h2>{t['nav_papers']} ({len(ps)})</h2>{''.join(paper_block(p, lang, edges, by_key) for p in ps)}"""
         (out / f"chapters/{e}.html").write_text(page(lang, C.ERA_TITLE[lang][e], body, 2, active="chapters"), encoding="utf-8")
     # lineage pages by lane
@@ -460,7 +493,7 @@ def build_lang(lang, papers, edges):
         es = [x for x in edges if x["src"] in ks and x["dst"] in ks]
         rows = "".join(f'<tr><td class="nw">{esc(p["first_public_date"][:4])}</td><td>{esc(p["authors_short"])}</td><td><a href="../chapters/{p["era"]}.html#{p["key"]}">{esc(p["title"])}</a></td><td>{esc(C.ERA_SHORT[lang][p["era"]])}</td></tr>' for p in ps)
         body = f"""<h1>{esc(t['theme_names'][l])}</h1><p class="lead">{esc(C.LANE_LEAD[lang].get(l, ''))}</p>
-<figure>{lineage_svg(ps, es, lang, href_prefix='../chapters/')}<figcaption>{esc(t['lineage_cap'])}</figcaption></figure>
+<figure>{lineage_svg(ps, es, lang, href_prefix='../chapters/')}<figcaption>{esc(lineage_cap(t, es))}</figcaption></figure>
 <div class="wrap"><table class="sort"><thead><tr><th>{t['year']}</th><th>{t['author']}</th><th>{t['title']}</th><th>{t['chapter']}</th></tr></thead><tbody>{rows}</tbody></table></div>"""
         (out / f"lineage/{l}.html").write_text(page(lang, t["theme_names"][l], body, 2, active="lineage"), encoding="utf-8")
     # winters
@@ -497,7 +530,7 @@ def winters_body(lang):
     s3 = [("NeurIPS", [(int(r["year"]), int(r["accepted_papers"])) for r in nips if not r["note"]], 1, False)]
     body = f"""<h1>{t['nav_winters']}</h1><p class="lead">{esc(C.WINTER_LEAD[lang])}</p>{glance(lang, C.WINTER_KEY[lang])}
 <div class="prose">{C.WINTER_TEXT[lang]['intro']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h1'])}</h2><figure>{line_svg(s1, lang, ylabel=C.WINTER_TEXT[lang]['y1'], xr=(1960, 2024))}<figcaption>{esc(C.WINTER_TEXT[lang]['cap1'])}</figcaption></figure>
+<h2>{esc(C.WINTER_TEXT[lang]['h1'])}</h2><figure>{line_svg(s1, lang, ylabel=C.WINTER_TEXT[lang]['y1'], xr=(1960, 2024), breaks=(1970,))}<figcaption>{esc(C.WINTER_TEXT[lang]['cap1'])}</figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t1']}</div>
 <h2>{esc(C.WINTER_TEXT[lang]['h2'])}</h2><figure>{line_svg(s2, lang, ylabel=C.WINTER_TEXT[lang]['y2'], xr=(1984, 2025))}<figcaption>{esc(C.WINTER_TEXT[lang]['cap2'])}</figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t2']}</div>

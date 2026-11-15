@@ -146,6 +146,8 @@ def METHOD(lang):
 <li><b>R3 수상.</b> 튜링상·노벨상의 공적 설명이 가리키는 업적의 원 논문. ({by_rule.get('R3', 0)}편)</li>
 <li><b>R4 최근(2021년 이후).</b> 동료 심사 게재(또는 공개된 심사 기록)와 원문 확인. ({by_rule.get('R4', 0)}편)</li></ul>
 <p>그 결과 {n}편이다. 교과서 대조는 참고문헌 텍스트를 제목·저자·연도로 자동 대조한 뒤 표본을 손으로 확인했다. 손으로 바로잡은 적중은 근거와 함께 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>에 적었다. Nilsson 의 책은 참고문헌을 장 끝의 주(註)에 두므로 책 전문(저자 공개 PDF, Internet Archive 2026-10-11 보존본)을 대조 텍스트로 썼다 — 본문에서 제목이나 저자·연도로 거명한 것도 인용으로 세었다는 뜻이다. Schmidhuber 의 「Annotated History of Modern AI and Deep Learning」(2022)은 기준 문헌에 넣지 않고 우선권 상자의 한쪽 자료로만 썼다.</p>
+<h2>1.1.4 — 2026-11-15</h2>
+<p>그림을 고쳤다. 계보도의 설명이 그림에 없는 점선을 풀이하고 있었다(인용이 확인되지 않은 선은 현재 0건이다). 점선이 없는 그림에서는 점선 풀이를 뺐다. 「겨울과 붐」의 그래프 두 개는 세로축 눈금이 47.8223 같은 값이어서 0 · 20 · 40처럼 둥근 값으로 바꿨다. 그 면의 첫 그래프는 캡션에서 뺐다고 밝힌 1970년을 선이 이어 지나가고 있어 그 자리에서 선을 끊었다. 첫 면 연대표와 계보도에서 겹치거나 잘리던 글자의 자리를 고쳤다. 논문 · 인용선 · 수치는 바뀌지 않았다.</p>
 <h2>1.1.3 — 2026-11-11</h2>
 <p>Pearl(1988)의 통합 참고문헌(521~538쪽)을 읽었다. 이 책에서 나가는 인용선 네 개(Hart 외 1968, McCarthy–Hayes 1969, Kirkpatrick 외 1983, Geman–Geman 1984)가 책의 참고문헌에 그대로 있음을 확인했고, 선의 수는 바뀌지 않았다.</p>
 <h2>1.1.2 — 2026-11-11</h2>
@@ -180,6 +182,8 @@ def METHOD(lang):
 <li><b>R3 Awards.</b> The Turing Award or Nobel Prize citation names the achievement. ({by_rule.get('R3', 0)})</li>
 <li><b>R4 Recent (2021 onward).</b> Peer-reviewed publication or public review record, original text checked. ({by_rule.get('R4', 0)})</li></ul>
 <p>The result is {n} papers. Textbook matching compared bibliography text by title, author and year automatically, with samples checked by hand; hits corrected by hand are listed with the evidence in <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>. Nilsson's book keeps its references in chapter endnotes, so the whole text (the author's public PDF, Internet Archive capture of 2026-10-11) was used as the comparison text; a work named by title or by author and year in the body counts as cited. Schmidhuber's "Annotated History of Modern AI and Deep Learning" (2022) is not a reference work here; it is used only as one side in the priority boxes.</p>
+<h2>Revision 1.1.4 — 2026-11-15</h2>
+<p>Figures corrected. The caption of the lineage diagrams explained dotted lines that the diagrams do not contain (there are currently no links without a confirmed citation); the dotted-line clause is now left out where a diagram has none. Two charts on the "Winters and booms" page had axis ticks such as 47.8223; they are now round values (0, 20, 40). In the first chart on that page the line ran across 1970, a year the caption says is left out; the line now breaks there. Labels that overlapped or were cut off on the home-page timeline and the lineage diagrams were moved. No paper, link or number changed.</p>
 <h2>Revision 1.1.3 — 2026-11-11</h2>
 <p>The bibliography of Pearl (1988), pp. 521–538, was read. The four citation links leaving the book (Hart et al. 1968, McCarthy–Hayes 1969, Kirkpatrick et al. 1983, Geman–Geman 1984) are all in it; the number of links did not change.</p>
 <h2>Revision 1.1.2 — 2026-11-11</h2>
