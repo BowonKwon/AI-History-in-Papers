@@ -22,7 +22,7 @@ import content as C  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 D = ROOT / "data/derived"
 SITE = ROOT / "site"
-VERSION = "1.1.4"
+VERSION = "1.1.5"
 BUILD_DATE = date.today().isoformat()
 REPO = "https://github.com/BowonKwon/AI-History-in-Papers"
 
@@ -43,6 +43,16 @@ T = {
                timeline_cap="점 하나가 논문 한 편이다. 가로축은 첫 공개 연도(2012년을 경계로 앞 70년과 뒤 14년이 비슷한 너비를 차지한다), 세로줄은 주제 묶음. 점 위에 마우스를 올리면 카드가 뜬다.",
                lineage_cap="실선은 인용이 확인된 선(OpenAlex 또는 인용한 논문의 참고문헌 목록), 점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선. 세로 위치는 주제 묶음.",
                lineage_cap_solid="선은 인용이 확인된 것만 그었다(OpenAlex 또는 인용한 논문의 참고문헌 목록). 세로 위치는 주제 묶음.",
+               hub_link="공개 자료 허브", axis_year="첫 공개 연도", axis_rows="주제 묶음",
+               cap_dot="점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다.",
+               cap_rows_multi="세로줄은 주제 묶음이다. 한 줄 안의 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다).",
+               cap_rows_single="이 그림에는 주제 묶음이 하나뿐이라 줄도 하나다. 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다).",
+               cap_lines="선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다.",
+               cap_notion="점선은 교과서가 말하는 영향이지만 인용이 확인되지 않은 선이다.",
+               cap_hover="점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다.",
+               cap_scope_era="조심할 것: 선은 이 장의 논문끼리만 그었다. 다른 장 논문과의 인용은 아래 논문 카드의 「이 목록의 논문 중 인용한 것」에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.",
+               cap_scope_lane="조심할 것: 선은 이 묶음의 논문끼리만 그었다. 다른 묶음 논문과의 인용은 장 면의 논문 카드에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.",
+               rows_gloss="줄(주제 묶음) 이름 풀이",
                theme_names={"neural": "신경망 학습", "rl": "강화학습·게임", "lang": "언어·음성", "vision": "시각·생성", "search": "탐색·계획·지식", "stat": "확률·통계·기원", "align": "규모·정렬·안전", "agent": "에이전트"}),
     "en": dict(site="AI History in Papers", lang_other="한국어", tagline="The history of AI research from 1943 to today, followed through its original papers",
                nav_home="Home", nav_chapters="Eras", nav_lineage="Lineage", nav_winters="Winters and booms", nav_papers="Paper list", nav_method="Method and limits",
@@ -53,6 +63,16 @@ T = {
                timeline_cap="One dot per paper. Horizontal position is the first public year (the axis gives the 70 years before 2012 and the 14 years after it similar widths); rows are theme groups. Hover a dot for its card.",
                lineage_cap="Solid lines are confirmed citations (OpenAlex or the citing paper's own reference list); dotted lines are influences stated in textbooks without a confirmed citation. Vertical position is the theme group.",
                lineage_cap_solid="Lines are confirmed citations only (OpenAlex or the citing paper's own reference list). Vertical position is the theme group.",
+               hub_link="All public materials", axis_year="First public year", axis_rows="Theme group",
+               cap_dot="One dot per paper. The horizontal axis is the first public year.",
+               cap_rows_multi="Rows are theme groups. The up-and-down position within a row means nothing: papers whose first public dates round to the same half-year step are staggered so that they overlap less.",
+               cap_rows_single="This diagram has a single theme group, so there is one row. The up-and-down position means nothing: papers whose first public dates round to the same half-year step are staggered so that they overlap less.",
+               cap_lines="Each line is one confirmed citation (OpenAlex or the citing paper's own reference list). A line joins a cited paper and the paper citing it; usually the left end is the cited, earlier paper.",
+               cap_notion="Dotted lines are influences stated in textbooks without a confirmed citation.",
+               cap_hover="Hover over a dot to see its card; only the lines joined to that paper stay dark and the rest fade. Click a dot to go to its card.",
+               cap_scope_era="Caution: lines are drawn only between papers of this era. Citations to papers of other eras are listed on the cards below, under “Cites (within this list)”. A line shows a confirmed citation; it does not measure how much influence there was.",
+               cap_scope_lane="Caution: lines are drawn only between papers of this theme group. Citations to papers of other groups are listed on the cards in the era pages. A line shows a confirmed citation; it does not measure how much influence there was.",
+               rows_gloss="What the row (theme group) names cover",
                theme_names={"neural": "Neural network learning", "rl": "Reinforcement learning and games", "lang": "Language and speech", "vision": "Vision and generative models", "search": "Search, planning and knowledge", "stat": "Probability, statistics and origins", "align": "Scale, alignment and safety", "agent": "Agents"}),
 }
 
@@ -71,6 +91,7 @@ header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color
 header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
 header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
 header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .hub{font-size:.88rem;color:var(--fg2);white-space:nowrap}header .hub:hover{color:var(--fg)}
 header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
 .theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
 main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
@@ -103,7 +124,9 @@ thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;
 tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
 .wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
-figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow);min-width:0}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summary{cursor:pointer}figcaption dl{grid-template-columns:max-content 1fr;gap:.2rem 1rem;margin:.3rem 0}figcaption dt{text-transform:none;letter-spacing:0;font-size:.84rem;color:var(--fg2)}
+@media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
 svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
@@ -232,7 +255,7 @@ def page(lang, title, body, depth=1, desc="", active=""):
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body>
 <header><a class="brand" href="{root}{lang}/index.html">{t['site']}</a><nav>{navh}</nav>
-<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="{root}{other}/index.html">{t['lang_other']}</a></div></header>
+<div class="right"><a class="hub" href="https://bowonkwon.github.io/{hub_path}">{t['hub_link']}</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="{root}{other}/index.html">{t['lang_other']}</a></div></header>
 <main>{body}</main>
 <footer>{t['site']} · {t['version']} {VERSION} · {t['built']} {BUILD_DATE} · <a href="{REPO}">GitHub</a> · {t['hub']} <a href="https://bowonkwon.github.io/{hub_path}">bowonkwon.github.io</a></footer>
 <script>{JS}</script></body></html>"""
@@ -244,9 +267,24 @@ def glance(lang, items):
 
 # ----------------------------------------------------------------- data
 
+def date_span(s):
+    """Earliest and latest day a first-public date can stand for: a full date is one day, YYYY-MM a month, YYYY a year."""
+    import calendar
+    import datetime
+    y = int(s[:4])
+    if len(s) >= 10:
+        d = datetime.date(y, int(s[5:7]), int(s[8:10]))
+        return d, d
+    if len(s) >= 7:
+        m = int(s[5:7])
+        return datetime.date(y, m, 1), datetime.date(y, m, calendar.monthrange(y, m)[1])
+    return datetime.date(y, 1, 1), datetime.date(y, 12, 31)
+
+
 def load():
     papers = read_csv("papers.csv")
     for p in papers:
+        p["dlo"], p["dhi"] = date_span(p["first_public_date"])
         p["yearf"] = float(p["first_public_date"][:4]) + (float(p["first_public_date"][5:7]) - 1) / 12 if len(p["first_public_date"]) >= 7 else float(p["first_public_date"][:4]) + 0.5
         p["lane"] = LANE_OF.get(p["theme"], "stat")
     papers.sort(key=lambda p: (p["yearf"], p["key"]))
@@ -292,8 +330,9 @@ def _label_w(text):
 def timeline_svg(papers, lang, y0=1942, y1=2026, width=1000, lane_h=42, chapter_links=True):
     lanes = [l for l, _ in LANES]
     left, right, top = max(150, int(max(_label_w(T[lang]["theme_names"][l]) for l in lanes)) + 18), width - 20, 40
-    h = top + lane_h * len(lanes) + 30
+    h = top + lane_h * len(lanes) + 30 + 18   # 1.1.5: +18 for the axis name under the year ticks
     out = [f'<svg viewBox="0 0 {width} {h}" role="img" aria-label="timeline">']
+    out.append(f'<text x="{(left + right) / 2:.1f}" y="{h - 4}" text-anchor="middle" fill="var(--fg3)">{esc(T[lang]["axis_year"])}</text>')
     # era bands
     for i, e in enumerate(ERAS):
         a, b = C.ERA_SPAN[e]
@@ -306,7 +345,7 @@ def timeline_svg(papers, lang, y0=1942, y1=2026, width=1000, lane_h=42, chapter_
         out.append(f'<text x="{left - 8}" y="{y + lane_h / 2 + 4}" text-anchor="end">{esc(T[lang]["theme_names"][lane])}</text>')
     for yr in list(range(1950, 2001, 10)) + list(range(2010, 2027, 4)):
         x = x_of(yr, y0, y1, left, right, KNEE)
-        out.append(f'<line class="ax" x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{top + lane_h * len(lanes)}"/><text x="{x:.1f}" y="{h - 8}" text-anchor="middle">{yr}</text>')
+        out.append(f'<line class="ax" x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{top + lane_h * len(lanes)}"/><text x="{x:.1f}" y="{h - 26}" text-anchor="middle">{yr}</text>')
     # dots with slight vertical jitter by index within lane-year
     seen = defaultdict(int)
     for p in papers:
@@ -316,7 +355,7 @@ def timeline_svg(papers, lang, y0=1942, y1=2026, width=1000, lane_h=42, chapter_
         y = top + li * lane_h + lane_h / 2 + ((slot % 3) - 1) * 9
         href = f"chapters/{p['era']}.html#{p['key']}" if chapter_links else f"#{p['key']}"
         meta = f"{esc(p['authors_short'])} · {esc(p['first_public_date'][:4])}"
-        out.append(f'<g class="dot" data-k="{p["key"]}" data-t="{esc(p["title"])}" data-m="{meta}" data-w="{esc(card_text(p, lang))}" data-href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="4.2" fill="var(--s{(li % 4) + 1})" stroke="var(--card)" stroke-width="1"/></g>')
+        out.append(f'<g class="dot" data-k="{p["key"]}" data-t="{esc(p["title"])}" data-m="{meta}" data-w="{esc(card_text(p, lang))}" data-href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="4.2" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>')  # 1.1.5: one colour; the four colours cycled over rows meant nothing
     out.append("</svg>")
     return "\n".join(out)
 
@@ -328,7 +367,7 @@ def lineage_svg(papers, edges, lang, width=1000, lane_h=70, href_prefix=""):
     y0 = math.floor(min(p["yearf"] for p in papers)) - 1
     y1 = math.ceil(max(p["yearf"] for p in papers)) + 1
     left, right, top = max(150, int(max(_label_w(T[lang]["theme_names"][l]) for l in lanes)) + 18), width - 20, 16
-    h = top + lane_h * len(lanes) + 30
+    h = top + lane_h * len(lanes) + 30 + 18   # 1.1.5: +18 for the axis name under the year ticks
     pos = {}
     seen = defaultdict(int)
     for p in papers:
@@ -338,6 +377,7 @@ def lineage_svg(papers, edges, lang, width=1000, lane_h=70, href_prefix=""):
         y = top + li * lane_h + lane_h / 2 + ((slot % 4) - 1.5) * 13
         pos[p["key"]] = (x, y)
     out = [f'<svg viewBox="0 0 {width} {h}" role="img" aria-label="lineage">']
+    out.append(f'<text x="{(left + right) / 2:.1f}" y="{h - 4}" text-anchor="middle" fill="var(--fg3)">{esc(T[lang]["axis_year"])}</text>')
     for i, lane in enumerate(lanes):
         y = top + i * lane_h
         out.append(f'<line class="grid" x1="{left}" x2="{right}" y1="{y + lane_h}" y2="{y + lane_h}"/>')
@@ -345,7 +385,7 @@ def lineage_svg(papers, edges, lang, width=1000, lane_h=70, href_prefix=""):
     step = 1 if y1 - y0 <= 12 else (5 if y1 - y0 <= 50 else 10)
     for yr in range(int(math.ceil(y0 / step) * step), int(y1) + 1, step):
         x = x_of(yr, y0, y1, left, right)
-        out.append(f'<line class="ax" x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{top + lane_h * len(lanes)}"/><text x="{x:.1f}" y="{h - 8}" text-anchor="middle">{yr}</text>')
+        out.append(f'<line class="ax" x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{top + lane_h * len(lanes)}"/><text x="{x:.1f}" y="{h - 26}" text-anchor="middle">{yr}</text>')
     for e in edges:
         if e["src"] in pos and e["dst"] in pos:
             (x2, y2), (x1, y1_) = pos[e["src"]], pos[e["dst"]]  # dst (older) -> src (newer)
@@ -355,9 +395,114 @@ def lineage_svg(papers, edges, lang, width=1000, lane_h=70, href_prefix=""):
         x, y = pos[p["key"]]
         li = lanes.index(p["lane"])
         meta = f"{esc(p['authors_short'])} · {esc(p['first_public_date'][:4])}"
-        out.append(f'<g class="dot" data-k="{p["key"]}" data-t="{esc(p["title"])}" data-m="{meta}" data-w="{esc(card_text(p, lang))}" data-href="{href_prefix}{p["era"]}.html#{p["key"]}"><circle cx="{x:.1f}" cy="{y:.1f}" r="5" fill="var(--s{(li % 4) + 1})" stroke="var(--card)" stroke-width="1"/></g>')
+        out.append(f'<g class="dot" data-k="{p["key"]}" data-t="{esc(p["title"])}" data-m="{meta}" data-w="{esc(card_text(p, lang))}" data-href="{href_prefix}{p["era"]}.html#{p["key"]}"><circle cx="{x:.1f}" cy="{y:.1f}" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>')  # 1.1.5: one colour (see timeline_svg)
     out.append("</svg>")
-    return "\n".join(out)
+    return sx("\n".join(out), width)
+
+
+def sx(svg, width):
+    """1.1.5: on narrow screens (<=640px) the chart keeps 92% of its drawn width and its box scrolls sideways, so the
+    text stays at 10px or more instead of shrinking to about 4px."""
+    return f'<div class="sx" style="--vw:{int(width * 0.92)}">{svg}</div>'
+
+
+def _fmt(n, lang):
+    return f"{n:,}"
+
+
+def _who(p):
+    return f"{p['authors_short']} {p['first_public_date'][:4]}"
+
+
+def home_key(lang, edges):
+    """HOME_KEY, with the dotted-line item told how many such lines this version has (1.1.5)."""
+    items = list(C.HOME_KEY[lang])
+    n = sum(1 for e in edges if e["kind"] == "notion")
+    if n == 0:
+        items[1] += " 현재 판에는 이런 점선이 없다(0건)." if lang == "ko" else " This version has none."
+    return items
+
+
+def timeline_caption(lang, papers):
+    """Home timeline caption (1.1.5): the reviewed sentence, then rows, bands and click; one computed sentence."""
+    t = T[lang]
+    spans = [C.ERA_SPAN[e] for e in ERAS]
+    over = [(ERAS[i], ERAS[i + 1], spans[i + 1][0], spans[i][1]) for i in range(len(ERAS) - 1) if spans[i + 1][0] < spans[i][1]]
+    n = len(papers); late = sum(1 for p in papers if p["yearf"] >= KNEE[0])
+    cnt = {l: sum(1 for p in papers if p["lane"] == l) for l, _ in LANES}
+    hi = max(cnt, key=lambda l: cnt[l]); lo = min(cnt, key=lambda l: cnt[l])
+    if lang == "ko":
+        ov = "".join(f" {a[1]}장과 {b[1]}장은 {y0}–{y1}년이 겹친다." for a, b, y0, y1 in over)
+        how = (t["timeline_cap"] + " 한 줄 안의 위아래 위치에는 뜻이 없다(같은 해 논문을 세 자리에 엇갈려 놓았다). 점을 누르면 그 논문이 실린 장으로 간다. "
+               "옅은 띠는 장(1~7장)이 다루는 시기이고 띠 위에 장 이름을 적었다. 띠 색이 번갈아 바뀌는 것은 이웃한 장을 가르려는 것일 뿐이다." + ov)
+        seen = (f"<b>보이는 것:</b> {n}편 가운데 {late}편({late / n:.0%})이 {KNEE[0]}년 이후에 처음 공개되었다. "
+                f"줄별로는 「{t['theme_names'][hi]}」 줄이 {cnt[hi]}편으로 가장 많고 「{t['theme_names'][lo]}」 줄이 {cnt[lo]}편으로 가장 적다.")
+    else:
+        ov = "".join(f" Chapters {a[1]} and {b[1]} overlap in {y0}–{y1}." for a, b, y0, y1 in over)
+        how = (t["timeline_cap"] + " The up-and-down position within a row means nothing (papers of the same year are staggered over three positions). Click a dot to go to its chapter. "
+               "The pale bands are the periods the chapters (1–7) cover, with the chapter name above each band; the band color alternates only to separate neighboring chapters." + ov)
+        seen = (f"<b>What it shows:</b> {late} of the {n} papers ({late / n:.0%}) were first made public in {KNEE[0]} or later. "
+                f"By row, “{t['theme_names'][hi]}” has the most papers ({cnt[hi]}) and “{t['theme_names'][lo]}” the fewest ({cnt[lo]}).")
+    return f"<p>{esc(how)}</p><p>{seen}</p>"
+
+
+def lineage_caption(lang, ps, es, by_key, scope):
+    """Caption of a lineage diagram (1.1.5). Template sentences from T, then one sentence computed from this diagram's
+    papers and edges: number of papers and lines, the paper cited by the most other papers in the diagram (ties named),
+    papers without any line, lines whose cited paper was first public later than the citing one."""
+    t = T[lang]
+    lanes = [l for l, _ in LANES if any(p["lane"] == l for p in ps)]
+    drawn = [e for e in es if e["src"] in by_key and e["dst"] in by_key]
+    solid = [e for e in drawn if e["kind"] != "notion"]
+    parts = [t["cap_dot"], t["cap_rows_multi"] if len(lanes) > 1 else t["cap_rows_single"], t["cap_lines"]]
+    if any(e["kind"] == "notion" for e in drawn):
+        parts.append(t["cap_notion"])
+    parts.append(t["cap_hover"])
+    how = " ".join(parts)
+    inc = defaultdict(int)
+    for e in solid:
+        inc[e["dst"]] += 1
+    keys = {p["key"] for p in ps}
+    lonely = sum(1 for k in keys if not any(e["src"] == k or e["dst"] == k for e in drawn))
+    # 1.1.5: the cited paper is later for certain when its earliest possible day is after the citing paper's latest;
+    # where the written dates overlap (year or month only) the order cannot be told and is counted apart
+    later = sum(1 for e in solid if by_key[e["dst"]]["dlo"] > by_key[e["src"]]["dhi"])
+    unsure = sum(1 for e in solid if not by_key[e["dst"]]["dlo"] > by_key[e["src"]]["dhi"]
+                 and by_key[e["dst"]]["dhi"] > by_key[e["src"]]["dlo"])
+    seen = []
+    if lang == "ko":
+        seen.append(f"이 그림에는 논문 {len(ps)}편과 확인된 인용선 {_fmt(len(solid), lang)}개가 있다.")
+        if inc:
+            m = max(inc.values()); top = [k for k in sorted(keys, key=lambda k: by_key[k]["yearf"]) if inc.get(k) == m]
+            names = " · ".join(_who(by_key[k]) for k in top[:3])
+            seen.append(f"이 그림 안의 다른 논문에게 가장 많이 인용된 것은 {names}({'각각 ' if len(top) > 1 else ''}선 {m}개)이다." if len(top) <= 3
+                        else f"이 그림 안에서 가장 많이 인용된 논문은 선 {m}개씩으로 {len(top)}편이 같다.")
+        seen.append(f"선이 하나도 없는 논문은 {lonely}편이다." if lonely else "선이 하나도 없는 논문은 없다.")
+        seen.append(f"선 {later}개는 인용된 논문의 첫 공개일이 인용한 논문보다 늦다(논문 카드에 적은 날짜 기준). 이런 선에서는 인용된 논문이 더 오른쪽이나 같은 자리에 놓인다." if later
+                    else "인용된 논문의 첫 공개일이 인용한 논문보다 늦은 것으로 확인되는 선은 없다(논문 카드에 적은 날짜 기준).")
+        if unsure:
+            seen.append(f"이 밖에 선 {unsure}개는 날짜가 연도나 달까지만 적혀 있어 어느 쪽이 먼저인지 가릴 수 없다.")
+        head = "보이는 것: "
+    else:
+        seen.append(f"This diagram has {len(ps)} papers and {_fmt(len(solid), lang)} confirmed citation lines.")
+        if inc:
+            m = max(inc.values()); top = [k for k in sorted(keys, key=lambda k: by_key[k]["yearf"]) if inc.get(k) == m]
+            names = ", ".join(_who(by_key[k]) for k in top[:3])
+            seen.append((f"The papers cited by the most other papers in the diagram are {names} ({m} lines each)." if len(top) > 1
+                         else f"The paper cited by the most other papers in the diagram is {names} ({m} lines).") if len(top) <= 3
+                        else f"{len(top)} papers tie as the most cited within the diagram, with {m} lines each.")
+        seen.append(f"{lonely} {'paper has' if lonely == 1 else 'papers have'} no line at all." if lonely else "No paper is without a line.")
+        seen.append(f"In {later} {'line' if later == 1 else 'lines'} the cited paper's first public date is later than the citing paper's (dates as given on the paper cards); there the cited paper sits further right or at the same position." if later
+                    else "No line has a cited paper whose first public date is confirmed to be later than the citing paper's (dates as given on the paper cards).")
+        if unsure:
+            seen.append(f"For {unsure} more {'line' if unsure == 1 else 'lines'} the dates are given only to the year or the month, so the order cannot be told.")
+        head = "What it shows: "
+    gloss = ""
+    if len(lanes) > 1:
+        rows = "".join(f'<dt><a href="../lineage/{l}.html">{esc(t["theme_names"][l])}</a></dt><dd>{esc(C.LANE_LEAD[lang].get(l, ""))}</dd>' for l in lanes)
+        gloss = f'<details><summary>{esc(t["rows_gloss"])}</summary><dl>{rows}</dl></details>'
+    return (f'<p>{esc(how)}</p><p><b>{head}</b>{esc(" ".join(seen))}</p>'
+            f'<p>{esc(t["cap_scope_era"] if scope == "era" else t["cap_scope_lane"])}</p>{gloss}')
 
 
 def lineage_cap(t, es):
@@ -377,8 +522,11 @@ def _nice(ya, yb, n=4):
     return [ya + step * i for i in range(int(round((top - ya) / step)) + 1)], top
 
 
-def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, logy=False, xr=None, breaks=()):
-    """series: list of (label, [(x,y)], color_idx, dashed)"""
+def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, logy=False, xr=None, breaks=(), xlabel=""):
+    """series: list of (label, [(x,y)], color_idx, dashed). xlabel (1.1.5): name of the horizontal axis, written under
+    the year ticks; the chart grows by 18 units to make room, so the plotting area keeps its size."""
+    if xlabel:
+        height += 18
     pts = [p for _, ps, _, _ in series for p in ps]
     if not pts:
         return ""
@@ -391,7 +539,7 @@ def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, l
             yb = top
         else:
             lin_ticks = [v for v in lin_ticks if v <= y1 + 1e-9]
-    left, right, top, bot = 60, width - 20, 24, height - 30
+    left, right, top, bot = 60, width - 20, 24, height - 30 - (18 if xlabel else 0)
     def X(x): return left + (x - xa) / (xb - xa) * (right - left)
     def Y(y):
         if logy:
@@ -403,7 +551,9 @@ def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, l
         out.append(f'<line class="grid" x1="{left}" x2="{right}" y1="{Y(tv):.1f}" y2="{Y(tv):.1f}"/><text x="{left - 6}" y="{Y(tv) + 4:.1f}" text-anchor="end">{tv:g}</text>')
     step = 5 if xb - xa <= 50 else 10
     for xv in range(int(math.ceil(xa / step) * step), int(xb) + 1, step):
-        out.append(f'<text x="{X(xv):.1f}" y="{height - 8}" text-anchor="middle">{xv}</text>')
+        out.append(f'<text x="{X(xv):.1f}" y="{bot + 22}" text-anchor="middle">{xv}</text>')
+    if xlabel:
+        out.append(f'<text x="{(left + right) / 2:.1f}" y="{height - 4}" text-anchor="middle" fill="var(--fg3)">{esc(xlabel)}</text>')
     out.append(f'<line class="ax" x1="{left}" x2="{right}" y1="{bot}" y2="{bot}"/>')
     for label, ps, ci, dashed in series:
         ps = sorted(ps)
@@ -414,10 +564,10 @@ def line_svg(series, lang, ylabel="", width=900, height=300, y0=None, y1=None, l
         for x, y in ps:
             out.append(f'<circle cx="{X(x):.1f}" cy="{Y(y):.1f}" r="2.2" fill="var(--s{ci})"><title>{esc(label)} {x}: {y:g}</title></circle>')
     if ylabel:
-        out.append(f'<text x="{left}" y="{top - 8}" font-size="10">{esc(ylabel)}</text>')
+        out.append(f'<text x="{left}" y="{top - 8}">{esc(ylabel)}</text>')
     out.append("</svg>")
     legend = '<div class="legend">' + "".join(f'<span style="--c:var(--s{ci})">{esc(l)}</span>' for l, _, ci, _ in series) + "</div>"
-    return legend + "\n".join(out)
+    return legend + sx("\n".join(out), width)
 
 
 # ----------------------------------------------------------------- pages
@@ -462,38 +612,63 @@ def build_lang(lang, papers, edges):
     # home
     eras_html = "".join(f'<a class="card" href="chapters/{e}.html"><b>{esc(C.ERA_TITLE[lang][e])}</b><small>{esc(C.ERA_LEAD[lang][e])}</small><small>{sum(1 for p in papers if p["era"] == e)} {t["papers"]}</small></a>' for e in ERAS)
     tl_list = "".join(f'<li><a href="chapters/{p["era"]}.html#{p["key"]}">{esc(p["first_public_date"][:4])} — {esc(p["authors_short"])}, {esc(p["title"])}</a></li>' for p in papers)
-    body = f"""<div class="hero"><h1>{t['site']}</h1><p class="lead">{esc(t['tagline'])}</p>{glance(lang, C.HOME_KEY[lang])}</div>
+    body = f"""<div class="hero"><h1>{t['site']}</h1><p class="lead">{esc(t['tagline'])}</p>{glance(lang, home_key(lang, edges))}</div>
 <div class="stats"><span class="stat"><span class="n">{len(papers)}</span><small>{esc(C.STAT[lang]['papers'])}</small></span><span class="stat"><span class="n">{n_edges}</span><small>{esc(C.STAT[lang]['edges'])}</small></span><span class="stat"><span class="n">{papers[0]['first_public_date'][:4]}–{papers[-1]['first_public_date'][:4]}</span><small>{esc(C.STAT[lang]['span'])}</small></span></div>
-<figure class="tl-wide">{timeline_svg(papers, lang)}<figcaption>{esc(t['timeline_cap'])}</figcaption></figure>
+<figure class="tl-wide">{timeline_svg(papers, lang)}<figcaption>{timeline_caption(lang, papers)}</figcaption></figure>
 <div class="tl-list"><ol>{tl_list}</ol></div>
 <h2>{t['nav_chapters']}</h2><div class="cards">{eras_html}</div>
 <div class="prose">{C.HOME_INTRO[lang]}</div>"""
     (out / "index.html").write_text(page(lang, t["site"], body, 1, active="home"), encoding="utf-8")
     # chapters index + pages
-    body = f"<h1>{t['nav_chapters']}</h1><div class=\"cards\">{eras_html.replace('href=\"chapters/', 'href=\"')}</div>"
+    ch_lead = (f"일곱 장의 목록이다. 장마다 그 시기의 서술, 계보도, 논문 카드가 있다(모두 {len(papers)}편)." if lang == "ko"
+               else f"The seven eras. Each has a narrative of the period, a lineage diagram and the paper cards ({len(papers)} papers in all).")
+    body = f"<h1>{t['nav_chapters']}</h1><p class=\"lead\">{esc(ch_lead)}</p><div class=\"cards\">{eras_html.replace('href=\"chapters/', 'href=\"')}</div>"
     (out / "chapters/index.html").write_text(page(lang, t["nav_chapters"], body, 2, active="chapters"), encoding="utf-8")
     for e in ERAS:
         ps = [p for p in papers if p["era"] == e]
         es = [x for x in edges if x["src"] in {p["key"] for p in ps} and x["dst"] in {p["key"] for p in ps}]
         boxes = "".join(C.BOXES[lang].get(e, []))
         body = f"""<div class="eyebrow"><span class="tag">{esc(C.ERA_SHORT[lang][e])}</span></div><h1>{esc(C.ERA_TITLE[lang][e])}</h1><p class="lead">{esc(C.ERA_LEAD[lang][e])}</p>
-{glance(lang, C.ERA_KEY[lang][e])}
+{glance(lang, [k.replace("{N_PAPERS}", str(len(ps))).replace("{N_ARXIV_V1}", str(sum(p["first_public_type"] == "arXiv v1" for p in ps))) for k in C.ERA_KEY[lang][e]])}
 <div class="prose">{C.ERA_TEXT[lang][e]}</div>
 {boxes}
-<h2>{t['nav_lineage']}</h2><figure>{lineage_svg(ps, es, lang)}<figcaption>{esc(lineage_cap(t, es))}</figcaption></figure>
+<h2>{t['nav_lineage']}</h2><figure>{lineage_svg(ps, es, lang)}<figcaption>{lineage_caption(lang, ps, es, by_key, "era")}</figcaption></figure>
 <h2>{t['nav_papers']} ({len(ps)})</h2>{''.join(paper_block(p, lang, edges, by_key) for p in ps)}"""
         (out / f"chapters/{e}.html").write_text(page(lang, C.ERA_TITLE[lang][e], body, 2, active="chapters"), encoding="utf-8")
     # lineage pages by lane
     lane_cards = "".join(f'<a class="card" href="{l}.html"><b>{esc(t["theme_names"][l])}</b><small>{sum(1 for p in papers if p["lane"] == l)} {t["papers"]}</small></a>' for l, _ in LANES)
-    body = f"<h1>{t['nav_lineage']}</h1><p class=\"lead\">{esc(C.LINEAGE_LEAD[lang])}</p><div class=\"cards\">{lane_cards}</div>"
+    # 1.1.5: head summary of the lineage list, computed
+    lane_n = {l: sum(1 for p in papers if p["lane"] == l) for l, _ in LANES}
+    lane_e = {l: sum(1 for x in edges if x["kind"] != "notion" and by_key[x["src"]]["lane"] == l and by_key[x["dst"]]["lane"] == l) for l, _ in LANES}
+    big = max(lane_n, key=lambda l: lane_n[l]); small = min(lane_n, key=lambda l: lane_n[l]); within = sum(lane_e.values())
+    if lang == "ko":
+        idx_sum = [f"주제 묶음 {len(LANES)}개마다 논문과 그 사이의 확인된 인용선을 그린 면의 목록이다.",
+                   f"가장 큰 묶음은 「{t['theme_names'][big]}」({lane_n[big]}편), 가장 작은 묶음은 「{t['theme_names'][small]}」({lane_n[small]}편)이다.",
+                   f"묶음 면에는 같은 묶음 안의 인용선만 그린다. 여덟 면의 선을 모두 합하면 {within:,}개로, 확인된 인용선 전체 {n_edges:,}개 가운데 나머지는 서로 다른 묶음 사이의 선이다."]
+    else:
+        idx_sum = [f"A list of pages, one for each of the {len(LANES)} theme groups, each drawing the group's papers and the confirmed citations among them.",
+                   f"The largest group is “{t['theme_names'][big]}” ({lane_n[big]} papers), the smallest “{t['theme_names'][small]}” ({lane_n[small]}).",
+                   f"A group page draws only lines within the group. The eight pages together show {within:,} lines; the rest of the {n_edges:,} confirmed citation lines join papers of different groups."]
+    body = f"<h1>{t['nav_lineage']}</h1><p class=\"lead\">{esc(C.LINEAGE_LEAD[lang])}</p>{glance(lang, [esc(x) for x in idx_sum])}<div class=\"cards\">{lane_cards}</div>"
     (out / "lineage/index.html").write_text(page(lang, t["nav_lineage"], body, 2, active="lineage"), encoding="utf-8")
     for l, _ in LANES:
         ps = [p for p in papers if p["lane"] == l]
         ks = {p["key"] for p in ps}
         es = [x for x in edges if x["src"] in ks and x["dst"] in ks]
         rows = "".join(f'<tr><td class="nw">{esc(p["first_public_date"][:4])}</td><td>{esc(p["authors_short"])}</td><td><a href="../chapters/{p["era"]}.html#{p["key"]}">{esc(p["title"])}</a></td><td>{esc(C.ERA_SHORT[lang][p["era"]])}</td></tr>' for p in ps)
-        body = f"""<h1>{esc(t['theme_names'][l])}</h1><p class="lead">{esc(C.LANE_LEAD[lang].get(l, ''))}</p>
-<figure>{lineage_svg(ps, es, lang, href_prefix='../chapters/')}<figcaption>{esc(lineage_cap(t, es))}</figcaption></figure>
+        late = sum(1 for p in ps if p["yearf"] >= KNEE[0])
+        y_a, y_b = ps[0]["first_public_date"][:4], ps[-1]["first_public_date"][:4]
+        n_es = sum(1 for x in es if x["kind"] != "notion")
+        if lang == "ko":
+            lsum = [f"「{t['theme_names'][l]}」 묶음의 논문을 첫 공개 연도 순으로 놓고, 그 사이의 확인된 인용을 선으로 이은 면이다.",
+                    f"논문 {len(ps)}편(첫 공개 {y_a}–{y_b}년), 묶음 안의 인용선 {n_es}개. " + (f"모두 {KNEE[0]}년 이후에 처음 공개되었다." if late == len(ps) else f"{KNEE[0]}년 이후에 처음 공개된 논문은 없다." if late == 0 else f"{len(ps)}편 가운데 {late}편이 {KNEE[0]}년 이후에 처음 공개되었다."),
+                    "다른 묶음 논문과의 인용은 이 면에 그리지 않는다."]
+        else:
+            lsum = [f"The papers of the “{t['theme_names'][l]}” group in order of first public year, with the confirmed citations among them drawn as lines.",
+                    f"{len(ps)} papers (first public {y_a}–{y_b}), {n_es} citation lines within the group; " + (f"all were first made public in {KNEE[0]} or later." if late == len(ps) else f"none was first made public in {KNEE[0]} or later." if late == 0 else f"{late} of the {len(ps)} were first made public in {KNEE[0]} or later."),
+                    "Citations to papers of other groups are not drawn on this page."]
+        body = f"""<h1>{esc(t['theme_names'][l])}</h1><p class="lead">{esc(C.LANE_LEAD[lang].get(l, ''))}</p>{glance(lang, [esc(x) for x in lsum])}
+<figure>{lineage_svg(ps, es, lang, href_prefix='../chapters/')}<figcaption>{lineage_caption(lang, ps, es, by_key, "lane")}</figcaption></figure>
 <div class="wrap"><table class="sort"><thead><tr><th>{t['year']}</th><th>{t['author']}</th><th>{t['title']}</th><th>{t['chapter']}</th></tr></thead><tbody>{rows}</tbody></table></div>"""
         (out / f"lineage/{l}.html").write_text(page(lang, t["theme_names"][l], body, 2, active="lineage"), encoding="utf-8")
     # winters
@@ -503,7 +678,10 @@ def build_lang(lang, papers, edges):
     for p in papers:
         url, kind = primary_link(p)
         rows.append(f'<tr><td class="nw" data-v="{p["yearf"]:.2f}">{esc(p["first_public_date"])}</td><td>{esc(p["authors_short"])}</td><td><a href="chapters/{p["era"]}.html#{p["key"]}">{esc(p["title"])}</a></td><td class="nw">{esc(p["venue_short"])}</td><td class="nw"><a href="{esc(url)}">{kind}</a></td><td class="nw">{esc(C.ERA_SHORT[lang][p["era"]])}</td><td class="nw">{esc(t["theme_names"][p["lane"]])}</td></tr>')
-    body = f"""<h1>{t['nav_papers']}</h1><p class="lead">{esc(C.PAPERS_LEAD[lang])}</p>
+    span = f"{papers[0]['first_public_date'][:4]}–{papers[-1]['first_public_date'][:4]}"
+    p_head = (f"선정 논문 {len(papers)}편(첫 공개 {span}년)을 한 표에 모았다. " if lang == "ko"
+              else f"All {len(papers)} selected papers (first public {span}) in one table. ")
+    body = f"""<h1>{t['nav_papers']}</h1><p class="lead">{esc(p_head + C.PAPERS_LEAD[lang].split(". ", 1)[1])}</p>
 <p class="files"><a href="../data/papers.csv">{t['download']}: papers.csv</a> <a href="../data/edges.csv">edges.csv</a> <a href="../data/datapackage.json">datapackage.json</a></p>
 <div class="filter"><input type="search" data-target="pt" placeholder="{t['filter']}"></div>
 <div class="wrap"><table class="sort" id="pt"><thead><tr><th>{t['first_public']}</th><th>{t['author']}</th><th>{t['title']}</th><th>{t['venue']}</th><th>{t['original']}</th><th>{t['chapter']}</th><th>{t['theme']}</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>"""
@@ -528,17 +706,57 @@ def winters_body(lang):
                 pts.setdefault(int(a["year"]), int(a["attendees"]))
         s2.append((c, sorted(pts.items()), i, False))
     s3 = [("NeurIPS", [(int(r["year"]), int(r["accepted_papers"])) for r in nips if not r["note"]], 1, False)]
+    note1, note2 = winter_notes(lang, s1, s2)
+    xl = "연도" if lang == "ko" else "Year"
     body = f"""<h1>{t['nav_winters']}</h1><p class="lead">{esc(C.WINTER_LEAD[lang])}</p>{glance(lang, C.WINTER_KEY[lang])}
 <div class="prose">{C.WINTER_TEXT[lang]['intro']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h1'])}</h2><figure>{line_svg(s1, lang, ylabel=C.WINTER_TEXT[lang]['y1'], xr=(1960, 2024), breaks=(1970,))}<figcaption>{esc(C.WINTER_TEXT[lang]['cap1'])}</figcaption></figure>
+<h2>{esc(C.WINTER_TEXT[lang]['h1'])}</h2><figure>{line_svg(s1, lang, ylabel=C.WINTER_TEXT[lang]['y1'], xr=(1960, 2024), breaks=(1970,), xlabel=xl)}<figcaption><p>{esc(C.WINTER_TEXT[lang]['cap1'].replace('{EX1970}', ex1970(lang, ph)))}</p><p>{esc(note1)}</p></figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t1']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h2'])}</h2><figure>{line_svg(s2, lang, ylabel=C.WINTER_TEXT[lang]['y2'], xr=(1984, 2025))}<figcaption>{esc(C.WINTER_TEXT[lang]['cap2'])}</figcaption></figure>
+<h2>{esc(C.WINTER_TEXT[lang]['h2'])}</h2><figure>{line_svg(s2, lang, ylabel=C.WINTER_TEXT[lang]['y2'], xr=(1984, 2025), xlabel=xl)}<figcaption><p>{esc(C.WINTER_TEXT[lang]['cap2'])}</p><p>{esc(note2)}</p></figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t2']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h3'])}</h2><figure>{line_svg(s3, lang, ylabel=C.WINTER_TEXT[lang]['y3'], logy=True, y0=50, y1=6000, xr=(1987, 2024))}<figcaption>{esc(C.WINTER_TEXT[lang]['cap3'])}</figcaption></figure>
+<h2>{esc(C.WINTER_TEXT[lang]['h3'])}</h2><figure>{line_svg(s3, lang, ylabel=C.WINTER_TEXT[lang]['y3'], logy=True, y0=50, y1=6000, xr=(1987, 2024), xlabel=xl)}<figcaption>{esc(C.WINTER_TEXT[lang]['cap3'])}</figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t3']}</div>
 <h2>{esc(C.WINTER_TEXT[lang]['h4'])}</h2><div class="prose">{C.WINTER_TEXT[lang]['t4']}</div>
 <p class="files"><a href="../data/winter_title_phrases.csv">winter_title_phrases.csv</a> <a href="../data/winter_attendance.csv">winter_attendance.csv</a> <a href="../data/winter_neurips_accepted.csv">winter_neurips_accepted.csv</a></p>"""
     return body
+
+
+def ex1970(lang, ph):
+    """Why 1970 is left out of the title-phrase chart: what the table shows, and what was not checked (1.1.5)."""
+    row = {int(r["year"]): r for r in ph}
+    cols = ("artificial_intelligence", "expert_system", "neural_network")
+    assert all(int(row[1970][f"title_{c}"]) > int(row[1969][f"title_{c}"]) and int(row[1970][f"title_{c}"]) > int(row[1971][f"title_{c}"]) for c in cols)
+    a, b, c = (int(row[y]["title_expert_system"]) for y in (1969, 1970, 1971))
+    if lang == "ko":
+        return (f"1970년 값은 뺐다. 그해에는 세 구절의 건수가 모두 앞뒤 해보다 많아서다(「expert system」이 1969년 {a}건, 1970년 {b}건, 1971년 {c}건). "
+                "날짜 없는 레코드가 그해로 몰린 것으로 보이나, 레코드를 하나씩 확인하지는 않았다.")
+    return (f"The 1970 value is left out: the counts of all three phrases in that year are higher than in the years before and after "
+            f"(“expert system”: {a} in 1969, {b} in 1970, {c} in 1971). Undated records appear to have been assigned to that year, but the records were not checked one by one.")
+
+
+def winter_notes(lang, s1, s2):
+    """1.1.5: two computed sentences that name values the page does not interpret — the 2002 title-phrase values
+    (above both neighboring years) and NeurIPS attendance after 2020. Values come from the plotted series."""
+    YR = 2002
+    d = {lab: dict(ps) for lab, ps, _, _ in s1}
+    up = [lab for lab, v in d.items() if all(y in v for y in (YR - 1, YR, YR + 1)) and v[YR] > v[YR - 1] and v[YR] > v[YR + 1]]
+    nn = d["“neural network”"]
+    n = dict(next(ps for lab, ps, _, _ in s2 if lab == "NeurIPS"))
+    a = 2020; after = {y: v for y, v in n.items() if y > a}
+    low_y = min((y for y in after if y < max(after)), key=lambda y: after[y]); last = max(after)
+    if lang == "ko":
+        both = "세 구절 모두" if len(up) == len(d) else f"{len(up)}개 구절이"
+        one = (f"{YR}년 값은 {both} 바로 앞뒤 해보다 높다(「neural network」 {YR - 1}년 {nn[YR - 1]:.1f} → {YR}년 {nn[YR]:.1f} → {YR + 1}년 {nn[YR + 1]:.1f}). "
+               "이 면은 그 까닭을 확인하지 않았고, 이 튀는 값을 해석하지 않는다.")
+        two = (f"NeurIPS 참가자는 {a}년 {n[a]:,}명 뒤 {low_y}년 {after[low_y]:,}명까지 줄었다가 {last}년 {after[last]:,}명이 되었다. "
+               f"이 면은 그 까닭을 확인하지 않았고, {a}년 뒤의 오르내림을 해석하지 않는다.")
+    else:
+        both = "all three phrases" if len(up) == len(d) else f"{len(up)} phrases"
+        one = (f"In {YR} {both} are higher than in the year before and the year after (“neural network”: {nn[YR - 1]:.1f} in {YR - 1}, {nn[YR]:.1f} in {YR}, {nn[YR + 1]:.1f} in {YR + 1}). "
+               "This page has not checked the reason and does not interpret this jump.")
+        two = (f"NeurIPS attendance went from {n[a]:,} in {a} down to {after[low_y]:,} in {low_y} and then to {after[last]:,} in {last}. "
+               f"This page has not checked the reason and does not interpret the rise and fall after {a}.")
+    return one, two
 
 
 def write_data(papers, edges):

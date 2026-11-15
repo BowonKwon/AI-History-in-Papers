@@ -19,6 +19,7 @@ header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color
 header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
 header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
 header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .hub{font-size:.88rem;color:var(--fg2);white-space:nowrap}header .hub:hover{color:var(--fg)}
 header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
 .theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
 main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
@@ -51,7 +52,9 @@ thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;
 tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
 .wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
-figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow);min-width:0}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summary{cursor:pointer}figcaption dl{grid-template-columns:max-content 1fr;gap:.2rem 1rem;margin:.3rem 0}figcaption dt{text-transform:none;letter-spacing:0;font-size:.84rem;color:var(--fg2)}
+@media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
 svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
@@ -69,7 +72,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 @media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
 </style></head><body>
 <header><a class="brand" href="../en/index.html">AI History in Papers</a><nav><a href="../en/index.html">Home</a><a href="../en/chapters/index.html">Eras</a><a href="../en/lineage/index.html">Lineage</a><a href="../en/winters.html">Winters and booms</a><a href="../en/papers.html">Paper list</a><a href="../en/method.html" class="on">Method and limits</a></nav>
-<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../ko/index.html">한국어</a></div></header>
+<div class="right"><a class="hub" href="https://bowonkwon.github.io/en/">All public materials</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../ko/index.html">한국어</a></div></header>
 <main><h1>Method and limits</h1>
 <p class="lead">The selection rules were registered before the list was made; dates come from the originals and lineage lines from citation data. This page records the procedure and the limits it carries.</p>
 <h2>Selecting papers — registered 2026-11-03</h2>
@@ -79,6 +82,8 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <li><b>R3 Awards.</b> The Turing Award or Nobel Prize citation names the achievement. (15)</li>
 <li><b>R4 Recent (2021 onward).</b> Peer-reviewed publication or public review record, original text checked. (28)</li></ul>
 <p>The result is 214 papers. Textbook matching compared bibliography text by title, author and year automatically, with samples checked by hand; hits corrected by hand are listed with the evidence in <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>. Nilsson's book keeps its references in chapter endnotes, so the whole text (the author's public PDF, Internet Archive capture of 2026-10-11) was used as the comparison text; a work named by title or by author and year in the body counts as cited. Schmidhuber's "Annotated History of Modern AI and Deep Learning" (2022) is not a reference work here; it is used only as one side in the priority boxes.</p>
+<h2>Revision 1.1.5 — 2026-11-16</h2>
+<p>Chart explanations filled in. The captions of the fifteen lineage diagrams now say what a dot, the horizontal axis, the rows and a line stand for and what hovering does, and each adds the number of papers and lines, the paper cited most within the diagram, the number of papers without a line and the number of lines whose cited paper has the later first public date, all computed from the data. Dot colors were four colors cycled over the rows and meant nothing, so the dots now share one color (the home-page timeline too). Every chart names its horizontal axis; the vertical axis names on the "Winters and booms" page can be read on their own, and the log scale and the conference names are explained. That page now says it does not interpret the 2002 values or NeurIPS attendance after 2020. The lineage pages, the paper list and the list of eras have short summaries, and on phones wide charts keep at least 92% of their drawn width and scroll sideways. The caption of the first "Winters and booms" chart now separates what the table shows about the omitted 1970 value from what was not checked. The header links to the hub of public materials. The key box of chapter 5 said "Of the 46 points in this chapter, 38 are arXiv v1 dates", a count left over from before papers were added in 1.1; it is now counted from the data (46 of 54). Apart from that, the paper and citation data and the dots and lines of the charts are unchanged.</p>
 <h2>Revision 1.1.4 — 2026-11-15</h2>
 <p>Figures corrected. The caption of the lineage diagrams explained dotted lines that the diagrams do not contain (there are currently no links without a confirmed citation); the dotted-line clause is now left out where a diagram has none. Two charts on the "Winters and booms" page had axis ticks such as 47.8223; they are now round values (0, 20, 40). In the first chart on that page the line ran across 1970, a year the caption says is left out; the line now breaks there. Labels that overlapped or were cut off on the home-page timeline and the lineage diagrams were moved. No paper, link or number changed.</p>
 <h2>Revision 1.1.3 — 2026-11-11</h2>
@@ -106,7 +111,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <li>Wikidata (Turing Award laureates, CC0) and the Nobel Prize API (CC0).</li>
 <li>AI Index 2019, chapter 2 attendance data; Our World in Data (CC BY); proceedings.neurips.cc.</li></ul>
 <p>Text on this site is CC BY-NC 4.0, code PolyForm Noncommercial 1.0.0, and the data compilation CC BY 4.0 (sources CC0 or CC BY). Paper texts are not redistributed; only short quotations and links.</p></main>
-<footer>AI History in Papers · Version 1.1.4 · Built 2026-11-15 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<footer>AI History in Papers · Version 1.1.5 · Built 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

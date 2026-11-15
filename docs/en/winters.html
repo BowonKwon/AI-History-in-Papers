@@ -19,6 +19,7 @@ header .brand{font-family:var(--display);font-weight:600;font-size:1.05rem;color
 header nav{display:flex;gap:1rem;flex-wrap:wrap}header nav a{color:var(--fg2);font-size:.92rem;padding:.2rem 0;border-bottom:2px solid transparent}
 header nav a:hover{text-decoration:none;color:var(--fg)}header nav a.on{color:var(--fg);border-bottom-color:var(--accent2)}
 header .right{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+header .hub{font-size:.88rem;color:var(--fg2);white-space:nowrap}header .hub:hover{color:var(--fg)}
 header .lang{font-size:.88rem;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}header .lang:hover{text-decoration:none;color:var(--fg);border-color:var(--fg3)}
 .theme{border:1px solid var(--line);background:transparent;color:var(--fg2);border-radius:999px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;padding:0}.theme:hover{color:var(--fg);border-color:var(--fg3)}
 main{max-width:1060px;margin:0 auto;padding:1.6rem 1.1rem 4rem;min-width:0}
@@ -51,7 +52,9 @@ thead th{color:var(--fg2);font-weight:600;font-size:.82rem;letter-spacing:.02em;
 tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg2) 55%,transparent)}tbody tr:hover{background:var(--bg2)}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.nw{white-space:nowrap}
 .wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 .3rem;margin:.6rem 0 1rem}.wrap table{margin:0}
-figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow)}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .8rem;box-shadow:var(--shadow);min-width:0}figcaption{font-size:.86rem;color:var(--fg2);margin-top:.5rem;line-height:1.5}
+figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summary{cursor:pointer}figcaption dl{grid-template-columns:max-content 1fr;gap:.2rem 1rem;margin:.3rem 0}figcaption dt{text-transform:none;letter-spacing:0;font-size:.84rem;color:var(--fg2)}
+@media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
 svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
@@ -69,10 +72,10 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 @media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
 </style></head><body>
 <header><a class="brand" href="../en/index.html">AI History in Papers</a><nav><a href="../en/index.html">Home</a><a href="../en/chapters/index.html">Eras</a><a href="../en/lineage/index.html">Lineage</a><a href="../en/winters.html" class="on">Winters and booms</a><a href="../en/papers.html">Paper list</a><a href="../en/method.html">Method and limits</a></nav>
-<div class="right"><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../ko/index.html">한국어</a></div></header>
-<main><h1>Winters and booms</h1><p class="lead">The two conventional winters re-examined with three series: the share of paper titles containing a term, conference attendance, and public-funding records.</p><div class="glance"><p class="glance-h">Key point</p><ul><li>The second winter around 1987 is visible in attendance: AAAI attendance fell from 5,334 in 1986 to 1,685 in 1992 (AI Index 2019 data).</li><li>Title counts lag by several years. OpenAlex records with “expert system” in the title peak at 1,857 in 1990 and fall to 490 in 1998; over the same years “neural network” rises from 1,745 to 4,243.</li><li>The first winter around 1974 could not be confirmed with numbers: no attendance or year-by-year funding series for that period was found, and OpenAlex title counts are too small.</li></ul></div>
+<div class="right"><a class="hub" href="https://bowonkwon.github.io/en/">All public materials</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../ko/index.html">한국어</a></div></header>
+<main><h1>Winters and booms</h1><p class="lead">The two conventional winters re-examined with three series: the share of paper titles containing a term, conference attendance, and public-funding records.</p><div class="glance"><p class="glance-h">Key point</p><ul><li>The second winter around 1987 is visible in attendance: attendance at AAAI (an AI conference) fell from 5,334 in 1986 to 1,685 in 1992 (AI Index 2019 data).</li><li>Title counts lag by several years. Records in OpenAlex (an open index of scholarly works and their citations) with “expert system” in the title peak at 1,857 in 1990 and fall to 490 in 1998; over the same years “neural network” rises from 1,745 to 4,243.</li><li>The first winter around 1974 could not be confirmed with numbers: no attendance or year-by-year funding series for that period was found, and OpenAlex title counts are too small.</li></ul></div>
 <div class="prose"><p>An "AI winter" is a period in which funding and attention cooled. By convention there were two: the first around the 1973 Lighthill report in Britain and the contraction of DARPA support in the United States, the second after the expert-system and Lisp-machine markets collapsed around 1987. This page re-examines that convention with numbers. We write "confirmed" only where the series point the same way, and we say so where there is no data.</p></div>
-<h2>Terms in paper titles</h2><figure><div class="legend"><span style="--c:var(--s1)">“artificial intelligence”</span><span style="--c:var(--s2)">“expert system”</span><span style="--c:var(--s3)">“neural network”</span></div><svg viewBox="0 0 900 300" role="img" aria-label="line chart">
+<h2>Terms in paper titles</h2><figure><div class="legend"><span style="--c:var(--s1)">“artificial intelligence”</span><span style="--c:var(--s2)">“expert system”</span><span style="--c:var(--s3)">“neural network”</span></div><div class="sx" style="--vw:828"><svg viewBox="0 0 900 318" role="img" aria-label="line chart">
 <line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">0</text>
 <line class="grid" x1="60" x2="880" y1="188.0" y2="188.0"/><text x="54" y="192.0" text-anchor="end">20</text>
 <line class="grid" x1="60" x2="880" y1="106.0" y2="106.0"/><text x="54" y="110.0" text-anchor="end">40</text>
@@ -84,6 +87,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <text x="572.5" y="292" text-anchor="middle">2000</text>
 <text x="700.6" y="292" text-anchor="middle">2010</text>
 <text x="828.8" y="292" text-anchor="middle">2020</text>
+<text x="470.0" y="314" text-anchor="middle" fill="var(--fg3)">Year</text>
 <line class="ax" x1="60" x2="880" y1="270" y2="270"/>
 <path d="M60.0,269.8 L72.8,269.5 L85.6,268.8 L98.4,269.5 L111.2,269.7 L124.1,269.8 L136.9,269.2 L149.7,269.7 L162.5,269.3 L175.3,268.9 M200.9,268.5 L213.8,269.1 L226.6,268.6 L239.4,268.2 L252.2,268.2 L265.0,268.1 L277.8,268.6 L290.6,268.2 L303.4,268.6 L316.2,267.6 L329.1,267.7 L341.9,267.3 L354.7,265.3 L367.5,263.3 L380.3,260.2 L393.1,256.4 L405.9,256.1 L418.8,256.8 L431.6,258.1 L444.4,258.8 L457.2,260.9 L470.0,261.9 L482.8,262.3 L495.6,263.4 L508.4,264.4 L521.2,265.0 L534.1,266.1 L546.9,266.3 L559.7,266.4 L572.5,266.6 L585.3,266.4 L598.1,265.6 L610.9,266.2 L623.8,266.2 L636.6,265.7 L649.4,266.1 L662.2,266.5 L675.0,266.7 L687.8,266.3 L700.6,266.8 L713.4,266.4 L726.2,266.3 L739.1,266.1 L751.9,266.1 L764.7,266.2 L777.5,265.1 L790.3,261.7 L803.1,251.8 L815.9,239.7 L828.8,224.2 L841.6,207.6 L854.4,191.7 L867.2,154.3 L880.0,83.6" fill="none" stroke="var(--s1)" stroke-width="2"/>
 <circle cx="60.0" cy="269.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1960: 0.039</title></circle>
@@ -280,12 +284,12 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <circle cx="854.4" cy="103.2" r="2.2" fill="var(--s3)"><title>“neural network” 2022: 40.686</title></circle>
 <circle cx="867.2" cy="99.2" r="2.2" fill="var(--s3)"><title>“neural network” 2023: 41.654</title></circle>
 <circle cx="880.0" cy="83.3" r="2.2" fill="var(--s3)"><title>“neural network” 2024: 45.545</title></circle>
-<text x="60" y="16" font-size="10">per 10,000 works</text>
-</svg><figcaption>OpenAlex records whose title contains the phrase, divided by all OpenAlex records of that year, per 10,000 (read 2026-11-03). The 1970 value is omitted because undated records appear to have been assigned to that year.</figcaption></figure>
+<text x="60" y="16">Records with the phrase in the title, per 10,000 OpenAlex records</text>
+</svg></div><figcaption><p>OpenAlex records whose title contains the phrase, divided by all OpenAlex records of that year, per 10,000 (read 2026-11-03). The 1970 value is left out: the counts of all three phrases in that year are higher than in the years before and after (“expert system”: 0 in 1969, 50 in 1970, 0 in 1971). Undated records appear to have been assigned to that year, but the records were not checked one by one. Higher values mean that a larger share of that year&#x27;s records used the phrase in the title.</p><p>In 2002 all three phrases are higher than in the year before and the year after (“neural network”: 12.4 in 2001, 27.5 in 2002, 17.8 in 2003). This page has not checked the reason and does not interpret this jump.</p></figcaption></figure>
 <div class="prose"><p>The three phrases tell different stories. “Expert system” rises steeply from 1984, peaks in 1988–1990 at about 9 per 10,000, and falls through the 1990s to 1.5 in 2000. “Artificial intelligence” also declines after a 1987 peak (3.4) to 0.84 in 2000. “Neural network”, by contrast, surges from 1988 to 15.7 in 1994 and does not fall much afterwards. The 1990s "winter" was therefore not a winter for the whole field but <b>a winter for the words symbolic AI and expert system</b>; neural-network research grew in the same years.</p>
 <p>The decline in title counts begins several years after the decline in attendance. Publication lag and index coverage may both contribute, so this series alone does not date the winter.</p>
 <p>The years around 1974 cannot be judged from this series. In 1973–1975 there are only 34–46 records a year with “artificial intelligence” in the title, and single digits for “perceptron”; the counts are too small to separate change from noise.</p></div>
-<h2>Conference attendance</h2><figure><div class="legend"><span style="--c:var(--s1)">AAAI</span><span style="--c:var(--s2)">IJCAI</span><span style="--c:var(--s3)">NeurIPS</span></div><svg viewBox="0 0 900 300" role="img" aria-label="line chart">
+<h2>Conference attendance</h2><figure><div class="legend"><span style="--c:var(--s1)">AAAI</span><span style="--c:var(--s2)">IJCAI</span><span style="--c:var(--s3)">NeurIPS</span></div><div class="sx" style="--vw:828"><svg viewBox="0 0 900 318" role="img" aria-label="line chart">
 <line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">0</text>
 <line class="grid" x1="60" x2="880" y1="188.0" y2="188.0"/><text x="54" y="192.0" text-anchor="end">10000</text>
 <line class="grid" x1="60" x2="880" y1="106.0" y2="106.0"/><text x="54" y="110.0" text-anchor="end">20000</text>
@@ -299,6 +303,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <text x="680.0" y="292" text-anchor="middle">2015</text>
 <text x="780.0" y="292" text-anchor="middle">2020</text>
 <text x="880.0" y="292" text-anchor="middle">2025</text>
+<text x="470.0" y="314" text-anchor="middle" fill="var(--fg3)">Year</text>
 <line class="ax" x1="60" x2="880" y1="270" y2="270"/>
 <path d="M60.0,242.9 L80.0,234.6 L100.0,226.3 L120.0,231.2 L140.0,237.4 L160.0,242.2 L180.0,247.0 L200.0,254.0 L220.0,256.2 L240.0,258.7 L260.0,253.9 L280.0,256.3 L300.0,258.8 L320.0,259.7 L340.0,258.4 L360.0,259.8 L380.0,258.9 L400.0,258.7 L420.0,258.5 L440.0,258.0 L460.0,257.4 L480.0,260.8 L500.0,259.6 L520.0,261.3 L540.0,260.9 L560.0,261.7 L580.0,262.5 L600.0,260.9 L620.0,262.3 L640.0,263.4 L660.0,261.6 L680.0,258.7 L700.0,259.4 L720.0,254.9 L740.0,251.5 L760.0,243.5 L780.0,230.0 L800.0,236.5 L820.0,240.8 L840.0,233.3 L860.0,227.8 L880.0,218.4" fill="none" stroke="var(--s1)" stroke-width="2"/>
 <circle cx="60.0" cy="242.9" r="2.2" fill="var(--s1)"><title>AAAI 1984: 3300</title></circle>
@@ -401,11 +406,11 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <circle cx="840.0" cy="135.7" r="2.2" fill="var(--s3)"><title>NeurIPS 2023: 16382</title></circle>
 <circle cx="860.0" cy="108.0" r="2.2" fill="var(--s3)"><title>NeurIPS 2024: 19756</title></circle>
 <circle cx="880.0" cy="53.7" r="2.2" fill="var(--s3)"><title>NeurIPS 2025: 26382</title></circle>
-<text x="60" y="16" font-size="10">attendees</text>
-</svg><figcaption>Attendance at AAAI, IJCAI and NeurIPS. 1984–2019 from the AI Index 2019 report, chapter 2; 2020 onward from Our World in Data (AI Index 2026). IJCAI met only in odd years until 2014; the even-year values the report filled in by averaging are excluded.</figcaption></figure>
+<text x="60" y="16">Attendees per conference</text>
+</svg></div><figcaption><p>Attendance at AAAI and IJCAI (both AI conferences) and NeurIPS (a neural-network and machine-learning conference). 1984–2019 from the AI Index 2019 report, chapter 2; 2020 onward from Our World in Data (AI Index 2026). IJCAI met only in odd years until 2014; the even-year values the report filled in by averaging are excluded.</p><p>NeurIPS attendance went from 22,823 in 2020 down to 15,390 in 2022 and then to 26,382 in 2025. This page has not checked the reason and does not interpret the rise and fall after 2020.</p></figcaption></figure>
 <div class="prose"><p>AAAI attendance falls year after year from 5,334 in 1986 to 1,685 in 1992 and, apart from a rise in 1994 (1,964), on to 1,262 in 1997. IJCAI falls from 4,995 in 1985 to 1,325 in 1997. While the two conferences lose about three quarters of their mid-1980s size (AAAI 76%, IJCAI 73%), NeurIPS grows slowly from a small base (500 in 1995, 926 in 2005). Measured by attendance, the second winter is <b>a long decline that begins in 1987 and lasts to the end of the 1990s</b>, and the recovery of the 2000s came first on the neural-network side. The late-2010s rise is steep at all three (NeurIPS 13,500 in 2019).</p>
 <p>Two cautions. First, the NeurIPS values for 1995–2001 increase by exactly 30 a year (500, 530, 560, …); they look like estimates rather than counts, so we read that stretch only as a trend. Second, no attendance data before 1984 was found, which is why the first winter cannot be seen in this series.</p></div>
-<h2>Papers accepted at NeurIPS</h2><figure><div class="legend"><span style="--c:var(--s1)">NeurIPS</span></div><svg viewBox="0 0 900 300" role="img" aria-label="line chart">
+<h2>Papers accepted at NeurIPS</h2><figure><div class="legend"><span style="--c:var(--s1)">NeurIPS</span></div><div class="sx" style="--vw:828"><svg viewBox="0 0 900 318" role="img" aria-label="line chart">
 <line class="grid" x1="60" x2="880" y1="234.4" y2="234.4"/><text x="54" y="238.4" text-anchor="end">100</text>
 <line class="grid" x1="60" x2="880" y1="116.1" y2="116.1"/><text x="54" y="120.1" text-anchor="end">1000</text>
 <text x="126.5" y="292" text-anchor="middle">1990</text>
@@ -415,6 +420,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <text x="569.7" y="292" text-anchor="middle">2010</text>
 <text x="680.5" y="292" text-anchor="middle">2015</text>
 <text x="791.4" y="292" text-anchor="middle">2020</text>
+<text x="470.0" y="314" text-anchor="middle" fill="var(--fg3)">Year</text>
 <line class="ax" x1="60" x2="880" y1="270" y2="270"/>
 <path d="M60.0,239.8 L82.2,237.6 L104.3,233.9 L126.5,216.0 L148.6,215.6 L170.8,222.1 L193.0,210.9 L215.1,217.1 L237.3,212.9 L259.5,212.9 L281.6,213.5 L303.8,213.2 L325.9,213.5 L348.1,212.9 L370.3,199.5 L392.4,197.0 L414.6,199.3 L436.8,197.0 L458.9,197.0 L481.1,197.7 L503.2,194.6 L525.4,187.3 L547.6,184.9 L569.7,179.3 L591.9,176.9 L614.1,167.2 L636.2,168.6 L658.4,161.8 L680.5,162.8 L702.7,145.0 L724.9,136.0 L747.0,115.6 L769.2,97.8 L791.4,83.1 L813.5,72.5 L835.7,62.5 L857.8,51.1 L880.0,38.9" fill="none" stroke="var(--s1)" stroke-width="2"/>
 <circle cx="60.0" cy="239.8" r="2.2" fill="var(--s1)"><title>NeurIPS 1987: 90</title></circle>
@@ -455,8 +461,8 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <circle cx="835.7" cy="62.5" r="2.2" fill="var(--s1)"><title>NeurIPS 2022: 2834</title></circle>
 <circle cx="857.8" cy="51.1" r="2.2" fill="var(--s1)"><title>NeurIPS 2023: 3540</title></circle>
 <circle cx="880.0" cy="38.9" r="2.2" fill="var(--s1)"><title>NeurIPS 2024: 4493</title></circle>
-<text x="60" y="16" font-size="10">papers (log scale)</text>
-</svg><figcaption>Papers listed per year on proceedings.neurips.cc, counted on 2026-11-03. The 2025 listing was incomplete and is omitted.</figcaption></figure>
+<text x="60" y="16">Accepted papers (log scale)</text>
+</svg></div><figcaption>Papers listed per year on proceedings.neurips.cc, counted on 2026-11-03. The 2025 listing was incomplete and is omitted. The vertical axis is a log scale: the ticks 100 and 1,000 are a factor of ten apart, and an equal rise in height means growth by an equal factor, not by an equal number.</figcaption></figure>
 <div class="prose"><p>Accepted papers grow gently from 90 in 1987 to 152 in 2000, then steeply: 370 in 2012, 679 in 2017, 1,898 in 2020, 4,493 in 2024. The neural-network conference grew overall during the 1990s "winter" (not every year: 1992, 1994 and 1997 were below the year before).</p></div>
 <h2>Public funding: records exist, year-by-year tables do not</h2><div class="prose"><p>The funding series could not be drawn. What we found are event records.</p>
 <ul>
@@ -467,7 +473,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 </ul>
 <p>The conclusion of this page is therefore: the second winter is confirmed by attendance and by title counts. The first winter has event records but no numerical series to confirm it. That does not mean there was no winter; it means we have not found the data to say so with numbers.</p></div>
 <p class="files"><a href="../data/winter_title_phrases.csv">winter_title_phrases.csv</a> <a href="../data/winter_attendance.csv">winter_attendance.csv</a> <a href="../data/winter_neurips_accepted.csv">winter_neurips_accepted.csv</a></p></main>
-<footer>AI History in Papers · Version 1.1.4 · Built 2026-11-15 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<footer>AI History in Papers · Version 1.1.5 · Built 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
