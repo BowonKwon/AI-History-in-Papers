@@ -57,9 +57,9 @@ figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summa
 @media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
-svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg.dense .edge{opacity:.3}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.late{stroke:var(--s4);stroke-width:2;opacity:.95}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.late.hi{stroke:var(--s4);stroke-width:3}svg .edge.dim{opacity:.12}
 svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
-.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}.legend.lg-line span::before{width:20px;height:2px;border-radius:0;vertical-align:4px;opacity:.8}.legend.lg-line span.late::before{height:3px;opacity:1}
 .pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
 .note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
 .prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
@@ -74,7 +74,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <header><a class="brand" href="../en/index.html">AI History in Papers</a><nav><a href="../en/index.html">Home</a><a href="../en/chapters/index.html">Eras</a><a href="../en/lineage/index.html">Lineage</a><a href="../en/winters.html" class="on">Winters and booms</a><a href="../en/papers.html">Paper list</a><a href="../en/method.html">Method and limits</a></nav>
 <div class="right"><a class="hub" href="https://bowonkwon.github.io/en/">All public materials</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../ko/index.html">한국어</a></div></header>
 <main><h1>Winters and booms</h1><p class="lead">The two conventional winters re-examined with three series: the share of paper titles containing a term, conference attendance, and public-funding records.</p><div class="glance"><p class="glance-h">Key point</p><ul><li>The second winter around 1987 is visible in attendance: attendance at AAAI (an AI conference) fell from 5,334 in 1986 to 1,685 in 1992 (AI Index 2019 data).</li><li>Title counts lag by several years. Records in OpenAlex (an open index of scholarly works and their citations) with “expert system” in the title peak at 1,857 in 1990 and fall to 490 in 1998; over the same years “neural network” rises from 1,745 to 4,243.</li><li>The first winter around 1974 could not be confirmed with numbers: no attendance or year-by-year funding series for that period was found, and OpenAlex title counts are too small.</li></ul></div>
-<div class="prose"><p>An "AI winter" is a period in which funding and attention cooled. By convention there were two: the first around the 1973 Lighthill report in Britain and the contraction of DARPA support in the United States, the second after the expert-system and Lisp-machine markets collapsed around 1987. This page re-examines that convention with numbers. We write "confirmed" only where the series point the same way, and we say so where there is no data.</p></div>
+<div class="prose"><p>An "AI winter" is a period in which funding and attention cooled. By convention there were two: the first around the 1973 Lighthill report in Britain and the contraction of DARPA (the US Defense Advanced Research Projects Agency) support in the United States, the second after the expert-system and Lisp-machine (computers built to run the Lisp language fast, used for AI work) markets collapsed around 1987. This page re-examines that convention with numbers. We write "confirmed" only where the series point the same way, and we say so where there is no data.</p></div>
 <h2>Terms in paper titles</h2><figure><div class="legend"><span style="--c:var(--s1)">“artificial intelligence”</span><span style="--c:var(--s2)">“expert system”</span><span style="--c:var(--s3)">“neural network”</span></div><div class="sx" style="--vw:828"><svg viewBox="0 0 900 318" role="img" aria-label="line chart">
 <line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">0</text>
 <line class="grid" x1="60" x2="880" y1="188.0" y2="188.0"/><text x="54" y="192.0" text-anchor="end">20</text>
@@ -285,10 +285,138 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <circle cx="867.2" cy="99.2" r="2.2" fill="var(--s3)"><title>“neural network” 2023: 41.654</title></circle>
 <circle cx="880.0" cy="83.3" r="2.2" fill="var(--s3)"><title>“neural network” 2024: 45.545</title></circle>
 <text x="60" y="16">Records with the phrase in the title, per 10,000 OpenAlex records</text>
-</svg></div><figcaption><p>OpenAlex records whose title contains the phrase, divided by all OpenAlex records of that year, per 10,000 (read 2026-11-03). The 1970 value is left out: the counts of all three phrases in that year are higher than in the years before and after (“expert system”: 0 in 1969, 50 in 1970, 0 in 1971). Undated records appear to have been assigned to that year, but the records were not checked one by one. Higher values mean that a larger share of that year&#x27;s records used the phrase in the title.</p><p>In 2002 all three phrases are higher than in the year before and the year after (“neural network”: 12.4 in 2001, 27.5 in 2002, 17.8 in 2003). This page has not checked the reason and does not interpret this jump.</p></figcaption></figure>
+</svg></div><figcaption><p>OpenAlex records whose title contains the phrase, divided by all OpenAlex records of that year, per 10,000 (read 2026-11-03). The 1970 value is left out: the counts of all three phrases in that year are higher than in the years before and after (“expert system”: 0 in 1969, 50 in 1970, 0 in 1971). The records were not checked one by one, so the reason is not known, and this page does not interpret the value. Higher values mean that a larger share of that year&#x27;s records used the phrase in the title.</p><p>In 2002 all three phrases are higher than in the year before and the year after (“neural network”: 12.4 in 2001, 27.5 in 2002, 17.8 in 2003). This page has not checked the reason and does not interpret this jump.</p></figcaption></figure>
+<h3>The same chart enlarged: “artificial intelligence” and “expert system”, 1960–2015</h3><figure><div class="legend"><span style="--c:var(--s1)">“artificial intelligence”</span><span style="--c:var(--s2)">“expert system”</span></div><div class="sx" style="--vw:828"><svg viewBox="0 0 900 318" role="img" aria-label="line chart">
+<line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">0</text>
+<line class="grid" x1="60" x2="880" y1="208.5" y2="208.5"/><text x="54" y="212.5" text-anchor="end">2.5</text>
+<line class="grid" x1="60" x2="880" y1="147.0" y2="147.0"/><text x="54" y="151.0" text-anchor="end">5</text>
+<line class="grid" x1="60" x2="880" y1="85.5" y2="85.5"/><text x="54" y="89.5" text-anchor="end">7.5</text>
+<line class="grid" x1="60" x2="880" y1="24.0" y2="24.0"/><text x="54" y="28.0" text-anchor="end">10</text>
+<text x="60.0" y="292" text-anchor="middle">1960</text>
+<text x="209.1" y="292" text-anchor="middle">1970</text>
+<text x="358.2" y="292" text-anchor="middle">1980</text>
+<text x="507.3" y="292" text-anchor="middle">1990</text>
+<text x="656.4" y="292" text-anchor="middle">2000</text>
+<text x="805.5" y="292" text-anchor="middle">2010</text>
+<text x="470.0" y="314" text-anchor="middle" fill="var(--fg3)">Year</text>
+<line class="ax" x1="60" x2="880" y1="270" y2="270"/>
+<path d="M60.0,269.0 L74.9,267.0 L89.8,263.0 L104.7,267.0 L119.6,268.4 L134.5,268.5 L149.5,265.4 L164.4,268.4 L179.3,266.0 L194.2,263.7 M224.0,261.0 L238.9,264.7 L253.8,261.6 L268.7,259.1 L283.6,259.5 L298.5,258.5 L313.5,261.6 L328.4,259.5 L343.3,261.7 L358.2,255.3 L373.1,256.3 L388.0,253.8 L402.9,242.1 L417.8,229.8 L432.7,211.0 L447.6,188.4 L462.5,186.8 L477.5,190.8 L492.4,198.7 L507.3,202.9 L522.2,215.3 L537.1,221.3 L552.0,223.9 L566.9,230.2 L581.8,236.4 L596.7,239.7 L611.6,246.4 L626.5,247.8 L641.5,248.1 L656.4,249.3 L671.3,248.5 L686.2,243.8 L701.1,247.1 L716.0,247.4 L730.9,244.1 L745.8,246.8 L760.7,248.9 L775.6,250.2 L790.5,248.1 L805.5,250.9 L820.4,248.5 L835.3,247.9 L850.2,246.8 L865.1,246.7 L880.0,247.2" fill="none" stroke="var(--s1)" stroke-width="2"/>
+<circle cx="60.0" cy="269.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1960: 0.039</title></circle>
+<circle cx="74.9" cy="267.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1961: 0.12</title></circle>
+<circle cx="89.8" cy="263.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1962: 0.285</title></circle>
+<circle cx="104.7" cy="267.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1963: 0.121</title></circle>
+<circle cx="119.6" cy="268.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1964: 0.065</title></circle>
+<circle cx="134.5" cy="268.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1965: 0.06</title></circle>
+<circle cx="149.5" cy="265.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1966: 0.185</title></circle>
+<circle cx="164.4" cy="268.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1967: 0.066</title></circle>
+<circle cx="179.3" cy="266.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1968: 0.161</title></circle>
+<circle cx="194.2" cy="263.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1969: 0.258</title></circle>
+<circle cx="224.0" cy="261.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1971: 0.367</title></circle>
+<circle cx="238.9" cy="264.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1972: 0.217</title></circle>
+<circle cx="253.8" cy="261.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1973: 0.343</title></circle>
+<circle cx="268.7" cy="259.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1974: 0.445</title></circle>
+<circle cx="283.6" cy="259.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1975: 0.428</title></circle>
+<circle cx="298.5" cy="258.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1976: 0.466</title></circle>
+<circle cx="313.5" cy="261.6" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1977: 0.342</title></circle>
+<circle cx="328.4" cy="259.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1978: 0.428</title></circle>
+<circle cx="343.3" cy="261.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1979: 0.339</title></circle>
+<circle cx="358.2" cy="255.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1980: 0.596</title></circle>
+<circle cx="373.1" cy="256.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1981: 0.556</title></circle>
+<circle cx="388.0" cy="253.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1982: 0.659</title></circle>
+<circle cx="402.9" cy="242.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1983: 1.135</title></circle>
+<circle cx="417.8" cy="229.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1984: 1.635</title></circle>
+<circle cx="432.7" cy="211.0" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1985: 2.398</title></circle>
+<circle cx="447.6" cy="188.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1986: 3.316</title></circle>
+<circle cx="462.5" cy="186.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1987: 3.381</title></circle>
+<circle cx="477.5" cy="190.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1988: 3.22</title></circle>
+<circle cx="492.4" cy="198.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1989: 2.899</title></circle>
+<circle cx="507.3" cy="202.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1990: 2.726</title></circle>
+<circle cx="522.2" cy="215.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1991: 2.222</title></circle>
+<circle cx="537.1" cy="221.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1992: 1.98</title></circle>
+<circle cx="552.0" cy="223.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1993: 1.875</title></circle>
+<circle cx="566.9" cy="230.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1994: 1.618</title></circle>
+<circle cx="581.8" cy="236.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1995: 1.367</title></circle>
+<circle cx="596.7" cy="239.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1996: 1.23</title></circle>
+<circle cx="611.6" cy="246.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1997: 0.958</title></circle>
+<circle cx="626.5" cy="247.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1998: 0.902</title></circle>
+<circle cx="641.5" cy="248.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 1999: 0.889</title></circle>
+<circle cx="656.4" cy="249.3" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2000: 0.84</title></circle>
+<circle cx="671.3" cy="248.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2001: 0.876</title></circle>
+<circle cx="686.2" cy="243.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2002: 1.065</title></circle>
+<circle cx="701.1" cy="247.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2003: 0.931</title></circle>
+<circle cx="716.0" cy="247.4" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2004: 0.92</title></circle>
+<circle cx="730.9" cy="244.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2005: 1.052</title></circle>
+<circle cx="745.8" cy="246.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2006: 0.942</title></circle>
+<circle cx="760.7" cy="248.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2007: 0.857</title></circle>
+<circle cx="775.6" cy="250.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2008: 0.806</title></circle>
+<circle cx="790.5" cy="248.1" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2009: 0.891</title></circle>
+<circle cx="805.5" cy="250.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2010: 0.775</title></circle>
+<circle cx="820.4" cy="248.5" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2011: 0.875</title></circle>
+<circle cx="835.3" cy="247.9" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2012: 0.898</title></circle>
+<circle cx="850.2" cy="246.8" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2013: 0.943</title></circle>
+<circle cx="865.1" cy="246.7" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2014: 0.949</title></circle>
+<circle cx="880.0" cy="247.2" r="2.2" fill="var(--s1)"><title>“artificial intelligence” 2015: 0.925</title></circle>
+<path d="M60.0,270.0 L74.9,269.5 L89.8,270.0 L104.7,270.0 L119.6,270.0 L134.5,270.0 L149.5,270.0 L164.4,270.0 L179.3,269.7 L194.2,270.0 M224.0,270.0 L238.9,270.0 L253.8,270.0 L268.7,270.0 L283.6,269.8 L298.5,269.8 L313.5,269.8 L328.4,269.8 L343.3,269.4 L358.2,268.7 L373.1,265.6 L388.0,262.5 L402.9,249.3 L417.8,227.3 L432.7,183.3 L447.6,121.9 L462.5,66.7 L477.5,42.2 L492.4,47.7 L507.3,50.4 L522.2,81.4 L537.1,104.5 L552.0,144.8 L566.9,169.6 L581.8,192.2 L596.7,204.3 L611.6,219.3 L626.5,229.4 L641.5,233.6 L656.4,234.3 L671.3,237.5 L686.2,200.3 L701.1,220.3 L716.0,240.5 L730.9,231.1 L745.8,241.8 L760.7,245.2 L775.6,244.2 L790.5,244.8 L805.5,245.2 L820.4,247.7 L835.3,250.3 L850.2,251.9 L865.1,254.1 L880.0,256.6" fill="none" stroke="var(--s2)" stroke-width="2"/>
+<circle cx="60.0" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1960: 0</title></circle>
+<circle cx="74.9" cy="269.5" r="2.2" fill="var(--s2)"><title>“expert system” 1961: 0.02</title></circle>
+<circle cx="89.8" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1962: 0</title></circle>
+<circle cx="104.7" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1963: 0</title></circle>
+<circle cx="119.6" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1964: 0</title></circle>
+<circle cx="134.5" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1965: 0</title></circle>
+<circle cx="149.5" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1966: 0</title></circle>
+<circle cx="164.4" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1967: 0</title></circle>
+<circle cx="179.3" cy="269.7" r="2.2" fill="var(--s2)"><title>“expert system” 1968: 0.012</title></circle>
+<circle cx="194.2" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1969: 0</title></circle>
+<circle cx="224.0" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1971: 0</title></circle>
+<circle cx="238.9" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1972: 0</title></circle>
+<circle cx="253.8" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1973: 0</title></circle>
+<circle cx="268.7" cy="270.0" r="2.2" fill="var(--s2)"><title>“expert system” 1974: 0</title></circle>
+<circle cx="283.6" cy="269.8" r="2.2" fill="var(--s2)"><title>“expert system” 1975: 0.009</title></circle>
+<circle cx="298.5" cy="269.8" r="2.2" fill="var(--s2)"><title>“expert system” 1976: 0.009</title></circle>
+<circle cx="313.5" cy="269.8" r="2.2" fill="var(--s2)"><title>“expert system” 1977: 0.009</title></circle>
+<circle cx="328.4" cy="269.8" r="2.2" fill="var(--s2)"><title>“expert system” 1978: 0.008</title></circle>
+<circle cx="343.3" cy="269.4" r="2.2" fill="var(--s2)"><title>“expert system” 1979: 0.024</title></circle>
+<circle cx="358.2" cy="268.7" r="2.2" fill="var(--s2)"><title>“expert system” 1980: 0.052</title></circle>
+<circle cx="373.1" cy="265.6" r="2.2" fill="var(--s2)"><title>“expert system” 1981: 0.178</title></circle>
+<circle cx="388.0" cy="262.5" r="2.2" fill="var(--s2)"><title>“expert system” 1982: 0.304</title></circle>
+<circle cx="402.9" cy="249.3" r="2.2" fill="var(--s2)"><title>“expert system” 1983: 0.843</title></circle>
+<circle cx="417.8" cy="227.3" r="2.2" fill="var(--s2)"><title>“expert system” 1984: 1.734</title></circle>
+<circle cx="432.7" cy="183.3" r="2.2" fill="var(--s2)"><title>“expert system” 1985: 3.523</title></circle>
+<circle cx="447.6" cy="121.9" r="2.2" fill="var(--s2)"><title>“expert system” 1986: 6.02</title></circle>
+<circle cx="462.5" cy="66.7" r="2.2" fill="var(--s2)"><title>“expert system” 1987: 8.266</title></circle>
+<circle cx="477.5" cy="42.2" r="2.2" fill="var(--s2)"><title>“expert system” 1988: 9.26</title></circle>
+<circle cx="492.4" cy="47.7" r="2.2" fill="var(--s2)"><title>“expert system” 1989: 9.036</title></circle>
+<circle cx="507.3" cy="50.4" r="2.2" fill="var(--s2)"><title>“expert system” 1990: 8.928</title></circle>
+<circle cx="522.2" cy="81.4" r="2.2" fill="var(--s2)"><title>“expert system” 1991: 7.668</title></circle>
+<circle cx="537.1" cy="104.5" r="2.2" fill="var(--s2)"><title>“expert system” 1992: 6.729</title></circle>
+<circle cx="552.0" cy="144.8" r="2.2" fill="var(--s2)"><title>“expert system” 1993: 5.09</title></circle>
+<circle cx="566.9" cy="169.6" r="2.2" fill="var(--s2)"><title>“expert system” 1994: 4.08</title></circle>
+<circle cx="581.8" cy="192.2" r="2.2" fill="var(--s2)"><title>“expert system” 1995: 3.164</title></circle>
+<circle cx="596.7" cy="204.3" r="2.2" fill="var(--s2)"><title>“expert system” 1996: 2.67</title></circle>
+<circle cx="611.6" cy="219.3" r="2.2" fill="var(--s2)"><title>“expert system” 1997: 2.062</title></circle>
+<circle cx="626.5" cy="229.4" r="2.2" fill="var(--s2)"><title>“expert system” 1998: 1.65</title></circle>
+<circle cx="641.5" cy="233.6" r="2.2" fill="var(--s2)"><title>“expert system” 1999: 1.481</title></circle>
+<circle cx="656.4" cy="234.3" r="2.2" fill="var(--s2)"><title>“expert system” 2000: 1.452</title></circle>
+<circle cx="671.3" cy="237.5" r="2.2" fill="var(--s2)"><title>“expert system” 2001: 1.321</title></circle>
+<circle cx="686.2" cy="200.3" r="2.2" fill="var(--s2)"><title>“expert system” 2002: 2.833</title></circle>
+<circle cx="701.1" cy="220.3" r="2.2" fill="var(--s2)"><title>“expert system” 2003: 2.019</title></circle>
+<circle cx="716.0" cy="240.5" r="2.2" fill="var(--s2)"><title>“expert system” 2004: 1.198</title></circle>
+<circle cx="730.9" cy="231.1" r="2.2" fill="var(--s2)"><title>“expert system” 2005: 1.583</title></circle>
+<circle cx="745.8" cy="241.8" r="2.2" fill="var(--s2)"><title>“expert system” 2006: 1.148</title></circle>
+<circle cx="760.7" cy="245.2" r="2.2" fill="var(--s2)"><title>“expert system” 2007: 1.01</title></circle>
+<circle cx="775.6" cy="244.2" r="2.2" fill="var(--s2)"><title>“expert system” 2008: 1.048</title></circle>
+<circle cx="790.5" cy="244.8" r="2.2" fill="var(--s2)"><title>“expert system” 2009: 1.026</title></circle>
+<circle cx="805.5" cy="245.2" r="2.2" fill="var(--s2)"><title>“expert system” 2010: 1.008</title></circle>
+<circle cx="820.4" cy="247.7" r="2.2" fill="var(--s2)"><title>“expert system” 2011: 0.908</title></circle>
+<circle cx="835.3" cy="250.3" r="2.2" fill="var(--s2)"><title>“expert system” 2012: 0.801</title></circle>
+<circle cx="850.2" cy="251.9" r="2.2" fill="var(--s2)"><title>“expert system” 2013: 0.734</title></circle>
+<circle cx="865.1" cy="254.1" r="2.2" fill="var(--s2)"><title>“expert system” 2014: 0.647</title></circle>
+<circle cx="880.0" cy="256.6" r="2.2" fill="var(--s2)"><title>“expert system” 2015: 0.543</title></circle>
+<text x="60" y="16">Records with the phrase in the title, per 10,000 OpenAlex records</text>
+</svg></div><figcaption><p>The two phrases of the chart above drawn again with the vertical axis stretched to 0–10. Each dot is one year&#x27;s value, in the same unit as above (records with the phrase in the title per 10,000 OpenAlex records). The values are the same, and 1970 is left out as above. “Neural network” goes above this scale in some of these years (its highest year is in the chart above), so it is not drawn here. What it shows: the highest years are artificial intelligence 3.4 in 1987, expert system 9.3 in 1988; in 2000 the values are 0.84 and 1.5 respectively.</p></figcaption></figure>
 <div class="prose"><p>The three phrases tell different stories. “Expert system” rises steeply from 1984, peaks in 1988–1990 at about 9 per 10,000, and falls through the 1990s to 1.5 in 2000. “Artificial intelligence” also declines after a 1987 peak (3.4) to 0.84 in 2000. “Neural network”, by contrast, surges from 1988 to 15.7 in 1994 and does not fall much afterwards. The 1990s "winter" was therefore not a winter for the whole field but <b>a winter for the words symbolic AI and expert system</b>; neural-network research grew in the same years.</p>
 <p>The decline in title counts begins several years after the decline in attendance. Publication lag and index coverage may both contribute, so this series alone does not date the winter.</p>
-<p>The years around 1974 cannot be judged from this series. In 1973–1975 there are only 34–46 records a year with “artificial intelligence” in the title, and single digits for “perceptron”; the counts are too small to separate change from noise.</p></div>
+<p>The years around 1974 cannot be judged from this series. In 1973–1975 there are only 34–46 records a year with “artificial intelligence” in the title, and single digits for “perceptron” (the early neural-network model of chapter 2; this phrase is not drawn in the chart); the counts are too small to separate change from noise.</p></div>
 <h2>Conference attendance</h2><figure><div class="legend"><span style="--c:var(--s1)">AAAI</span><span style="--c:var(--s2)">IJCAI</span><span style="--c:var(--s3)">NeurIPS</span></div><div class="sx" style="--vw:828"><svg viewBox="0 0 900 318" role="img" aria-label="line chart">
 <line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">0</text>
 <line class="grid" x1="60" x2="880" y1="188.0" y2="188.0"/><text x="54" y="192.0" text-anchor="end">10000</text>
@@ -411,8 +539,13 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <div class="prose"><p>AAAI attendance falls year after year from 5,334 in 1986 to 1,685 in 1992 and, apart from a rise in 1994 (1,964), on to 1,262 in 1997. IJCAI falls from 4,995 in 1985 to 1,325 in 1997. While the two conferences lose about three quarters of their mid-1980s size (AAAI 76%, IJCAI 73%), NeurIPS grows slowly from a small base (500 in 1995, 926 in 2005). Measured by attendance, the second winter is <b>a long decline that begins in 1987 and lasts to the end of the 1990s</b>, and the recovery of the 2000s came first on the neural-network side. The late-2010s rise is steep at all three (NeurIPS 13,500 in 2019).</p>
 <p>Two cautions. First, the NeurIPS values for 1995–2001 increase by exactly 30 a year (500, 530, 560, …); they look like estimates rather than counts, so we read that stretch only as a trend. Second, no attendance data before 1984 was found, which is why the first winter cannot be seen in this series.</p></div>
 <h2>Papers accepted at NeurIPS</h2><figure><div class="legend"><span style="--c:var(--s1)">NeurIPS</span></div><div class="sx" style="--vw:828"><svg viewBox="0 0 900 318" role="img" aria-label="line chart">
+<line class="grid" x1="60" x2="880" y1="270.0" y2="270.0"/><text x="54" y="274.0" text-anchor="end">50</text>
 <line class="grid" x1="60" x2="880" y1="234.4" y2="234.4"/><text x="54" y="238.4" text-anchor="end">100</text>
-<line class="grid" x1="60" x2="880" y1="116.1" y2="116.1"/><text x="54" y="120.1" text-anchor="end">1000</text>
+<line class="grid" x1="60" x2="880" y1="198.8" y2="198.8"/><text x="54" y="202.8" text-anchor="end">200</text>
+<line class="grid" x1="60" x2="880" y1="151.7" y2="151.7"/><text x="54" y="155.7" text-anchor="end">500</text>
+<line class="grid" x1="60" x2="880" y1="116.1" y2="116.1"/><text x="54" y="120.1" text-anchor="end">1,000</text>
+<line class="grid" x1="60" x2="880" y1="80.5" y2="80.5"/><text x="54" y="84.5" text-anchor="end">2,000</text>
+<line class="grid" x1="60" x2="880" y1="33.4" y2="33.4"/><text x="54" y="37.4" text-anchor="end">5,000</text>
 <text x="126.5" y="292" text-anchor="middle">1990</text>
 <text x="237.3" y="292" text-anchor="middle">1995</text>
 <text x="348.1" y="292" text-anchor="middle">2000</text>
@@ -462,18 +595,18 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <circle cx="857.8" cy="51.1" r="2.2" fill="var(--s1)"><title>NeurIPS 2023: 3540</title></circle>
 <circle cx="880.0" cy="38.9" r="2.2" fill="var(--s1)"><title>NeurIPS 2024: 4493</title></circle>
 <text x="60" y="16">Accepted papers (log scale)</text>
-</svg></div><figcaption>Papers listed per year on proceedings.neurips.cc, counted on 2026-11-03. The 2025 listing was incomplete and is omitted. The vertical axis is a log scale: the ticks 100 and 1,000 are a factor of ten apart, and an equal rise in height means growth by an equal factor, not by an equal number.</figcaption></figure>
+</svg></div><figcaption>Papers listed per year on proceedings.neurips.cc, counted on 2026-11-03. The 2025 listing was incomplete and is omitted. The vertical axis is a log scale: the ticks 100 and 1,000 are a factor of ten apart, and an equal rise in height means growth by an equal factor, not by an equal number. That is also why the ticks are unevenly spaced (100 to 200 is a factor of 2, 200 to 500 a factor of 2.5).</figcaption></figure>
 <div class="prose"><p>Accepted papers grow gently from 90 in 1987 to 152 in 2000, then steeply: 370 in 2012, 679 in 2017, 1,898 in 2020, 4,493 in 2024. The neural-network conference grew overall during the 1990s "winter" (not every year: 1992, 1994 and 1997 were below the year before).</p></div>
 <h2>Public funding: records exist, year-by-year tables do not</h2><div class="prose"><p>The funding series could not be drawn. What we found are event records.</p>
 <ul>
-<li><b>The Mansfield Amendment (1969).</b> Section 203 of U.S. Public Law 91-121 provides that none of the funds authorized "may be used to carry out any research project or study unless such project or study has a direct and apparent relationship to a specific military function or operation" (83 Stat. 206). It is often cited as redirecting basic research money, but no year-by-year table of AI funding in the following years was found.</li>
+<li><b>The Mansfield Amendment (1969).</b> Section 203 of U.S. Public Law 91-121 provides that none of the funds authorized "may be used to carry out any research project or study unless such project or study has a direct and apparent relationship to a specific military function or operation" (83 Stat. 206, that is, volume 83, page 206 of the United States Statutes at Large). It is often cited as redirecting basic research money, but no year-by-year table of AI funding in the following years was found.</li>
 <li><b>The Lighthill report (1973).</b> "Artificial Intelligence: A General Survey", written for the UK Science Research Council, together with the published replies and commentaries, is available in full (Chilton Computing). The statement that it cut British AI support is widely accepted; the source does not give yearly amounts.</li>
 <li><b>DARPA's Strategic Computing Initiative (1983–1993).</b> Usually given as about one billion dollars (Roland & Shiman, <i>Strategic Computing</i>, 2002). Yearly outlays are in the book's appendices or budget documents and were not found as an online table.</li>
 <li><b>Japan's Fifth Generation Computer project (1982–1992).</b> The IPSJ Computer Museum states "approximately ¥54 billion was invested in the project over 11 years". No yearly table.</li>
 </ul>
 <p>The conclusion of this page is therefore: the second winter is confirmed by attendance and by title counts. The first winter has event records but no numerical series to confirm it. That does not mean there was no winter; it means we have not found the data to say so with numbers.</p></div>
 <p class="files"><a href="../data/winter_title_phrases.csv">winter_title_phrases.csv</a> <a href="../data/winter_attendance.csv">winter_attendance.csv</a> <a href="../data/winter_neurips_accepted.csv">winter_neurips_accepted.csv</a></p></main>
-<footer>AI History in Papers · Version 1.1.5 · Built 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<footer>AI History in Papers · Version 1.1.6 · Built 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

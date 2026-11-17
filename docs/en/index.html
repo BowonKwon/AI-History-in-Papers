@@ -57,9 +57,9 @@ figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summa
 @media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
-svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg.dense .edge{opacity:.3}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.late{stroke:var(--s4);stroke-width:2;opacity:.95}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.late.hi{stroke:var(--s4);stroke-width:3}svg .edge.dim{opacity:.12}
 svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
-.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}.legend.lg-line span::before{width:20px;height:2px;border-radius:0;vertical-align:4px;opacity:.8}.legend.lg-line span.late::before{height:3px;opacity:1}
 .pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
 .note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
 .prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
@@ -77,12 +77,13 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <div class="stats"><span class="stat"><span class="n">214</span><small>original papers</small></span><span class="stat"><span class="n">1286</span><small>confirmed citation lines</small></span><span class="stat"><span class="n">1943–2025</span><small>first-public years</small></span></div>
 <figure class="tl-wide"><svg viewBox="0 0 1000 424" role="img" aria-label="timeline">
 <text x="614.5" y="420" text-anchor="middle" fill="var(--fg3)">First public year</text>
+<text x="241" y="17" text-anchor="end" fill="var(--fg3)">Theme group</text>
 <rect class="band" x="254.7" y="40" width="74.7" height="336"/>
 <text x="292.1" y="34" text-anchor="middle" font-size="10">Ch. 1 Origins 1943–56</text>
 <rect class="band alt" x="329.4" y="40" width="103.4" height="336"/>
 <text x="381.1" y="17" text-anchor="middle" font-size="10">Ch. 2 Symbols and perceptrons 1956–74</text>
-<rect class="band" x="432.8" y="40" width="109.1" height="336"/>
-<text x="487.4" y="34" text-anchor="middle" font-size="10">Ch. 3 Knowledge systems and connectionism 1974–93</text>
+<rect class="band" x="432.8" y="40" width="114.9" height="336"/>
+<text x="490.2" y="34" text-anchor="middle" font-size="10">Ch. 3 Knowledge systems and connectionism 1974–93</text>
 <rect class="band alt" x="524.7" y="40" width="126.4" height="336"/>
 <text x="587.9" y="17" text-anchor="middle" font-size="10">Ch. 4 Statistical learning 1990–2011</text>
 <rect class="band" x="651.0" y="40" width="117.5" height="336"/>
@@ -338,7 +339,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <div class="prose"><h2>What this site does</h2>
 <p>The history of AI research has been written in many places: the Wikipedia timelines, the Computer History Museum's timeline, the history chapters of textbooks, one researcher's long annotated history. This site does not replace them. It adds one thing: <b>every point is tied to an original paper</b>. Dates are first-public dates rather than popularly quoted years, "what changed" is written from the paper's own sentences, and lines of influence distinguish confirmed citations from unconfirmed attributions.</p>
 <p>Numbers only support the narrative. Citation counts appear small on each card with the date they were read, and there is no ranking. The page on winters and booms re-examines the two conventional winters (around 1974 and around 1987) against paper-title counts, conference attendance and public funding records.</p></div></main>
-<footer>AI History in Papers · Version 1.1.5 · Built 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
+<footer>AI History in Papers · Version 1.1.6 · Built 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

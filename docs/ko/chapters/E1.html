@@ -57,9 +57,9 @@ figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summa
 @media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
-svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg.dense .edge{opacity:.3}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.late{stroke:var(--s4);stroke-width:2;opacity:.95}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.late.hi{stroke:var(--s4);stroke-width:3}svg .edge.dim{opacity:.12}
 svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
-.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}.legend.lg-line span::before{width:20px;height:2px;border-radius:0;vertical-align:4px;opacity:.8}.legend.lg-line span.late::before{height:3px;opacity:1}
 .pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
 .note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
 .prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
@@ -87,30 +87,31 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <p>일곱 편 가운데 원문 게재본을 읽은 것은 Shannon 1948, Hebb 1949, Turing 1950, Chomsky 1956 네 편이다. Wiener는 2019년 재간본으로 읽었다. McCulloch–Pitts는 1990년 재수록본(『Bulletin of Mathematical Biology』 52권)으로, Shannon 1950은 재타자본으로 읽었다. 재타자본에는 쪽이 없어 인용문의 쪽을 적지 못했다. </p>
 </div>
 
-<h2>계보</h2><figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 344" role="img" aria-label="lineage">
-<text x="565.0" y="340" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
-<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
-<text x="142" y="55.0" text-anchor="end">신경망 학습</text>
-<line class="grid" x1="150" x2="980" y1="156" y2="156"/>
-<text x="142" y="125.0" text-anchor="end">언어·음성</text>
-<line class="grid" x1="150" x2="980" y1="226" y2="226"/>
-<text x="142" y="195.0" text-anchor="end">탐색·계획·지식</text>
-<line class="grid" x1="150" x2="980" y1="296" y2="296"/>
-<text x="142" y="265.0" text-anchor="end">확률·통계·기원</text>
-<line class="ax" x1="305.6" x2="305.6" y1="16" y2="296"/><text x="305.6" y="318" text-anchor="middle">1945</text>
-<line class="ax" x1="565.0" x2="565.0" y1="16" y2="296"/><text x="565.0" y="318" text-anchor="middle">1950</text>
-<line class="ax" x1="824.4" x2="824.4" y1="16" y2="296"/><text x="824.4" y="318" text-anchor="middle">1955</text>
-<path class="edge" data-s="wiener1948" data-d="mcculloch1943" d="M249.4,31.5 C368.3,31.5 368.3,254.5 487.2,254.5"/>
-<path class="edge" data-s="shannon1948" data-d="wiener1948" d="M487.2,254.5 C487.2,254.5 487.2,241.5 487.2,241.5"/>
-<path class="edge" data-s="shannon1950" data-d="wiener1948" d="M487.2,254.5 C504.5,254.5 504.5,171.5 521.8,171.5"/>
-<path class="edge" data-s="chomsky1956" data-d="shannon1948" d="M487.2,241.5 C699.0,241.5 699.0,101.5 910.8,101.5"/>
-<g class="dot" data-k="mcculloch1943" data-t="A logical calculus of the ideas immanent in nervous activity" data-m="McCulloch &amp; Pitts · 1943" data-w="신경의 실무율(全無律)에 기대어 신경 사건과 그 관계를 명제 논리로 다룬다. 모든 망의 행동을 그 논리로 기술할 수 있고, 조건을 만족하는 논리식마다 그대로 행동하는 망을 만들 수 있음을 보인다." data-href="E1.html#mcculloch1943"><circle cx="249.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="shannon1948" data-t="A Mathematical Theory of Communication" data-m="Shannon · 1948" data-w="나이퀴스트와 하틀리의 통신 이론을 채널 잡음과 메시지의 통계적 구조까지 확장한다. 정보를 로그 척도로 재고, 밑이 2인 단위를 비트라 부른다." data-href="E1.html#shannon1948"><circle cx="487.2" cy="241.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wiener1948" data-t="Cybernetics: or Control and Communication in the Animal and the Machine" data-m="Wiener · 1948" data-w="기계와 동물의 제어·통신 이론을 합친 분야에 「사이버네틱스」라는 이름을 붙이고, 되먹임·시계열과 정보·계산 기계와 신경계를 다루는 틀을 세운다. 저자의 전시 예측·되먹임 연구를 신경생리학·통계역학과 한데 모은다." data-href="E1.html#wiener1948"><circle cx="487.2" cy="254.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="shannon1950" data-t="Programming a computer for playing chess" data-m="Shannon · 1949" data-w="비수치 문제를 다루는 기계의 시험 사례로 범용 컴퓨터의 체스 프로그램을 구상한다. 기물·폰 구조·기물 위치·기동성으로 국면을 평가하는 함수 f(P)와 수(手) 변화에 대한 앞 내다보기를 결합할 것을 제안한다." data-href="E1.html#shannon1950"><circle cx="521.8" cy="171.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="hebb1949" data-t="The Organization of Behavior" data-m="Hebb · 1949" data-w="신경생리학과 심리학을 잇는 행동의 신경심리학 이론을 세운다. 세포 사이의 반복된 활동이 한 세포가 다른 세포를 발화시키는 효율을 높이는 지속적 변화를 낳는다고 제안하고, 이를 세포 집합의 성장에 쓴다." data-href="E1.html#hebb1949"><circle cx="539.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="turing1950" data-t="Computing Machinery and Intelligence" data-m="Turing · 1950" data-w="「기계는 생각할 수 있는가」라는 물음을, 질문자가 텔레프린터로 기계와 사람에게 질문하는 「흉내 게임」으로 바꾸고, 적절히 프로그램된 디지털 컴퓨터가 그 게임을 만족스럽게 해낼 수 있는가로 다시 세웠다. 기계 사고에 대한 반론들을 논하고, 아이를 가르치듯 가르치는 학습 기계를 만들자고 제안했다." data-href="E1.html#turing1950"><circle cx="603.9" cy="241.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="chomsky1956" data-t="Three models for the description of language" data-m="Chomsky · 1956" data-w="영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다." data-href="E1.html#chomsky1956"><circle cx="910.8" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<h2>계보</h2><figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 358" role="img" aria-label="lineage">
+<text x="565.0" y="354" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
+<text x="142" y="26" text-anchor="end" fill="var(--fg3)">주제 묶음</text>
+<line class="grid" x1="150" x2="980" y1="100" y2="100"/>
+<text x="142" y="69.0" text-anchor="end">신경망 학습</text>
+<line class="grid" x1="150" x2="980" y1="170" y2="170"/>
+<text x="142" y="139.0" text-anchor="end">언어·음성</text>
+<line class="grid" x1="150" x2="980" y1="240" y2="240"/>
+<text x="142" y="209.0" text-anchor="end">탐색·계획·지식</text>
+<line class="grid" x1="150" x2="980" y1="310" y2="310"/>
+<text x="142" y="279.0" text-anchor="end">확률·통계·기원</text>
+<line class="ax" x1="305.6" x2="305.6" y1="30" y2="310"/><text x="305.6" y="332" text-anchor="middle">1945</text>
+<line class="ax" x1="565.0" x2="565.0" y1="30" y2="310"/><text x="565.0" y="332" text-anchor="middle">1950</text>
+<line class="ax" x1="824.4" x2="824.4" y1="30" y2="310"/><text x="824.4" y="332" text-anchor="middle">1955</text>
+<path class="edge" data-s="wiener1948" data-d="mcculloch1943" d="M249.4,45.5 C368.3,45.5 368.3,268.5 487.2,268.5"/>
+<path class="edge" data-s="shannon1948" data-d="wiener1948" d="M487.2,268.5 C487.2,268.5 487.2,255.5 487.2,255.5"/>
+<path class="edge" data-s="shannon1950" data-d="wiener1948" d="M487.2,268.5 C504.5,268.5 504.5,185.5 521.8,185.5"/>
+<path class="edge" data-s="chomsky1956" data-d="shannon1948" d="M487.2,255.5 C699.0,255.5 699.0,115.5 910.8,115.5"/>
+<g class="dot" data-k="mcculloch1943" data-t="A logical calculus of the ideas immanent in nervous activity" data-m="McCulloch &amp; Pitts · 1943" data-w="신경의 실무율(全無律)에 기대어 신경 사건과 그 관계를 명제 논리로 다룬다. 모든 망의 행동을 그 논리로 기술할 수 있고, 조건을 만족하는 논리식마다 그대로 행동하는 망을 만들 수 있음을 보인다." data-href="E1.html#mcculloch1943"><circle cx="249.4" cy="45.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="shannon1948" data-t="A Mathematical Theory of Communication" data-m="Shannon · 1948" data-w="나이퀴스트와 하틀리의 통신 이론을 채널 잡음과 메시지의 통계적 구조까지 확장한다. 정보를 로그 척도로 재고, 밑이 2인 단위를 비트라 부른다." data-href="E1.html#shannon1948"><circle cx="487.2" cy="255.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wiener1948" data-t="Cybernetics: or Control and Communication in the Animal and the Machine" data-m="Wiener · 1948" data-w="기계와 동물의 제어·통신 이론을 합친 분야에 「사이버네틱스」라는 이름을 붙이고, 되먹임·시계열과 정보·계산 기계와 신경계를 다루는 틀을 세운다. 저자의 전시 예측·되먹임 연구를 신경생리학·통계역학과 한데 모은다." data-href="E1.html#wiener1948"><circle cx="487.2" cy="268.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="shannon1950" data-t="Programming a computer for playing chess" data-m="Shannon · 1949" data-w="비수치 문제를 다루는 기계의 시험 사례로 범용 컴퓨터의 체스 프로그램을 구상한다. 기물·폰 구조·기물 위치·기동성으로 국면을 평가하는 함수 f(P)와 수(手) 변화에 대한 앞 내다보기를 결합할 것을 제안한다." data-href="E1.html#shannon1950"><circle cx="521.8" cy="185.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hebb1949" data-t="The Organization of Behavior" data-m="Hebb · 1949" data-w="신경생리학과 심리학을 잇는 행동의 신경심리학 이론을 세운다. 세포 사이의 반복된 활동이 한 세포가 다른 세포를 발화시키는 효율을 높이는 지속적 변화를 낳는다고 제안하고, 이를 세포 집합의 성장에 쓴다." data-href="E1.html#hebb1949"><circle cx="539.1" cy="45.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="turing1950" data-t="Computing Machinery and Intelligence" data-m="Turing · 1950" data-w="「기계는 생각할 수 있는가」라는 물음을, 질문자가 텔레프린터로 기계와 사람에게 질문하는 「흉내 게임」으로 바꾸고, 적절히 프로그램된 디지털 컴퓨터가 그 게임을 만족스럽게 해낼 수 있는가로 다시 세웠다. 기계 사고에 대한 반론들을 논하고, 아이를 가르치듯 가르치는 학습 기계를 만들자고 제안했다." data-href="E1.html#turing1950"><circle cx="603.9" cy="255.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="chomsky1956" data-t="Three models for the description of language" data-m="Chomsky · 1956" data-w="영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다." data-href="E1.html#chomsky1956"><circle cx="910.8" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
 </svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 세로줄은 주제 묶음이다. 한 줄 안의 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다.</p><p><b>보이는 것: </b>이 그림에는 논문 7편과 확인된 인용선 4개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Wiener 1948(선 2개)이다. 선이 하나도 없는 논문은 2편이다. 인용된 논문의 첫 공개일이 인용한 논문보다 늦은 것으로 확인되는 선은 없다(논문 카드에 적은 날짜 기준). 이 밖에 선 1개는 날짜가 연도나 달까지만 적혀 있어 어느 쪽이 먼저인지 가릴 수 없다.</p><p>조심할 것: 선은 이 장의 논문끼리만 그었다. 다른 장 논문과의 인용은 아래 논문 카드의 「이 목록의 논문 중 인용한 것」에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p><details><summary>줄(주제 묶음) 이름 풀이</summary><dl><dt><a href="../lineage/neural.html">신경망 학습</a></dt><dd>형식 뉴런에서 퍼셉트론, 역전파(backpropagation), 합성곱(convolution)·순환망(recurrent network), 정규화와 잔차 연결(residual connection)까지.</dd><dt><a href="../lineage/lang.html">언어·음성</a></dt><dd>통계적 언어 모델과 음성 인식에서 임베딩, 어텐션, 트랜스포머, 사전학습 언어 모델까지.</dd><dt><a href="../lineage/search.html">탐색·계획·지식</a></dt><dd>논리 이론가·GPS·A*·STRIPS·전문가 시스템(expert system)·MCTS.</dd><dt><a href="../lineage/stat.html">확률·통계·기원</a></dt><dd>사이버네틱스·정보 이론·PAC 학습·SVM·앙상블·베이지안 망(Bayesian network).</dd></dl></details></figcaption></figure>
 <h2>논문 목록 (7)</h2><article class="paper" id="mcculloch1943">
 <h3>A logical calculus of the ideas immanent in nervous activity</h3>
@@ -162,7 +163,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <p class="wc"><b>무엇을 바꿨나.</b> 영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다.</p>
 <p class="rel">이 목록의 논문 중 인용한 것: <a href="E1.html#shannon1948">Shannon 1948</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#collobert2011">Collobert et al. 2011</a>, <a href="E5.html#graves2014">Graves et al. 2014</a></p>
 </article></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.5 · 생성일 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.6 · 생성일 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

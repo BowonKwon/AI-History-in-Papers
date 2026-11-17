@@ -57,9 +57,9 @@ figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summa
 @media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
-svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg.dense .edge{opacity:.3}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.late{stroke:var(--s4);stroke-width:2;opacity:.95}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.late.hi{stroke:var(--s4);stroke-width:3}svg .edge.dim{opacity:.12}
 svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
-.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}.legend.lg-line span::before{width:20px;height:2px;border-radius:0;vertical-align:4px;opacity:.8}.legend.lg-line span.late::before{height:3px;opacity:1}
 .pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
 .note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
 .prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
@@ -74,220 +74,222 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html">시대</a><a href="../../ko/lineage/index.html" class="on">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
 <div class="right"><a class="hub" href="https://bowonkwon.github.io/">공개 자료 허브</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
 <main><h1>언어·음성</h1><p class="lead">통계적 언어 모델과 음성 인식에서 임베딩, 어텐션, 트랜스포머, 사전학습 언어 모델까지.</p><div class="glance"><p class="glance-h">핵심</p><ul><li>「언어·음성」 묶음의 논문을 첫 공개 연도 순으로 놓고, 그 사이의 확인된 인용을 선으로 이은 면이다.</li><li>논문 38편(첫 공개 1956–2023년), 묶음 안의 인용선 162개. 38편 가운데 25편이 2012년 이후에 처음 공개되었다.</li><li>다른 묶음 논문과의 인용은 이 면에 그리지 않는다.</li></ul></div>
-<figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 134" role="img" aria-label="lineage">
-<text x="565.0" y="130" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
-<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
-<text x="142" y="55.0" text-anchor="end">언어·음성</text>
-<line class="ax" x1="209.3" x2="209.3" y1="16" y2="86"/><text x="209.3" y="108" text-anchor="middle">1960</text>
-<line class="ax" x1="327.9" x2="327.9" y1="16" y2="86"/><text x="327.9" y="108" text-anchor="middle">1970</text>
-<line class="ax" x1="446.4" x2="446.4" y1="16" y2="86"/><text x="446.4" y="108" text-anchor="middle">1980</text>
-<line class="ax" x1="565.0" x2="565.0" y1="16" y2="86"/><text x="565.0" y="108" text-anchor="middle">1990</text>
-<line class="ax" x1="683.6" x2="683.6" y1="16" y2="86"/><text x="683.6" y="108" text-anchor="middle">2000</text>
-<line class="ax" x1="802.1" x2="802.1" y1="16" y2="86"/><text x="802.1" y="108" text-anchor="middle">2010</text>
-<line class="ax" x1="920.7" x2="920.7" y1="16" y2="86"/><text x="920.7" y="108" text-anchor="middle">2020</text>
-<path class="edge" data-s="winograd1972" data-d="weizenbaum1966" d="M280.4,31.5 C310.1,31.5 310.1,31.5 339.7,31.5"/>
-<path class="edge" data-s="bengio2003" data-d="deerwester1990" d="M572.9,44.5 C646.5,44.5 646.5,31.5 720.1,31.5"/>
-<path class="edge" data-s="collobert2011" data-d="waibel1989" d="M538.3,31.5 C677.1,31.5 677.1,31.5 816.0,31.5"/>
-<path class="edge" data-s="collobert2011" data-d="chomsky1956" d="M169.8,31.5 C492.9,31.5 492.9,31.5 816.0,31.5"/>
-<path class="edge" data-s="collobert2011" data-d="rabiner1989" d="M554.1,31.5 C685.1,31.5 685.1,31.5 816.0,31.5"/>
-<path class="edge" data-s="collobert2011" data-d="bengio2003" d="M720.1,31.5 C768.1,31.5 768.1,31.5 816.0,31.5"/>
-<path class="edge" data-s="collobert2011" data-d="lafferty2001" d="M700.4,31.5 C758.2,31.5 758.2,31.5 816.0,31.5"/>
-<path class="edge" data-s="collobert2011" data-d="turian2010" d="M808.1,31.5 C812.0,31.5 812.0,31.5 816.0,31.5"/>
-<path class="edge" data-s="mikolov2013b" data-d="mikolov2013" d="M837.7,44.5 C842.2,44.5 842.2,31.5 846.6,31.5"/>
-<path class="edge" data-s="mikolov2013b" data-d="turian2010" d="M808.1,31.5 C827.3,31.5 827.3,31.5 846.6,31.5"/>
-<path class="edge" data-s="cho2014" data-d="mikolov2013b" d="M846.6,31.5 C850.6,31.5 850.6,31.5 854.5,31.5"/>
-<path class="edge" data-s="sutskever2014" data-d="mikolov2010" d="M810.0,57.5 C833.8,57.5 833.8,57.5 857.5,57.5"/>
-<path class="edge" data-s="sutskever2014" data-d="cho2014" d="M854.5,31.5 C856.0,31.5 856.0,57.5 857.5,57.5"/>
-<path class="edge" data-s="bahdanau2014" data-d="sutskever2014" d="M857.5,57.5 C857.5,57.5 857.5,44.5 857.5,44.5"/>
-<path class="edge" data-s="bahdanau2014" data-d="cho2014" d="M854.5,31.5 C856.0,31.5 856.0,44.5 857.5,44.5"/>
-<path class="edge" data-s="pennington2014" data-d="mikolov2013" d="M837.7,44.5 C848.1,44.5 848.1,31.5 858.5,31.5"/>
-<path class="edge" data-s="pennington2014" data-d="deerwester1990" d="M572.9,44.5 C715.7,44.5 715.7,31.5 858.5,31.5"/>
-<path class="edge" data-s="pennington2014" data-d="mikolov2013b" d="M846.6,31.5 C852.5,31.5 852.5,31.5 858.5,31.5"/>
-<path class="edge" data-s="pennington2014" data-d="turian2010" d="M808.1,31.5 C833.3,31.5 833.3,31.5 858.5,31.5"/>
-<path class="edge" data-s="pennington2014" data-d="collobert2011" d="M816.0,31.5 C837.2,31.5 837.2,31.5 858.5,31.5"/>
-<path class="edge" data-s="luong2015" data-d="sutskever2014" d="M857.5,57.5 C862.9,57.5 862.9,31.5 868.3,31.5"/>
-<path class="edge" data-s="sennrich2015" data-d="sutskever2014" d="M857.5,57.5 C862.9,57.5 862.9,44.5 868.3,44.5"/>
-<path class="edge" data-s="vaswani2017" data-d="wu2016" d="M881.2,31.5 C885.6,31.5 885.6,31.5 890.1,31.5"/>
-<path class="edge" data-s="peters2018" data-d="lafferty2001" d="M700.4,31.5 C799.2,31.5 799.2,44.5 898.0,44.5"/>
-<path class="edge" data-s="peters2018" data-d="turian2010" d="M808.1,31.5 C853.0,31.5 853.0,44.5 898.0,44.5"/>
-<path class="edge" data-s="peters2018" data-d="pennington2014" d="M858.5,31.5 C878.2,31.5 878.2,44.5 898.0,44.5"/>
-<path class="edge" data-s="devlin2018" data-d="mikolov2013b" d="M846.6,31.5 C876.2,31.5 876.2,31.5 905.9,31.5"/>
-<path class="edge" data-s="devlin2018" data-d="turian2010" d="M808.1,31.5 C857.0,31.5 857.0,31.5 905.9,31.5"/>
-<path class="edge" data-s="devlin2018" data-d="pennington2014" d="M858.5,31.5 C882.2,31.5 882.2,31.5 905.9,31.5"/>
-<path class="edge" data-s="devlin2018" data-d="wu2016" d="M881.2,31.5 C893.5,31.5 893.5,31.5 905.9,31.5"/>
-<path class="edge" data-s="devlin2018" data-d="vaswani2017" d="M890.1,31.5 C898.0,31.5 898.0,31.5 905.9,31.5"/>
-<path class="edge" data-s="devlin2018" data-d="peters2018" d="M898.0,44.5 C901.9,44.5 901.9,31.5 905.9,31.5"/>
-<path class="edge" data-s="devlin2018" data-d="howard2018" d="M897.0,31.5 C901.4,31.5 901.4,31.5 905.9,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="mikolov2013" d="M837.7,44.5 C877.7,44.5 877.7,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="sutskever2014" d="M857.5,57.5 C887.6,57.5 887.6,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="mikolov2013b" d="M846.6,31.5 C882.2,31.5 882.2,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="pennington2014" d="M858.5,31.5 C888.1,31.5 888.1,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="wu2016" d="M881.2,31.5 C899.5,31.5 899.5,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="vaswani2017" d="M890.1,31.5 C903.9,31.5 903.9,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="peters2018" d="M898.0,44.5 C907.9,44.5 907.9,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="howard2018" d="M897.0,31.5 C907.4,31.5 907.4,31.5 917.8,31.5"/>
-<path class="edge" data-s="brown2020" data-d="mikolov2013" d="M837.7,44.5 C881.2,44.5 881.2,31.5 924.7,31.5"/>
-<path class="edge" data-s="brown2020" data-d="pennington2014" d="M858.5,31.5 C891.6,31.5 891.6,31.5 924.7,31.5"/>
-<path class="edge" data-s="brown2020" data-d="vaswani2017" d="M890.1,31.5 C907.4,31.5 907.4,31.5 924.7,31.5"/>
-<path class="edge" data-s="brown2020" data-d="howard2018" d="M897.0,31.5 C910.8,31.5 910.8,31.5 924.7,31.5"/>
-<path class="edge" data-s="brown2020" data-d="lewis2020" d="M924.7,44.5 C924.7,44.5 924.7,31.5 924.7,31.5"/>
-<path class="edge" data-s="lewis2020" data-d="vaswani2017" d="M890.1,31.5 C907.4,31.5 907.4,44.5 924.7,44.5"/>
-<path class="edge" data-s="lewis2020" data-d="raffel2019" d="M917.8,31.5 C921.2,31.5 921.2,44.5 924.7,44.5"/>
-<path class="edge" data-s="chen2021" data-d="sutskever2014" d="M857.5,57.5 C898.0,57.5 898.0,31.5 938.5,31.5"/>
-<path class="edge" data-s="chen2021" data-d="mikolov2013b" d="M846.6,31.5 C892.6,31.5 892.6,31.5 938.5,31.5"/>
-<path class="edge" data-s="chen2021" data-d="vaswani2017" d="M890.1,31.5 C914.3,31.5 914.3,31.5 938.5,31.5"/>
-<path class="edge" data-s="chen2021" data-d="peters2018" d="M898.0,44.5 C918.2,44.5 918.2,31.5 938.5,31.5"/>
-<path class="edge" data-s="wei2022" data-d="vaswani2017" d="M890.1,31.5 C917.3,31.5 917.3,31.5 944.4,31.5"/>
-<path class="edge" data-s="wei2022" data-d="brown2020" d="M924.7,31.5 C934.5,31.5 934.5,31.5 944.4,31.5"/>
-<path class="edge" data-s="turian2010" data-d="bengio2003" d="M720.1,31.5 C764.1,31.5 764.1,31.5 808.1,31.5"/>
-<path class="edge" data-s="mikolov2010" data-d="bengio2003" d="M720.1,31.5 C765.1,31.5 765.1,57.5 810.0,57.5"/>
-<path class="edge" data-s="mikolov2013" data-d="bengio2003" d="M720.1,31.5 C778.9,31.5 778.9,44.5 837.7,44.5"/>
-<path class="edge" data-s="mikolov2013" data-d="collobert2011" d="M816.0,31.5 C826.8,31.5 826.8,44.5 837.7,44.5"/>
-<path class="edge" data-s="mikolov2013" data-d="mikolov2010" d="M810.0,57.5 C823.9,57.5 823.9,44.5 837.7,44.5"/>
-<path class="edge" data-s="mikolov2013" data-d="mikolov2013b" d="M846.6,31.5 C842.2,31.5 842.2,44.5 837.7,44.5"/>
-<path class="edge" data-s="mikolov2013b" data-d="bengio2003" d="M720.1,31.5 C783.4,31.5 783.4,31.5 846.6,31.5"/>
-<path class="edge" data-s="cho2014" data-d="bengio2003" d="M720.1,31.5 C787.3,31.5 787.3,31.5 854.5,31.5"/>
-<path class="edge" data-s="sutskever2014" data-d="bahdanau2014" d="M857.5,44.5 C857.5,44.5 857.5,57.5 857.5,57.5"/>
-<path class="edge" data-s="sutskever2014" data-d="bengio2003" d="M720.1,31.5 C788.8,31.5 788.8,57.5 857.5,57.5"/>
-<path class="edge" data-s="sutskever2014" data-d="hinton2012" d="M835.7,31.5 C846.6,31.5 846.6,57.5 857.5,57.5"/>
-<path class="edge" data-s="bahdanau2014" data-d="bengio2003" d="M720.1,31.5 C788.8,31.5 788.8,44.5 857.5,44.5"/>
-<path class="edge" data-s="pennington2014" data-d="bengio2003" d="M720.1,31.5 C789.3,31.5 789.3,31.5 858.5,31.5"/>
-<path class="edge" data-s="luong2015" data-d="bahdanau2014" d="M857.5,44.5 C862.9,44.5 862.9,31.5 868.3,31.5"/>
-<path class="edge" data-s="luong2015" data-d="cho2014" d="M854.5,31.5 C861.4,31.5 861.4,31.5 868.3,31.5"/>
-<path class="edge" data-s="sennrich2015" data-d="bahdanau2014" d="M857.5,44.5 C862.9,44.5 862.9,44.5 868.3,44.5"/>
-<path class="edge" data-s="sennrich2015" data-d="cho2014" d="M854.5,31.5 C861.4,31.5 861.4,44.5 868.3,44.5"/>
-<path class="edge" data-s="sennrich2015" data-d="luong2015" d="M868.3,31.5 C868.3,31.5 868.3,44.5 868.3,44.5"/>
-<path class="edge" data-s="wu2016" data-d="bahdanau2014" d="M857.5,44.5 C869.3,44.5 869.3,31.5 881.2,31.5"/>
-<path class="edge" data-s="wu2016" data-d="brown1990" d="M569.9,31.5 C725.6,31.5 725.6,31.5 881.2,31.5"/>
-<path class="edge" data-s="wu2016" data-d="cho2014" d="M854.5,31.5 C867.9,31.5 867.9,31.5 881.2,31.5"/>
-<path class="edge" data-s="wu2016" data-d="luong2015" d="M868.3,31.5 C874.8,31.5 874.8,31.5 881.2,31.5"/>
-<path class="edge" data-s="wu2016" data-d="sennrich2015" d="M868.3,44.5 C874.8,44.5 874.8,31.5 881.2,31.5"/>
-<path class="edge" data-s="wu2016" data-d="sutskever2014" d="M857.5,57.5 C869.3,57.5 869.3,31.5 881.2,31.5"/>
-<path class="edge" data-s="vaswani2017" data-d="bahdanau2014" d="M857.5,44.5 C873.8,44.5 873.8,31.5 890.1,31.5"/>
-<path class="edge" data-s="vaswani2017" data-d="cho2014" d="M854.5,31.5 C872.3,31.5 872.3,31.5 890.1,31.5"/>
-<path class="edge" data-s="vaswani2017" data-d="luong2015" d="M868.3,31.5 C879.2,31.5 879.2,31.5 890.1,31.5"/>
-<path class="edge" data-s="vaswani2017" data-d="sennrich2015" d="M868.3,44.5 C879.2,44.5 879.2,31.5 890.1,31.5"/>
-<path class="edge" data-s="vaswani2017" data-d="sutskever2014" d="M857.5,57.5 C873.8,57.5 873.8,31.5 890.1,31.5"/>
-<path class="edge" data-s="peters2018" data-d="collobert2011" d="M816.0,31.5 C857.0,31.5 857.0,44.5 898.0,44.5"/>
-<path class="edge" data-s="peters2018" data-d="mikolov2013b" d="M846.6,31.5 C872.3,31.5 872.3,44.5 898.0,44.5"/>
-<path class="edge" data-s="howard2018" data-d="mikolov2013b" d="M846.6,31.5 C871.8,31.5 871.8,31.5 897.0,31.5"/>
-<path class="edge" data-s="howard2018" data-d="peters2018" d="M898.0,44.5 C897.5,44.5 897.5,31.5 897.0,31.5"/>
-<path class="edge" data-s="radford2018" data-d="collobert2011" d="M816.0,31.5 C859.0,31.5 859.0,31.5 901.9,31.5"/>
-<path class="edge" data-s="radford2018" data-d="howard2018" d="M897.0,31.5 C899.5,31.5 899.5,31.5 901.9,31.5"/>
-<path class="edge" data-s="radford2018" data-d="mikolov2013b" d="M846.6,31.5 C874.3,31.5 874.3,31.5 901.9,31.5"/>
-<path class="edge" data-s="radford2018" data-d="pennington2014" d="M858.5,31.5 C880.2,31.5 880.2,31.5 901.9,31.5"/>
-<path class="edge" data-s="radford2018" data-d="peters2018" d="M898.0,44.5 C900.0,44.5 900.0,31.5 901.9,31.5"/>
-<path class="edge" data-s="radford2018" data-d="sennrich2015" d="M868.3,44.5 C885.1,44.5 885.1,31.5 901.9,31.5"/>
-<path class="edge" data-s="radford2018" data-d="vaswani2017" d="M890.1,31.5 C896.0,31.5 896.0,31.5 901.9,31.5"/>
-<path class="edge" data-s="devlin2018" data-d="radford2018" d="M901.9,31.5 C903.9,31.5 903.9,31.5 905.9,31.5"/>
-<path class="edge" data-s="radford2019" data-d="bengio2003" d="M720.1,31.5 C815.0,31.5 815.0,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="collobert2011" d="M816.0,31.5 C862.9,31.5 862.9,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="devlin2018" d="M905.9,31.5 C907.9,31.5 907.9,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="howard2018" d="M897.0,31.5 C903.4,31.5 903.4,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="mikolov2013b" d="M846.6,31.5 C878.2,31.5 878.2,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="pennington2014" d="M858.5,31.5 C884.2,31.5 884.2,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="peters2018" d="M898.0,44.5 C903.9,44.5 903.9,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="radford2018" d="M901.9,31.5 C905.9,31.5 905.9,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="sennrich2015" d="M868.3,44.5 C889.1,44.5 889.1,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="sutskever2014" d="M857.5,57.5 C883.7,57.5 883.7,44.5 909.8,44.5"/>
-<path class="edge" data-s="radford2019" data-d="vaswani2017" d="M890.1,31.5 C900.0,31.5 900.0,44.5 909.8,44.5"/>
-<path class="edge" data-s="raffel2019" data-d="bahdanau2014" d="M857.5,44.5 C887.6,44.5 887.6,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="sennrich2015" d="M868.3,44.5 C893.0,44.5 893.0,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="radford2018" d="M901.9,31.5 C909.8,31.5 909.8,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="devlin2018" d="M905.9,31.5 C911.8,31.5 911.8,31.5 917.8,31.5"/>
-<path class="edge" data-s="raffel2019" data-d="radford2019" d="M909.8,44.5 C913.8,44.5 913.8,31.5 917.8,31.5"/>
-<path class="edge" data-s="brown2020" data-d="radford2018" d="M901.9,31.5 C913.3,31.5 913.3,31.5 924.7,31.5"/>
-<path class="edge" data-s="brown2020" data-d="devlin2018" d="M905.9,31.5 C915.3,31.5 915.3,31.5 924.7,31.5"/>
-<path class="edge" data-s="brown2020" data-d="radford2019" d="M909.8,44.5 C917.3,44.5 917.3,31.5 924.7,31.5"/>
-<path class="edge" data-s="brown2020" data-d="raffel2019" d="M917.8,31.5 C921.2,31.5 921.2,31.5 924.7,31.5"/>
-<path class="edge" data-s="lewis2020" data-d="devlin2018" d="M905.9,31.5 C915.3,31.5 915.3,44.5 924.7,44.5"/>
-<path class="edge" data-s="lewis2020" data-d="radford2018" d="M901.9,31.5 C913.3,31.5 913.3,44.5 924.7,44.5"/>
-<path class="edge" data-s="lewis2020" data-d="radford2019" d="M909.8,44.5 C917.3,44.5 917.3,44.5 924.7,44.5"/>
-<path class="edge" data-s="chen2021" data-d="brown2020" d="M924.7,31.5 C931.6,31.5 931.6,31.5 938.5,31.5"/>
-<path class="edge" data-s="chen2021" data-d="devlin2018" d="M905.9,31.5 C922.2,31.5 922.2,31.5 938.5,31.5"/>
-<path class="edge" data-s="chen2021" data-d="radford2018" d="M901.9,31.5 C920.2,31.5 920.2,31.5 938.5,31.5"/>
-<path class="edge" data-s="chen2021" data-d="radford2019" d="M909.8,44.5 C924.2,44.5 924.2,31.5 938.5,31.5"/>
-<path class="edge" data-s="chen2021" data-d="raffel2019" d="M917.8,31.5 C928.1,31.5 928.1,31.5 938.5,31.5"/>
-<path class="edge" data-s="wei2022" data-d="peters2018" d="M898.0,44.5 C921.2,44.5 921.2,31.5 944.4,31.5"/>
-<path class="edge" data-s="wei2022" data-d="devlin2018" d="M905.9,31.5 C925.2,31.5 925.2,31.5 944.4,31.5"/>
-<path class="edge" data-s="wei2022" data-d="raffel2019" d="M917.8,31.5 C931.1,31.5 931.1,31.5 944.4,31.5"/>
-<path class="edge" data-s="wei2022" data-d="chen2021" d="M938.5,31.5 C941.5,31.5 941.5,31.5 944.4,31.5"/>
-<path class="edge" data-s="wei2022" data-d="wang2022" d="M946.4,44.5 C945.4,44.5 945.4,31.5 944.4,31.5"/>
-<path class="edge" data-s="kojima2022" data-d="vaswani2017" d="M890.1,31.5 C919.2,31.5 919.2,31.5 948.4,31.5"/>
-<path class="edge" data-s="kojima2022" data-d="devlin2018" d="M905.9,31.5 C927.1,31.5 927.1,31.5 948.4,31.5"/>
-<path class="edge" data-s="kojima2022" data-d="radford2019" d="M909.8,44.5 C929.1,44.5 929.1,31.5 948.4,31.5"/>
-<path class="edge" data-s="kojima2022" data-d="raffel2019" d="M917.8,31.5 C933.1,31.5 933.1,31.5 948.4,31.5"/>
-<path class="edge" data-s="kojima2022" data-d="brown2020" d="M924.7,31.5 C936.5,31.5 936.5,31.5 948.4,31.5"/>
-<path class="edge" data-s="kojima2022" data-d="wei2022" d="M944.4,31.5 C946.4,31.5 946.4,31.5 948.4,31.5"/>
-<path class="edge" data-s="kojima2022" data-d="wang2022" d="M946.4,44.5 C947.4,44.5 947.4,31.5 948.4,31.5"/>
-<path class="edge" data-s="wang2022" data-d="radford2019" d="M909.8,44.5 C928.1,44.5 928.1,44.5 946.4,44.5"/>
-<path class="edge" data-s="wang2022" data-d="brown2020" d="M924.7,31.5 C935.5,31.5 935.5,44.5 946.4,44.5"/>
-<path class="edge" data-s="wang2022" data-d="chen2021" d="M938.5,31.5 C942.5,31.5 942.5,44.5 946.4,44.5"/>
-<path class="edge" data-s="wang2022" data-d="wei2022" d="M944.4,31.5 C945.4,31.5 945.4,44.5 946.4,44.5"/>
-<path class="edge" data-s="wang2022" data-d="kojima2022" d="M948.4,31.5 C947.4,31.5 947.4,44.5 946.4,44.5"/>
-<path class="edge" data-s="touvron2023" data-d="bengio2003" d="M720.1,31.5 C838.7,31.5 838.7,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="brown1990" d="M569.9,31.5 C763.6,31.5 763.6,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="brown2020" d="M924.7,31.5 C941.0,31.5 941.0,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="chen2021" d="M938.5,31.5 C947.9,31.5 947.9,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="devlin2018" d="M905.9,31.5 C931.6,31.5 931.6,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="mikolov2010" d="M810.0,57.5 C883.7,57.5 883.7,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="radford2018" d="M901.9,31.5 C929.6,31.5 929.6,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="radford2019" d="M909.8,44.5 C933.6,44.5 933.6,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="raffel2019" d="M917.8,31.5 C937.5,31.5 937.5,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="sennrich2015" d="M868.3,44.5 C912.8,44.5 912.8,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="vaswani2017" d="M890.1,31.5 C923.7,31.5 923.7,31.5 957.3,31.5"/>
-<path class="edge" data-s="touvron2023" data-d="wang2022" d="M946.4,44.5 C951.8,44.5 951.8,31.5 957.3,31.5"/>
-<path class="edge" data-s="openai2023" data-d="brown2020" d="M924.7,31.5 C941.5,31.5 941.5,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="chen2021" d="M938.5,31.5 C948.4,31.5 948.4,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="devlin2018" d="M905.9,31.5 C932.1,31.5 932.1,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="kojima2022" d="M948.4,31.5 C953.3,31.5 953.3,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="radford2018" d="M901.9,31.5 C930.1,31.5 930.1,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="radford2019" d="M909.8,44.5 C934.1,44.5 934.1,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="raffel2019" d="M917.8,31.5 C938.0,31.5 938.0,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="touvron2023" d="M957.3,31.5 C957.8,31.5 957.8,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="vaswani2017" d="M890.1,31.5 C924.2,31.5 924.2,44.5 958.3,44.5"/>
-<path class="edge" data-s="openai2023" data-d="wei2022" d="M944.4,31.5 C951.3,31.5 951.3,44.5 958.3,44.5"/>
-<g class="dot" data-k="chomsky1956" data-t="Three models for the description of language" data-m="Chomsky · 1956" data-w="영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다." data-href="../chapters/E1.html#chomsky1956"><circle cx="169.8" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="weizenbaum1966" data-t="ELIZA—a computer program for the study of natural language communication between man and machine" data-m="Weizenbaum · 1966" data-w="MIT MAC 시분할 체계에서 입력 문장을 키워드가 촉발하는 분해 규칙으로 분석하고 재조립 규칙으로 응답을 만들며, 규칙은 편집 가능한 「스크립트」로 주는 프로그램 ELIZA를 기술했다. 키워드 식별, 최소 문맥, 변환, 키워드 없는 응답, 이 접근의 심리학적 문제를 논했다." data-href="../chapters/E2.html#weizenbaum1966"><circle cx="280.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="winograd1972" data-t="Understanding natural language" data-m="Winograd · 1971" data-w="장난감 블록을 다루는 모의 로봇과 영어로 대화하며 질문에 답하고 명령을 수행하고 정보를 받아들이는 체계를 기술한다. 구문 분석기, 영어 인식 문법, 의미 분석 프로그램, 일반 문제 해결 체계를 결합하고, 지식을 절차로 표현하며 구문·의미·추론에 각각 절차적 표현을 둔다." data-href="../chapters/E2.html#winograd1972"><circle cx="339.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="waibel1989" data-t="Phoneme recognition using time-delay neural networks" data-m="Waibel et al. · 1987" data-w="시간 지연 배열로 시간상 위치와 무관한 음향·음소 특징을 학습하는 시간 지연 신경망(TDNN)을 음소 인식에 제시한다. B·D·G의 화자 종속 인식에서 같은 과제로 훈련한 이산 은닉 마르코프 모델과 비교한다." data-href="../chapters/E3.html#waibel1989"><circle cx="538.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="rabiner1989" data-t="A tutorial on hidden Markov models and selected applications in speech recognition" data-m="Rabiner · 1989" data-w="이산 마르코프 연쇄에서 가변 지속·연속 밀도 모델까지 은닉 마르코프 모델의 이론을 검토하고 음성 인식 문제에의 적용을 보인다. HMM 설계를 세 가지 기본 문제로 정리한다." data-href="../chapters/E3.html#rabiner1989"><circle cx="554.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="brown1990" data-t="A statistical approach to machine translation" data-m="Brown et al. · 1990" data-w="번역을 Pr(S)Pr(T|S)를 최대로 하는 원문 S를 고르는 문제로 세우고, 언어 모델과 번역 모델을 결합한다. 이 접근을 프랑스어→영어 번역에 적용한 예비 결과를 준다." data-href="../chapters/E4.html#brown1990"><circle cx="569.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="deerwester1990" data-t="Indexing by latent semantic analysis" data-m="Deerwester et al. · 1990" data-w="용어-문서 행렬에 특이값 분해를 적용해 약 100개의 직교 요인을 얻고, 그 공간에 용어·문서·질의를 표현하여 글자 그대로의 용어 일치 대신 잠재 구조로 검색하는 잠재 의미 색인(LSI)을 기술한다. 두 문서 집합에서 단순 용어 일치, SMART, Voorhees 시스템과 비교한 시험 결과를 보고한다." data-href="../chapters/E4.html#deerwester1990"><circle cx="572.9" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="lafferty2001" data-t="Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data" data-m="Lafferty et al. · 2001" data-w="순서열의 표지와 분할을 위한 조건부 확률장과 반복적 매개변수 추정 알고리즘을 도입한다. 최대 엔트로피 마르코프 모델의 표지 편향 문제를 피한다고 보고하고, 합성 자료와 품사 태깅에서 HMM·MEMM과 비교한다." data-href="../chapters/E4.html#lafferty2001"><circle cx="700.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="bengio2003" data-t="A Neural Probabilistic Language Model" data-m="Bengio et al. · 2003" data-w="각 단어의 분산 표현과 단어 열의 확률 함수를 함께 학습하는 신경망 언어 모델을 제안한다. 두 말뭉치에서 n-그램 모델보다 나은 결과를 보고하고, 더 긴 문맥을 쓸 수 있음을 보인다." data-href="../chapters/E4.html#bengio2003"><circle cx="720.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="turian2010" data-t="Word Representations: A Simple and General Method for Semi-Supervised Learning" data-m="Turian et al. · 2010" data-w="비지도 단어 표현(브라운 군집, 콜로베르·웨스턴 임베딩, HLBL 임베딩)을 기존의 지도 학습 개체명 인식·청킹 시스템에 추가 특징으로 넣는다. 각 표현이 기준선보다 정확도를 높이고 이들을 결합하면 더 나아진다고 보고하며, 단어 특징과 코드를 공개한다." data-href="../chapters/E4.html#turian2010"><circle cx="808.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="ferrucci2010" data-t="Building Watson: An Overview of the DeepQA Project" data-m="Ferrucci et al. · 2010" data-w="질문 분석, 가설 생성, 증거 채점과 병합에 쓰이는 100가지가 넘는 기법을 결합하는 대규모 병렬의 확률적·증거 기반 질의응답 아키텍처 DeepQA와, 이를 퀴즈 쇼 「제퍼디!」용으로 구현한 왓슨을 설명한다. 3년간의 개발 끝에 왓슨이 제퍼디 문제에서 정밀도·확신도·속도 면에서 인간 전문가 수준에 이르렀다고 보고한다." data-href="../chapters/E4.html#ferrucci2010"><circle cx="810.0" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="mikolov2010" data-t="Recurrent neural network based language model" data-m="Mikolov et al. · 2010" data-w="순환 신경망 언어 모델을 제시하고, RNN LM 혼합이 백오프 모델보다 혼잡도를 약 50% 낮추며 WSJ와 NIST RT05에서 단어 오류율을 줄였다고 보고한다." data-href="../chapters/E4.html#mikolov2010"><circle cx="810.0" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="collobert2011" data-t="Natural Language Processing (almost) from Scratch" data-m="Collobert et al. · 2011" data-w="품사 태깅·청킹·개체명 인식·의미역 결정에 하나의 신경망 구조와 학습 알고리즘을 쓰며, 과제별 특징 대신 대량의 비표지 텍스트에서 내부 표현을 학습한다. 태깅 체계로 공개했다." data-href="../chapters/E4.html#collobert2011"><circle cx="816.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="hinton2012" data-t="Deep Neural Networks for Acoustic Modeling in Speech Recognition" data-m="Hinton et al. · 2012" data-w="토론토·MSR·구글·IBM 네 그룹이 공유하는 견해로서, 생성적 사전훈련과 판별적 미세 조정으로 훈련한 DNN 음향 모델을 검토하고, TIMIT와 다섯 개 대어휘 연속 음성 인식 과제에서 GMM-HMM 체계와 비교한 결과를 보고한다." data-href="../chapters/E5.html#hinton2012"><circle cx="835.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="mikolov2013" data-t="Efficient Estimation of Word Representations in Vector Space" data-m="Mikolov et al. · 2013" data-w="매우 큰 말뭉치에서 적은 계산으로 단어 벡터를 학습하는 두 로그 선형 구조(CBOW와 스킵그램)를 제안하고, 구문·의미 단어 유사성 시험 집합으로 평가한다." data-href="../chapters/E5.html#mikolov2013"><circle cx="837.7" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="mikolov2013b" data-t="Distributed Representations of Words and Phrases and their Compositionality" data-m="Mikolov et al. · 2013" data-w="연속 스킵그램 모델의 확장으로 빈번 단어의 하향 표집과 계층 소프트맥스의 대안인 음성 표집을 제시한다. 텍스트에서 구를 찾아 그 벡터 표현을 학습하는 방법도 기술한다." data-href="../chapters/E5.html#mikolov2013b"><circle cx="846.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="cho2014" data-t="Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation" data-m="Cho et al. · 2014" data-w="한 RNN이 기호 열을 고정 길이 벡터로 부호화하고 다른 RNN이 복호화하며 둘을 함께 훈련하는 RNN 인코더-디코더를 제안한다. 게이트 은닉 단위도 도입하고, 모델의 구 쌍 점수를 구 기반 통계 번역 체계의 추가 특징으로 쓴다." data-href="../chapters/E5.html#cho2014"><circle cx="854.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="bahdanau2014" data-t="Neural Machine Translation by Jointly Learning to Align and Translate" data-m="Bahdanau et al. · 2014" data-w="기본 인코더-디코더의 고정 길이 벡터를 병목으로 본다. 목표 단어마다 원문에서 관련 위치를 (부드럽게) 탐색해 그 위치들의 문맥 벡터로 단어를 예측하도록 모델을 확장한다." data-href="../chapters/E5.html#bahdanau2014"><circle cx="857.5" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="sutskever2014" data-t="Sequence to Sequence Learning with Neural Networks" data-m="Sutskever et al. · 2014" data-w="다층 LSTM 하나로 입력 열을 고정 차원 벡터에 사상하고 다른 깊은 LSTM으로 목표 열을 복호화해 WMT 2014 영→불 번역에서 BLEU 34.8을 보고한다. 원문 단어 순서를 뒤집으면 성능이 올랐다고도 보고한다." data-href="../chapters/E5.html#sutskever2014"><circle cx="857.5" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="pennington2014" data-t="GloVe: Global Vectors for Word Representation" data-m="Pennington et al. · 2014" data-w="단어 벡터의 선형 규칙성에 필요한 모델 성질을 분석하고, 단어-단어 동시 출현 행렬의 0이 아닌 항목으로 훈련하는 전역 로그 쌍선형 회귀 모델 GloVe를 제안한다. 단어 유추 과제에서 75%를 보고한다." data-href="../chapters/E5.html#pennington2014"><circle cx="858.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="luong2015" data-t="Effective Approaches to Attention-based Neural Machine Translation" data-m="Luong et al. · 2015" data-w="신경 기계 번역을 위해 원문 단어 전체에 주의를 두는 전역 어텐션과 원문 위치의 일부에만 주의를 두는 국소 어텐션을 제안하고 비교했다. WMT 영→독에서 국소 어텐션이 어텐션 없는 체계보다 5.0 BLEU 높았고, 앙상블은 WMT 2015 영→독에서 25.9 BLEU에 이르렀다." data-href="../chapters/E5.html#luong2015"><circle cx="868.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="sennrich2015" data-t="Neural Machine Translation of Rare Words with Subword Units" data-m="Sennrich et al. · 2015" data-w="희귀·미지 단어를 하위 단어 단위의 열로 부호화해(바이트 쌍 부호화에 기초한 분할 포함) 신경 기계 번역을 열린 어휘로 만든다. WMT 15 영→독·영→러에서 백오프 사전 기준선보다 최대 1.1·1.3 BLEU의 개선을 보고한다." data-href="../chapters/E5.html#sennrich2015"><circle cx="868.3" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wu2016" data-t="Google&#x27;s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation" data-m="Wu et al. · 2016" data-w="8층 LSTM 인코더·디코더, 잔차·어텐션 연결, 워드피스 하위 단어, 저정밀 추론, 길이 정규화와 커버리지 페널티를 둔 빔 탐색을 갖춘 실제 서비스용 신경 기계 번역 체계 GNMT를 기술한다. 사람의 나란히 평가에서 구글의 구 기반 체계보다 번역 오류가 평균 60% 줄었다." data-href="../chapters/E5.html#wu2016"><circle cx="881.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="vaswani2017" data-t="Attention Is All You Need" data-m="Vaswani et al. · 2017" data-w="순환이나 합성곱 없이 어텐션(스케일된 내적 어텐션과 다중 헤드 어텐션)만으로 세운 열 변환 구조 트랜스포머를 제안한다. WMT 2014 영→독 28.4, 영→불 41.8 BLEU를 보고하고 영어 구문 분석에도 적용한다." data-href="../chapters/E5.html#vaswani2017"><circle cx="890.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="howard2018" data-t="Universal Language Model Fine-tuning for Text Classification" data-m="Howard &amp; Ruder · 2018" data-w="일반 말뭉치로 언어 모델을 사전훈련한 뒤 판별적 미세 조정, 기울어진 삼각 학습률, 점진적 해동으로 목표 과제에 미세 조정하고 분류기를 훈련하는 ULMFiT를 제안한다. 여섯 텍스트 분류 자료 대부분에서 18~24%의 오류 감소를 보고한다." data-href="../chapters/E6.html#howard2018"><circle cx="897.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="peters2018" data-t="Deep contextualized word representations" data-m="Peters et al. · 2018" data-w="대규모 말뭉치로 사전훈련한 양방향 LSTM 언어 모델의 모든 내부 층을 과제별로 학습한 선형 결합으로 계산하는 단어 표현 ELMo를 소개한다. 기존 모델에 더하면 여섯 NLP 과제에서 결과가 개선되었다." data-href="../chapters/E6.html#peters2018"><circle cx="898.0" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="radford2018" data-t="Improving Language Understanding by Generative Pre-Training" data-m="Radford et al. · 2018" data-w="다층 트랜스포머 디코더를 비표지 텍스트로 언어 모델로 훈련한 뒤, 과제를 의식한 입력 변환으로 표지 과제에 미세 조정했다. 과제에 무관한 모델 하나가 연구한 자연어 이해 자료 12개 중 9개에서 최고 성능을 개선했다." data-href="../chapters/E6.html#radford2018"><circle cx="901.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="devlin2018" data-t="BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" data-m="Devlin et al. · 2018" data-w="마스크 언어 모델 목적과 다음 문장 예측으로 비표지 텍스트에 사전훈련해 표현이 좌우 문맥을 모두 조건으로 삼게 한 트랜스포머 인코더 BERT를 소개한다. 출력층 하나를 더해 미세 조정하며 11개 NLP 과제에서 새 최고 성능을 보고한다." data-href="../chapters/E6.html#devlin2018"><circle cx="905.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="radford2019" data-t="Language Models are Unsupervised Multitask Learners" data-m="Radford et al. · 2019" data-w="가장 큰 것이 15억 매개변수 GPT-2인 트랜스포머 언어 모델들을 수백만 웹페이지의 새 자료 WebText로 훈련하고, 과제별 훈련 없이 질의응답·번역·독해·요약의 제로샷 성능을 보고한다. 성능은 모델 용량에 로그 선형으로 개선된다." data-href="../chapters/E6.html#radford2019"><circle cx="909.8" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="raffel2019" data-t="Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" data-m="Raffel et al. · 2019" data-w="모든 텍스트 기반 언어 문제를 텍스트 입력·텍스트 출력으로 두는 통일된 틀을 도입하고, 그 틀로 사전훈련 목적·구조·비표지 자료·전이 방법을 체계적으로 비교한다. 말뭉치 C4와 사전훈련 모델·코드를 공개했다." data-href="../chapters/E6.html#raffel2019"><circle cx="917.8" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="brown2020" data-t="Language Models are Few-Shot Learners" data-m="Brown et al. · 2020" data-w="1750억 매개변수의 자기회귀 언어 모델 GPT-3를 훈련하고, 과제와 시연을 텍스트로만 주고 기울기 갱신이나 미세 조정 없이 제로샷·원샷·퓨샷으로 여러 NLP 과제에서 평가한다. 한계, 벤치마크 오염 분석, 사회적 영향도 함께 보고한다." data-href="../chapters/E6.html#brown2020"><circle cx="924.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="lewis2020" data-t="Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" data-m="Lewis et al. · 2020" data-w="사전훈련된 seq2seq 생성기와 위키백과 색인 위의 사전훈련 밀집 검색기를 결합해 끝에서 끝까지 미세 조정하는 검색 증강 생성(RAG)을 두 변형(열 전체에 같은 문단 / 토큰마다)으로 제안했다. 저자들의 실험에서 열린 영역 질의응답 과제 셋에서 최고 성능을 세웠다." data-href="../chapters/E6.html#lewis2020"><circle cx="924.7" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="chen2021" data-t="Evaluating Large Language Models Trained on Code" data-m="Chen et al. · 2021" data-w="공개 GitHub 코드로 미세 조정한 GPT 모델 Codex와, 문서 문자열에서 합성한 프로그램의 기능적 정확성을 재는 벤치마크 HumanEval을 소개했다. Codex는 HumanEval 문제의 28.8%(GPT-3는 0%)를, 문제당 100개 표본을 뽑으면 70.2%를 풀었다." data-href="../chapters/E6.html#chen2021"><circle cx="938.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wei2022" data-t="Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" data-m="Wei et al. · 2022" data-w="중간 추론 단계를 담은 예 몇 개를 프롬프트에 주는 생각의 사슬 프롬프트를 도입하고, 산술·상식·기호 추론 과제에서 대규모 언어 모델을 개선함을 보고했다. 그런 예 여덟 개로 PaLM 540B가 GSM8K에서 최고 정확도에 이르렀다." data-href="../chapters/E6.html#wei2022"><circle cx="944.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wang2022" data-t="Self-Consistency Improves Chain of Thought Reasoning in Language Models" data-m="Wang et al. · 2022" data-w="생각의 사슬 프롬프트에서 다양한 추론 경로를 표집하고 그것들을 주변화해 가장 일관된 답을 고르는 복호화 전략 자기 일관성을 제안했다. GSM8K(+17.9%)·SVAMP(+11.0%) 같은 산술·상식 벤치마크에서 개선을 보고한다." data-href="../chapters/E6.html#wang2022"><circle cx="946.4" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="kojima2022" data-t="Large Language Models are Zero-Shot Reasoners" data-m="Kojima et al. · 2022" data-w="각 답 앞에 「Let&#x27;s think step by step」 한 문장을 붙이는 제로샷 CoT가 손수 만든 퓨샷 예 없이도 산술·기호·논리 추론 벤치마크에서 대규모 언어 모델의 제로샷 정확도를 올림을 보였다. 예컨대 text-davinci-002의 MultiArith가 17.7%에서 78.7%로 올랐다." data-href="../chapters/E6.html#kojima2022"><circle cx="948.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="touvron2023" data-t="LLaMA: Open and Efficient Foundation Language Models" data-m="Touvron et al. · 2023" data-w="공개 자료만으로 수조 토큰을 훈련한 70억~650억 매개변수의 기반 언어 모델 LLaMA를 공개했다. 주어진 추론 예산에서 최고 성능을 겨냥하며, LLaMA-13B가 대부분의 벤치마크에서 GPT-3(175B)를 앞서고 LLaMA-65B가 Chinchilla-70B·PaLM-540B에 견줄 만하다고 보고했다." data-href="../chapters/E6.html#touvron2023"><circle cx="957.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="openai2023" data-t="GPT-4 Technical Report" data-m="OpenAI · 2023" data-w="영상·텍스트 입력을 받는 트랜스포머 기반 다중 모달 모델 GPT-4를 시험·벤치마크 결과와 사후 훈련 정렬 절차와 함께 보고하고, 1/1,000 이하의 연산으로 훈련한 모델로부터 성능의 일부를 예측하게 한 기반 설비를 기술했다. 보고서는 구조(모델 크기 포함)·하드웨어·훈련 연산량·자료 구성·훈련 방법의 세부는 담지 않는다고 적는다." data-href="../chapters/E6.html#openai2023"><circle cx="958.3" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-</svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 이 그림에는 주제 묶음이 하나뿐이라 줄도 하나다. 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다.</p><p><b>보이는 것: </b>이 그림에는 논문 38편과 확인된 인용선 162개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Bengio et al. 2003 · Vaswani et al. 2017(각각 선 11개)이다. 선이 하나도 없는 논문은 1편이다. 선 5개는 인용된 논문의 첫 공개일이 인용한 논문보다 늦다(논문 카드에 적은 날짜 기준). 이런 선에서는 인용된 논문이 더 오른쪽이나 같은 자리에 놓인다.</p><p>조심할 것: 선은 이 묶음의 논문끼리만 그었다. 다른 묶음 논문과의 인용은 장 면의 논문 카드에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p></figcaption></figure>
+<figure><div class="legend lg-line"><span style="--c:var(--fg3)">그 밖의 확인된 인용선</span><span class="late" style="--c:var(--s4)">인용된 논문의 첫 공개일이 더 늦은 선(5개)</span></div><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 160" role="img" aria-label="lineage" class="dense">
+<text x="565.0" y="156" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
+<line class="grid" x1="150" x2="980" y1="112" y2="112"/>
+<text x="142" y="68.0" text-anchor="end">언어·음성</text>
+<line class="ax" x1="190.0" x2="190.0" y1="16" y2="112"/><text x="190.0" y="134" text-anchor="middle">1960</text>
+<line class="ax" x1="270.1" x2="270.1" y1="16" y2="112"/><text x="270.1" y="134" text-anchor="middle">1970</text>
+<line class="ax" x1="350.2" x2="350.2" y1="16" y2="112"/><text x="350.2" y="134" text-anchor="middle">1980</text>
+<line class="ax" x1="430.3" x2="430.3" y1="16" y2="112"/><text x="430.3" y="134" text-anchor="middle">1990</text>
+<line class="ax" x1="510.4" x2="510.4" y1="16" y2="112"/><text x="510.4" y="134" text-anchor="middle">2000</text>
+<line class="ax" x1="590.5" x2="590.5" y1="16" y2="112"/><text x="590.5" y="134" text-anchor="middle">2010</text>
+<line class="ax" x1="664.0" x2="664.0" y1="16" y2="112"/><text x="664.0" y="134" text-anchor="middle">2014</text>
+<line class="ax" x1="778.9" x2="778.9" y1="16" y2="112"/><text x="778.9" y="134" text-anchor="middle">2018</text>
+<line class="ax" x1="893.8" x2="893.8" y1="16" y2="112"/><text x="893.8" y="134" text-anchor="middle">2022</text>
+<path class="edge" data-s="winograd1972" data-d="weizenbaum1966" d="M238.1,70.5 C258.1,70.5 258.1,44.5 278.1,44.5"/>
+<path class="edge" data-s="bengio2003" data-d="deerwester1990" d="M435.6,31.5 C485.4,31.5 485.4,44.5 535.1,44.5"/>
+<path class="edge" data-s="collobert2011" data-d="waibel1989" d="M412.3,83.5 C506.1,83.5 506.1,31.5 599.8,31.5"/>
+<path class="edge" data-s="collobert2011" data-d="chomsky1956" d="M163.3,31.5 C381.6,31.5 381.6,31.5 599.8,31.5"/>
+<path class="edge" data-s="collobert2011" data-d="rabiner1989" d="M423.0,57.5 C511.4,57.5 511.4,31.5 599.8,31.5"/>
+<path class="edge" data-s="collobert2011" data-d="bengio2003" d="M535.1,44.5 C567.5,44.5 567.5,31.5 599.8,31.5"/>
+<path class="edge" data-s="collobert2011" data-d="lafferty2001" d="M521.7,70.5 C560.8,70.5 560.8,31.5 599.8,31.5"/>
+<path class="edge" data-s="collobert2011" data-d="turian2010" d="M594.5,83.5 C597.2,83.5 597.2,31.5 599.8,31.5"/>
+<path class="edge" data-s="mikolov2013b" data-d="mikolov2013" d="M635.2,44.5 C646.0,44.5 646.0,83.5 656.8,83.5"/>
+<path class="edge" data-s="mikolov2013b" data-d="turian2010" d="M594.5,83.5 C625.6,83.5 625.6,83.5 656.8,83.5"/>
+<path class="edge" data-s="cho2014" data-d="mikolov2013b" d="M656.8,83.5 C666.4,83.5 666.4,57.5 675.9,57.5"/>
+<path class="edge" data-s="sutskever2014" data-d="mikolov2010" d="M595.8,96.5 C639.5,96.5 639.5,31.5 683.1,31.5"/>
+<path class="edge" data-s="sutskever2014" data-d="cho2014" d="M675.9,57.5 C679.5,57.5 679.5,31.5 683.1,31.5"/>
+<path class="edge" data-s="bahdanau2014" data-d="cho2014" d="M675.9,57.5 C679.5,57.5 679.5,96.5 683.1,96.5"/>
+<path class="edge" data-s="pennington2014" data-d="mikolov2013" d="M635.2,44.5 C660.4,44.5 660.4,70.5 685.5,70.5"/>
+<path class="edge" data-s="pennington2014" data-d="deerwester1990" d="M435.6,31.5 C560.6,31.5 560.6,70.5 685.5,70.5"/>
+<path class="edge" data-s="pennington2014" data-d="mikolov2013b" d="M656.8,83.5 C671.1,83.5 671.1,70.5 685.5,70.5"/>
+<path class="edge" data-s="pennington2014" data-d="turian2010" d="M594.5,83.5 C640.0,83.5 640.0,70.5 685.5,70.5"/>
+<path class="edge" data-s="pennington2014" data-d="collobert2011" d="M599.8,31.5 C642.7,31.5 642.7,70.5 685.5,70.5"/>
+<path class="edge" data-s="luong2015" data-d="sutskever2014" d="M683.1,31.5 C696.3,31.5 696.3,44.5 709.5,44.5"/>
+<path class="edge" data-s="sennrich2015" data-d="sutskever2014" d="M683.1,31.5 C696.3,31.5 696.3,83.5 709.5,83.5"/>
+<path class="edge" data-s="vaswani2017" data-d="wu2016" d="M740.6,57.5 C751.4,57.5 751.4,96.5 762.1,96.5"/>
+<path class="edge" data-s="peters2018" data-d="lafferty2001" d="M521.7,70.5 C651.5,70.5 651.5,70.5 781.3,70.5"/>
+<path class="edge" data-s="peters2018" data-d="turian2010" d="M594.5,83.5 C687.9,83.5 687.9,70.5 781.3,70.5"/>
+<path class="edge" data-s="peters2018" data-d="pennington2014" d="M685.5,70.5 C733.4,70.5 733.4,70.5 781.3,70.5"/>
+<path class="edge" data-s="devlin2018" data-d="mikolov2013b" d="M656.8,83.5 C728.6,83.5 728.6,83.5 800.4,83.5"/>
+<path class="edge" data-s="devlin2018" data-d="turian2010" d="M594.5,83.5 C697.5,83.5 697.5,83.5 800.4,83.5"/>
+<path class="edge" data-s="devlin2018" data-d="pennington2014" d="M685.5,70.5 C743.0,70.5 743.0,83.5 800.4,83.5"/>
+<path class="edge" data-s="devlin2018" data-d="wu2016" d="M740.6,57.5 C770.5,57.5 770.5,83.5 800.4,83.5"/>
+<path class="edge" data-s="devlin2018" data-d="vaswani2017" d="M762.1,96.5 C781.3,96.5 781.3,83.5 800.4,83.5"/>
+<path class="edge" data-s="devlin2018" data-d="peters2018" d="M781.3,70.5 C790.9,70.5 790.9,83.5 800.4,83.5"/>
+<path class="edge" data-s="devlin2018" data-d="howard2018" d="M778.9,31.5 C789.7,31.5 789.7,83.5 800.4,83.5"/>
+<path class="edge" data-s="raffel2019" data-d="mikolov2013" d="M635.2,44.5 C732.2,44.5 732.2,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="sutskever2014" d="M683.1,31.5 C756.1,31.5 756.1,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="mikolov2013b" d="M656.8,83.5 C743.0,83.5 743.0,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="pennington2014" d="M685.5,70.5 C757.3,70.5 757.3,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="wu2016" d="M740.6,57.5 C784.9,57.5 784.9,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="vaswani2017" d="M762.1,96.5 C795.6,96.5 795.6,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="peters2018" d="M781.3,70.5 C805.2,70.5 805.2,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="howard2018" d="M778.9,31.5 C804.0,31.5 804.0,96.5 829.2,96.5"/>
+<path class="edge" data-s="brown2020" data-d="mikolov2013" d="M635.2,44.5 C740.6,44.5 740.6,70.5 845.9,70.5"/>
+<path class="edge" data-s="brown2020" data-d="pennington2014" d="M685.5,70.5 C765.7,70.5 765.7,70.5 845.9,70.5"/>
+<path class="edge" data-s="brown2020" data-d="vaswani2017" d="M762.1,96.5 C804.0,96.5 804.0,70.5 845.9,70.5"/>
+<path class="edge" data-s="brown2020" data-d="howard2018" d="M778.9,31.5 C812.4,31.5 812.4,70.5 845.9,70.5"/>
+<path class="edge" data-s="brown2020" data-d="lewis2020" d="M845.9,31.5 C845.9,31.5 845.9,70.5 845.9,70.5"/>
+<path class="edge" data-s="lewis2020" data-d="vaswani2017" d="M762.1,96.5 C804.0,96.5 804.0,31.5 845.9,31.5"/>
+<path class="edge" data-s="lewis2020" data-d="raffel2019" d="M829.2,96.5 C837.5,96.5 837.5,31.5 845.9,31.5"/>
+<path class="edge" data-s="chen2021" data-d="sutskever2014" d="M683.1,31.5 C781.3,31.5 781.3,44.5 879.4,44.5"/>
+<path class="edge" data-s="chen2021" data-d="mikolov2013b" d="M656.8,83.5 C768.1,83.5 768.1,44.5 879.4,44.5"/>
+<path class="edge" data-s="chen2021" data-d="vaswani2017" d="M762.1,96.5 C820.8,96.5 820.8,44.5 879.4,44.5"/>
+<path class="edge" data-s="chen2021" data-d="peters2018" d="M781.3,70.5 C830.4,70.5 830.4,44.5 879.4,44.5"/>
+<path class="edge" data-s="wei2022" data-d="vaswani2017" d="M762.1,96.5 C828.0,96.5 828.0,83.5 893.8,83.5"/>
+<path class="edge" data-s="wei2022" data-d="brown2020" d="M845.9,70.5 C869.9,70.5 869.9,83.5 893.8,83.5"/>
+<path class="edge" data-s="turian2010" data-d="bengio2003" d="M535.1,44.5 C564.8,44.5 564.8,83.5 594.5,83.5"/>
+<path class="edge" data-s="mikolov2010" data-d="bengio2003" d="M535.1,44.5 C565.5,44.5 565.5,96.5 595.8,96.5"/>
+<path class="edge" data-s="mikolov2013" data-d="bengio2003" d="M535.1,44.5 C585.2,44.5 585.2,44.5 635.2,44.5"/>
+<path class="edge" data-s="mikolov2013" data-d="collobert2011" d="M599.8,31.5 C617.5,31.5 617.5,44.5 635.2,44.5"/>
+<path class="edge" data-s="mikolov2013" data-d="mikolov2010" d="M595.8,96.5 C615.5,96.5 615.5,44.5 635.2,44.5"/>
+<path class="edge" data-s="mikolov2013b" data-d="bengio2003" d="M535.1,44.5 C595.9,44.5 595.9,83.5 656.8,83.5"/>
+<path class="edge" data-s="cho2014" data-d="bengio2003" d="M535.1,44.5 C605.5,44.5 605.5,57.5 675.9,57.5"/>
+<path class="edge" data-s="sutskever2014" data-d="bahdanau2014" d="M683.1,96.5 C683.1,96.5 683.1,31.5 683.1,31.5"/>
+<path class="edge" data-s="sutskever2014" data-d="bengio2003" d="M535.1,44.5 C609.1,44.5 609.1,31.5 683.1,31.5"/>
+<path class="edge" data-s="sutskever2014" data-d="hinton2012" d="M630.4,70.5 C656.8,70.5 656.8,31.5 683.1,31.5"/>
+<path class="edge" data-s="bahdanau2014" data-d="bengio2003" d="M535.1,44.5 C609.1,44.5 609.1,96.5 683.1,96.5"/>
+<path class="edge" data-s="pennington2014" data-d="bengio2003" d="M535.1,44.5 C610.3,44.5 610.3,70.5 685.5,70.5"/>
+<path class="edge" data-s="luong2015" data-d="bahdanau2014" d="M683.1,96.5 C696.3,96.5 696.3,44.5 709.5,44.5"/>
+<path class="edge" data-s="luong2015" data-d="cho2014" d="M675.9,57.5 C692.7,57.5 692.7,44.5 709.5,44.5"/>
+<path class="edge" data-s="sennrich2015" data-d="bahdanau2014" d="M683.1,96.5 C696.3,96.5 696.3,83.5 709.5,83.5"/>
+<path class="edge" data-s="sennrich2015" data-d="cho2014" d="M675.9,57.5 C692.7,57.5 692.7,83.5 709.5,83.5"/>
+<path class="edge" data-s="sennrich2015" data-d="luong2015" d="M709.5,44.5 C709.5,44.5 709.5,83.5 709.5,83.5"/>
+<path class="edge" data-s="wu2016" data-d="bahdanau2014" d="M683.1,96.5 C711.8,96.5 711.8,57.5 740.6,57.5"/>
+<path class="edge" data-s="wu2016" data-d="brown1990" d="M433.6,96.5 C587.1,96.5 587.1,57.5 740.6,57.5"/>
+<path class="edge" data-s="wu2016" data-d="cho2014" d="M675.9,57.5 C708.3,57.5 708.3,57.5 740.6,57.5"/>
+<path class="edge" data-s="wu2016" data-d="luong2015" d="M709.5,44.5 C725.0,44.5 725.0,57.5 740.6,57.5"/>
+<path class="edge" data-s="wu2016" data-d="sennrich2015" d="M709.5,83.5 C725.0,83.5 725.0,57.5 740.6,57.5"/>
+<path class="edge" data-s="wu2016" data-d="sutskever2014" d="M683.1,31.5 C711.8,31.5 711.8,57.5 740.6,57.5"/>
+<path class="edge" data-s="vaswani2017" data-d="bahdanau2014" d="M683.1,96.5 C722.6,96.5 722.6,96.5 762.1,96.5"/>
+<path class="edge" data-s="vaswani2017" data-d="cho2014" d="M675.9,57.5 C719.0,57.5 719.0,96.5 762.1,96.5"/>
+<path class="edge" data-s="vaswani2017" data-d="luong2015" d="M709.5,44.5 C735.8,44.5 735.8,96.5 762.1,96.5"/>
+<path class="edge" data-s="vaswani2017" data-d="sennrich2015" d="M709.5,83.5 C735.8,83.5 735.8,96.5 762.1,96.5"/>
+<path class="edge" data-s="vaswani2017" data-d="sutskever2014" d="M683.1,31.5 C722.6,31.5 722.6,96.5 762.1,96.5"/>
+<path class="edge" data-s="peters2018" data-d="collobert2011" d="M599.8,31.5 C690.6,31.5 690.6,70.5 781.3,70.5"/>
+<path class="edge" data-s="peters2018" data-d="mikolov2013b" d="M656.8,83.5 C719.0,83.5 719.0,70.5 781.3,70.5"/>
+<path class="edge" data-s="howard2018" data-d="mikolov2013b" d="M656.8,83.5 C717.8,83.5 717.8,31.5 778.9,31.5"/>
+<path class="edge" data-s="radford2018" data-d="collobert2011" d="M599.8,31.5 C695.3,31.5 695.3,44.5 790.9,44.5"/>
+<path class="edge" data-s="radford2018" data-d="howard2018" d="M778.9,31.5 C784.9,31.5 784.9,44.5 790.9,44.5"/>
+<path class="edge" data-s="radford2018" data-d="mikolov2013b" d="M656.8,83.5 C723.8,83.5 723.8,44.5 790.9,44.5"/>
+<path class="edge" data-s="radford2018" data-d="pennington2014" d="M685.5,70.5 C738.2,70.5 738.2,44.5 790.9,44.5"/>
+<path class="edge" data-s="radford2018" data-d="peters2018" d="M781.3,70.5 C786.1,70.5 786.1,44.5 790.9,44.5"/>
+<path class="edge" data-s="radford2018" data-d="sennrich2015" d="M709.5,83.5 C750.2,83.5 750.2,44.5 790.9,44.5"/>
+<path class="edge" data-s="radford2018" data-d="vaswani2017" d="M762.1,96.5 C776.5,96.5 776.5,44.5 790.9,44.5"/>
+<path class="edge" data-s="devlin2018" data-d="radford2018" d="M790.9,44.5 C795.6,44.5 795.6,83.5 800.4,83.5"/>
+<path class="edge" data-s="radford2019" data-d="bengio2003" d="M535.1,44.5 C672.5,44.5 672.5,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="collobert2011" d="M599.8,31.5 C704.9,31.5 704.9,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="devlin2018" d="M800.4,83.5 C805.2,83.5 805.2,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="howard2018" d="M778.9,31.5 C794.4,31.5 794.4,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="mikolov2013b" d="M656.8,83.5 C733.4,83.5 733.4,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="pennington2014" d="M685.5,70.5 C747.8,70.5 747.8,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="peters2018" d="M781.3,70.5 C795.6,70.5 795.6,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="radford2018" d="M790.9,44.5 C800.4,44.5 800.4,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="sennrich2015" d="M709.5,83.5 C759.7,83.5 759.7,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="sutskever2014" d="M683.1,31.5 C746.6,31.5 746.6,57.5 810.0,57.5"/>
+<path class="edge" data-s="radford2019" data-d="vaswani2017" d="M762.1,96.5 C786.1,96.5 786.1,57.5 810.0,57.5"/>
+<path class="edge" data-s="raffel2019" data-d="bahdanau2014" d="M683.1,96.5 C756.1,96.5 756.1,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="sennrich2015" d="M709.5,83.5 C769.3,83.5 769.3,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="radford2018" d="M790.9,44.5 C810.0,44.5 810.0,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="devlin2018" d="M800.4,83.5 C814.8,83.5 814.8,96.5 829.2,96.5"/>
+<path class="edge" data-s="raffel2019" data-d="radford2019" d="M810.0,57.5 C819.6,57.5 819.6,96.5 829.2,96.5"/>
+<path class="edge" data-s="brown2020" data-d="radford2018" d="M790.9,44.5 C818.4,44.5 818.4,70.5 845.9,70.5"/>
+<path class="edge" data-s="brown2020" data-d="devlin2018" d="M800.4,83.5 C823.2,83.5 823.2,70.5 845.9,70.5"/>
+<path class="edge" data-s="brown2020" data-d="radford2019" d="M810.0,57.5 C828.0,57.5 828.0,70.5 845.9,70.5"/>
+<path class="edge" data-s="brown2020" data-d="raffel2019" d="M829.2,96.5 C837.5,96.5 837.5,70.5 845.9,70.5"/>
+<path class="edge" data-s="lewis2020" data-d="devlin2018" d="M800.4,83.5 C823.2,83.5 823.2,31.5 845.9,31.5"/>
+<path class="edge" data-s="lewis2020" data-d="radford2018" d="M790.9,44.5 C818.4,44.5 818.4,31.5 845.9,31.5"/>
+<path class="edge" data-s="lewis2020" data-d="radford2019" d="M810.0,57.5 C828.0,57.5 828.0,31.5 845.9,31.5"/>
+<path class="edge" data-s="chen2021" data-d="brown2020" d="M845.9,70.5 C862.7,70.5 862.7,44.5 879.4,44.5"/>
+<path class="edge" data-s="chen2021" data-d="devlin2018" d="M800.4,83.5 C839.9,83.5 839.9,44.5 879.4,44.5"/>
+<path class="edge" data-s="chen2021" data-d="radford2018" d="M790.9,44.5 C835.1,44.5 835.1,44.5 879.4,44.5"/>
+<path class="edge" data-s="chen2021" data-d="radford2019" d="M810.0,57.5 C844.7,57.5 844.7,44.5 879.4,44.5"/>
+<path class="edge" data-s="chen2021" data-d="raffel2019" d="M829.2,96.5 C854.3,96.5 854.3,44.5 879.4,44.5"/>
+<path class="edge" data-s="wei2022" data-d="peters2018" d="M781.3,70.5 C837.5,70.5 837.5,83.5 893.8,83.5"/>
+<path class="edge" data-s="wei2022" data-d="devlin2018" d="M800.4,83.5 C847.1,83.5 847.1,83.5 893.8,83.5"/>
+<path class="edge" data-s="wei2022" data-d="raffel2019" d="M829.2,96.5 C861.5,96.5 861.5,83.5 893.8,83.5"/>
+<path class="edge" data-s="wei2022" data-d="chen2021" d="M879.4,44.5 C886.6,44.5 886.6,83.5 893.8,83.5"/>
+<path class="edge" data-s="kojima2022" data-d="vaswani2017" d="M762.1,96.5 C832.8,96.5 832.8,96.5 903.4,96.5"/>
+<path class="edge" data-s="kojima2022" data-d="devlin2018" d="M800.4,83.5 C851.9,83.5 851.9,96.5 903.4,96.5"/>
+<path class="edge" data-s="kojima2022" data-d="radford2019" d="M810.0,57.5 C856.7,57.5 856.7,96.5 903.4,96.5"/>
+<path class="edge" data-s="kojima2022" data-d="raffel2019" d="M829.2,96.5 C866.3,96.5 866.3,96.5 903.4,96.5"/>
+<path class="edge" data-s="kojima2022" data-d="brown2020" d="M845.9,70.5 C874.7,70.5 874.7,96.5 903.4,96.5"/>
+<path class="edge" data-s="kojima2022" data-d="wei2022" d="M893.8,83.5 C898.6,83.5 898.6,96.5 903.4,96.5"/>
+<path class="edge" data-s="kojima2022" data-d="wang2022" d="M898.6,57.5 C901.0,57.5 901.0,96.5 903.4,96.5"/>
+<path class="edge" data-s="wang2022" data-d="radford2019" d="M810.0,57.5 C854.3,57.5 854.3,57.5 898.6,57.5"/>
+<path class="edge" data-s="wang2022" data-d="brown2020" d="M845.9,70.5 C872.3,70.5 872.3,57.5 898.6,57.5"/>
+<path class="edge" data-s="wang2022" data-d="chen2021" d="M879.4,44.5 C889.0,44.5 889.0,57.5 898.6,57.5"/>
+<path class="edge" data-s="wang2022" data-d="wei2022" d="M893.8,83.5 C896.2,83.5 896.2,57.5 898.6,57.5"/>
+<path class="edge" data-s="touvron2023" data-d="bengio2003" d="M535.1,44.5 C730.0,44.5 730.0,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="brown1990" d="M433.6,96.5 C679.3,96.5 679.3,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="brown2020" d="M845.9,70.5 C885.4,70.5 885.4,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="chen2021" d="M879.4,44.5 C902.2,44.5 902.2,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="devlin2018" d="M800.4,83.5 C862.7,83.5 862.7,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="mikolov2010" d="M595.8,96.5 C760.4,96.5 760.4,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="radford2018" d="M790.9,44.5 C857.9,44.5 857.9,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="radford2019" d="M810.0,57.5 C867.5,57.5 867.5,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="raffel2019" d="M829.2,96.5 C877.0,96.5 877.0,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="sennrich2015" d="M709.5,83.5 C817.2,83.5 817.2,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="vaswani2017" d="M762.1,96.5 C843.5,96.5 843.5,31.5 924.9,31.5"/>
+<path class="edge" data-s="touvron2023" data-d="wang2022" d="M898.6,57.5 C911.8,57.5 911.8,31.5 924.9,31.5"/>
+<path class="edge" data-s="openai2023" data-d="brown2020" d="M845.9,70.5 C886.6,70.5 886.6,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="chen2021" d="M879.4,44.5 C903.4,44.5 903.4,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="devlin2018" d="M800.4,83.5 C863.9,83.5 863.9,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="kojima2022" d="M903.4,96.5 C915.4,96.5 915.4,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="radford2018" d="M790.9,44.5 C859.1,44.5 859.1,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="radford2019" d="M810.0,57.5 C868.7,57.5 868.7,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="raffel2019" d="M829.2,96.5 C878.2,96.5 878.2,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="touvron2023" d="M924.9,31.5 C926.1,31.5 926.1,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="vaswani2017" d="M762.1,96.5 C844.7,96.5 844.7,70.5 927.3,70.5"/>
+<path class="edge" data-s="openai2023" data-d="wei2022" d="M893.8,83.5 C910.6,83.5 910.6,70.5 927.3,70.5"/>
+<path class="edge late" data-s="bahdanau2014" data-d="sutskever2014" d="M683.1,31.5 C683.1,31.5 683.1,96.5 683.1,96.5"/>
+<path class="edge late" data-s="mikolov2013" data-d="mikolov2013b" d="M656.8,83.5 C646.0,83.5 646.0,44.5 635.2,44.5"/>
+<path class="edge late" data-s="howard2018" data-d="peters2018" d="M781.3,70.5 C780.1,70.5 780.1,31.5 778.9,31.5"/>
+<path class="edge late" data-s="wei2022" data-d="wang2022" d="M898.6,57.5 C896.2,57.5 896.2,83.5 893.8,83.5"/>
+<path class="edge late" data-s="wang2022" data-d="kojima2022" d="M903.4,96.5 C901.0,96.5 901.0,57.5 898.6,57.5"/>
+<g class="dot" data-k="chomsky1956" data-t="Three models for the description of language" data-m="Chomsky · 1956" data-w="영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다." data-href="../chapters/E1.html#chomsky1956"><circle cx="163.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="weizenbaum1966" data-t="ELIZA—a computer program for the study of natural language communication between man and machine" data-m="Weizenbaum · 1966" data-w="MIT MAC 시분할 체계에서 입력 문장을 키워드가 촉발하는 분해 규칙으로 분석하고 재조립 규칙으로 응답을 만들며, 규칙은 편집 가능한 「스크립트」로 주는 프로그램 ELIZA를 기술했다. 키워드 식별, 최소 문맥, 변환, 키워드 없는 응답, 이 접근의 심리학적 문제를 논했다." data-href="../chapters/E2.html#weizenbaum1966"><circle cx="238.1" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="winograd1972" data-t="Understanding natural language" data-m="Winograd · 1971" data-w="장난감 블록을 다루는 모의 로봇과 영어로 대화하며 질문에 답하고 명령을 수행하고 정보를 받아들이는 체계를 기술한다. 구문 분석기, 영어 인식 문법, 의미 분석 프로그램, 일반 문제 해결 체계를 결합하고, 지식을 절차로 표현하며 구문·의미·추론에 각각 절차적 표현을 둔다." data-href="../chapters/E2.html#winograd1972"><circle cx="278.1" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="waibel1989" data-t="Phoneme recognition using time-delay neural networks" data-m="Waibel et al. · 1987" data-w="시간 지연 배열로 시간상 위치와 무관한 음향·음소 특징을 학습하는 시간 지연 신경망(TDNN)을 음소 인식에 제시한다. B·D·G의 화자 종속 인식에서 같은 과제로 훈련한 이산 은닉 마르코프 모델과 비교한다." data-href="../chapters/E3.html#waibel1989"><circle cx="412.3" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="rabiner1989" data-t="A tutorial on hidden Markov models and selected applications in speech recognition" data-m="Rabiner · 1989" data-w="이산 마르코프 연쇄에서 가변 지속·연속 밀도 모델까지 은닉 마르코프 모델의 이론을 검토하고 음성 인식 문제에의 적용을 보인다. HMM 설계를 세 가지 기본 문제로 정리한다." data-href="../chapters/E3.html#rabiner1989"><circle cx="423.0" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="brown1990" data-t="A statistical approach to machine translation" data-m="Brown et al. · 1990" data-w="번역을 Pr(S)Pr(T|S)를 최대로 하는 원문 S를 고르는 문제로 세우고, 언어 모델과 번역 모델을 결합한다. 이 접근을 프랑스어→영어 번역에 적용한 예비 결과를 준다." data-href="../chapters/E4.html#brown1990"><circle cx="433.6" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="deerwester1990" data-t="Indexing by latent semantic analysis" data-m="Deerwester et al. · 1990" data-w="용어-문서 행렬에 특이값 분해를 적용해 약 100개의 직교 요인을 얻고, 그 공간에 용어·문서·질의를 표현하여 글자 그대로의 용어 일치 대신 잠재 구조로 검색하는 잠재 의미 색인(LSI)을 기술한다. 두 문서 집합에서 단순 용어 일치, SMART, Voorhees 시스템과 비교한 시험 결과를 보고한다." data-href="../chapters/E4.html#deerwester1990"><circle cx="435.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="lafferty2001" data-t="Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data" data-m="Lafferty et al. · 2001" data-w="순서열의 표지와 분할을 위한 조건부 확률장과 반복적 매개변수 추정 알고리즘을 도입한다. 최대 엔트로피 마르코프 모델의 표지 편향 문제를 피한다고 보고하고, 합성 자료와 품사 태깅에서 HMM·MEMM과 비교한다." data-href="../chapters/E4.html#lafferty2001"><circle cx="521.7" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="bengio2003" data-t="A Neural Probabilistic Language Model" data-m="Bengio et al. · 2003" data-w="각 단어의 분산 표현과 단어 열의 확률 함수를 함께 학습하는 신경망 언어 모델을 제안한다. 두 말뭉치에서 n-그램 모델보다 나은 결과를 보고하고, 더 긴 문맥을 쓸 수 있음을 보인다." data-href="../chapters/E4.html#bengio2003"><circle cx="535.1" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="turian2010" data-t="Word Representations: A Simple and General Method for Semi-Supervised Learning" data-m="Turian et al. · 2010" data-w="비지도 단어 표현(브라운 군집, 콜로베르·웨스턴 임베딩, HLBL 임베딩)을 기존의 지도 학습 개체명 인식·청킹 시스템에 추가 특징으로 넣는다. 각 표현이 기준선보다 정확도를 높이고 이들을 결합하면 더 나아진다고 보고하며, 단어 특징과 코드를 공개한다." data-href="../chapters/E4.html#turian2010"><circle cx="594.5" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="ferrucci2010" data-t="Building Watson: An Overview of the DeepQA Project" data-m="Ferrucci et al. · 2010" data-w="질문 분석, 가설 생성, 증거 채점과 병합에 쓰이는 100가지가 넘는 기법을 결합하는 대규모 병렬의 확률적·증거 기반 질의응답 아키텍처 DeepQA와, 이를 퀴즈 쇼 「제퍼디!」용으로 구현한 왓슨을 설명한다. 3년간의 개발 끝에 왓슨이 제퍼디 문제에서 정밀도·확신도·속도 면에서 인간 전문가 수준에 이르렀다고 보고한다." data-href="../chapters/E4.html#ferrucci2010"><circle cx="595.8" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mikolov2010" data-t="Recurrent neural network based language model" data-m="Mikolov et al. · 2010" data-w="순환 신경망 언어 모델을 제시하고, RNN LM 혼합이 백오프 모델보다 혼잡도를 약 50% 낮추며 WSJ와 NIST RT05에서 단어 오류율을 줄였다고 보고한다." data-href="../chapters/E4.html#mikolov2010"><circle cx="595.8" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="collobert2011" data-t="Natural Language Processing (almost) from Scratch" data-m="Collobert et al. · 2011" data-w="품사 태깅·청킹·개체명 인식·의미역 결정에 하나의 신경망 구조와 학습 알고리즘을 쓰며, 과제별 특징 대신 대량의 비표지 텍스트에서 내부 표현을 학습한다. 태깅 체계로 공개했다." data-href="../chapters/E4.html#collobert2011"><circle cx="599.8" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hinton2012" data-t="Deep Neural Networks for Acoustic Modeling in Speech Recognition" data-m="Hinton et al. · 2012" data-w="토론토·MSR·구글·IBM 네 그룹이 공유하는 견해로서, 생성적 사전훈련과 판별적 미세 조정으로 훈련한 DNN 음향 모델을 검토하고, TIMIT와 다섯 개 대어휘 연속 음성 인식 과제에서 GMM-HMM 체계와 비교한 결과를 보고한다." data-href="../chapters/E5.html#hinton2012"><circle cx="630.4" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mikolov2013" data-t="Efficient Estimation of Word Representations in Vector Space" data-m="Mikolov et al. · 2013" data-w="매우 큰 말뭉치에서 적은 계산으로 단어 벡터를 학습하는 두 로그 선형 구조(CBOW와 스킵그램)를 제안하고, 구문·의미 단어 유사성 시험 집합으로 평가한다." data-href="../chapters/E5.html#mikolov2013"><circle cx="635.2" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mikolov2013b" data-t="Distributed Representations of Words and Phrases and their Compositionality" data-m="Mikolov et al. · 2013" data-w="연속 스킵그램 모델의 확장으로 빈번 단어의 하향 표집과 계층 소프트맥스의 대안인 음성 표집을 제시한다. 텍스트에서 구를 찾아 그 벡터 표현을 학습하는 방법도 기술한다." data-href="../chapters/E5.html#mikolov2013b"><circle cx="656.8" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="cho2014" data-t="Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation" data-m="Cho et al. · 2014" data-w="한 RNN이 기호 열을 고정 길이 벡터로 부호화하고 다른 RNN이 복호화하며 둘을 함께 훈련하는 RNN 인코더-디코더를 제안한다. 게이트 은닉 단위도 도입하고, 모델의 구 쌍 점수를 구 기반 통계 번역 체계의 추가 특징으로 쓴다." data-href="../chapters/E5.html#cho2014"><circle cx="675.9" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="bahdanau2014" data-t="Neural Machine Translation by Jointly Learning to Align and Translate" data-m="Bahdanau et al. · 2014" data-w="기본 인코더-디코더의 고정 길이 벡터를 병목으로 본다. 목표 단어마다 원문에서 관련 위치를 (부드럽게) 탐색해 그 위치들의 문맥 벡터로 단어를 예측하도록 모델을 확장한다." data-href="../chapters/E5.html#bahdanau2014"><circle cx="683.1" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutskever2014" data-t="Sequence to Sequence Learning with Neural Networks" data-m="Sutskever et al. · 2014" data-w="다층 LSTM 하나로 입력 열을 고정 차원 벡터에 사상하고 다른 깊은 LSTM으로 목표 열을 복호화해 WMT 2014 영→불 번역에서 BLEU 34.8을 보고한다. 원문 단어 순서를 뒤집으면 성능이 올랐다고도 보고한다." data-href="../chapters/E5.html#sutskever2014"><circle cx="683.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="pennington2014" data-t="GloVe: Global Vectors for Word Representation" data-m="Pennington et al. · 2014" data-w="단어 벡터의 선형 규칙성에 필요한 모델 성질을 분석하고, 단어-단어 동시 출현 행렬의 0이 아닌 항목으로 훈련하는 전역 로그 쌍선형 회귀 모델 GloVe를 제안한다. 단어 유추 과제에서 75%를 보고한다." data-href="../chapters/E5.html#pennington2014"><circle cx="685.5" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="luong2015" data-t="Effective Approaches to Attention-based Neural Machine Translation" data-m="Luong et al. · 2015" data-w="신경 기계 번역을 위해 원문 단어 전체에 주의를 두는 전역 어텐션과 원문 위치의 일부에만 주의를 두는 국소 어텐션을 제안하고 비교했다. WMT 영→독에서 국소 어텐션이 어텐션 없는 체계보다 5.0 BLEU 높았고, 앙상블은 WMT 2015 영→독에서 25.9 BLEU에 이르렀다." data-href="../chapters/E5.html#luong2015"><circle cx="709.5" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sennrich2015" data-t="Neural Machine Translation of Rare Words with Subword Units" data-m="Sennrich et al. · 2015" data-w="희귀·미지 단어를 하위 단어 단위의 열로 부호화해(바이트 쌍 부호화에 기초한 분할 포함) 신경 기계 번역을 열린 어휘로 만든다. WMT 15 영→독·영→러에서 백오프 사전 기준선보다 최대 1.1·1.3 BLEU의 개선을 보고한다." data-href="../chapters/E5.html#sennrich2015"><circle cx="709.5" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wu2016" data-t="Google&#x27;s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation" data-m="Wu et al. · 2016" data-w="8층 LSTM 인코더·디코더, 잔차·어텐션 연결, 워드피스 하위 단어, 저정밀 추론, 길이 정규화와 커버리지 페널티를 둔 빔 탐색을 갖춘 실제 서비스용 신경 기계 번역 체계 GNMT를 기술한다. 사람의 나란히 평가에서 구글의 구 기반 체계보다 번역 오류가 평균 60% 줄었다." data-href="../chapters/E5.html#wu2016"><circle cx="740.6" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="vaswani2017" data-t="Attention Is All You Need" data-m="Vaswani et al. · 2017" data-w="순환이나 합성곱 없이 어텐션(스케일된 내적 어텐션과 다중 헤드 어텐션)만으로 세운 열 변환 구조 트랜스포머를 제안한다. WMT 2014 영→독 28.4, 영→불 41.8 BLEU를 보고하고 영어 구문 분석에도 적용한다." data-href="../chapters/E5.html#vaswani2017"><circle cx="762.1" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="howard2018" data-t="Universal Language Model Fine-tuning for Text Classification" data-m="Howard &amp; Ruder · 2018" data-w="일반 말뭉치로 언어 모델을 사전훈련한 뒤 판별적 미세 조정, 기울어진 삼각 학습률, 점진적 해동으로 목표 과제에 미세 조정하고 분류기를 훈련하는 ULMFiT를 제안한다. 여섯 텍스트 분류 자료 대부분에서 18~24%의 오류 감소를 보고한다." data-href="../chapters/E6.html#howard2018"><circle cx="778.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="peters2018" data-t="Deep contextualized word representations" data-m="Peters et al. · 2018" data-w="대규모 말뭉치로 사전훈련한 양방향 LSTM 언어 모델의 모든 내부 층을 과제별로 학습한 선형 결합으로 계산하는 단어 표현 ELMo를 소개한다. 기존 모델에 더하면 여섯 NLP 과제에서 결과가 개선되었다." data-href="../chapters/E6.html#peters2018"><circle cx="781.3" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="radford2018" data-t="Improving Language Understanding by Generative Pre-Training" data-m="Radford et al. · 2018" data-w="다층 트랜스포머 디코더를 비표지 텍스트로 언어 모델로 훈련한 뒤, 과제를 의식한 입력 변환으로 표지 과제에 미세 조정했다. 과제에 무관한 모델 하나가 연구한 자연어 이해 자료 12개 중 9개에서 최고 성능을 개선했다." data-href="../chapters/E6.html#radford2018"><circle cx="790.9" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="devlin2018" data-t="BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" data-m="Devlin et al. · 2018" data-w="마스크 언어 모델 목적과 다음 문장 예측으로 비표지 텍스트에 사전훈련해 표현이 좌우 문맥을 모두 조건으로 삼게 한 트랜스포머 인코더 BERT를 소개한다. 출력층 하나를 더해 미세 조정하며 11개 NLP 과제에서 새 최고 성능을 보고한다." data-href="../chapters/E6.html#devlin2018"><circle cx="800.4" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="radford2019" data-t="Language Models are Unsupervised Multitask Learners" data-m="Radford et al. · 2019" data-w="가장 큰 것이 15억 매개변수 GPT-2인 트랜스포머 언어 모델들을 수백만 웹페이지의 새 자료 WebText로 훈련하고, 과제별 훈련 없이 질의응답·번역·독해·요약의 제로샷 성능을 보고한다. 성능은 모델 용량에 로그 선형으로 개선된다." data-href="../chapters/E6.html#radford2019"><circle cx="810.0" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="raffel2019" data-t="Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" data-m="Raffel et al. · 2019" data-w="모든 텍스트 기반 언어 문제를 텍스트 입력·텍스트 출력으로 두는 통일된 틀을 도입하고, 그 틀로 사전훈련 목적·구조·비표지 자료·전이 방법을 체계적으로 비교한다. 말뭉치 C4와 사전훈련 모델·코드를 공개했다." data-href="../chapters/E6.html#raffel2019"><circle cx="829.2" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="brown2020" data-t="Language Models are Few-Shot Learners" data-m="Brown et al. · 2020" data-w="1750억 매개변수의 자기회귀 언어 모델 GPT-3를 훈련하고, 과제와 시연을 텍스트로만 주고 기울기 갱신이나 미세 조정 없이 제로샷·원샷·퓨샷으로 여러 NLP 과제에서 평가한다. 한계, 벤치마크 오염 분석, 사회적 영향도 함께 보고한다." data-href="../chapters/E6.html#brown2020"><circle cx="845.9" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="lewis2020" data-t="Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" data-m="Lewis et al. · 2020" data-w="사전훈련된 seq2seq 생성기와 위키백과 색인 위의 사전훈련 밀집 검색기를 결합해 끝에서 끝까지 미세 조정하는 검색 증강 생성(RAG)을 두 변형(열 전체에 같은 문단 / 토큰마다)으로 제안했다. 저자들의 실험에서 열린 영역 질의응답 과제 셋에서 최고 성능을 세웠다." data-href="../chapters/E6.html#lewis2020"><circle cx="845.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="chen2021" data-t="Evaluating Large Language Models Trained on Code" data-m="Chen et al. · 2021" data-w="공개 GitHub 코드로 미세 조정한 GPT 모델 Codex와, 문서 문자열에서 합성한 프로그램의 기능적 정확성을 재는 벤치마크 HumanEval을 소개했다. Codex는 HumanEval 문제의 28.8%(GPT-3는 0%)를, 문제당 100개 표본을 뽑으면 70.2%를 풀었다." data-href="../chapters/E6.html#chen2021"><circle cx="879.4" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wei2022" data-t="Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" data-m="Wei et al. · 2022" data-w="중간 추론 단계를 담은 예 몇 개를 프롬프트에 주는 생각의 사슬 프롬프트를 도입하고, 산술·상식·기호 추론 과제에서 대규모 언어 모델을 개선함을 보고했다. 그런 예 여덟 개로 PaLM 540B가 GSM8K에서 최고 정확도에 이르렀다." data-href="../chapters/E6.html#wei2022"><circle cx="893.8" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wang2022" data-t="Self-Consistency Improves Chain of Thought Reasoning in Language Models" data-m="Wang et al. · 2022" data-w="생각의 사슬 프롬프트에서 다양한 추론 경로를 표집하고 그것들을 주변화해 가장 일관된 답을 고르는 복호화 전략 자기 일관성을 제안했다. GSM8K(+17.9%)·SVAMP(+11.0%) 같은 산술·상식 벤치마크에서 개선을 보고한다." data-href="../chapters/E6.html#wang2022"><circle cx="898.6" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kojima2022" data-t="Large Language Models are Zero-Shot Reasoners" data-m="Kojima et al. · 2022" data-w="각 답 앞에 「Let&#x27;s think step by step」 한 문장을 붙이는 제로샷 CoT가 손수 만든 퓨샷 예 없이도 산술·기호·논리 추론 벤치마크에서 대규모 언어 모델의 제로샷 정확도를 올림을 보였다. 예컨대 text-davinci-002의 MultiArith가 17.7%에서 78.7%로 올랐다." data-href="../chapters/E6.html#kojima2022"><circle cx="903.4" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="touvron2023" data-t="LLaMA: Open and Efficient Foundation Language Models" data-m="Touvron et al. · 2023" data-w="공개 자료만으로 수조 토큰을 훈련한 70억~650억 매개변수의 기반 언어 모델 LLaMA를 공개했다. 주어진 추론 예산에서 최고 성능을 겨냥하며, LLaMA-13B가 대부분의 벤치마크에서 GPT-3(175B)를 앞서고 LLaMA-65B가 Chinchilla-70B·PaLM-540B에 견줄 만하다고 보고했다." data-href="../chapters/E6.html#touvron2023"><circle cx="924.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="openai2023" data-t="GPT-4 Technical Report" data-m="OpenAI · 2023" data-w="영상·텍스트 입력을 받는 트랜스포머 기반 다중 모달 모델 GPT-4를 시험·벤치마크 결과와 사후 훈련 정렬 절차와 함께 보고하고, 1/1,000 이하의 연산으로 훈련한 모델로부터 성능의 일부를 예측하게 한 기반 설비를 기술했다. 보고서는 구조(모델 크기 포함)·하드웨어·훈련 연산량·자료 구성·훈련 방법의 세부는 담지 않는다고 적는다." data-href="../chapters/E6.html#openai2023"><circle cx="927.3" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 가로축은 2012년에서 꺾인다: 그 앞 57년이 연도 구간 너비의 55%, 뒤 13년이 45%를 차지해서, 2012년 뒤에는 같은 1년이 더 넓다(눈금 간격도 10년에서 4년으로 바뀐다). 이 그림에는 주제 묶음이 하나뿐이라 줄도 하나다. 위아래 위치에는 뜻이 없다(시간 순서대로 여섯 높이를 돌아가며 놓아 점과 선이 덜 겹치게 했을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다. 선이 많은 그림이라 선을 옅게 그렸다.</p><p><b>보이는 것: </b>이 그림에는 논문 38편과 확인된 인용선 162개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Bengio et al. 2003 · Vaswani et al. 2017(각각 선 11개)이다. 선이 하나도 없는 논문은 1편이다. 선 5개는 인용된 논문의 첫 공개일이 인용한 논문보다 늦다(논문 카드에 적은 날짜 기준). 이 선들은 초록색으로 굵게 그렸고, 인용된 논문이 더 오른쪽이나 같은 자리에 놓인다. 왜 그런지는 하나씩 확인하지 않았다.</p><p>조심할 것: 선은 이 묶음의 논문끼리만 그었다. 다른 묶음 논문과의 인용은 장 면의 논문 카드에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p></figcaption></figure>
 <div class="wrap"><table class="sort"><thead><tr><th>연도</th><th>첫 저자</th><th>제목</th><th>장</th></tr></thead><tbody><tr><td class="nw">1956</td><td>Chomsky</td><td><a href="../chapters/E1.html#chomsky1956">Three models for the description of language</a></td><td>1장 기원 1943–56</td></tr><tr><td class="nw">1966</td><td>Weizenbaum</td><td><a href="../chapters/E2.html#weizenbaum1966">ELIZA—a computer program for the study of natural language communication between man and machine</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1971</td><td>Winograd</td><td><a href="../chapters/E2.html#winograd1972">Understanding natural language</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1987</td><td>Waibel et al.</td><td><a href="../chapters/E3.html#waibel1989">Phoneme recognition using time-delay neural networks</a></td><td>3장 지식 시스템과 연결주의(connectionism) 1974–93</td></tr><tr><td class="nw">1989</td><td>Rabiner</td><td><a href="../chapters/E3.html#rabiner1989">A tutorial on hidden Markov models and selected applications in speech recognition</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1990</td><td>Brown et al.</td><td><a href="../chapters/E4.html#brown1990">A statistical approach to machine translation</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1990</td><td>Deerwester et al.</td><td><a href="../chapters/E4.html#deerwester1990">Indexing by latent semantic analysis</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2001</td><td>Lafferty et al.</td><td><a href="../chapters/E4.html#lafferty2001">Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2003</td><td>Bengio et al.</td><td><a href="../chapters/E4.html#bengio2003">A Neural Probabilistic Language Model</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2010</td><td>Turian et al.</td><td><a href="../chapters/E4.html#turian2010">Word Representations: A Simple and General Method for Semi-Supervised Learning</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2010</td><td>Ferrucci et al.</td><td><a href="../chapters/E4.html#ferrucci2010">Building Watson: An Overview of the DeepQA Project</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2010</td><td>Mikolov et al.</td><td><a href="../chapters/E4.html#mikolov2010">Recurrent neural network based language model</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2011</td><td>Collobert et al.</td><td><a href="../chapters/E4.html#collobert2011">Natural Language Processing (almost) from Scratch</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2012</td><td>Hinton et al.</td><td><a href="../chapters/E5.html#hinton2012">Deep Neural Networks for Acoustic Modeling in Speech Recognition</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2013</td><td>Mikolov et al.</td><td><a href="../chapters/E5.html#mikolov2013">Efficient Estimation of Word Representations in Vector Space</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2013</td><td>Mikolov et al.</td><td><a href="../chapters/E5.html#mikolov2013b">Distributed Representations of Words and Phrases and their Compositionality</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2014</td><td>Cho et al.</td><td><a href="../chapters/E5.html#cho2014">Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2014</td><td>Bahdanau et al.</td><td><a href="../chapters/E5.html#bahdanau2014">Neural Machine Translation by Jointly Learning to Align and Translate</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2014</td><td>Sutskever et al.</td><td><a href="../chapters/E5.html#sutskever2014">Sequence to Sequence Learning with Neural Networks</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2014</td><td>Pennington et al.</td><td><a href="../chapters/E5.html#pennington2014">GloVe: Global Vectors for Word Representation</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Luong et al.</td><td><a href="../chapters/E5.html#luong2015">Effective Approaches to Attention-based Neural Machine Translation</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Sennrich et al.</td><td><a href="../chapters/E5.html#sennrich2015">Neural Machine Translation of Rare Words with Subword Units</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2016</td><td>Wu et al.</td><td><a href="../chapters/E5.html#wu2016">Google&#x27;s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2017</td><td>Vaswani et al.</td><td><a href="../chapters/E5.html#vaswani2017">Attention Is All You Need</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2018</td><td>Howard &amp; Ruder</td><td><a href="../chapters/E6.html#howard2018">Universal Language Model Fine-tuning for Text Classification</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2018</td><td>Peters et al.</td><td><a href="../chapters/E6.html#peters2018">Deep contextualized word representations</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2018</td><td>Radford et al.</td><td><a href="../chapters/E6.html#radford2018">Improving Language Understanding by Generative Pre-Training</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2018</td><td>Devlin et al.</td><td><a href="../chapters/E6.html#devlin2018">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2019</td><td>Radford et al.</td><td><a href="../chapters/E6.html#radford2019">Language Models are Unsupervised Multitask Learners</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2019</td><td>Raffel et al.</td><td><a href="../chapters/E6.html#raffel2019">Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2020</td><td>Brown et al.</td><td><a href="../chapters/E6.html#brown2020">Language Models are Few-Shot Learners</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2020</td><td>Lewis et al.</td><td><a href="../chapters/E6.html#lewis2020">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2021</td><td>Chen et al.</td><td><a href="../chapters/E6.html#chen2021">Evaluating Large Language Models Trained on Code</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2022</td><td>Wei et al.</td><td><a href="../chapters/E6.html#wei2022">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2022</td><td>Wang et al.</td><td><a href="../chapters/E6.html#wang2022">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2022</td><td>Kojima et al.</td><td><a href="../chapters/E6.html#kojima2022">Large Language Models are Zero-Shot Reasoners</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2023</td><td>Touvron et al.</td><td><a href="../chapters/E6.html#touvron2023">LLaMA: Open and Efficient Foundation Language Models</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2023</td><td>OpenAI</td><td><a href="../chapters/E6.html#openai2023">GPT-4 Technical Report</a></td><td>6장 사전학습·생성 2017–22</td></tr></tbody></table></div></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.5 · 생성일 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.6 · 생성일 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

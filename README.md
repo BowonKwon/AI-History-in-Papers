@@ -37,6 +37,7 @@ The selection rules were registered before the list was made (`method/selection-
 
 ## Changes · 바뀐 것
 
+- **1.1.6 (2026-11-17)** — Figures and glosses: the long theme-group lineage diagrams bend the year axis at 2012 as the home timeline does; single-row diagrams spread the dots over six heights; crowded diagrams draw lines fainter; lines whose cited paper was made public later are green, with a legend; an enlarged chart of the two low title-phrase series; 1-2-5 ticks on the log axis; chapter 4's last year in the timeline data now 2011 as in its title; short glosses for DARPA, Lisp machine, TIMIT, GMM-HMM, BLEU, mAP, SGVB, AEVB, “perceptron” and "83 Stat. 206". No paper, link or chart value changed. 그림과 낱말 풀이를 손봤다(계보도 가로축 꺾기 · 높이 나누기 · 늦게 공개된 논문을 인용한 선을 초록으로, 낮은 제목 구절 확대 그래프, 로그 눈금, 4장 띠의 끝 해, 약어 풀이). 논문 · 인용선 · 그래프의 값은 그대로다.
 - **1.1.5 (2026-11-16)** — Chart explanations filled in: the lineage captions say what dots, rows and lines stand for, with the number of papers and lines, the most-cited paper, the papers without a line and the lines whose cited paper has the later first public date computed for each diagram from the data; dots share one color, since the cycled colors meant nothing; axes are named; the log scale and conference names are explained, and the caption says what the table shows about the omitted 1970 value and what was not checked; short summaries on the lineage, paper-list and era-list pages; wide charts scroll sideways on phones; a hub link in the header. One count corrected: the key box of chapter 5 now reads 46 of 54 points with arXiv v1 dates (it still said 38 of 46, from before 1.1 added papers). Apart from that, the paper and citation data and the dots and lines of the charts are unchanged. 그래프 설명을 보강했다(계보도의 점 · 줄 · 선 풀이와 그림마다 계산한 논문 · 선 수와 가장 많이 인용된 논문 · 선 없는 논문 · 인용된 논문의 첫 공개일이 더 늦은 선, 뜻 없던 점 색을 한 색으로, 축 이름, 로그 눈금 · 학회 이름 풀이, 계보 · 목록 면 요약, 휴대폰에서 옆으로 밀리는 그래프, 허브 링크). 5장 핵심 상자의 수를 바로잡았다(arXiv v1 날짜인 점이 54개 가운데 46개 — 1.1 에서 논문을 더하기 전의 「46개 가운데 38개」가 남아 있었다). 그 밖에 논문과 인용선의 자료, 그림의 점과 선은 그대로다.
 - **1.1.4 (2026-11-15)** — Figures corrected: a caption no longer explains dotted lines the diagrams do not contain, axis ticks are round values, the line of the first "Winters and booms" chart breaks at 1970 (a year left out), and overlapping or cut-off labels were moved. No paper, link or number changed. 그림을 고쳤다(없는 점선의 풀이, 눈금, 1970년에서 끊은 선, 겹치거나 잘린 글자). 논문·인용선·수치는 그대로다.
 - **1.1.3 (2026-11-11)** — Pearl (1988): the book's bibliography (pp. 521–538) was read and its four citation links confirmed there. 펄(1988)의 참고문헌을 읽어 이 책에서 나가는 인용선 네 개를 책에서 확인했다.
@@ -50,7 +51,7 @@ The selection rules were registered before the list was made (`method/selection-
 ```
 python src/merge_cards.py      # reading outputs + selection + OpenAlex -> data/papers.csv, edges.csv
 python src/check_claims.py     # every link and citation claim in the narrative against the data
-python src/build_site.py       # -> docs/ (ko/, en/, data/)
+python src/build_site.py       # -> site/ (ko/, en/, data/); this repository publishes that folder as docs/
 ```
 
 The pipeline that produced the inputs (`bibcheck.py`, `oa_refs.py`, `oa_edges.py`, `arxiv_pdfs.py`, `textbook_match.py`, `select_papers.py`, `winter_series.py`, `awards.py`) is included; it reads OpenAlex, Crossref and arXiv without an API key or e-mail, and downloads nothing that is not public.
@@ -66,3 +67,9 @@ Citation of OpenAlex, as they request: Priem, J., Piwowar, H., & Orr, R. (2022).
 ---
 
 Part of [bowonkwon.github.io](https://bowonkwon.github.io/) · [공개 자료 전체](https://bowonkwon.github.io/)
+
+## 일러두기 · Note
+
+이 저장소의 자료는 엮은이가 개인적으로 공부하며 엮은 것입니다. 엮은이가 속한 기관의 견해나 업무와는 관계가 없습니다.
+
+These are personal study materials and do not represent the views or work of any institution the editor belongs to.

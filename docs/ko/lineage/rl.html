@@ -57,9 +57,9 @@ figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summa
 @media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
-svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg.dense .edge{opacity:.3}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.late{stroke:var(--s4);stroke-width:2;opacity:.95}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.late.hi{stroke:var(--s4);stroke-width:3}svg .edge.dim{opacity:.12}
 svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
-.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}.legend.lg-line span::before{width:20px;height:2px;border-radius:0;vertical-align:4px;opacity:.8}.legend.lg-line span.late::before{height:3px;opacity:1}
 .pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
 .note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
 .prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
@@ -74,114 +74,115 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html">시대</a><a href="../../ko/lineage/index.html" class="on">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
 <div class="right"><a class="hub" href="https://bowonkwon.github.io/">공개 자료 허브</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
 <main><h1>강화학습·게임</h1><p class="lead">동적 계획법(dynamic programming)과 시간차(temporal difference) 학습에서 Q-학습, 정책 경사(policy gradient), 알파고 계열까지.</p><div class="glance"><p class="glance-h">핵심</p><ul><li>「강화학습(reinforcement learning)·게임」 묶음의 논문을 첫 공개 연도 순으로 놓고, 그 사이의 확인된 인용을 선으로 이은 면이다.</li><li>논문 22편(첫 공개 1957–2019년), 묶음 안의 인용선 72개. 22편 가운데 10편이 2012년 이후에 처음 공개되었다.</li><li>다른 묶음 논문과의 인용은 이 면에 그리지 않는다.</li></ul></div>
-<figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 134" role="img" aria-label="lineage">
-<text x="565.0" y="130" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
-<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
-<text x="142" y="55.0" text-anchor="end">강화학습·게임</text>
-<line class="ax" x1="201.1" x2="201.1" y1="16" y2="86"/><text x="201.1" y="108" text-anchor="middle">1960</text>
-<line class="ax" x1="328.8" x2="328.8" y1="16" y2="86"/><text x="328.8" y="108" text-anchor="middle">1970</text>
-<line class="ax" x1="456.5" x2="456.5" y1="16" y2="86"/><text x="456.5" y="108" text-anchor="middle">1980</text>
-<line class="ax" x1="584.2" x2="584.2" y1="16" y2="86"/><text x="584.2" y="108" text-anchor="middle">1990</text>
-<line class="ax" x1="711.8" x2="711.8" y1="16" y2="86"/><text x="711.8" y="108" text-anchor="middle">2000</text>
-<line class="ax" x1="839.5" x2="839.5" y1="16" y2="86"/><text x="839.5" y="108" text-anchor="middle">2010</text>
-<line class="ax" x1="967.2" x2="967.2" y1="16" y2="86"/><text x="967.2" y="108" text-anchor="middle">2020</text>
-<path class="edge" data-s="sutton1988" data-d="barto1983" d="M503.3,31.5 C534.7,31.5 534.7,31.5 566.1,31.5"/>
-<path class="edge" data-s="sutton1988" data-d="bellman1957" d="M169.2,31.5 C367.6,31.5 367.6,31.5 566.1,31.5"/>
-<path class="edge" data-s="sutton1988" data-d="samuel1959" d="M194.7,31.5 C380.4,31.5 380.4,31.5 566.1,31.5"/>
-<path class="edge" data-s="watkins1992" data-d="watkins1989" d="M575.6,31.5 C594.8,31.5 594.8,31.5 613.9,31.5"/>
-<path class="edge" data-s="williams1992" data-d="barto1983" d="M503.3,31.5 C558.6,31.5 558.6,44.5 613.9,44.5"/>
-<path class="edge" data-s="williams1992" data-d="sutton1988" d="M566.1,31.5 C590.0,31.5 590.0,44.5 613.9,44.5"/>
-<path class="edge" data-s="williams1992" data-d="watkins1989" d="M575.6,31.5 C594.8,31.5 594.8,44.5 613.9,44.5"/>
-<path class="edge" data-s="tesauro1995" data-d="sutton1988" d="M566.1,31.5 C608.1,31.5 608.1,31.5 650.1,31.5"/>
-<path class="edge" data-s="tesauro1995" data-d="samuel1959" d="M194.7,31.5 C422.4,31.5 422.4,31.5 650.1,31.5"/>
-<path class="edge" data-s="sutton1999" data-d="barto1983" d="M503.3,31.5 C604.4,31.5 604.4,31.5 705.5,31.5"/>
-<path class="edge" data-s="sutton1999" data-d="williams1992" d="M613.9,44.5 C659.7,44.5 659.7,31.5 705.5,31.5"/>
-<path class="edge" data-s="mnih2013" data-d="moore1993" d="M632.0,31.5 C760.8,31.5 760.8,31.5 889.6,31.5"/>
-<path class="edge" data-s="mnih2013" data-d="tesauro1995" d="M650.1,31.5 C769.8,31.5 769.8,31.5 889.6,31.5"/>
-<path class="edge" data-s="mnih2015" data-d="moore1993" d="M632.0,31.5 C768.2,31.5 768.2,31.5 904.4,31.5"/>
-<path class="edge" data-s="mnih2015" data-d="tesauro1995" d="M650.1,31.5 C777.3,31.5 777.3,31.5 904.4,31.5"/>
-<path class="edge" data-s="mnih2015" data-d="kaelbling1998" d="M690.6,31.5 C797.5,31.5 797.5,31.5 904.4,31.5"/>
-<path class="edge" data-s="mnih2015" data-d="sutton1998" d="M692.7,44.5 C798.6,44.5 798.6,31.5 904.4,31.5"/>
-<path class="edge" data-s="schulman2015" data-d="barto1983" d="M503.3,31.5 C703.9,31.5 703.9,44.5 904.4,44.5"/>
-<path class="edge" data-s="schulman2015" data-d="mnih2013" d="M889.6,31.5 C897.0,31.5 897.0,44.5 904.4,44.5"/>
-<path class="edge" data-s="lillicrap2015" data-d="mnih2013" d="M889.6,31.5 C900.7,31.5 900.7,31.5 911.9,31.5"/>
-<path class="edge" data-s="lillicrap2015" data-d="mnih2015" d="M904.4,31.5 C908.2,31.5 908.2,31.5 911.9,31.5"/>
-<path class="edge" data-s="silver2016" data-d="sutton1988" d="M566.1,31.5 C741.1,31.5 741.1,31.5 916.2,31.5"/>
-<path class="edge" data-s="silver2016" data-d="williams1992" d="M613.9,44.5 C765.1,44.5 765.1,31.5 916.2,31.5"/>
-<path class="edge" data-s="silver2016" data-d="mnih2015" d="M904.4,31.5 C910.3,31.5 910.3,31.5 916.2,31.5"/>
-<path class="edge" data-s="silver2016" data-d="sutton1999" d="M705.5,31.5 C810.8,31.5 810.8,31.5 916.2,31.5"/>
-<path class="edge" data-s="silver2016" data-d="sutton1998" d="M692.7,44.5 C804.4,44.5 804.4,31.5 916.2,31.5"/>
-<path class="edge" data-s="mnih2016" data-d="mnih2013" d="M889.6,31.5 C903.4,31.5 903.4,44.5 917.2,44.5"/>
-<path class="edge" data-s="mnih2016" data-d="williams1992" d="M613.9,44.5 C765.6,44.5 765.6,44.5 917.2,44.5"/>
-<path class="edge" data-s="mnih2016" data-d="mnih2015" d="M904.4,31.5 C910.8,31.5 910.8,44.5 917.2,44.5"/>
-<path class="edge" data-s="mnih2016" data-d="lillicrap2015" d="M911.9,31.5 C914.6,31.5 914.6,44.5 917.2,44.5"/>
-<path class="edge" data-s="silver2017" data-d="sutton1988" d="M566.1,31.5 C752.3,31.5 752.3,31.5 938.5,31.5"/>
-<path class="edge" data-s="silver2017" data-d="mnih2015" d="M904.4,31.5 C921.5,31.5 921.5,31.5 938.5,31.5"/>
-<path class="edge" data-s="silver2017" data-d="silver2016" d="M916.2,31.5 C927.3,31.5 927.3,31.5 938.5,31.5"/>
-<path class="edge" data-s="silver2017" data-d="mnih2016" d="M917.2,44.5 C927.9,44.5 927.9,31.5 938.5,31.5"/>
-<path class="edge" data-s="silver2017" data-d="sutton1998" d="M692.7,44.5 C815.6,44.5 815.6,31.5 938.5,31.5"/>
-<path class="edge" data-s="schulman2017" data-d="schulman2015" d="M904.4,44.5 C919.9,44.5 919.9,31.5 935.3,31.5"/>
-<path class="edge" data-s="schulman2017" data-d="mnih2015" d="M904.4,31.5 C919.9,31.5 919.9,31.5 935.3,31.5"/>
-<path class="edge" data-s="schulman2017" data-d="mnih2016" d="M917.2,44.5 C926.3,44.5 926.3,31.5 935.3,31.5"/>
-<path class="edge" data-s="silver2018" data-d="silver2016" d="M916.2,31.5 C934.8,31.5 934.8,31.5 953.4,31.5"/>
-<path class="edge" data-s="silver2018" data-d="silver2017" d="M938.5,31.5 C945.9,31.5 945.9,31.5 953.4,31.5"/>
-<path class="edge" data-s="schrittwieser2019" data-d="mnih2015" d="M904.4,31.5 C934.8,31.5 934.8,31.5 965.1,31.5"/>
-<path class="edge" data-s="schrittwieser2019" data-d="silver2016" d="M916.2,31.5 C940.6,31.5 940.6,31.5 965.1,31.5"/>
-<path class="edge" data-s="schrittwieser2019" data-d="silver2017" d="M938.5,31.5 C951.8,31.5 951.8,31.5 965.1,31.5"/>
-<path class="edge" data-s="schrittwieser2019" data-d="silver2018" d="M953.4,31.5 C959.2,31.5 959.2,31.5 965.1,31.5"/>
-<path class="edge" data-s="moore1993" data-d="sutton1988" d="M566.1,31.5 C599.1,31.5 599.1,31.5 632.0,31.5"/>
-<path class="edge" data-s="moore1993" data-d="bellman1957" d="M169.2,31.5 C400.6,31.5 400.6,31.5 632.0,31.5"/>
-<path class="edge" data-s="moore1993" data-d="watkins1989" d="M575.6,31.5 C603.8,31.5 603.8,31.5 632.0,31.5"/>
-<path class="edge" data-s="moore1993" data-d="samuel1959" d="M194.7,31.5 C413.4,31.5 413.4,31.5 632.0,31.5"/>
-<path class="edge" data-s="barto1983" data-d="samuel1959" d="M194.7,31.5 C349.0,31.5 349.0,31.5 503.3,31.5"/>
-<path class="edge" data-s="watkins1989" data-d="barto1983" d="M503.3,31.5 C539.5,31.5 539.5,31.5 575.6,31.5"/>
-<path class="edge" data-s="watkins1989" data-d="samuel1959" d="M194.7,31.5 C385.2,31.5 385.2,31.5 575.6,31.5"/>
-<path class="edge" data-s="watkins1989" data-d="sutton1988" d="M566.1,31.5 C570.9,31.5 570.9,31.5 575.6,31.5"/>
-<path class="edge" data-s="watkins1992" data-d="sutton1988" d="M566.1,31.5 C590.0,31.5 590.0,31.5 613.9,31.5"/>
-<path class="edge" data-s="sutton1998" data-d="bellman1957" d="M169.2,31.5 C430.9,31.5 430.9,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1998" data-d="samuel1959" d="M194.7,31.5 C443.7,31.5 443.7,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1998" data-d="barto1983" d="M503.3,31.5 C598.0,31.5 598.0,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1998" data-d="sutton1988" d="M566.1,31.5 C629.4,31.5 629.4,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1998" data-d="watkins1989" d="M575.6,31.5 C634.2,31.5 634.2,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1998" data-d="watkins1992" d="M613.9,31.5 C653.3,31.5 653.3,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1998" data-d="williams1992" d="M613.9,44.5 C653.3,44.5 653.3,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1998" data-d="tesauro1995" d="M650.1,31.5 C671.4,31.5 671.4,44.5 692.7,44.5"/>
-<path class="edge" data-s="sutton1999" data-d="sutton1998" d="M692.7,44.5 C699.1,44.5 699.1,31.5 705.5,31.5"/>
-<path class="edge" data-s="mnih2013" data-d="sutton1998" d="M692.7,44.5 C791.1,44.5 791.1,31.5 889.6,31.5"/>
-<path class="edge" data-s="mnih2013" data-d="watkins1992" d="M613.9,31.5 C751.8,31.5 751.8,31.5 889.6,31.5"/>
-<path class="edge" data-s="mnih2015" data-d="watkins1992" d="M613.9,31.5 C759.2,31.5 759.2,31.5 904.4,31.5"/>
-<path class="edge" data-s="lillicrap2015" data-d="schulman2015" d="M904.4,44.5 C908.2,44.5 908.2,31.5 911.9,31.5"/>
-<path class="edge" data-s="lillicrap2015" data-d="watkins1992" d="M613.9,31.5 C762.9,31.5 762.9,31.5 911.9,31.5"/>
-<path class="edge" data-s="mnih2016" data-d="schulman2015" d="M904.4,44.5 C910.8,44.5 910.8,44.5 917.2,44.5"/>
-<path class="edge" data-s="mnih2016" data-d="sutton1998" d="M692.7,44.5 C805.0,44.5 805.0,44.5 917.2,44.5"/>
-<path class="edge" data-s="mnih2016" data-d="watkins1989" d="M575.6,31.5 C746.4,31.5 746.4,44.5 917.2,44.5"/>
-<path class="edge" data-s="schulman2017" data-d="williams1992" d="M613.9,44.5 C774.6,44.5 774.6,31.5 935.3,31.5"/>
-<path class="edge" data-s="schrittwieser2019" data-d="sutton1998" d="M692.7,44.5 C828.9,44.5 828.9,31.5 965.1,31.5"/>
-<g class="dot" data-k="bellman1957" data-t="Dynamic Programming" data-m="Bellman · 1957" data-w="다단계 결정 과정의 수학적 이론에 「동적 계획법」이라는 이름을 붙이고, 고정된 한 상태에서 출발하는 최적 결정열 대신 어느 상태에서든 내려야 할 최적 결정을 구하도록 문제를 바꾸어, 문제의 차원을 한 단계에서 내리는 결정의 차원으로 줄인다. 최적성 원리에서 함수 방정식을 끌어내 할당 문제 같은 결정론적·확률적 다단계 과정에 적용하고, 정책 공간에서의 근사를 도입한다." data-href="../chapters/E2.html#bellman1957"><circle cx="169.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="samuel1959" data-t="Some Studies in Machine Learning Using the Game of Checkers" data-m="Samuel · 1959" data-w="체커를 재료로 두 가지 기계학습 절차, 곧 암기 학습과 평가 다항식의 항을 조정하는 일반화 절차를 조사한다. 규칙과 방향 감각과 불완전한 매개변수 목록만 받은 프로그램이 8~10시간의 대국 뒤 저자보다 잘 두게 되었다고 보고한다." data-href="../chapters/E2.html#samuel1959"><circle cx="194.7" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="barto1983" data-t="Neuronlike adaptive elements that can solve difficult learning control problems" data-m="Barto et al. · 1983" data-w="연합 탐색 소자와 적응 비평 소자라는 뉴런형 적응 소자 둘로 이루어진 체계가, 실패 신호만을 피드백으로 받으면서 수레 위 막대를 세우는 법을 학습함을 보인다. 비평 소자는 강화 신호만으로는 얻지 못할 더 많은 정보를 담은 평가를 만들어 낸다." data-href="../chapters/E3.html#barto1983"><circle cx="503.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="sutton1988" data-t="Learning to predict by the methods of temporal differences" data-m="Sutton · 1988" data-w="시간적으로 잇따르는 예측 사이의 차이로 공로를 배분하는 점진적 예측 학습 절차의 부류로 시간차 방법을 도입하고, 특수한 경우의 수렴과 최적성을 증명한다. 이 방법을 지도학습 절차와 형식적으로 관련짓는다." data-href="../chapters/E3.html#sutton1988"><circle cx="566.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="watkins1989" data-t="Learning from Delayed Rewards" data-m="Watkins · 1989" data-w="마르코프 결정 과정을 동물의 행동 선택 모델로 다루고, 환경 모델 없이 행동의 최적 가치를 직접 학습하는 점진적 몬테카를로 방법을 기술한다. 이 학습법이 작동한다는 증명을 주고 계층적 정책도 다룬다." data-href="../chapters/E3.html#watkins1989"><circle cx="575.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="watkins1992" data-t="Q-learning" data-m="Watkins &amp; Dayan · 1992" data-w="Watkins(1989)가 개요만 적은 Q-학습 수렴 증명을 이 기술 노트에서 상세히 제시한다. 모든 상태에서 모든 행동이 반복 표집되고 행동 가치가 이산이면 확률 1로 최적 행동 가치에 수렴하며, 비할인 흡수 환경과 한 반복에 여러 Q값을 바꾸는 경우로의 확장을 개관한다." data-href="../chapters/E4.html#watkins1992"><circle cx="613.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="williams1992" data-t="Simple statistical gradient-following algorithms for connectionist reinforcement learning" data-m="Williams · 1992" data-w="확률적 단위 망을 위한 연합 강화학습 알고리즘 부류인 REINFORCE를 제시하고, 즉시 강화 과제와 일부 지연 강화 과제에서 그 가중치 조정이 기울기 추정을 명시적으로 계산하지 않고도 기대 강화의 기울기 방향을 따름을 보인다. 역전파와의 결합도 보인다." data-href="../chapters/E4.html#williams1992"><circle cx="613.9" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="moore1993" data-t="Prioritized Sweeping: Reinforcement Learning with Less Data and Less Time" data-m="Moore &amp; Atkeson · 1993" data-w="마르코프 예측과 강화학습을 위한 기억 기반 방법인 우선순위 스위핑을 도입한다. 이 방법은 과거 경험 전체를 이용해 동적 계획법 갱신의 우선순위를 정하고 상태 공간 탐색을 이끈다. 여러 확률적 최적 제어 문제에서 다른 강화학습 방식과 비교한다." data-href="../chapters/E3.html#moore1993"><circle cx="632.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="tesauro1995" data-t="Temporal difference learning and TD-Gammon" data-m="Tesauro · 1995" data-w="자기 대국의 결과로부터 TD(λ) 알고리듬으로 스스로를 백개먼 평가 함수로 훈련하는 신경망 TD-Gammon을 제시했다. 전문가 기보에 역전파로 훈련한 저자의 앞선 망 Neurogammon과 비교하고, 이 영역에서 TD 학습이 작동한 까닭을 논한다." data-href="../chapters/E4.html#tesauro1995"><circle cx="650.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="kaelbling1998" data-t="Planning and acting in partially observable stochastic domains" data-m="Kaelbling et al. · 1998" data-w="마르코프 결정 과정과 부분 관측 MDP에 대한 운영과학 기법을 부분 관측 확률적 영역에서의 행동 선택 문제에 끌어온다. POMDP를 오프라인으로 푸는 알고리즘을 개관하고, 어떤 경우에는 그 해에서 유한 기억 제어기를 끌어낼 수 있음을 보인다." data-href="../chapters/E4.html#kaelbling1998"><circle cx="690.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="sutton1998" data-t="Reinforcement Learning: An Introduction" data-m="Sutton &amp; Barto · 1998" data-w="강화학습의 핵심 발상과 알고리즘을 주로 인공지능과 공학의 관점에서 설명하는 책이다. 시간차 학습, 동적 계획법, 함수 근사를 목표 달성을 위한 상호작용 학습이라는 하나의 틀 안에 놓는다." data-href="../chapters/E4.html#sutton1998"><circle cx="692.7" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="sutton1999" data-t="Policy Gradient Methods for Reinforcement Learning with Function Approximation" data-m="Sutton et al. · 1999" data-w="정책을 고유의 함수 근사기로 표현하고 기대 보상의 기울기를 따라 갱신한다. 그 기울기를 근사 행동 가치나 이점 함수로 추정할 수 있음을 보이고, 미분 가능한 함수 근사를 쓰는 정책 반복의 한 판이 국소 최적 정책으로 수렴함을 증명한다." data-href="../chapters/E4.html#sutton1999"><circle cx="705.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="mnih2013" data-t="Playing Atari with Deep Reinforcement Learning" data-m="Mnih et al. · 2013" data-w="Q-학습의 변형으로 합성곱 신경망을 훈련해 아타리 2600의 원시 픽셀에서 직접 미래 보상을 추정한다. 같은 구조와 학습 알고리즘을 손보지 않고 일곱 게임에 적용했다." data-href="../chapters/E5.html#mnih2013"><circle cx="889.6" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="mnih2015" data-t="Human-level control through deep reinforcement learning" data-m="Mnih et al. · 2015" data-w="경험 재생과 주기적으로 갱신되는 목표망을 써서 픽셀과 게임 점수로부터 끝에서 끝까지 강화학습으로 제어 정책을 배우는 심층 Q-망을 도입한다. 하나의 알고리즘·구조·초매개변수로 아타리 2600 게임 49개에서 시험했다." data-href="../chapters/E5.html#mnih2015"><circle cx="904.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="schulman2015" data-t="Trust Region Policy Optimization" data-m="Schulman et al. · 2015" data-w="단조 개선이 보장되는 반복 정책 최적화 절차와 그 실용적 근사인 TRPO를 기술한다. 자연 정책 기울기 방법과 비슷하며, 모의 로봇의 수영·뜀뛰기·걷기와 화면 영상으로 하는 아타리 게임에서 시험했다." data-href="../chapters/E5.html#schulman2015"><circle cx="904.4" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="lillicrap2015" data-t="Continuous control with deep reinforcement learning" data-m="Lillicrap et al. · 2015" data-w="심층 Q-학습의 발상을 결정적 정책 기울기에 기초한 행위자-비평자 알고리즘으로 연속 행동 영역에 맞춘다. 하나의 알고리즘과 망 설정으로 20개 넘는 모의 물리 과제를 풀며 일부는 원시 픽셀에서 직접 푼다." data-href="../chapters/E5.html#lillicrap2015"><circle cx="911.9" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="silver2016" data-t="Mastering the game of Go with deep neural networks and tree search" data-m="Silver et al. · 2016" data-w="인간 전문가 기보의 지도학습과 자기 대국 강화학습으로 훈련한 정책망, 가치망, 몬테카를로 트리 탐색을 결합한 알파고를 소개한다. 다른 바둑 프로그램들을 상대로 99.8%를 이기고 유럽 바둑 챔피언을 5대 0으로 이겼다." data-href="../chapters/E5.html#silver2016"><circle cx="916.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="mnih2016" data-t="Asynchronous Methods for Deep Reinforcement Learning" data-m="Mnih et al. · 2016" data-w="경험 재생 대신 여러 행위자-학습자를 여러 환경 사례에서 비동기로 병렬 실행할 것을 제안하고, 이점 행위자-비평자(A3C)를 포함한 표준 RL 알고리듬 넷의 비동기 변형을 준다. 비동기 행위자-비평자가 다중 코어 CPU 한 대로 훈련하면서 아타리 최고 성능을 넘었고 연속 제어와 3차원 미로 탐색도 다루었다고 보고한다." data-href="../chapters/E5.html#mnih2016"><circle cx="917.2" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="schulman2017" data-t="Proximal Policy Optimization Algorithms" data-m="Schulman et al. · 2017" data-w="자료 표집과, 잘라 낸 확률비를 쓴 대리 목적의 여러 에포크 미니배치 최적화를 번갈아 하는 정책 경사 방법군인 근접 정책 최적화(PPO)를 제안한다. 모의 로봇 보행과 아타리 게임에서 다른 정책 경사 방법과 비교해 시험한다." data-href="../chapters/E5.html#schulman2017"><circle cx="935.3" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="silver2017" data-t="Mastering the game of Go without human knowledge" data-m="Silver et al. · 2017" data-w="무작위 대국에서 출발하는 자기 대국 강화학습만으로, 바둑판의 돌을 입력받는 신경망 하나와 몬테카를로 롤아웃 없는 트리 탐색으로 훈련한 알파고 제로를 소개한다. 앞서 발표된 알파고를 100대 0으로 이겼다." data-href="../chapters/E5.html#silver2017"><circle cx="938.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="silver2018" data-t="A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play" data-m="Silver et al. · 2018" data-w="알파고 제로의 접근을 게임 규칙만 주어진 채 무작위 대국에서 자기 대국 강화학습으로 체스·쇼기·바둑을 배우는 단일 알고리즘 AlphaZero로 일반화한다. 심층 신경망과 범용 몬테카를로 트리 탐색을 쓰며, 세 게임 각각에서 세계 챔피언 프로그램을 이겼다." data-href="../chapters/E6.html#silver2018"><circle cx="953.4" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="schrittwieser2019" data-t="Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model" data-m="Schrittwieser et al. · 2019" data-w="보상·행동 선택 정책·가치 함수를 예측하는 학습된 모델과 트리 기반 탐색을 결합한 MuZero를 제시한다. 아타리 57개 게임에서 새 최고 성능을 세우고, 게임 규칙을 받지 않고도 바둑·체스·쇼기에서 AlphaZero와 맞먹었다." data-href="../chapters/E6.html#schrittwieser2019"><circle cx="965.1" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-</svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 이 그림에는 주제 묶음이 하나뿐이라 줄도 하나다. 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다.</p><p><b>보이는 것: </b>이 그림에는 논문 22편과 확인된 인용선 72개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Sutton 1988(선 8개)이다. 선이 하나도 없는 논문은 없다. 인용된 논문의 첫 공개일이 인용한 논문보다 늦은 것으로 확인되는 선은 없다(논문 카드에 적은 날짜 기준).</p><p>조심할 것: 선은 이 묶음의 논문끼리만 그었다. 다른 묶음 논문과의 인용은 장 면의 논문 카드에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p></figcaption></figure>
+<figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 160" role="img" aria-label="lineage">
+<text x="565.0" y="156" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
+<line class="grid" x1="150" x2="980" y1="112" y2="112"/>
+<text x="142" y="68.0" text-anchor="end">강화학습·게임</text>
+<line class="ax" x1="182.6" x2="182.6" y1="16" y2="112"/><text x="182.6" y="134" text-anchor="middle">1960</text>
+<line class="ax" x1="264.1" x2="264.1" y1="16" y2="112"/><text x="264.1" y="134" text-anchor="middle">1970</text>
+<line class="ax" x1="345.6" x2="345.6" y1="16" y2="112"/><text x="345.6" y="134" text-anchor="middle">1980</text>
+<line class="ax" x1="427.2" x2="427.2" y1="16" y2="112"/><text x="427.2" y="134" text-anchor="middle">1990</text>
+<line class="ax" x1="508.7" x2="508.7" y1="16" y2="112"/><text x="508.7" y="134" text-anchor="middle">2000</text>
+<line class="ax" x1="590.2" x2="590.2" y1="16" y2="112"/><text x="590.2" y="134" text-anchor="middle">2010</text>
+<line class="ax" x1="689.5" x2="689.5" y1="16" y2="112"/><text x="689.5" y="134" text-anchor="middle">2014</text>
+<line class="ax" x1="855.5" x2="855.5" y1="16" y2="112"/><text x="855.5" y="134" text-anchor="middle">2018</text>
+<path class="edge" data-s="sutton1988" data-d="barto1983" d="M375.5,44.5 C395.6,44.5 395.6,83.5 415.6,83.5"/>
+<path class="edge" data-s="sutton1988" data-d="bellman1957" d="M162.2,31.5 C288.9,31.5 288.9,83.5 415.6,83.5"/>
+<path class="edge" data-s="sutton1988" data-d="samuel1959" d="M178.5,70.5 C297.1,70.5 297.1,83.5 415.6,83.5"/>
+<path class="edge" data-s="watkins1992" data-d="watkins1989" d="M421.7,57.5 C434.0,57.5 434.0,96.5 446.2,96.5"/>
+<path class="edge" data-s="williams1992" data-d="barto1983" d="M375.5,44.5 C410.9,44.5 410.9,31.5 446.2,31.5"/>
+<path class="edge" data-s="williams1992" data-d="sutton1988" d="M415.6,83.5 C430.9,83.5 430.9,31.5 446.2,31.5"/>
+<path class="edge" data-s="williams1992" data-d="watkins1989" d="M421.7,57.5 C434.0,57.5 434.0,31.5 446.2,31.5"/>
+<path class="edge" data-s="tesauro1995" data-d="sutton1988" d="M415.6,83.5 C442.4,83.5 442.4,44.5 469.3,44.5"/>
+<path class="edge" data-s="tesauro1995" data-d="samuel1959" d="M178.5,70.5 C323.9,70.5 323.9,44.5 469.3,44.5"/>
+<path class="edge" data-s="sutton1999" data-d="barto1983" d="M375.5,44.5 C440.1,44.5 440.1,96.5 504.6,96.5"/>
+<path class="edge" data-s="sutton1999" data-d="williams1992" d="M446.2,31.5 C475.4,31.5 475.4,96.5 504.6,96.5"/>
+<path class="edge" data-s="mnih2013" data-d="moore1993" d="M457.7,70.5 C571.9,70.5 571.9,31.5 686.0,31.5"/>
+<path class="edge" data-s="mnih2013" data-d="tesauro1995" d="M469.3,44.5 C577.7,44.5 577.7,31.5 686.0,31.5"/>
+<path class="edge" data-s="mnih2015" data-d="moore1993" d="M457.7,70.5 C596.1,70.5 596.1,44.5 734.5,44.5"/>
+<path class="edge" data-s="mnih2015" data-d="tesauro1995" d="M469.3,44.5 C601.9,44.5 601.9,44.5 734.5,44.5"/>
+<path class="edge" data-s="mnih2015" data-d="kaelbling1998" d="M495.1,57.5 C614.8,57.5 614.8,44.5 734.5,44.5"/>
+<path class="edge" data-s="mnih2015" data-d="sutton1998" d="M496.5,83.5 C615.5,83.5 615.5,44.5 734.5,44.5"/>
+<path class="edge" data-s="schulman2015" data-d="barto1983" d="M375.5,44.5 C555.0,44.5 555.0,70.5 734.5,70.5"/>
+<path class="edge" data-s="schulman2015" data-d="mnih2013" d="M686.0,31.5 C710.2,31.5 710.2,70.5 734.5,70.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="mnih2013" d="M686.0,31.5 C722.4,31.5 722.4,83.5 758.7,83.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="mnih2015" d="M734.5,44.5 C746.6,44.5 746.6,83.5 758.7,83.5"/>
+<path class="edge" data-s="silver2016" data-d="sutton1988" d="M415.6,83.5 C594.1,83.5 594.1,57.5 772.5,57.5"/>
+<path class="edge" data-s="silver2016" data-d="williams1992" d="M446.2,31.5 C609.3,31.5 609.3,57.5 772.5,57.5"/>
+<path class="edge" data-s="silver2016" data-d="mnih2015" d="M734.5,44.5 C753.5,44.5 753.5,57.5 772.5,57.5"/>
+<path class="edge" data-s="silver2016" data-d="sutton1999" d="M504.6,96.5 C638.6,96.5 638.6,57.5 772.5,57.5"/>
+<path class="edge" data-s="silver2016" data-d="sutton1998" d="M496.5,83.5 C634.5,83.5 634.5,57.5 772.5,57.5"/>
+<path class="edge" data-s="mnih2016" data-d="mnih2013" d="M686.0,31.5 C731.0,31.5 731.0,96.5 776.0,96.5"/>
+<path class="edge" data-s="mnih2016" data-d="williams1992" d="M446.2,31.5 C611.1,31.5 611.1,96.5 776.0,96.5"/>
+<path class="edge" data-s="mnih2016" data-d="mnih2015" d="M734.5,44.5 C755.2,44.5 755.2,96.5 776.0,96.5"/>
+<path class="edge" data-s="mnih2016" data-d="lillicrap2015" d="M758.7,83.5 C767.3,83.5 767.3,96.5 776.0,96.5"/>
+<path class="edge" data-s="silver2017" data-d="sutton1988" d="M415.6,83.5 C630.4,83.5 630.4,70.5 845.1,70.5"/>
+<path class="edge" data-s="silver2017" data-d="mnih2015" d="M734.5,44.5 C789.8,44.5 789.8,70.5 845.1,70.5"/>
+<path class="edge" data-s="silver2017" data-d="silver2016" d="M772.5,57.5 C808.8,57.5 808.8,70.5 845.1,70.5"/>
+<path class="edge" data-s="silver2017" data-d="mnih2016" d="M776.0,96.5 C810.5,96.5 810.5,70.5 845.1,70.5"/>
+<path class="edge" data-s="silver2017" data-d="sutton1998" d="M496.5,83.5 C670.8,83.5 670.8,70.5 845.1,70.5"/>
+<path class="edge" data-s="schulman2017" data-d="schulman2015" d="M734.5,70.5 C784.6,70.5 784.6,31.5 834.8,31.5"/>
+<path class="edge" data-s="schulman2017" data-d="mnih2015" d="M734.5,44.5 C784.6,44.5 784.6,31.5 834.8,31.5"/>
+<path class="edge" data-s="schulman2017" data-d="mnih2016" d="M776.0,96.5 C805.4,96.5 805.4,31.5 834.8,31.5"/>
+<path class="edge" data-s="silver2018" data-d="silver2016" d="M772.5,57.5 C833.0,57.5 833.0,44.5 893.5,44.5"/>
+<path class="edge" data-s="silver2018" data-d="silver2017" d="M845.1,70.5 C869.3,70.5 869.3,44.5 893.5,44.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="mnih2015" d="M734.5,44.5 C833.0,44.5 833.0,83.5 931.6,83.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="silver2016" d="M772.5,57.5 C852.0,57.5 852.0,83.5 931.6,83.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="silver2017" d="M845.1,70.5 C888.4,70.5 888.4,83.5 931.6,83.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="silver2018" d="M893.5,44.5 C912.6,44.5 912.6,83.5 931.6,83.5"/>
+<path class="edge" data-s="moore1993" data-d="sutton1988" d="M415.6,83.5 C436.7,83.5 436.7,70.5 457.7,70.5"/>
+<path class="edge" data-s="moore1993" data-d="bellman1957" d="M162.2,31.5 C310.0,31.5 310.0,70.5 457.7,70.5"/>
+<path class="edge" data-s="moore1993" data-d="watkins1989" d="M421.7,57.5 C439.7,57.5 439.7,70.5 457.7,70.5"/>
+<path class="edge" data-s="moore1993" data-d="samuel1959" d="M178.5,70.5 C318.1,70.5 318.1,70.5 457.7,70.5"/>
+<path class="edge" data-s="barto1983" data-d="samuel1959" d="M178.5,70.5 C277.0,70.5 277.0,44.5 375.5,44.5"/>
+<path class="edge" data-s="watkins1989" data-d="barto1983" d="M375.5,44.5 C398.6,44.5 398.6,57.5 421.7,57.5"/>
+<path class="edge" data-s="watkins1989" data-d="samuel1959" d="M178.5,70.5 C300.1,70.5 300.1,57.5 421.7,57.5"/>
+<path class="edge" data-s="watkins1989" data-d="sutton1988" d="M415.6,83.5 C418.7,83.5 418.7,57.5 421.7,57.5"/>
+<path class="edge" data-s="watkins1992" data-d="sutton1988" d="M415.6,83.5 C430.9,83.5 430.9,96.5 446.2,96.5"/>
+<path class="edge" data-s="sutton1998" data-d="bellman1957" d="M162.2,31.5 C329.3,31.5 329.3,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1998" data-d="samuel1959" d="M178.5,70.5 C337.5,70.5 337.5,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1998" data-d="barto1983" d="M375.5,44.5 C436.0,44.5 436.0,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1998" data-d="sutton1988" d="M415.6,83.5 C456.0,83.5 456.0,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1998" data-d="watkins1989" d="M421.7,57.5 C459.1,57.5 459.1,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1998" data-d="watkins1992" d="M446.2,96.5 C471.3,96.5 471.3,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1998" data-d="williams1992" d="M446.2,31.5 C471.3,31.5 471.3,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1998" data-d="tesauro1995" d="M469.3,44.5 C482.9,44.5 482.9,83.5 496.5,83.5"/>
+<path class="edge" data-s="sutton1999" data-d="sutton1998" d="M496.5,83.5 C500.5,83.5 500.5,96.5 504.6,96.5"/>
+<path class="edge" data-s="mnih2013" data-d="sutton1998" d="M496.5,83.5 C591.2,83.5 591.2,31.5 686.0,31.5"/>
+<path class="edge" data-s="mnih2013" data-d="watkins1992" d="M446.2,96.5 C566.1,96.5 566.1,31.5 686.0,31.5"/>
+<path class="edge" data-s="mnih2015" data-d="watkins1992" d="M446.2,96.5 C590.3,96.5 590.3,44.5 734.5,44.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="schulman2015" d="M734.5,70.5 C746.6,70.5 746.6,83.5 758.7,83.5"/>
+<path class="edge" data-s="lillicrap2015" data-d="watkins1992" d="M446.2,96.5 C602.4,96.5 602.4,83.5 758.7,83.5"/>
+<path class="edge" data-s="mnih2016" data-d="schulman2015" d="M734.5,70.5 C755.2,70.5 755.2,96.5 776.0,96.5"/>
+<path class="edge" data-s="mnih2016" data-d="sutton1998" d="M496.5,83.5 C636.2,83.5 636.2,96.5 776.0,96.5"/>
+<path class="edge" data-s="mnih2016" data-d="watkins1989" d="M421.7,57.5 C598.8,57.5 598.8,96.5 776.0,96.5"/>
+<path class="edge" data-s="schulman2017" data-d="williams1992" d="M446.2,31.5 C640.5,31.5 640.5,31.5 834.8,31.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="sutton1998" d="M496.5,83.5 C714.0,83.5 714.0,83.5 931.6,83.5"/>
+<g class="dot" data-k="bellman1957" data-t="Dynamic Programming" data-m="Bellman · 1957" data-w="다단계 결정 과정의 수학적 이론에 「동적 계획법」이라는 이름을 붙이고, 고정된 한 상태에서 출발하는 최적 결정열 대신 어느 상태에서든 내려야 할 최적 결정을 구하도록 문제를 바꾸어, 문제의 차원을 한 단계에서 내리는 결정의 차원으로 줄인다. 최적성 원리에서 함수 방정식을 끌어내 할당 문제 같은 결정론적·확률적 다단계 과정에 적용하고, 정책 공간에서의 근사를 도입한다." data-href="../chapters/E2.html#bellman1957"><circle cx="162.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="samuel1959" data-t="Some Studies in Machine Learning Using the Game of Checkers" data-m="Samuel · 1959" data-w="체커를 재료로 두 가지 기계학습 절차, 곧 암기 학습과 평가 다항식의 항을 조정하는 일반화 절차를 조사한다. 규칙과 방향 감각과 불완전한 매개변수 목록만 받은 프로그램이 8~10시간의 대국 뒤 저자보다 잘 두게 되었다고 보고한다." data-href="../chapters/E2.html#samuel1959"><circle cx="178.5" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="barto1983" data-t="Neuronlike adaptive elements that can solve difficult learning control problems" data-m="Barto et al. · 1983" data-w="연합 탐색 소자와 적응 비평 소자라는 뉴런형 적응 소자 둘로 이루어진 체계가, 실패 신호만을 피드백으로 받으면서 수레 위 막대를 세우는 법을 학습함을 보인다. 비평 소자는 강화 신호만으로는 얻지 못할 더 많은 정보를 담은 평가를 만들어 낸다." data-href="../chapters/E3.html#barto1983"><circle cx="375.5" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutton1988" data-t="Learning to predict by the methods of temporal differences" data-m="Sutton · 1988" data-w="시간적으로 잇따르는 예측 사이의 차이로 공로를 배분하는 점진적 예측 학습 절차의 부류로 시간차 방법을 도입하고, 특수한 경우의 수렴과 최적성을 증명한다. 이 방법을 지도학습 절차와 형식적으로 관련짓는다." data-href="../chapters/E3.html#sutton1988"><circle cx="415.6" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="watkins1989" data-t="Learning from Delayed Rewards" data-m="Watkins · 1989" data-w="마르코프 결정 과정을 동물의 행동 선택 모델로 다루고, 환경 모델 없이 행동의 최적 가치를 직접 학습하는 점진적 몬테카를로 방법을 기술한다. 이 학습법이 작동한다는 증명을 주고 계층적 정책도 다룬다." data-href="../chapters/E3.html#watkins1989"><circle cx="421.7" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="watkins1992" data-t="Q-learning" data-m="Watkins &amp; Dayan · 1992" data-w="Watkins(1989)가 개요만 적은 Q-학습 수렴 증명을 이 기술 노트에서 상세히 제시한다. 모든 상태에서 모든 행동이 반복 표집되고 행동 가치가 이산이면 확률 1로 최적 행동 가치에 수렴하며, 비할인 흡수 환경과 한 반복에 여러 Q값을 바꾸는 경우로의 확장을 개관한다." data-href="../chapters/E4.html#watkins1992"><circle cx="446.2" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="williams1992" data-t="Simple statistical gradient-following algorithms for connectionist reinforcement learning" data-m="Williams · 1992" data-w="확률적 단위 망을 위한 연합 강화학습 알고리즘 부류인 REINFORCE를 제시하고, 즉시 강화 과제와 일부 지연 강화 과제에서 그 가중치 조정이 기울기 추정을 명시적으로 계산하지 않고도 기대 강화의 기울기 방향을 따름을 보인다. 역전파와의 결합도 보인다." data-href="../chapters/E4.html#williams1992"><circle cx="446.2" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="moore1993" data-t="Prioritized Sweeping: Reinforcement Learning with Less Data and Less Time" data-m="Moore &amp; Atkeson · 1993" data-w="마르코프 예측과 강화학습을 위한 기억 기반 방법인 우선순위 스위핑을 도입한다. 이 방법은 과거 경험 전체를 이용해 동적 계획법 갱신의 우선순위를 정하고 상태 공간 탐색을 이끈다. 여러 확률적 최적 제어 문제에서 다른 강화학습 방식과 비교한다." data-href="../chapters/E3.html#moore1993"><circle cx="457.7" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="tesauro1995" data-t="Temporal difference learning and TD-Gammon" data-m="Tesauro · 1995" data-w="자기 대국의 결과로부터 TD(λ) 알고리듬으로 스스로를 백개먼 평가 함수로 훈련하는 신경망 TD-Gammon을 제시했다. 전문가 기보에 역전파로 훈련한 저자의 앞선 망 Neurogammon과 비교하고, 이 영역에서 TD 학습이 작동한 까닭을 논한다." data-href="../chapters/E4.html#tesauro1995"><circle cx="469.3" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kaelbling1998" data-t="Planning and acting in partially observable stochastic domains" data-m="Kaelbling et al. · 1998" data-w="마르코프 결정 과정과 부분 관측 MDP에 대한 운영과학 기법을 부분 관측 확률적 영역에서의 행동 선택 문제에 끌어온다. POMDP를 오프라인으로 푸는 알고리즘을 개관하고, 어떤 경우에는 그 해에서 유한 기억 제어기를 끌어낼 수 있음을 보인다." data-href="../chapters/E4.html#kaelbling1998"><circle cx="495.1" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutton1998" data-t="Reinforcement Learning: An Introduction" data-m="Sutton &amp; Barto · 1998" data-w="강화학습의 핵심 발상과 알고리즘을 주로 인공지능과 공학의 관점에서 설명하는 책이다. 시간차 학습, 동적 계획법, 함수 근사를 목표 달성을 위한 상호작용 학습이라는 하나의 틀 안에 놓는다." data-href="../chapters/E4.html#sutton1998"><circle cx="496.5" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="sutton1999" data-t="Policy Gradient Methods for Reinforcement Learning with Function Approximation" data-m="Sutton et al. · 1999" data-w="정책을 고유의 함수 근사기로 표현하고 기대 보상의 기울기를 따라 갱신한다. 그 기울기를 근사 행동 가치나 이점 함수로 추정할 수 있음을 보이고, 미분 가능한 함수 근사를 쓰는 정책 반복의 한 판이 국소 최적 정책으로 수렴함을 증명한다." data-href="../chapters/E4.html#sutton1999"><circle cx="504.6" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mnih2013" data-t="Playing Atari with Deep Reinforcement Learning" data-m="Mnih et al. · 2013" data-w="Q-학습의 변형으로 합성곱 신경망을 훈련해 아타리 2600의 원시 픽셀에서 직접 미래 보상을 추정한다. 같은 구조와 학습 알고리즘을 손보지 않고 일곱 게임에 적용했다." data-href="../chapters/E5.html#mnih2013"><circle cx="686.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mnih2015" data-t="Human-level control through deep reinforcement learning" data-m="Mnih et al. · 2015" data-w="경험 재생과 주기적으로 갱신되는 목표망을 써서 픽셀과 게임 점수로부터 끝에서 끝까지 강화학습으로 제어 정책을 배우는 심층 Q-망을 도입한다. 하나의 알고리즘·구조·초매개변수로 아타리 2600 게임 49개에서 시험했다." data-href="../chapters/E5.html#mnih2015"><circle cx="734.5" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schulman2015" data-t="Trust Region Policy Optimization" data-m="Schulman et al. · 2015" data-w="단조 개선이 보장되는 반복 정책 최적화 절차와 그 실용적 근사인 TRPO를 기술한다. 자연 정책 기울기 방법과 비슷하며, 모의 로봇의 수영·뜀뛰기·걷기와 화면 영상으로 하는 아타리 게임에서 시험했다." data-href="../chapters/E5.html#schulman2015"><circle cx="734.5" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="lillicrap2015" data-t="Continuous control with deep reinforcement learning" data-m="Lillicrap et al. · 2015" data-w="심층 Q-학습의 발상을 결정적 정책 기울기에 기초한 행위자-비평자 알고리즘으로 연속 행동 영역에 맞춘다. 하나의 알고리즘과 망 설정으로 20개 넘는 모의 물리 과제를 풀며 일부는 원시 픽셀에서 직접 푼다." data-href="../chapters/E5.html#lillicrap2015"><circle cx="758.7" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="silver2016" data-t="Mastering the game of Go with deep neural networks and tree search" data-m="Silver et al. · 2016" data-w="인간 전문가 기보의 지도학습과 자기 대국 강화학습으로 훈련한 정책망, 가치망, 몬테카를로 트리 탐색을 결합한 알파고를 소개한다. 다른 바둑 프로그램들을 상대로 99.8%를 이기고 유럽 바둑 챔피언을 5대 0으로 이겼다." data-href="../chapters/E5.html#silver2016"><circle cx="772.5" cy="57.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="mnih2016" data-t="Asynchronous Methods for Deep Reinforcement Learning" data-m="Mnih et al. · 2016" data-w="경험 재생 대신 여러 행위자-학습자를 여러 환경 사례에서 비동기로 병렬 실행할 것을 제안하고, 이점 행위자-비평자(A3C)를 포함한 표준 RL 알고리듬 넷의 비동기 변형을 준다. 비동기 행위자-비평자가 다중 코어 CPU 한 대로 훈련하면서 아타리 최고 성능을 넘었고 연속 제어와 3차원 미로 탐색도 다루었다고 보고한다." data-href="../chapters/E5.html#mnih2016"><circle cx="776.0" cy="96.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schulman2017" data-t="Proximal Policy Optimization Algorithms" data-m="Schulman et al. · 2017" data-w="자료 표집과, 잘라 낸 확률비를 쓴 대리 목적의 여러 에포크 미니배치 최적화를 번갈아 하는 정책 경사 방법군인 근접 정책 최적화(PPO)를 제안한다. 모의 로봇 보행과 아타리 게임에서 다른 정책 경사 방법과 비교해 시험한다." data-href="../chapters/E5.html#schulman2017"><circle cx="834.8" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="silver2017" data-t="Mastering the game of Go without human knowledge" data-m="Silver et al. · 2017" data-w="무작위 대국에서 출발하는 자기 대국 강화학습만으로, 바둑판의 돌을 입력받는 신경망 하나와 몬테카를로 롤아웃 없는 트리 탐색으로 훈련한 알파고 제로를 소개한다. 앞서 발표된 알파고를 100대 0으로 이겼다." data-href="../chapters/E5.html#silver2017"><circle cx="845.1" cy="70.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="silver2018" data-t="A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play" data-m="Silver et al. · 2018" data-w="알파고 제로의 접근을 게임 규칙만 주어진 채 무작위 대국에서 자기 대국 강화학습으로 체스·쇼기·바둑을 배우는 단일 알고리즘 AlphaZero로 일반화한다. 심층 신경망과 범용 몬테카를로 트리 탐색을 쓰며, 세 게임 각각에서 세계 챔피언 프로그램을 이겼다." data-href="../chapters/E6.html#silver2018"><circle cx="893.5" cy="44.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schrittwieser2019" data-t="Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model" data-m="Schrittwieser et al. · 2019" data-w="보상·행동 선택 정책·가치 함수를 예측하는 학습된 모델과 트리 기반 탐색을 결합한 MuZero를 제시한다. 아타리 57개 게임에서 새 최고 성능을 세우고, 게임 규칙을 받지 않고도 바둑·체스·쇼기에서 AlphaZero와 맞먹었다." data-href="../chapters/E6.html#schrittwieser2019"><circle cx="931.6" cy="83.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 가로축은 2012년에서 꺾인다: 그 앞 56년이 연도 구간 너비의 55%, 뒤 9년이 45%를 차지해서, 2012년 뒤에는 같은 1년이 더 넓다(눈금 간격도 10년에서 4년으로 바뀐다). 이 그림에는 주제 묶음이 하나뿐이라 줄도 하나다. 위아래 위치에는 뜻이 없다(시간 순서대로 여섯 높이를 돌아가며 놓아 점과 선이 덜 겹치게 했을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다.</p><p><b>보이는 것: </b>이 그림에는 논문 22편과 확인된 인용선 72개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Sutton 1988(선 8개)이다. 선이 하나도 없는 논문은 없다. 인용된 논문의 첫 공개일이 인용한 논문보다 늦은 것으로 확인되는 선은 없다(논문 카드에 적은 날짜 기준).</p><p>조심할 것: 선은 이 묶음의 논문끼리만 그었다. 다른 묶음 논문과의 인용은 장 면의 논문 카드에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p></figcaption></figure>
 <div class="wrap"><table class="sort"><thead><tr><th>연도</th><th>첫 저자</th><th>제목</th><th>장</th></tr></thead><tbody><tr><td class="nw">1957</td><td>Bellman</td><td><a href="../chapters/E2.html#bellman1957">Dynamic Programming</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1959</td><td>Samuel</td><td><a href="../chapters/E2.html#samuel1959">Some Studies in Machine Learning Using the Game of Checkers</a></td><td>2장 기호와 퍼셉트론 1956–74</td></tr><tr><td class="nw">1983</td><td>Barto et al.</td><td><a href="../chapters/E3.html#barto1983">Neuronlike adaptive elements that can solve difficult learning control problems</a></td><td>3장 지식 시스템과 연결주의(connectionism) 1974–93</td></tr><tr><td class="nw">1988</td><td>Sutton</td><td><a href="../chapters/E3.html#sutton1988">Learning to predict by the methods of temporal differences</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1989</td><td>Watkins</td><td><a href="../chapters/E3.html#watkins1989">Learning from Delayed Rewards</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1992</td><td>Watkins &amp; Dayan</td><td><a href="../chapters/E4.html#watkins1992">Q-learning</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1992</td><td>Williams</td><td><a href="../chapters/E4.html#williams1992">Simple statistical gradient-following algorithms for connectionist reinforcement learning</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1993</td><td>Moore &amp; Atkeson</td><td><a href="../chapters/E3.html#moore1993">Prioritized Sweeping: Reinforcement Learning with Less Data and Less Time</a></td><td>3장 지식 시스템과 연결주의 1974–93</td></tr><tr><td class="nw">1995</td><td>Tesauro</td><td><a href="../chapters/E4.html#tesauro1995">Temporal difference learning and TD-Gammon</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1998</td><td>Kaelbling et al.</td><td><a href="../chapters/E4.html#kaelbling1998">Planning and acting in partially observable stochastic domains</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1998</td><td>Sutton &amp; Barto</td><td><a href="../chapters/E4.html#sutton1998">Reinforcement Learning: An Introduction</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">1999</td><td>Sutton et al.</td><td><a href="../chapters/E4.html#sutton1999">Policy Gradient Methods for Reinforcement Learning with Function Approximation</a></td><td>4장 통계 학습 1990–2011</td></tr><tr><td class="nw">2013</td><td>Mnih et al.</td><td><a href="../chapters/E5.html#mnih2013">Playing Atari with Deep Reinforcement Learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Mnih et al.</td><td><a href="../chapters/E5.html#mnih2015">Human-level control through deep reinforcement learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Schulman et al.</td><td><a href="../chapters/E5.html#schulman2015">Trust Region Policy Optimization</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2015</td><td>Lillicrap et al.</td><td><a href="../chapters/E5.html#lillicrap2015">Continuous control with deep reinforcement learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2016</td><td>Silver et al.</td><td><a href="../chapters/E5.html#silver2016">Mastering the game of Go with deep neural networks and tree search</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2016</td><td>Mnih et al.</td><td><a href="../chapters/E5.html#mnih2016">Asynchronous Methods for Deep Reinforcement Learning</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2017</td><td>Schulman et al.</td><td><a href="../chapters/E5.html#schulman2017">Proximal Policy Optimization Algorithms</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2017</td><td>Silver et al.</td><td><a href="../chapters/E5.html#silver2017">Mastering the game of Go without human knowledge</a></td><td>5장 딥러닝 2012–17</td></tr><tr><td class="nw">2018</td><td>Silver et al.</td><td><a href="../chapters/E6.html#silver2018">A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play</a></td><td>6장 사전학습·생성 2017–22</td></tr><tr><td class="nw">2019</td><td>Schrittwieser et al.</td><td><a href="../chapters/E6.html#schrittwieser2019">Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model</a></td><td>6장 사전학습·생성 2017–22</td></tr></tbody></table></div></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.5 · 생성일 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.6 · 생성일 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){

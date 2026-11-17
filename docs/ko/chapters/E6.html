@@ -57,9 +57,9 @@ figcaption p{margin:.35rem 0}figcaption details{margin:.35rem 0}figcaption summa
 @media(max-width:640px){.sx{overflow-x:auto;-webkit-overflow-scrolling:touch}.sx>svg{min-width:calc(var(--vw)*1px);max-width:none}}
 svg{max-width:100%;height:auto;display:block}svg text{font-family:var(--body);fill:var(--fg2);font-size:11px}svg .ax{stroke:var(--line)}svg .grid{stroke:var(--grid)}
 svg .dot{cursor:pointer}svg .dot:hover circle,svg .dot.on circle{stroke:var(--fg);stroke-width:2}
-svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.dim{opacity:.12}
+svg .edge{fill:none;stroke:var(--fg3);stroke-width:1.1;opacity:.55}svg.dense .edge{opacity:.3}svg .edge.notion{stroke-dasharray:3 3;opacity:.5}svg .edge.late{stroke:var(--s4);stroke-width:2;opacity:.95}svg .edge.hi{stroke:var(--accent);stroke-width:2;opacity:1}svg .edge.late.hi{stroke:var(--s4);stroke-width:3}svg .edge.dim{opacity:.12}
 svg .band{fill:var(--s1);opacity:.07}svg .band.alt{fill:var(--s2)}
-.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+.legend{display:flex;gap:1.1rem;font-size:.86rem;color:var(--fg2);flex-wrap:wrap;margin:.2rem 0 .4rem}.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}.legend.lg-line span::before{width:20px;height:2px;border-radius:0;vertical-align:4px;opacity:.8}.legend.lg-line span.late::before{height:3px;opacity:1}
 .pop{position:absolute;z-index:9;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.6rem .8rem;font-size:.85rem;line-height:1.45;pointer-events:none;display:none}.pop b{display:block;color:var(--accent)}
 .note{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin:1.2rem 0;font-size:.95rem}
 .prose p,.prose ul,.prose .note,.prose .lead{max-width:72ch}.prose p{margin:.8rem 0}.prose ul{padding-left:1.2rem}.prose li{margin:.3rem 0}
@@ -98,248 +98,249 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <tr><td><a href="#openai2023">GPT-4</a></td><td>2023-03-14(발표)</td><td>2023-03-15 arXiv v1(보고서)</td></tr>
 <tr><td><a href="#peters2018">ELMo</a></td><td>NAACL 2018</td><td>2018-02-15 arXiv v1. arXiv 주석은 「2017-10-27 OpenReview 게시」를 적으나 그 기록을 찾지 못해 v1을 썼다</td></tr>
 </tbody></table></div></div>
-<h2>계보</h2><figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 414" role="img" aria-label="lineage">
-<text x="565.0" y="410" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
-<line class="grid" x1="150" x2="980" y1="86" y2="86"/>
-<text x="142" y="55.0" text-anchor="end">강화학습·게임</text>
-<line class="grid" x1="150" x2="980" y1="156" y2="156"/>
-<text x="142" y="125.0" text-anchor="end">언어·음성</text>
-<line class="grid" x1="150" x2="980" y1="226" y2="226"/>
-<text x="142" y="195.0" text-anchor="end">시각·생성</text>
-<line class="grid" x1="150" x2="980" y1="296" y2="296"/>
-<text x="142" y="265.0" text-anchor="end">확률·통계·기원</text>
-<line class="grid" x1="150" x2="980" y1="366" y2="366"/>
-<text x="142" y="335.0" text-anchor="end">규모·정렬·안전</text>
-<line class="ax" x1="150.0" x2="150.0" y1="16" y2="366"/><text x="150.0" y="388" text-anchor="middle">2016</text>
-<line class="ax" x1="242.2" x2="242.2" y1="16" y2="366"/><text x="242.2" y="388" text-anchor="middle">2017</text>
-<line class="ax" x1="334.4" x2="334.4" y1="16" y2="366"/><text x="334.4" y="388" text-anchor="middle">2018</text>
-<line class="ax" x1="426.7" x2="426.7" y1="16" y2="366"/><text x="426.7" y="388" text-anchor="middle">2019</text>
-<line class="ax" x1="518.9" x2="518.9" y1="16" y2="366"/><text x="518.9" y="388" text-anchor="middle">2020</text>
-<line class="ax" x1="611.1" x2="611.1" y1="16" y2="366"/><text x="611.1" y="388" text-anchor="middle">2021</text>
-<line class="ax" x1="703.3" x2="703.3" y1="16" y2="366"/><text x="703.3" y="388" text-anchor="middle">2022</text>
-<line class="ax" x1="795.6" x2="795.6" y1="16" y2="366"/><text x="795.6" y="388" text-anchor="middle">2023</text>
-<line class="ax" x1="887.8" x2="887.8" y1="16" y2="366"/><text x="887.8" y="388" text-anchor="middle">2024</text>
-<line class="ax" x1="980.0" x2="980.0" y1="16" y2="366"/><text x="980.0" y="388" text-anchor="middle">2025</text>
-<path class="edge" data-s="devlin2018" data-d="peters2018" d="M342.1,114.5 C372.9,114.5 372.9,101.5 403.6,101.5"/>
-<path class="edge" data-s="devlin2018" data-d="howard2018" d="M334.4,101.5 C369.0,101.5 369.0,101.5 403.6,101.5"/>
-<path class="edge" data-s="devlin2018" data-d="wang2018" d="M357.5,171.5 C380.6,171.5 380.6,101.5 403.6,101.5"/>
-<path class="edge" data-s="raffel2019" data-d="hestness2017" d="M326.8,311.5 C411.3,311.5 411.3,101.5 495.8,101.5"/>
-<path class="edge" data-s="raffel2019" data-d="peters2018" d="M342.1,114.5 C419.0,114.5 419.0,101.5 495.8,101.5"/>
-<path class="edge" data-s="raffel2019" data-d="howard2018" d="M334.4,101.5 C415.1,101.5 415.1,101.5 495.8,101.5"/>
-<path class="edge" data-s="schrittwieser2019" data-d="silver2018" d="M419.0,31.5 C461.2,31.5 461.2,31.5 503.5,31.5"/>
-<path class="edge" data-s="brown2020" data-d="hestness2017" d="M326.8,311.5 C438.2,311.5 438.2,101.5 549.6,101.5"/>
-<path class="edge" data-s="brown2020" data-d="howard2018" d="M334.4,101.5 C442.0,101.5 442.0,101.5 549.6,101.5"/>
-<path class="edge" data-s="brown2020" data-d="kaplan2020" d="M518.9,311.5 C534.3,311.5 534.3,101.5 549.6,101.5"/>
-<path class="edge" data-s="brown2020" data-d="lewis2020" d="M549.6,114.5 C549.6,114.5 549.6,101.5 549.6,101.5"/>
-<path class="edge" data-s="dosovitskiy2020" data-d="brown2020" d="M549.6,101.5 C568.8,101.5 568.8,171.5 588.1,171.5"/>
-<path class="edge" data-s="lewis2020" data-d="wang2018" d="M357.5,171.5 C453.6,171.5 453.6,114.5 549.6,114.5"/>
-<path class="edge" data-s="lewis2020" data-d="raffel2019" d="M495.8,101.5 C522.7,101.5 522.7,114.5 549.6,114.5"/>
-<path class="edge" data-s="stiennon2020" data-d="raffel2019" d="M495.8,101.5 C538.1,101.5 538.1,311.5 580.4,311.5"/>
-<path class="edge" data-s="stiennon2020" data-d="brown2020" d="M549.6,101.5 C565.0,101.5 565.0,311.5 580.4,311.5"/>
-<path class="edge" data-s="radford2021" data-d="hestness2017" d="M326.8,311.5 C472.8,311.5 472.8,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="peters2018" d="M342.1,114.5 C480.5,114.5 480.5,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="howard2018" d="M334.4,101.5 C476.6,101.5 476.6,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="wang2018" d="M357.5,171.5 C488.1,171.5 488.1,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="raffel2019" d="M495.8,101.5 C557.3,101.5 557.3,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="kaplan2020" d="M518.9,311.5 C568.8,311.5 568.8,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="brown2020" d="M549.6,101.5 C584.2,101.5 584.2,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="dosovitskiy2020" d="M588.1,171.5 C603.4,171.5 603.4,184.5 618.8,184.5"/>
-<path class="edge" data-s="chen2021" data-d="peters2018" d="M342.1,114.5 C499.7,114.5 499.7,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="kaplan2020" d="M518.9,311.5 C588.1,311.5 588.1,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="stiennon2020" d="M580.4,311.5 C618.8,311.5 618.8,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="bender2021" d="M626.5,324.5 C641.9,324.5 641.9,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="radford2021" d="M618.8,184.5 C638.0,184.5 638.0,101.5 657.2,101.5"/>
-<path class="edge" data-s="bender2021" data-d="peters2018" d="M342.1,114.5 C484.3,114.5 484.3,324.5 626.5,324.5"/>
-<path class="edge" data-s="bender2021" data-d="raffel2019" d="M495.8,101.5 C561.2,101.5 561.2,324.5 626.5,324.5"/>
-<path class="edge" data-s="bommasani2021" data-d="hestness2017" d="M326.8,311.5 C495.8,311.5 495.8,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="peters2018" d="M342.1,114.5 C503.5,114.5 503.5,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="howard2018" d="M334.4,101.5 C499.7,101.5 499.7,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="kaplan2020" d="M518.9,311.5 C591.9,311.5 591.9,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="brown2020" d="M549.6,101.5 C607.3,101.5 607.3,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="stiennon2020" d="M580.4,311.5 C622.6,311.5 622.6,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="fedus2021" d="M611.1,311.5 C638.0,311.5 638.0,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="bender2021" d="M626.5,324.5 C645.7,324.5 645.7,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="radford2021" d="M618.8,184.5 C641.9,184.5 641.9,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="chen2021" d="M657.2,101.5 C661.1,101.5 661.1,254.5 664.9,254.5"/>
-<path class="edge" data-s="fedus2021" data-d="wang2018" d="M357.5,171.5 C484.3,171.5 484.3,311.5 611.1,311.5"/>
-<path class="edge" data-s="fedus2021" data-d="raffel2019" d="M495.8,101.5 C553.5,101.5 553.5,311.5 611.1,311.5"/>
-<path class="edge" data-s="fedus2021" data-d="kaplan2020" d="M518.9,311.5 C565.0,311.5 565.0,311.5 611.1,311.5"/>
-<path class="edge" data-s="fedus2021" data-d="brown2020" d="M549.6,101.5 C580.4,101.5 580.4,311.5 611.1,311.5"/>
-<path class="edge" data-s="wei2022" data-d="brown2020" d="M549.6,101.5 C626.5,101.5 626.5,101.5 703.3,101.5"/>
-<path class="edge" data-s="howard2018" data-d="peters2018" d="M342.1,114.5 C338.3,114.5 338.3,101.5 334.4,101.5"/>
-<path class="edge" data-s="radford2018" data-d="howard2018" d="M334.4,101.5 C353.7,101.5 353.7,101.5 372.9,101.5"/>
-<path class="edge" data-s="radford2018" data-d="peters2018" d="M342.1,114.5 C357.5,114.5 357.5,101.5 372.9,101.5"/>
-<path class="edge" data-s="devlin2018" data-d="radford2018" d="M372.9,101.5 C388.2,101.5 388.2,101.5 403.6,101.5"/>
-<path class="edge" data-s="radford2019" data-d="devlin2018" d="M403.6,101.5 C419.0,101.5 419.0,114.5 434.4,114.5"/>
-<path class="edge" data-s="radford2019" data-d="hestness2017" d="M326.8,311.5 C380.6,311.5 380.6,114.5 434.4,114.5"/>
-<path class="edge" data-s="radford2019" data-d="howard2018" d="M334.4,101.5 C384.4,101.5 384.4,114.5 434.4,114.5"/>
-<path class="edge" data-s="radford2019" data-d="peters2018" d="M342.1,114.5 C388.2,114.5 388.2,114.5 434.4,114.5"/>
-<path class="edge" data-s="radford2019" data-d="radford2018" d="M372.9,101.5 C403.6,101.5 403.6,114.5 434.4,114.5"/>
-<path class="edge" data-s="raffel2019" data-d="radford2018" d="M372.9,101.5 C434.4,101.5 434.4,101.5 495.8,101.5"/>
-<path class="edge" data-s="raffel2019" data-d="devlin2018" d="M403.6,101.5 C449.7,101.5 449.7,101.5 495.8,101.5"/>
-<path class="edge" data-s="raffel2019" data-d="radford2019" d="M434.4,114.5 C465.1,114.5 465.1,101.5 495.8,101.5"/>
-<path class="edge" data-s="kaplan2020" data-d="devlin2018" d="M403.6,101.5 C461.2,101.5 461.2,311.5 518.9,311.5"/>
-<path class="edge" data-s="kaplan2020" data-d="hestness2017" d="M326.8,311.5 C422.8,311.5 422.8,311.5 518.9,311.5"/>
-<path class="edge" data-s="kaplan2020" data-d="radford2018" d="M372.9,101.5 C445.9,101.5 445.9,311.5 518.9,311.5"/>
-<path class="edge" data-s="kaplan2020" data-d="radford2019" d="M434.4,114.5 C476.6,114.5 476.6,311.5 518.9,311.5"/>
-<path class="edge" data-s="kaplan2020" data-d="raffel2019" d="M495.8,101.5 C507.4,101.5 507.4,311.5 518.9,311.5"/>
-<path class="edge" data-s="brown2020" data-d="radford2018" d="M372.9,101.5 C461.2,101.5 461.2,101.5 549.6,101.5"/>
-<path class="edge" data-s="brown2020" data-d="devlin2018" d="M403.6,101.5 C476.6,101.5 476.6,101.5 549.6,101.5"/>
-<path class="edge" data-s="brown2020" data-d="radford2019" d="M434.4,114.5 C492.0,114.5 492.0,101.5 549.6,101.5"/>
-<path class="edge" data-s="brown2020" data-d="raffel2019" d="M495.8,101.5 C522.7,101.5 522.7,101.5 549.6,101.5"/>
-<path class="edge" data-s="dosovitskiy2020" data-d="devlin2018" d="M403.6,101.5 C495.8,101.5 495.8,171.5 588.1,171.5"/>
-<path class="edge" data-s="dosovitskiy2020" data-d="radford2018" d="M372.9,101.5 C480.5,101.5 480.5,171.5 588.1,171.5"/>
-<path class="edge" data-s="dosovitskiy2020" data-d="radford2019" d="M434.4,114.5 C511.2,114.5 511.2,171.5 588.1,171.5"/>
-<path class="edge" data-s="lewis2020" data-d="devlin2018" d="M403.6,101.5 C476.6,101.5 476.6,114.5 549.6,114.5"/>
-<path class="edge" data-s="lewis2020" data-d="radford2018" d="M372.9,101.5 C461.2,101.5 461.2,114.5 549.6,114.5"/>
-<path class="edge" data-s="lewis2020" data-d="radford2019" d="M434.4,114.5 C492.0,114.5 492.0,114.5 549.6,114.5"/>
-<path class="edge" data-s="stiennon2020" data-d="radford2018" d="M372.9,101.5 C476.6,101.5 476.6,311.5 580.4,311.5"/>
-<path class="edge" data-s="stiennon2020" data-d="radford2019" d="M434.4,114.5 C507.4,114.5 507.4,311.5 580.4,311.5"/>
-<path class="edge" data-s="jumper2021" data-d="devlin2018" d="M403.6,101.5 C530.4,101.5 530.4,241.5 657.2,241.5"/>
-<path class="edge" data-s="radford2021" data-d="devlin2018" d="M403.6,101.5 C511.2,101.5 511.2,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="radford2018" d="M372.9,101.5 C495.8,101.5 495.8,184.5 618.8,184.5"/>
-<path class="edge" data-s="radford2021" data-d="radford2019" d="M434.4,114.5 C526.6,114.5 526.6,184.5 618.8,184.5"/>
-<path class="edge" data-s="chen2021" data-d="brown2020" d="M549.6,101.5 C603.4,101.5 603.4,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="devlin2018" d="M403.6,101.5 C530.4,101.5 530.4,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="radford2018" d="M372.9,101.5 C515.0,101.5 515.0,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="radford2019" d="M434.4,114.5 C545.8,114.5 545.8,101.5 657.2,101.5"/>
-<path class="edge" data-s="chen2021" data-d="raffel2019" d="M495.8,101.5 C576.5,101.5 576.5,101.5 657.2,101.5"/>
-<path class="edge" data-s="bender2021" data-d="brown2020" d="M549.6,101.5 C588.1,101.5 588.1,324.5 626.5,324.5"/>
-<path class="edge" data-s="bender2021" data-d="devlin2018" d="M403.6,101.5 C515.0,101.5 515.0,324.5 626.5,324.5"/>
-<path class="edge" data-s="bender2021" data-d="fedus2021" d="M611.1,311.5 C618.8,311.5 618.8,324.5 626.5,324.5"/>
-<path class="edge" data-s="bender2021" data-d="radford2019" d="M434.4,114.5 C530.4,114.5 530.4,324.5 626.5,324.5"/>
-<path class="edge" data-s="bommasani2021" data-d="devlin2018" d="M403.6,101.5 C534.3,101.5 534.3,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="dosovitskiy2020" d="M588.1,171.5 C626.5,171.5 626.5,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="lewis2020" d="M549.6,114.5 C607.3,114.5 607.3,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="radford2018" d="M372.9,101.5 C518.9,101.5 518.9,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="radford2019" d="M434.4,114.5 C549.6,114.5 549.6,254.5 664.9,254.5"/>
-<path class="edge" data-s="bommasani2021" data-d="raffel2019" d="M495.8,101.5 C580.4,101.5 580.4,254.5 664.9,254.5"/>
-<path class="edge" data-s="fedus2021" data-d="devlin2018" d="M403.6,101.5 C507.4,101.5 507.4,311.5 611.1,311.5"/>
-<path class="edge" data-s="fedus2021" data-d="radford2018" d="M372.9,101.5 C492.0,101.5 492.0,311.5 611.1,311.5"/>
-<path class="edge" data-s="wei2022" data-d="peters2018" d="M342.1,114.5 C522.7,114.5 522.7,101.5 703.3,101.5"/>
-<path class="edge" data-s="wei2022" data-d="devlin2018" d="M403.6,101.5 C553.5,101.5 553.5,101.5 703.3,101.5"/>
-<path class="edge" data-s="wei2022" data-d="raffel2019" d="M495.8,101.5 C599.6,101.5 599.6,101.5 703.3,101.5"/>
-<path class="edge" data-s="wei2022" data-d="kaplan2020" d="M518.9,311.5 C611.1,311.5 611.1,101.5 703.3,101.5"/>
-<path class="edge" data-s="wei2022" data-d="chen2021" d="M657.2,101.5 C680.3,101.5 680.3,101.5 703.3,101.5"/>
-<path class="edge" data-s="wei2022" data-d="ouyang2022" d="M718.7,324.5 C711.0,324.5 711.0,101.5 703.3,101.5"/>
-<path class="edge" data-s="wei2022" data-d="wei2022b" d="M741.8,311.5 C722.5,311.5 722.5,101.5 703.3,101.5"/>
-<path class="edge" data-s="wei2022" data-d="wang2022" d="M718.7,114.5 C711.0,114.5 711.0,101.5 703.3,101.5"/>
-<path class="edge" data-s="ouyang2022" data-d="silver2018" d="M419.0,31.5 C568.8,31.5 568.8,324.5 718.7,324.5"/>
-<path class="edge" data-s="ouyang2022" data-d="radford2019" d="M434.4,114.5 C576.5,114.5 576.5,324.5 718.7,324.5"/>
-<path class="edge" data-s="ouyang2022" data-d="brown2020" d="M549.6,101.5 C634.2,101.5 634.2,324.5 718.7,324.5"/>
-<path class="edge" data-s="ouyang2022" data-d="stiennon2020" d="M580.4,311.5 C649.5,311.5 649.5,324.5 718.7,324.5"/>
-<path class="edge" data-s="ouyang2022" data-d="chen2021" d="M657.2,101.5 C688.0,101.5 688.0,324.5 718.7,324.5"/>
-<path class="edge" data-s="ouyang2022" data-d="bender2021" d="M626.5,324.5 C672.6,324.5 672.6,324.5 718.7,324.5"/>
-<path class="edge" data-s="ouyang2022" data-d="bommasani2021" d="M664.9,254.5 C691.8,254.5 691.8,324.5 718.7,324.5"/>
-<path class="edge" data-s="ouyang2022" data-d="fedus2021" d="M611.1,311.5 C664.9,311.5 664.9,324.5 718.7,324.5"/>
-<path class="edge" data-s="hoffmann2022" data-d="raffel2019" d="M495.8,101.5 C607.3,101.5 607.3,311.5 718.7,311.5"/>
-<path class="edge" data-s="hoffmann2022" data-d="kaplan2020" d="M518.9,311.5 C618.8,311.5 618.8,311.5 718.7,311.5"/>
-<path class="edge" data-s="hoffmann2022" data-d="brown2020" d="M549.6,101.5 C634.2,101.5 634.2,311.5 718.7,311.5"/>
-<path class="edge" data-s="hoffmann2022" data-d="lewis2020" d="M549.6,114.5 C634.2,114.5 634.2,311.5 718.7,311.5"/>
-<path class="edge" data-s="hoffmann2022" data-d="bender2021" d="M626.5,324.5 C672.6,324.5 672.6,311.5 718.7,311.5"/>
-<path class="edge" data-s="hoffmann2022" data-d="fedus2021" d="M611.1,311.5 C664.9,311.5 664.9,311.5 718.7,311.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="bender2021" d="M626.5,324.5 C676.4,324.5 676.4,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="bommasani2021" d="M664.9,254.5 C695.6,254.5 695.6,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="brown2020" d="M549.6,101.5 C638.0,101.5 638.0,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="chen2021" d="M657.2,101.5 C691.8,101.5 691.8,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="devlin2018" d="M403.6,101.5 C565.0,101.5 565.0,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="fedus2021" d="M611.1,311.5 C668.8,311.5 668.8,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="hoffmann2022" d="M718.7,311.5 C722.5,311.5 722.5,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="kaplan2020" d="M518.9,311.5 C622.6,311.5 622.6,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="ouyang2022" d="M718.7,324.5 C722.5,324.5 722.5,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="radford2018" d="M372.9,101.5 C549.6,101.5 549.6,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="raffel2019" d="M495.8,101.5 C611.1,101.5 611.1,337.5 726.4,337.5"/>
-<path class="edge" data-s="chowdhery2022" data-d="wei2022" d="M703.3,101.5 C714.9,101.5 714.9,337.5 726.4,337.5"/>
-<path class="edge" data-s="wei2022b" data-d="bender2021" d="M626.5,324.5 C684.1,324.5 684.1,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="bommasani2021" d="M664.9,254.5 C703.3,254.5 703.3,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="brown2020" d="M549.6,101.5 C645.7,101.5 645.7,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="chowdhery2022" d="M726.4,337.5 C734.1,337.5 734.1,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="devlin2018" d="M403.6,101.5 C572.7,101.5 572.7,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="fedus2021" d="M611.1,311.5 C676.4,311.5 676.4,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="hoffmann2022" d="M718.7,311.5 C730.2,311.5 730.2,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="kaplan2020" d="M518.9,311.5 C630.3,311.5 630.3,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="kojima2022" d="M734.1,101.5 C737.9,101.5 737.9,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="ouyang2022" d="M718.7,324.5 C730.2,324.5 730.2,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="radford2019" d="M434.4,114.5 C588.1,114.5 588.1,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="raffel2019" d="M495.8,101.5 C618.8,101.5 618.8,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="wang2022" d="M718.7,114.5 C730.2,114.5 730.2,311.5 741.8,311.5"/>
-<path class="edge" data-s="wei2022b" data-d="wei2022" d="M703.3,101.5 C722.5,101.5 722.5,311.5 741.8,311.5"/>
-<path class="edge" data-s="kojima2022" data-d="devlin2018" d="M403.6,101.5 C568.8,101.5 568.8,101.5 734.1,101.5"/>
-<path class="edge" data-s="kojima2022" data-d="radford2019" d="M434.4,114.5 C584.2,114.5 584.2,101.5 734.1,101.5"/>
-<path class="edge" data-s="kojima2022" data-d="raffel2019" d="M495.8,101.5 C615.0,101.5 615.0,101.5 734.1,101.5"/>
-<path class="edge" data-s="kojima2022" data-d="brown2020" d="M549.6,101.5 C641.9,101.5 641.9,101.5 734.1,101.5"/>
-<path class="edge" data-s="kojima2022" data-d="wei2022" d="M703.3,101.5 C718.7,101.5 718.7,101.5 734.1,101.5"/>
-<path class="edge" data-s="kojima2022" data-d="ouyang2022" d="M718.7,324.5 C726.4,324.5 726.4,101.5 734.1,101.5"/>
-<path class="edge" data-s="kojima2022" data-d="chowdhery2022" d="M726.4,337.5 C730.2,337.5 730.2,101.5 734.1,101.5"/>
-<path class="edge" data-s="kojima2022" data-d="wang2022" d="M718.7,114.5 C726.4,114.5 726.4,101.5 734.1,101.5"/>
-<path class="edge" data-s="wang2022" data-d="radford2019" d="M434.4,114.5 C576.5,114.5 576.5,114.5 718.7,114.5"/>
-<path class="edge" data-s="wang2022" data-d="brown2020" d="M549.6,101.5 C634.2,101.5 634.2,114.5 718.7,114.5"/>
-<path class="edge" data-s="wang2022" data-d="chen2021" d="M657.2,101.5 C688.0,101.5 688.0,114.5 718.7,114.5"/>
-<path class="edge" data-s="wang2022" data-d="wei2022" d="M703.3,101.5 C711.0,101.5 711.0,114.5 718.7,114.5"/>
-<path class="edge" data-s="wang2022" data-d="chowdhery2022" d="M726.4,337.5 C722.5,337.5 722.5,114.5 718.7,114.5"/>
-<path class="edge" data-s="wang2022" data-d="kojima2022" d="M734.1,101.5 C726.4,101.5 726.4,114.5 718.7,114.5"/>
-<path class="edge" data-s="touvron2023" data-d="brown2020" d="M549.6,101.5 C676.4,101.5 676.4,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="chen2021" d="M657.2,101.5 C730.2,101.5 730.2,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="chowdhery2022" d="M726.4,337.5 C764.8,337.5 764.8,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="devlin2018" d="M403.6,101.5 C603.4,101.5 603.4,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="hestness2017" d="M326.8,311.5 C565.0,311.5 565.0,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="hoffmann2022" d="M718.7,311.5 C761.0,311.5 761.0,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="kaplan2020" d="M518.9,311.5 C661.1,311.5 661.1,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="ouyang2022" d="M718.7,324.5 C761.0,324.5 761.0,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="radford2018" d="M372.9,101.5 C588.1,101.5 588.1,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="radford2019" d="M434.4,114.5 C618.8,114.5 618.8,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="raffel2019" d="M495.8,101.5 C649.5,101.5 649.5,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="wang2022" d="M718.7,114.5 C761.0,114.5 761.0,101.5 803.2,101.5"/>
-<path class="edge" data-s="touvron2023" data-d="wei2022b" d="M741.8,311.5 C772.5,311.5 772.5,101.5 803.2,101.5"/>
-<path class="edge" data-s="openai2023" data-d="bender2021" d="M626.5,324.5 C718.7,324.5 718.7,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="bommasani2021" d="M664.9,254.5 C737.9,254.5 737.9,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="brown2020" d="M549.6,101.5 C680.3,101.5 680.3,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="chen2021" d="M657.2,101.5 C734.1,101.5 734.1,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="chowdhery2022" d="M726.4,337.5 C768.7,337.5 768.7,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="devlin2018" d="M403.6,101.5 C607.3,101.5 607.3,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="hestness2017" d="M326.8,311.5 C568.8,311.5 568.8,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="hoffmann2022" d="M718.7,311.5 C764.8,311.5 764.8,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="kaplan2020" d="M518.9,311.5 C664.9,311.5 664.9,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="kojima2022" d="M734.1,101.5 C772.5,101.5 772.5,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="ouyang2022" d="M718.7,324.5 C764.8,324.5 764.8,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="radford2018" d="M372.9,101.5 C591.9,101.5 591.9,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="radford2019" d="M434.4,114.5 C622.6,114.5 622.6,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="raffel2019" d="M495.8,101.5 C653.4,101.5 653.4,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="touvron2023" d="M803.2,101.5 C807.1,101.5 807.1,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="wei2022" d="M703.3,101.5 C757.1,101.5 757.1,114.5 810.9,114.5"/>
-<path class="edge" data-s="openai2023" data-d="wei2022b" d="M741.8,311.5 C776.3,311.5 776.3,114.5 810.9,114.5"/>
-<path class="edge" data-s="wang2018" data-d="peters2018" d="M342.1,114.5 C349.8,114.5 349.8,171.5 357.5,171.5"/>
-<g class="dot" data-k="hestness2017" data-t="Deep Learning Scaling is Predictable, Empirically" data-m="Hestness et al. · 2017" data-w="기계 번역·언어 모델링·영상 분류·음성 인식에서 학습 곡선을 재어, 일반화 오류가 훈련 집합 크기의 거듭제곱 법칙으로 줄어들며 그 지수(대개 −0.07~−0.35)는 모델 개선으로 절편만 바뀌고 지수는 바뀌지 않음을 찾았다. 모델 크기는 자료 크기에 대해 선형보다 느리게 커진다고도 보고했다." data-href="E6.html#hestness2017"><circle cx="326.8" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="howard2018" data-t="Universal Language Model Fine-tuning for Text Classification" data-m="Howard &amp; Ruder · 2018" data-w="일반 말뭉치로 언어 모델을 사전훈련한 뒤 판별적 미세 조정, 기울어진 삼각 학습률, 점진적 해동으로 목표 과제에 미세 조정하고 분류기를 훈련하는 ULMFiT를 제안한다. 여섯 텍스트 분류 자료 대부분에서 18~24%의 오류 감소를 보고한다." data-href="E6.html#howard2018"><circle cx="334.4" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="peters2018" data-t="Deep contextualized word representations" data-m="Peters et al. · 2018" data-w="대규모 말뭉치로 사전훈련한 양방향 LSTM 언어 모델의 모든 내부 층을 과제별로 학습한 선형 결합으로 계산하는 단어 표현 ELMo를 소개한다. 기존 모델에 더하면 여섯 NLP 과제에서 결과가 개선되었다." data-href="E6.html#peters2018"><circle cx="342.1" cy="114.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wang2018" data-t="GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding" data-m="Wang et al. · 2018" data-w="기존 자연어 이해 과제들을 모으고 모델 평가용 온라인 플랫폼과 모델의 언어학적 분석을 위해 손으로 만든 진단 시험 세트를 붙인 일반 언어 이해 평가(GLUE) 벤치마크를 도입한다. 기준 모델들을 평가하여 모든 과제를 함께 학습한 다중 과제 학습이 과제마다 따로 학습한 모델보다 성능이 높다는 결과를 보고한다." data-href="E6.html#wang2018"><circle cx="357.5" cy="171.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="radford2018" data-t="Improving Language Understanding by Generative Pre-Training" data-m="Radford et al. · 2018" data-w="다층 트랜스포머 디코더를 비표지 텍스트로 언어 모델로 훈련한 뒤, 과제를 의식한 입력 변환으로 표지 과제에 미세 조정했다. 과제에 무관한 모델 하나가 연구한 자연어 이해 자료 12개 중 9개에서 최고 성능을 개선했다." data-href="E6.html#radford2018"><circle cx="372.9" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="devlin2018" data-t="BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" data-m="Devlin et al. · 2018" data-w="마스크 언어 모델 목적과 다음 문장 예측으로 비표지 텍스트에 사전훈련해 표현이 좌우 문맥을 모두 조건으로 삼게 한 트랜스포머 인코더 BERT를 소개한다. 출력층 하나를 더해 미세 조정하며 11개 NLP 과제에서 새 최고 성능을 보고한다." data-href="E6.html#devlin2018"><circle cx="403.6" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="silver2018" data-t="A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play" data-m="Silver et al. · 2018" data-w="알파고 제로의 접근을 게임 규칙만 주어진 채 무작위 대국에서 자기 대국 강화학습으로 체스·쇼기·바둑을 배우는 단일 알고리즘 AlphaZero로 일반화한다. 심층 신경망과 범용 몬테카를로 트리 탐색을 쓰며, 세 게임 각각에서 세계 챔피언 프로그램을 이겼다." data-href="E6.html#silver2018"><circle cx="419.0" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="radford2019" data-t="Language Models are Unsupervised Multitask Learners" data-m="Radford et al. · 2019" data-w="가장 큰 것이 15억 매개변수 GPT-2인 트랜스포머 언어 모델들을 수백만 웹페이지의 새 자료 WebText로 훈련하고, 과제별 훈련 없이 질의응답·번역·독해·요약의 제로샷 성능을 보고한다. 성능은 모델 용량에 로그 선형으로 개선된다." data-href="E6.html#radford2019"><circle cx="434.4" cy="114.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="raffel2019" data-t="Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" data-m="Raffel et al. · 2019" data-w="모든 텍스트 기반 언어 문제를 텍스트 입력·텍스트 출력으로 두는 통일된 틀을 도입하고, 그 틀로 사전훈련 목적·구조·비표지 자료·전이 방법을 체계적으로 비교한다. 말뭉치 C4와 사전훈련 모델·코드를 공개했다." data-href="E6.html#raffel2019"><circle cx="495.8" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="schrittwieser2019" data-t="Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model" data-m="Schrittwieser et al. · 2019" data-w="보상·행동 선택 정책·가치 함수를 예측하는 학습된 모델과 트리 기반 탐색을 결합한 MuZero를 제시한다. 아타리 57개 게임에서 새 최고 성능을 세우고, 게임 규칙을 받지 않고도 바둑·체스·쇼기에서 AlphaZero와 맞먹었다." data-href="E6.html#schrittwieser2019"><circle cx="503.5" cy="31.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="kaplan2020" data-t="Scaling Laws for Neural Language Models" data-m="Kaplan et al. · 2020" data-w="트랜스포머 언어 모델의 교차 엔트로피 손실이 모델 크기·자료 크기·훈련 연산량에 어떻게 의존하는지 재고 그 추세에 거듭제곱 법칙을 맞췄다. 그 적합으로 고정된 연산 예산의 배분을 끌어내어, 연산 효율적 훈련은 매우 큰 모델을 수렴 훨씬 전에 멈추는 것임을 찾았다." data-href="E6.html#kaplan2020"><circle cx="518.9" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="brown2020" data-t="Language Models are Few-Shot Learners" data-m="Brown et al. · 2020" data-w="1750억 매개변수의 자기회귀 언어 모델 GPT-3를 훈련하고, 과제와 시연을 텍스트로만 주고 기울기 갱신이나 미세 조정 없이 제로샷·원샷·퓨샷으로 여러 NLP 과제에서 평가한다. 한계, 벤치마크 오염 분석, 사회적 영향도 함께 보고한다." data-href="E6.html#brown2020"><circle cx="549.6" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="lewis2020" data-t="Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" data-m="Lewis et al. · 2020" data-w="사전훈련된 seq2seq 생성기와 위키백과 색인 위의 사전훈련 밀집 검색기를 결합해 끝에서 끝까지 미세 조정하는 검색 증강 생성(RAG)을 두 변형(열 전체에 같은 문단 / 토큰마다)으로 제안했다. 저자들의 실험에서 열린 영역 질의응답 과제 셋에서 최고 성능을 세웠다." data-href="E6.html#lewis2020"><circle cx="549.6" cy="114.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="stiennon2020" data-t="Learning to summarize from human feedback" data-m="Stiennon et al. · 2020" data-w="요약 쌍에 대한 인간 비교 자료를 모아 인간이 선호한 요약을 예측하는 보상 모델을 훈련하고, 그 보상 모델에 대해 강화학습(PPO)으로 요약 정책을 미세 조정한다. 레딧 TL;DR에 적용하고 뉴스 전용 미세 조정 없이 CNN/DM 기사로 전이됨을 보고한다." data-href="E6.html#stiennon2020"><circle cx="580.4" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="dosovitskiy2020" data-t="An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale" data-m="Dosovitskiy et al. · 2020" data-w="선형 임베딩한 영상 조각의 열에 표준 트랜스포머를 거의 손대지 않고 직접 적용해 영상을 분류하는 비전 트랜스포머(ViT)를 제시한다. 큰 자료로 사전훈련해 중소 규모 벤치마크로 옮기면 더 적은 훈련 연산으로 합성곱망에 맞먹거나 앞선다고 보고한다." data-href="E6.html#dosovitskiy2020"><circle cx="588.1" cy="171.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="fedus2021" data-t="Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity" data-m="Fedus et al. · 2021" data-w="전문가 혼합 라우팅을 스위치 트랜스포머로 단순화하고, 큰 희소 모델을 bfloat16으로 훈련하게 하는 기법을 더해 같은 연산에서 T5-Base/Large보다 최대 7배 빠른 사전훈련을 보고한다. C4 말뭉치로 최대 1조 매개변수 모델을 사전훈련한다." data-href="E6.html#fedus2021"><circle cx="611.1" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="radford2021" data-t="Learning Transferable Visual Models From Natural Language Supervision" data-m="Radford et al. · 2021" data-w="인터넷에서 모은 4억 개의 (영상, 텍스트) 쌍으로 어떤 캡션이 어떤 영상에 붙는지 예측하는 과제로 영상·텍스트 인코더를 사전훈련한다(CLIP). 자연어로 시각 개념을 가리켜 제로샷 전이를 하며, 기존 컴퓨터 비전 자료 30여 개로 벤치마크했다." data-href="E6.html#radford2021"><circle cx="618.8" cy="184.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="bender2021" data-t="On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?" data-m="Bender et al. · 2021" data-w="점점 커지는 언어 모델에 따르는 위험을 묻는다. 환경·재정 비용, 문서화되지 않은 거대한 학습 자료가 지배적 관점을 과대 대표하고 편향을 담는 문제, 합성된 글을 의미 있는 것으로 받아들이는 경향을 들고, 언어 모델은 자연어를 이해하는 것이 아니라 언어 형식을 다룬다고 주장한다. 환경·재정 비용을 먼저 따지고, 자료를 선별·문서화하고, 목표와 이해당사자의 가치에 관한 개발 전 검토를 하고, 더 큰 모델 밖의 연구를 할 것을 권고한다." data-href="E6.html#bender2021"><circle cx="626.5" cy="324.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="chen2021" data-t="Evaluating Large Language Models Trained on Code" data-m="Chen et al. · 2021" data-w="공개 GitHub 코드로 미세 조정한 GPT 모델 Codex와, 문서 문자열에서 합성한 프로그램의 기능적 정확성을 재는 벤치마크 HumanEval을 소개했다. Codex는 HumanEval 문제의 28.8%(GPT-3는 0%)를, 문제당 100개 표본을 뽑으면 70.2%를 풀었다." data-href="E6.html#chen2021"><circle cx="657.2" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="jumper2021" data-t="Highly accurate protein structure prediction with AlphaFold" data-m="Jumper et al. · 2021" data-w="단백질 구조와 다중 서열 정렬에 관한 물리·생물학적 지식을 딥러닝 설계에 넣어 완전히 다시 설계한 AlphaFold 신경망을 기술한다. CASP14에서 다수의 경우 실험 구조에 견줄 정확도로 구조를 예측했다." data-href="E6.html#jumper2021"><circle cx="657.2" cy="241.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="bommasani2021" data-t="On the Opportunities and Risks of Foundation Models" data-m="Bommasani et al. · 2021" data-w="넓은 자료로 대개 대규모 자기 지도로 훈련되어 넓은 범위의 하류 과제에 맞출 수 있는 모델에 「기반 모델」이라는 이름을 도입했다. 그 능력·기술 원리·응용·사회적 영향을 개관하고, 이 전환을 창발과 동질화라는 개념으로 짚었다." data-href="E6.html#bommasani2021"><circle cx="664.9" cy="254.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wei2022" data-t="Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" data-m="Wei et al. · 2022" data-w="중간 추론 단계를 담은 예 몇 개를 프롬프트에 주는 생각의 사슬 프롬프트를 도입하고, 산술·상식·기호 추론 과제에서 대규모 언어 모델을 개선함을 보고했다. 그런 예 여덟 개로 PaLM 540B가 GSM8K에서 최고 정확도에 이르렀다." data-href="E6.html#wei2022"><circle cx="703.3" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="hoffmann2022" data-t="Training Compute-Optimal Large Language Models" data-m="Hoffmann et al. · 2022" data-w="400여 개의 훈련된 언어 모델로부터 고정 연산 예산에서 모델 크기와 훈련 토큰 수를 어떻게 늘려야 하는지 추정해 같은 비율로 키워야 함을 찾았다. 같은 연산으로 Gopher보다 자료를 4배 쓴 700억 매개변수 Chinchilla가 Gopher·GPT-3·Jurassic-1·Megatron-Turing NLG를 여러 하류 과제에서 앞섰다." data-href="E6.html#hoffmann2022"><circle cx="718.7" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="ouyang2022" data-t="Training language models to follow instructions with human feedback" data-m="Ouyang et al. · 2022" data-w="GPT-3를 먼저 라벨러의 시연으로 지도학습하고 다음에 라벨러가 매긴 출력 순위로 인간 피드백 강화학습을 해 InstructGPT를 만들었다. 라벨러들은 13억 InstructGPT의 출력을 1750억 GPT-3보다 선호했고, 진실성이 오르고 유해 출력이 줄었다." data-href="E6.html#ouyang2022"><circle cx="718.7" cy="324.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wang2022" data-t="Self-Consistency Improves Chain of Thought Reasoning in Language Models" data-m="Wang et al. · 2022" data-w="생각의 사슬 프롬프트에서 다양한 추론 경로를 표집하고 그것들을 주변화해 가장 일관된 답을 고르는 복호화 전략 자기 일관성을 제안했다. GSM8K(+17.9%)·SVAMP(+11.0%) 같은 산술·상식 벤치마크에서 개선을 보고한다." data-href="E6.html#wang2022"><circle cx="718.7" cy="114.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="chowdhery2022" data-t="PaLM: Scaling Language Modeling with Pathways" data-m="Chowdhery et al. · 2022" data-w="Pathways 체계로 TPU v4 칩 6,144개에서 5400억 매개변수 조밀 트랜스포머 언어 모델 PaLM을 훈련하고, 수백 개의 언어 이해·생성·추론·다국어·코드 벤치마크에서 퓨샷 결과를 보고했다. 모델 규모에 따른 편향·유해성·훈련 자료 암기도 분석했다." data-href="E6.html#chowdhery2022"><circle cx="726.4" cy="337.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="kojima2022" data-t="Large Language Models are Zero-Shot Reasoners" data-m="Kojima et al. · 2022" data-w="각 답 앞에 「Let&#x27;s think step by step」 한 문장을 붙이는 제로샷 CoT가 손수 만든 퓨샷 예 없이도 산술·기호·논리 추론 벤치마크에서 대규모 언어 모델의 제로샷 정확도를 올림을 보였다. 예컨대 text-davinci-002의 MultiArith가 17.7%에서 78.7%로 올랐다." data-href="E6.html#kojima2022"><circle cx="734.1" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="wei2022b" data-t="Emergent Abilities of Large Language Models" data-m="Wei et al. · 2022" data-w="대규모 언어 모델의 창발 능력을 작은 모델에는 없고 큰 모델에는 있어서 작은 모델의 성능을 외삽해서는 예측할 수 없는 능력으로 정의하고, 퓨샷 프롬프트와 증강 프롬프트 설정에서 선행 연구가 보고한 그런 능력을 개관했다." data-href="E6.html#wei2022b"><circle cx="741.8" cy="311.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="touvron2023" data-t="LLaMA: Open and Efficient Foundation Language Models" data-m="Touvron et al. · 2023" data-w="공개 자료만으로 수조 토큰을 훈련한 70억~650억 매개변수의 기반 언어 모델 LLaMA를 공개했다. 주어진 추론 예산에서 최고 성능을 겨냥하며, LLaMA-13B가 대부분의 벤치마크에서 GPT-3(175B)를 앞서고 LLaMA-65B가 Chinchilla-70B·PaLM-540B에 견줄 만하다고 보고했다." data-href="E6.html#touvron2023"><circle cx="803.2" cy="101.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-<g class="dot" data-k="openai2023" data-t="GPT-4 Technical Report" data-m="OpenAI · 2023" data-w="영상·텍스트 입력을 받는 트랜스포머 기반 다중 모달 모델 GPT-4를 시험·벤치마크 결과와 사후 훈련 정렬 절차와 함께 보고하고, 1/1,000 이하의 연산으로 훈련한 모델로부터 성능의 일부를 예측하게 한 기반 설비를 기술했다. 보고서는 구조(모델 크기 포함)·하드웨어·훈련 연산량·자료 구성·훈련 방법의 세부는 담지 않는다고 적는다." data-href="E6.html#openai2023"><circle cx="810.9" cy="114.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
-</svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 세로줄은 주제 묶음이다. 한 줄 안의 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다.</p><p><b>보이는 것: </b>이 그림에는 논문 30편과 확인된 인용선 189개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Devlin et al. 2018(선 18개)이다. 선이 하나도 없는 논문은 없다. 선 6개는 인용된 논문의 첫 공개일이 인용한 논문보다 늦다(논문 카드에 적은 날짜 기준). 이런 선에서는 인용된 논문이 더 오른쪽이나 같은 자리에 놓인다.</p><p>조심할 것: 선은 이 장의 논문끼리만 그었다. 다른 장 논문과의 인용은 아래 논문 카드의 「이 목록의 논문 중 인용한 것」에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p><details><summary>줄(주제 묶음) 이름 풀이</summary><dl><dt><a href="../lineage/rl.html">강화학습·게임</a></dt><dd>동적 계획법(dynamic programming)과 시간차(temporal difference) 학습에서 Q-학습, 정책 경사(policy gradient), 알파고 계열까지.</dd><dt><a href="../lineage/lang.html">언어·음성</a></dt><dd>통계적 언어 모델과 음성 인식에서 임베딩, 어텐션, 트랜스포머, 사전학습 언어 모델까지.</dd><dt><a href="../lineage/vision.html">시각·생성</a></dt><dd>네오코그니트론과 LeNet에서 ImageNet, ResNet, 생성 모델(GAN·VAE·확산)까지.</dd><dt><a href="../lineage/stat.html">확률·통계·기원</a></dt><dd>사이버네틱스·정보 이론·PAC 학습·SVM·앙상블·베이지안 망(Bayesian network).</dd><dt><a href="../lineage/align.html">규모·정렬·안전</a></dt><dd>스케일링 법칙, 인간 피드백 강화학습, 안전 문제 제기.</dd></dl></details></figcaption></figure>
+<h2>계보</h2><figure><div class="legend lg-line"><span style="--c:var(--fg3)">그 밖의 확인된 인용선</span><span class="late" style="--c:var(--s4)">인용된 논문의 첫 공개일이 더 늦은 선(6개)</span></div><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 428" role="img" aria-label="lineage" class="dense">
+<text x="565.0" y="424" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
+<text x="142" y="26" text-anchor="end" fill="var(--fg3)">주제 묶음</text>
+<line class="grid" x1="150" x2="980" y1="100" y2="100"/>
+<text x="142" y="69.0" text-anchor="end">강화학습·게임</text>
+<line class="grid" x1="150" x2="980" y1="170" y2="170"/>
+<text x="142" y="139.0" text-anchor="end">언어·음성</text>
+<line class="grid" x1="150" x2="980" y1="240" y2="240"/>
+<text x="142" y="209.0" text-anchor="end">시각·생성</text>
+<line class="grid" x1="150" x2="980" y1="310" y2="310"/>
+<text x="142" y="279.0" text-anchor="end">확률·통계·기원</text>
+<line class="grid" x1="150" x2="980" y1="380" y2="380"/>
+<text x="142" y="349.0" text-anchor="end">규모·정렬·안전</text>
+<line class="ax" x1="150.0" x2="150.0" y1="30" y2="380"/><text x="150.0" y="402" text-anchor="middle">2016</text>
+<line class="ax" x1="242.2" x2="242.2" y1="30" y2="380"/><text x="242.2" y="402" text-anchor="middle">2017</text>
+<line class="ax" x1="334.4" x2="334.4" y1="30" y2="380"/><text x="334.4" y="402" text-anchor="middle">2018</text>
+<line class="ax" x1="426.7" x2="426.7" y1="30" y2="380"/><text x="426.7" y="402" text-anchor="middle">2019</text>
+<line class="ax" x1="518.9" x2="518.9" y1="30" y2="380"/><text x="518.9" y="402" text-anchor="middle">2020</text>
+<line class="ax" x1="611.1" x2="611.1" y1="30" y2="380"/><text x="611.1" y="402" text-anchor="middle">2021</text>
+<line class="ax" x1="703.3" x2="703.3" y1="30" y2="380"/><text x="703.3" y="402" text-anchor="middle">2022</text>
+<line class="ax" x1="795.6" x2="795.6" y1="30" y2="380"/><text x="795.6" y="402" text-anchor="middle">2023</text>
+<line class="ax" x1="887.8" x2="887.8" y1="30" y2="380"/><text x="887.8" y="402" text-anchor="middle">2024</text>
+<line class="ax" x1="980.0" x2="980.0" y1="30" y2="380"/><text x="980.0" y="402" text-anchor="middle">2025</text>
+<path class="edge" data-s="devlin2018" data-d="peters2018" d="M342.1,128.5 C372.9,128.5 372.9,115.5 403.6,115.5"/>
+<path class="edge" data-s="devlin2018" data-d="howard2018" d="M334.4,115.5 C369.0,115.5 369.0,115.5 403.6,115.5"/>
+<path class="edge" data-s="devlin2018" data-d="wang2018" d="M357.5,185.5 C380.6,185.5 380.6,115.5 403.6,115.5"/>
+<path class="edge" data-s="raffel2019" data-d="hestness2017" d="M326.8,325.5 C411.3,325.5 411.3,115.5 495.8,115.5"/>
+<path class="edge" data-s="raffel2019" data-d="peters2018" d="M342.1,128.5 C419.0,128.5 419.0,115.5 495.8,115.5"/>
+<path class="edge" data-s="raffel2019" data-d="howard2018" d="M334.4,115.5 C415.1,115.5 415.1,115.5 495.8,115.5"/>
+<path class="edge" data-s="schrittwieser2019" data-d="silver2018" d="M419.0,45.5 C461.2,45.5 461.2,45.5 503.5,45.5"/>
+<path class="edge" data-s="brown2020" data-d="hestness2017" d="M326.8,325.5 C438.2,325.5 438.2,115.5 549.6,115.5"/>
+<path class="edge" data-s="brown2020" data-d="howard2018" d="M334.4,115.5 C442.0,115.5 442.0,115.5 549.6,115.5"/>
+<path class="edge" data-s="brown2020" data-d="kaplan2020" d="M518.9,325.5 C534.3,325.5 534.3,115.5 549.6,115.5"/>
+<path class="edge" data-s="brown2020" data-d="lewis2020" d="M549.6,128.5 C549.6,128.5 549.6,115.5 549.6,115.5"/>
+<path class="edge" data-s="dosovitskiy2020" data-d="brown2020" d="M549.6,115.5 C568.8,115.5 568.8,185.5 588.1,185.5"/>
+<path class="edge" data-s="lewis2020" data-d="wang2018" d="M357.5,185.5 C453.6,185.5 453.6,128.5 549.6,128.5"/>
+<path class="edge" data-s="lewis2020" data-d="raffel2019" d="M495.8,115.5 C522.7,115.5 522.7,128.5 549.6,128.5"/>
+<path class="edge" data-s="stiennon2020" data-d="raffel2019" d="M495.8,115.5 C538.1,115.5 538.1,325.5 580.4,325.5"/>
+<path class="edge" data-s="stiennon2020" data-d="brown2020" d="M549.6,115.5 C565.0,115.5 565.0,325.5 580.4,325.5"/>
+<path class="edge" data-s="radford2021" data-d="hestness2017" d="M326.8,325.5 C472.8,325.5 472.8,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="peters2018" d="M342.1,128.5 C480.5,128.5 480.5,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="howard2018" d="M334.4,115.5 C476.6,115.5 476.6,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="wang2018" d="M357.5,185.5 C488.1,185.5 488.1,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="raffel2019" d="M495.8,115.5 C557.3,115.5 557.3,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="kaplan2020" d="M518.9,325.5 C568.8,325.5 568.8,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="brown2020" d="M549.6,115.5 C584.2,115.5 584.2,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="dosovitskiy2020" d="M588.1,185.5 C603.4,185.5 603.4,198.5 618.8,198.5"/>
+<path class="edge" data-s="chen2021" data-d="peters2018" d="M342.1,128.5 C499.7,128.5 499.7,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="kaplan2020" d="M518.9,325.5 C588.1,325.5 588.1,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="stiennon2020" d="M580.4,325.5 C618.8,325.5 618.8,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="bender2021" d="M626.5,338.5 C641.9,338.5 641.9,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="radford2021" d="M618.8,198.5 C638.0,198.5 638.0,115.5 657.2,115.5"/>
+<path class="edge" data-s="bender2021" data-d="peters2018" d="M342.1,128.5 C484.3,128.5 484.3,338.5 626.5,338.5"/>
+<path class="edge" data-s="bender2021" data-d="raffel2019" d="M495.8,115.5 C561.2,115.5 561.2,338.5 626.5,338.5"/>
+<path class="edge" data-s="bommasani2021" data-d="hestness2017" d="M326.8,325.5 C495.8,325.5 495.8,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="peters2018" d="M342.1,128.5 C503.5,128.5 503.5,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="howard2018" d="M334.4,115.5 C499.7,115.5 499.7,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="kaplan2020" d="M518.9,325.5 C591.9,325.5 591.9,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="brown2020" d="M549.6,115.5 C607.3,115.5 607.3,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="stiennon2020" d="M580.4,325.5 C622.6,325.5 622.6,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="fedus2021" d="M611.1,325.5 C638.0,325.5 638.0,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="bender2021" d="M626.5,338.5 C645.7,338.5 645.7,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="radford2021" d="M618.8,198.5 C641.9,198.5 641.9,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="chen2021" d="M657.2,115.5 C661.1,115.5 661.1,268.5 664.9,268.5"/>
+<path class="edge" data-s="fedus2021" data-d="wang2018" d="M357.5,185.5 C484.3,185.5 484.3,325.5 611.1,325.5"/>
+<path class="edge" data-s="fedus2021" data-d="raffel2019" d="M495.8,115.5 C553.5,115.5 553.5,325.5 611.1,325.5"/>
+<path class="edge" data-s="fedus2021" data-d="kaplan2020" d="M518.9,325.5 C565.0,325.5 565.0,325.5 611.1,325.5"/>
+<path class="edge" data-s="fedus2021" data-d="brown2020" d="M549.6,115.5 C580.4,115.5 580.4,325.5 611.1,325.5"/>
+<path class="edge" data-s="wei2022" data-d="brown2020" d="M549.6,115.5 C626.5,115.5 626.5,115.5 703.3,115.5"/>
+<path class="edge" data-s="radford2018" data-d="howard2018" d="M334.4,115.5 C353.7,115.5 353.7,115.5 372.9,115.5"/>
+<path class="edge" data-s="radford2018" data-d="peters2018" d="M342.1,128.5 C357.5,128.5 357.5,115.5 372.9,115.5"/>
+<path class="edge" data-s="devlin2018" data-d="radford2018" d="M372.9,115.5 C388.2,115.5 388.2,115.5 403.6,115.5"/>
+<path class="edge" data-s="radford2019" data-d="devlin2018" d="M403.6,115.5 C419.0,115.5 419.0,128.5 434.4,128.5"/>
+<path class="edge" data-s="radford2019" data-d="hestness2017" d="M326.8,325.5 C380.6,325.5 380.6,128.5 434.4,128.5"/>
+<path class="edge" data-s="radford2019" data-d="howard2018" d="M334.4,115.5 C384.4,115.5 384.4,128.5 434.4,128.5"/>
+<path class="edge" data-s="radford2019" data-d="peters2018" d="M342.1,128.5 C388.2,128.5 388.2,128.5 434.4,128.5"/>
+<path class="edge" data-s="radford2019" data-d="radford2018" d="M372.9,115.5 C403.6,115.5 403.6,128.5 434.4,128.5"/>
+<path class="edge" data-s="raffel2019" data-d="radford2018" d="M372.9,115.5 C434.4,115.5 434.4,115.5 495.8,115.5"/>
+<path class="edge" data-s="raffel2019" data-d="devlin2018" d="M403.6,115.5 C449.7,115.5 449.7,115.5 495.8,115.5"/>
+<path class="edge" data-s="raffel2019" data-d="radford2019" d="M434.4,128.5 C465.1,128.5 465.1,115.5 495.8,115.5"/>
+<path class="edge" data-s="kaplan2020" data-d="devlin2018" d="M403.6,115.5 C461.2,115.5 461.2,325.5 518.9,325.5"/>
+<path class="edge" data-s="kaplan2020" data-d="hestness2017" d="M326.8,325.5 C422.8,325.5 422.8,325.5 518.9,325.5"/>
+<path class="edge" data-s="kaplan2020" data-d="radford2018" d="M372.9,115.5 C445.9,115.5 445.9,325.5 518.9,325.5"/>
+<path class="edge" data-s="kaplan2020" data-d="radford2019" d="M434.4,128.5 C476.6,128.5 476.6,325.5 518.9,325.5"/>
+<path class="edge" data-s="kaplan2020" data-d="raffel2019" d="M495.8,115.5 C507.4,115.5 507.4,325.5 518.9,325.5"/>
+<path class="edge" data-s="brown2020" data-d="radford2018" d="M372.9,115.5 C461.2,115.5 461.2,115.5 549.6,115.5"/>
+<path class="edge" data-s="brown2020" data-d="devlin2018" d="M403.6,115.5 C476.6,115.5 476.6,115.5 549.6,115.5"/>
+<path class="edge" data-s="brown2020" data-d="radford2019" d="M434.4,128.5 C492.0,128.5 492.0,115.5 549.6,115.5"/>
+<path class="edge" data-s="brown2020" data-d="raffel2019" d="M495.8,115.5 C522.7,115.5 522.7,115.5 549.6,115.5"/>
+<path class="edge" data-s="dosovitskiy2020" data-d="devlin2018" d="M403.6,115.5 C495.8,115.5 495.8,185.5 588.1,185.5"/>
+<path class="edge" data-s="dosovitskiy2020" data-d="radford2018" d="M372.9,115.5 C480.5,115.5 480.5,185.5 588.1,185.5"/>
+<path class="edge" data-s="dosovitskiy2020" data-d="radford2019" d="M434.4,128.5 C511.2,128.5 511.2,185.5 588.1,185.5"/>
+<path class="edge" data-s="lewis2020" data-d="devlin2018" d="M403.6,115.5 C476.6,115.5 476.6,128.5 549.6,128.5"/>
+<path class="edge" data-s="lewis2020" data-d="radford2018" d="M372.9,115.5 C461.2,115.5 461.2,128.5 549.6,128.5"/>
+<path class="edge" data-s="lewis2020" data-d="radford2019" d="M434.4,128.5 C492.0,128.5 492.0,128.5 549.6,128.5"/>
+<path class="edge" data-s="stiennon2020" data-d="radford2018" d="M372.9,115.5 C476.6,115.5 476.6,325.5 580.4,325.5"/>
+<path class="edge" data-s="stiennon2020" data-d="radford2019" d="M434.4,128.5 C507.4,128.5 507.4,325.5 580.4,325.5"/>
+<path class="edge" data-s="jumper2021" data-d="devlin2018" d="M403.6,115.5 C530.4,115.5 530.4,255.5 657.2,255.5"/>
+<path class="edge" data-s="radford2021" data-d="devlin2018" d="M403.6,115.5 C511.2,115.5 511.2,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="radford2018" d="M372.9,115.5 C495.8,115.5 495.8,198.5 618.8,198.5"/>
+<path class="edge" data-s="radford2021" data-d="radford2019" d="M434.4,128.5 C526.6,128.5 526.6,198.5 618.8,198.5"/>
+<path class="edge" data-s="chen2021" data-d="brown2020" d="M549.6,115.5 C603.4,115.5 603.4,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="devlin2018" d="M403.6,115.5 C530.4,115.5 530.4,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="radford2018" d="M372.9,115.5 C515.0,115.5 515.0,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="radford2019" d="M434.4,128.5 C545.8,128.5 545.8,115.5 657.2,115.5"/>
+<path class="edge" data-s="chen2021" data-d="raffel2019" d="M495.8,115.5 C576.5,115.5 576.5,115.5 657.2,115.5"/>
+<path class="edge" data-s="bender2021" data-d="brown2020" d="M549.6,115.5 C588.1,115.5 588.1,338.5 626.5,338.5"/>
+<path class="edge" data-s="bender2021" data-d="devlin2018" d="M403.6,115.5 C515.0,115.5 515.0,338.5 626.5,338.5"/>
+<path class="edge" data-s="bender2021" data-d="fedus2021" d="M611.1,325.5 C618.8,325.5 618.8,338.5 626.5,338.5"/>
+<path class="edge" data-s="bender2021" data-d="radford2019" d="M434.4,128.5 C530.4,128.5 530.4,338.5 626.5,338.5"/>
+<path class="edge" data-s="bommasani2021" data-d="devlin2018" d="M403.6,115.5 C534.3,115.5 534.3,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="dosovitskiy2020" d="M588.1,185.5 C626.5,185.5 626.5,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="lewis2020" d="M549.6,128.5 C607.3,128.5 607.3,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="radford2018" d="M372.9,115.5 C518.9,115.5 518.9,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="radford2019" d="M434.4,128.5 C549.6,128.5 549.6,268.5 664.9,268.5"/>
+<path class="edge" data-s="bommasani2021" data-d="raffel2019" d="M495.8,115.5 C580.4,115.5 580.4,268.5 664.9,268.5"/>
+<path class="edge" data-s="fedus2021" data-d="devlin2018" d="M403.6,115.5 C507.4,115.5 507.4,325.5 611.1,325.5"/>
+<path class="edge" data-s="fedus2021" data-d="radford2018" d="M372.9,115.5 C492.0,115.5 492.0,325.5 611.1,325.5"/>
+<path class="edge" data-s="wei2022" data-d="peters2018" d="M342.1,128.5 C522.7,128.5 522.7,115.5 703.3,115.5"/>
+<path class="edge" data-s="wei2022" data-d="devlin2018" d="M403.6,115.5 C553.5,115.5 553.5,115.5 703.3,115.5"/>
+<path class="edge" data-s="wei2022" data-d="raffel2019" d="M495.8,115.5 C599.6,115.5 599.6,115.5 703.3,115.5"/>
+<path class="edge" data-s="wei2022" data-d="kaplan2020" d="M518.9,325.5 C611.1,325.5 611.1,115.5 703.3,115.5"/>
+<path class="edge" data-s="wei2022" data-d="chen2021" d="M657.2,115.5 C680.3,115.5 680.3,115.5 703.3,115.5"/>
+<path class="edge" data-s="ouyang2022" data-d="silver2018" d="M419.0,45.5 C568.8,45.5 568.8,338.5 718.7,338.5"/>
+<path class="edge" data-s="ouyang2022" data-d="radford2019" d="M434.4,128.5 C576.5,128.5 576.5,338.5 718.7,338.5"/>
+<path class="edge" data-s="ouyang2022" data-d="brown2020" d="M549.6,115.5 C634.2,115.5 634.2,338.5 718.7,338.5"/>
+<path class="edge" data-s="ouyang2022" data-d="stiennon2020" d="M580.4,325.5 C649.5,325.5 649.5,338.5 718.7,338.5"/>
+<path class="edge" data-s="ouyang2022" data-d="chen2021" d="M657.2,115.5 C688.0,115.5 688.0,338.5 718.7,338.5"/>
+<path class="edge" data-s="ouyang2022" data-d="bender2021" d="M626.5,338.5 C672.6,338.5 672.6,338.5 718.7,338.5"/>
+<path class="edge" data-s="ouyang2022" data-d="bommasani2021" d="M664.9,268.5 C691.8,268.5 691.8,338.5 718.7,338.5"/>
+<path class="edge" data-s="ouyang2022" data-d="fedus2021" d="M611.1,325.5 C664.9,325.5 664.9,338.5 718.7,338.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="raffel2019" d="M495.8,115.5 C607.3,115.5 607.3,325.5 718.7,325.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="kaplan2020" d="M518.9,325.5 C618.8,325.5 618.8,325.5 718.7,325.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="brown2020" d="M549.6,115.5 C634.2,115.5 634.2,325.5 718.7,325.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="lewis2020" d="M549.6,128.5 C634.2,128.5 634.2,325.5 718.7,325.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="bender2021" d="M626.5,338.5 C672.6,338.5 672.6,325.5 718.7,325.5"/>
+<path class="edge" data-s="hoffmann2022" data-d="fedus2021" d="M611.1,325.5 C664.9,325.5 664.9,325.5 718.7,325.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="bender2021" d="M626.5,338.5 C676.4,338.5 676.4,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="bommasani2021" d="M664.9,268.5 C695.6,268.5 695.6,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="brown2020" d="M549.6,115.5 C638.0,115.5 638.0,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="chen2021" d="M657.2,115.5 C691.8,115.5 691.8,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="devlin2018" d="M403.6,115.5 C565.0,115.5 565.0,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="fedus2021" d="M611.1,325.5 C668.8,325.5 668.8,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="hoffmann2022" d="M718.7,325.5 C722.5,325.5 722.5,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="kaplan2020" d="M518.9,325.5 C622.6,325.5 622.6,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="ouyang2022" d="M718.7,338.5 C722.5,338.5 722.5,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="radford2018" d="M372.9,115.5 C549.6,115.5 549.6,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="raffel2019" d="M495.8,115.5 C611.1,115.5 611.1,351.5 726.4,351.5"/>
+<path class="edge" data-s="chowdhery2022" data-d="wei2022" d="M703.3,115.5 C714.9,115.5 714.9,351.5 726.4,351.5"/>
+<path class="edge" data-s="wei2022b" data-d="bender2021" d="M626.5,338.5 C684.1,338.5 684.1,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="bommasani2021" d="M664.9,268.5 C703.3,268.5 703.3,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="brown2020" d="M549.6,115.5 C645.7,115.5 645.7,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="chowdhery2022" d="M726.4,351.5 C734.1,351.5 734.1,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="devlin2018" d="M403.6,115.5 C572.7,115.5 572.7,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="fedus2021" d="M611.1,325.5 C676.4,325.5 676.4,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="hoffmann2022" d="M718.7,325.5 C730.2,325.5 730.2,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="kaplan2020" d="M518.9,325.5 C630.3,325.5 630.3,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="kojima2022" d="M734.1,115.5 C737.9,115.5 737.9,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="ouyang2022" d="M718.7,338.5 C730.2,338.5 730.2,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="radford2019" d="M434.4,128.5 C588.1,128.5 588.1,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="raffel2019" d="M495.8,115.5 C618.8,115.5 618.8,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="wang2022" d="M718.7,128.5 C730.2,128.5 730.2,325.5 741.8,325.5"/>
+<path class="edge" data-s="wei2022b" data-d="wei2022" d="M703.3,115.5 C722.5,115.5 722.5,325.5 741.8,325.5"/>
+<path class="edge" data-s="kojima2022" data-d="devlin2018" d="M403.6,115.5 C568.8,115.5 568.8,115.5 734.1,115.5"/>
+<path class="edge" data-s="kojima2022" data-d="radford2019" d="M434.4,128.5 C584.2,128.5 584.2,115.5 734.1,115.5"/>
+<path class="edge" data-s="kojima2022" data-d="raffel2019" d="M495.8,115.5 C615.0,115.5 615.0,115.5 734.1,115.5"/>
+<path class="edge" data-s="kojima2022" data-d="brown2020" d="M549.6,115.5 C641.9,115.5 641.9,115.5 734.1,115.5"/>
+<path class="edge" data-s="kojima2022" data-d="wei2022" d="M703.3,115.5 C718.7,115.5 718.7,115.5 734.1,115.5"/>
+<path class="edge" data-s="kojima2022" data-d="ouyang2022" d="M718.7,338.5 C726.4,338.5 726.4,115.5 734.1,115.5"/>
+<path class="edge" data-s="kojima2022" data-d="chowdhery2022" d="M726.4,351.5 C730.2,351.5 730.2,115.5 734.1,115.5"/>
+<path class="edge" data-s="kojima2022" data-d="wang2022" d="M718.7,128.5 C726.4,128.5 726.4,115.5 734.1,115.5"/>
+<path class="edge" data-s="wang2022" data-d="radford2019" d="M434.4,128.5 C576.5,128.5 576.5,128.5 718.7,128.5"/>
+<path class="edge" data-s="wang2022" data-d="brown2020" d="M549.6,115.5 C634.2,115.5 634.2,128.5 718.7,128.5"/>
+<path class="edge" data-s="wang2022" data-d="chen2021" d="M657.2,115.5 C688.0,115.5 688.0,128.5 718.7,128.5"/>
+<path class="edge" data-s="wang2022" data-d="wei2022" d="M703.3,115.5 C711.0,115.5 711.0,128.5 718.7,128.5"/>
+<path class="edge" data-s="touvron2023" data-d="brown2020" d="M549.6,115.5 C676.4,115.5 676.4,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="chen2021" d="M657.2,115.5 C730.2,115.5 730.2,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="chowdhery2022" d="M726.4,351.5 C764.8,351.5 764.8,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="devlin2018" d="M403.6,115.5 C603.4,115.5 603.4,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="hestness2017" d="M326.8,325.5 C565.0,325.5 565.0,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="hoffmann2022" d="M718.7,325.5 C761.0,325.5 761.0,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="kaplan2020" d="M518.9,325.5 C661.1,325.5 661.1,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="ouyang2022" d="M718.7,338.5 C761.0,338.5 761.0,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="radford2018" d="M372.9,115.5 C588.1,115.5 588.1,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="radford2019" d="M434.4,128.5 C618.8,128.5 618.8,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="raffel2019" d="M495.8,115.5 C649.5,115.5 649.5,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="wang2022" d="M718.7,128.5 C761.0,128.5 761.0,115.5 803.2,115.5"/>
+<path class="edge" data-s="touvron2023" data-d="wei2022b" d="M741.8,325.5 C772.5,325.5 772.5,115.5 803.2,115.5"/>
+<path class="edge" data-s="openai2023" data-d="bender2021" d="M626.5,338.5 C718.7,338.5 718.7,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="bommasani2021" d="M664.9,268.5 C737.9,268.5 737.9,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="brown2020" d="M549.6,115.5 C680.3,115.5 680.3,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="chen2021" d="M657.2,115.5 C734.1,115.5 734.1,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="chowdhery2022" d="M726.4,351.5 C768.7,351.5 768.7,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="devlin2018" d="M403.6,115.5 C607.3,115.5 607.3,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="hestness2017" d="M326.8,325.5 C568.8,325.5 568.8,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="hoffmann2022" d="M718.7,325.5 C764.8,325.5 764.8,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="kaplan2020" d="M518.9,325.5 C664.9,325.5 664.9,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="kojima2022" d="M734.1,115.5 C772.5,115.5 772.5,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="ouyang2022" d="M718.7,338.5 C764.8,338.5 764.8,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="radford2018" d="M372.9,115.5 C591.9,115.5 591.9,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="radford2019" d="M434.4,128.5 C622.6,128.5 622.6,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="raffel2019" d="M495.8,115.5 C653.4,115.5 653.4,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="touvron2023" d="M803.2,115.5 C807.1,115.5 807.1,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="wei2022" d="M703.3,115.5 C757.1,115.5 757.1,128.5 810.9,128.5"/>
+<path class="edge" data-s="openai2023" data-d="wei2022b" d="M741.8,325.5 C776.3,325.5 776.3,128.5 810.9,128.5"/>
+<path class="edge" data-s="wang2018" data-d="peters2018" d="M342.1,128.5 C349.8,128.5 349.8,185.5 357.5,185.5"/>
+<path class="edge late" data-s="howard2018" data-d="peters2018" d="M342.1,128.5 C338.3,128.5 338.3,115.5 334.4,115.5"/>
+<path class="edge late" data-s="wei2022" data-d="ouyang2022" d="M718.7,338.5 C711.0,338.5 711.0,115.5 703.3,115.5"/>
+<path class="edge late" data-s="wei2022" data-d="wei2022b" d="M741.8,325.5 C722.5,325.5 722.5,115.5 703.3,115.5"/>
+<path class="edge late" data-s="wei2022" data-d="wang2022" d="M718.7,128.5 C711.0,128.5 711.0,115.5 703.3,115.5"/>
+<path class="edge late" data-s="wang2022" data-d="chowdhery2022" d="M726.4,351.5 C722.5,351.5 722.5,128.5 718.7,128.5"/>
+<path class="edge late" data-s="wang2022" data-d="kojima2022" d="M734.1,115.5 C726.4,115.5 726.4,128.5 718.7,128.5"/>
+<g class="dot" data-k="hestness2017" data-t="Deep Learning Scaling is Predictable, Empirically" data-m="Hestness et al. · 2017" data-w="기계 번역·언어 모델링·영상 분류·음성 인식에서 학습 곡선을 재어, 일반화 오류가 훈련 집합 크기의 거듭제곱 법칙으로 줄어들며 그 지수(대개 −0.07~−0.35)는 모델 개선으로 절편만 바뀌고 지수는 바뀌지 않음을 찾았다. 모델 크기는 자료 크기에 대해 선형보다 느리게 커진다고도 보고했다." data-href="E6.html#hestness2017"><circle cx="326.8" cy="325.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="howard2018" data-t="Universal Language Model Fine-tuning for Text Classification" data-m="Howard &amp; Ruder · 2018" data-w="일반 말뭉치로 언어 모델을 사전훈련한 뒤 판별적 미세 조정, 기울어진 삼각 학습률, 점진적 해동으로 목표 과제에 미세 조정하고 분류기를 훈련하는 ULMFiT를 제안한다. 여섯 텍스트 분류 자료 대부분에서 18~24%의 오류 감소를 보고한다." data-href="E6.html#howard2018"><circle cx="334.4" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="peters2018" data-t="Deep contextualized word representations" data-m="Peters et al. · 2018" data-w="대규모 말뭉치로 사전훈련한 양방향 LSTM 언어 모델의 모든 내부 층을 과제별로 학습한 선형 결합으로 계산하는 단어 표현 ELMo를 소개한다. 기존 모델에 더하면 여섯 NLP 과제에서 결과가 개선되었다." data-href="E6.html#peters2018"><circle cx="342.1" cy="128.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wang2018" data-t="GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding" data-m="Wang et al. · 2018" data-w="기존 자연어 이해 과제들을 모으고 모델 평가용 온라인 플랫폼과 모델의 언어학적 분석을 위해 손으로 만든 진단 시험 세트를 붙인 일반 언어 이해 평가(GLUE) 벤치마크를 도입한다. 기준 모델들을 평가하여 모든 과제를 함께 학습한 다중 과제 학습이 과제마다 따로 학습한 모델보다 성능이 높다는 결과를 보고한다." data-href="E6.html#wang2018"><circle cx="357.5" cy="185.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="radford2018" data-t="Improving Language Understanding by Generative Pre-Training" data-m="Radford et al. · 2018" data-w="다층 트랜스포머 디코더를 비표지 텍스트로 언어 모델로 훈련한 뒤, 과제를 의식한 입력 변환으로 표지 과제에 미세 조정했다. 과제에 무관한 모델 하나가 연구한 자연어 이해 자료 12개 중 9개에서 최고 성능을 개선했다." data-href="E6.html#radford2018"><circle cx="372.9" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="devlin2018" data-t="BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" data-m="Devlin et al. · 2018" data-w="마스크 언어 모델 목적과 다음 문장 예측으로 비표지 텍스트에 사전훈련해 표현이 좌우 문맥을 모두 조건으로 삼게 한 트랜스포머 인코더 BERT를 소개한다. 출력층 하나를 더해 미세 조정하며 11개 NLP 과제에서 새 최고 성능을 보고한다." data-href="E6.html#devlin2018"><circle cx="403.6" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="silver2018" data-t="A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play" data-m="Silver et al. · 2018" data-w="알파고 제로의 접근을 게임 규칙만 주어진 채 무작위 대국에서 자기 대국 강화학습으로 체스·쇼기·바둑을 배우는 단일 알고리즘 AlphaZero로 일반화한다. 심층 신경망과 범용 몬테카를로 트리 탐색을 쓰며, 세 게임 각각에서 세계 챔피언 프로그램을 이겼다." data-href="E6.html#silver2018"><circle cx="419.0" cy="45.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="radford2019" data-t="Language Models are Unsupervised Multitask Learners" data-m="Radford et al. · 2019" data-w="가장 큰 것이 15억 매개변수 GPT-2인 트랜스포머 언어 모델들을 수백만 웹페이지의 새 자료 WebText로 훈련하고, 과제별 훈련 없이 질의응답·번역·독해·요약의 제로샷 성능을 보고한다. 성능은 모델 용량에 로그 선형으로 개선된다." data-href="E6.html#radford2019"><circle cx="434.4" cy="128.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="raffel2019" data-t="Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" data-m="Raffel et al. · 2019" data-w="모든 텍스트 기반 언어 문제를 텍스트 입력·텍스트 출력으로 두는 통일된 틀을 도입하고, 그 틀로 사전훈련 목적·구조·비표지 자료·전이 방법을 체계적으로 비교한다. 말뭉치 C4와 사전훈련 모델·코드를 공개했다." data-href="E6.html#raffel2019"><circle cx="495.8" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="schrittwieser2019" data-t="Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model" data-m="Schrittwieser et al. · 2019" data-w="보상·행동 선택 정책·가치 함수를 예측하는 학습된 모델과 트리 기반 탐색을 결합한 MuZero를 제시한다. 아타리 57개 게임에서 새 최고 성능을 세우고, 게임 규칙을 받지 않고도 바둑·체스·쇼기에서 AlphaZero와 맞먹었다." data-href="E6.html#schrittwieser2019"><circle cx="503.5" cy="45.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kaplan2020" data-t="Scaling Laws for Neural Language Models" data-m="Kaplan et al. · 2020" data-w="트랜스포머 언어 모델의 교차 엔트로피 손실이 모델 크기·자료 크기·훈련 연산량에 어떻게 의존하는지 재고 그 추세에 거듭제곱 법칙을 맞췄다. 그 적합으로 고정된 연산 예산의 배분을 끌어내어, 연산 효율적 훈련은 매우 큰 모델을 수렴 훨씬 전에 멈추는 것임을 찾았다." data-href="E6.html#kaplan2020"><circle cx="518.9" cy="325.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="brown2020" data-t="Language Models are Few-Shot Learners" data-m="Brown et al. · 2020" data-w="1750억 매개변수의 자기회귀 언어 모델 GPT-3를 훈련하고, 과제와 시연을 텍스트로만 주고 기울기 갱신이나 미세 조정 없이 제로샷·원샷·퓨샷으로 여러 NLP 과제에서 평가한다. 한계, 벤치마크 오염 분석, 사회적 영향도 함께 보고한다." data-href="E6.html#brown2020"><circle cx="549.6" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="lewis2020" data-t="Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" data-m="Lewis et al. · 2020" data-w="사전훈련된 seq2seq 생성기와 위키백과 색인 위의 사전훈련 밀집 검색기를 결합해 끝에서 끝까지 미세 조정하는 검색 증강 생성(RAG)을 두 변형(열 전체에 같은 문단 / 토큰마다)으로 제안했다. 저자들의 실험에서 열린 영역 질의응답 과제 셋에서 최고 성능을 세웠다." data-href="E6.html#lewis2020"><circle cx="549.6" cy="128.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="stiennon2020" data-t="Learning to summarize from human feedback" data-m="Stiennon et al. · 2020" data-w="요약 쌍에 대한 인간 비교 자료를 모아 인간이 선호한 요약을 예측하는 보상 모델을 훈련하고, 그 보상 모델에 대해 강화학습(PPO)으로 요약 정책을 미세 조정한다. 레딧 TL;DR에 적용하고 뉴스 전용 미세 조정 없이 CNN/DM 기사로 전이됨을 보고한다." data-href="E6.html#stiennon2020"><circle cx="580.4" cy="325.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="dosovitskiy2020" data-t="An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale" data-m="Dosovitskiy et al. · 2020" data-w="선형 임베딩한 영상 조각의 열에 표준 트랜스포머를 거의 손대지 않고 직접 적용해 영상을 분류하는 비전 트랜스포머(ViT)를 제시한다. 큰 자료로 사전훈련해 중소 규모 벤치마크로 옮기면 더 적은 훈련 연산으로 합성곱망에 맞먹거나 앞선다고 보고한다." data-href="E6.html#dosovitskiy2020"><circle cx="588.1" cy="185.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="fedus2021" data-t="Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity" data-m="Fedus et al. · 2021" data-w="전문가 혼합 라우팅을 스위치 트랜스포머로 단순화하고, 큰 희소 모델을 bfloat16으로 훈련하게 하는 기법을 더해 같은 연산에서 T5-Base/Large보다 최대 7배 빠른 사전훈련을 보고한다. C4 말뭉치로 최대 1조 매개변수 모델을 사전훈련한다." data-href="E6.html#fedus2021"><circle cx="611.1" cy="325.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="radford2021" data-t="Learning Transferable Visual Models From Natural Language Supervision" data-m="Radford et al. · 2021" data-w="인터넷에서 모은 4억 개의 (영상, 텍스트) 쌍으로 어떤 캡션이 어떤 영상에 붙는지 예측하는 과제로 영상·텍스트 인코더를 사전훈련한다(CLIP). 자연어로 시각 개념을 가리켜 제로샷 전이를 하며, 기존 컴퓨터 비전 자료 30여 개로 벤치마크했다." data-href="E6.html#radford2021"><circle cx="618.8" cy="198.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="bender2021" data-t="On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?" data-m="Bender et al. · 2021" data-w="점점 커지는 언어 모델에 따르는 위험을 묻는다. 환경·재정 비용, 문서화되지 않은 거대한 학습 자료가 지배적 관점을 과대 대표하고 편향을 담는 문제, 합성된 글을 의미 있는 것으로 받아들이는 경향을 들고, 언어 모델은 자연어를 이해하는 것이 아니라 언어 형식을 다룬다고 주장한다. 환경·재정 비용을 먼저 따지고, 자료를 선별·문서화하고, 목표와 이해당사자의 가치에 관한 개발 전 검토를 하고, 더 큰 모델 밖의 연구를 할 것을 권고한다." data-href="E6.html#bender2021"><circle cx="626.5" cy="338.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="chen2021" data-t="Evaluating Large Language Models Trained on Code" data-m="Chen et al. · 2021" data-w="공개 GitHub 코드로 미세 조정한 GPT 모델 Codex와, 문서 문자열에서 합성한 프로그램의 기능적 정확성을 재는 벤치마크 HumanEval을 소개했다. Codex는 HumanEval 문제의 28.8%(GPT-3는 0%)를, 문제당 100개 표본을 뽑으면 70.2%를 풀었다." data-href="E6.html#chen2021"><circle cx="657.2" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="jumper2021" data-t="Highly accurate protein structure prediction with AlphaFold" data-m="Jumper et al. · 2021" data-w="단백질 구조와 다중 서열 정렬에 관한 물리·생물학적 지식을 딥러닝 설계에 넣어 완전히 다시 설계한 AlphaFold 신경망을 기술한다. CASP14에서 다수의 경우 실험 구조에 견줄 정확도로 구조를 예측했다." data-href="E6.html#jumper2021"><circle cx="657.2" cy="255.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="bommasani2021" data-t="On the Opportunities and Risks of Foundation Models" data-m="Bommasani et al. · 2021" data-w="넓은 자료로 대개 대규모 자기 지도로 훈련되어 넓은 범위의 하류 과제에 맞출 수 있는 모델에 「기반 모델」이라는 이름을 도입했다. 그 능력·기술 원리·응용·사회적 영향을 개관하고, 이 전환을 창발과 동질화라는 개념으로 짚었다." data-href="E6.html#bommasani2021"><circle cx="664.9" cy="268.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wei2022" data-t="Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" data-m="Wei et al. · 2022" data-w="중간 추론 단계를 담은 예 몇 개를 프롬프트에 주는 생각의 사슬 프롬프트를 도입하고, 산술·상식·기호 추론 과제에서 대규모 언어 모델을 개선함을 보고했다. 그런 예 여덟 개로 PaLM 540B가 GSM8K에서 최고 정확도에 이르렀다." data-href="E6.html#wei2022"><circle cx="703.3" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="hoffmann2022" data-t="Training Compute-Optimal Large Language Models" data-m="Hoffmann et al. · 2022" data-w="400여 개의 훈련된 언어 모델로부터 고정 연산 예산에서 모델 크기와 훈련 토큰 수를 어떻게 늘려야 하는지 추정해 같은 비율로 키워야 함을 찾았다. 같은 연산으로 Gopher보다 자료를 4배 쓴 700억 매개변수 Chinchilla가 Gopher·GPT-3·Jurassic-1·Megatron-Turing NLG를 여러 하류 과제에서 앞섰다." data-href="E6.html#hoffmann2022"><circle cx="718.7" cy="325.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="ouyang2022" data-t="Training language models to follow instructions with human feedback" data-m="Ouyang et al. · 2022" data-w="GPT-3를 먼저 라벨러의 시연으로 지도학습하고 다음에 라벨러가 매긴 출력 순위로 인간 피드백 강화학습을 해 InstructGPT를 만들었다. 라벨러들은 13억 InstructGPT의 출력을 1750억 GPT-3보다 선호했고, 진실성이 오르고 유해 출력이 줄었다." data-href="E6.html#ouyang2022"><circle cx="718.7" cy="338.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wang2022" data-t="Self-Consistency Improves Chain of Thought Reasoning in Language Models" data-m="Wang et al. · 2022" data-w="생각의 사슬 프롬프트에서 다양한 추론 경로를 표집하고 그것들을 주변화해 가장 일관된 답을 고르는 복호화 전략 자기 일관성을 제안했다. GSM8K(+17.9%)·SVAMP(+11.0%) 같은 산술·상식 벤치마크에서 개선을 보고한다." data-href="E6.html#wang2022"><circle cx="718.7" cy="128.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="chowdhery2022" data-t="PaLM: Scaling Language Modeling with Pathways" data-m="Chowdhery et al. · 2022" data-w="Pathways 체계로 TPU v4 칩 6,144개에서 5400억 매개변수 조밀 트랜스포머 언어 모델 PaLM을 훈련하고, 수백 개의 언어 이해·생성·추론·다국어·코드 벤치마크에서 퓨샷 결과를 보고했다. 모델 규모에 따른 편향·유해성·훈련 자료 암기도 분석했다." data-href="E6.html#chowdhery2022"><circle cx="726.4" cy="351.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="kojima2022" data-t="Large Language Models are Zero-Shot Reasoners" data-m="Kojima et al. · 2022" data-w="각 답 앞에 「Let&#x27;s think step by step」 한 문장을 붙이는 제로샷 CoT가 손수 만든 퓨샷 예 없이도 산술·기호·논리 추론 벤치마크에서 대규모 언어 모델의 제로샷 정확도를 올림을 보였다. 예컨대 text-davinci-002의 MultiArith가 17.7%에서 78.7%로 올랐다." data-href="E6.html#kojima2022"><circle cx="734.1" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="wei2022b" data-t="Emergent Abilities of Large Language Models" data-m="Wei et al. · 2022" data-w="대규모 언어 모델의 창발 능력을 작은 모델에는 없고 큰 모델에는 있어서 작은 모델의 성능을 외삽해서는 예측할 수 없는 능력으로 정의하고, 퓨샷 프롬프트와 증강 프롬프트 설정에서 선행 연구가 보고한 그런 능력을 개관했다." data-href="E6.html#wei2022b"><circle cx="741.8" cy="325.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="touvron2023" data-t="LLaMA: Open and Efficient Foundation Language Models" data-m="Touvron et al. · 2023" data-w="공개 자료만으로 수조 토큰을 훈련한 70억~650억 매개변수의 기반 언어 모델 LLaMA를 공개했다. 주어진 추론 예산에서 최고 성능을 겨냥하며, LLaMA-13B가 대부분의 벤치마크에서 GPT-3(175B)를 앞서고 LLaMA-65B가 Chinchilla-70B·PaLM-540B에 견줄 만하다고 보고했다." data-href="E6.html#touvron2023"><circle cx="803.2" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+<g class="dot" data-k="openai2023" data-t="GPT-4 Technical Report" data-m="OpenAI · 2023" data-w="영상·텍스트 입력을 받는 트랜스포머 기반 다중 모달 모델 GPT-4를 시험·벤치마크 결과와 사후 훈련 정렬 절차와 함께 보고하고, 1/1,000 이하의 연산으로 훈련한 모델로부터 성능의 일부를 예측하게 한 기반 설비를 기술했다. 보고서는 구조(모델 크기 포함)·하드웨어·훈련 연산량·자료 구성·훈련 방법의 세부는 담지 않는다고 적는다." data-href="E6.html#openai2023"><circle cx="810.9" cy="128.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
+</svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 세로줄은 주제 묶음이다. 한 줄 안의 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다. 선이 많은 그림이라 선을 옅게 그렸다.</p><p><b>보이는 것: </b>이 그림에는 논문 30편과 확인된 인용선 189개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Devlin et al. 2018(선 18개)이다. 선이 하나도 없는 논문은 없다. 선 6개는 인용된 논문의 첫 공개일이 인용한 논문보다 늦다(논문 카드에 적은 날짜 기준). 이 선들은 초록색으로 굵게 그렸고, 인용된 논문이 더 오른쪽이나 같은 자리에 놓인다. 왜 그런지는 하나씩 확인하지 않았다.</p><p>조심할 것: 선은 이 장의 논문끼리만 그었다. 다른 장 논문과의 인용은 아래 논문 카드의 「이 목록의 논문 중 인용한 것」에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p><details><summary>줄(주제 묶음) 이름 풀이</summary><dl><dt><a href="../lineage/rl.html">강화학습·게임</a></dt><dd>동적 계획법(dynamic programming)과 시간차(temporal difference) 학습에서 Q-학습, 정책 경사(policy gradient), 알파고 계열까지.</dd><dt><a href="../lineage/lang.html">언어·음성</a></dt><dd>통계적 언어 모델과 음성 인식에서 임베딩, 어텐션, 트랜스포머, 사전학습 언어 모델까지.</dd><dt><a href="../lineage/vision.html">시각·생성</a></dt><dd>네오코그니트론과 LeNet에서 ImageNet, ResNet, 생성 모델(GAN·VAE·확산)까지.</dd><dt><a href="../lineage/stat.html">확률·통계·기원</a></dt><dd>사이버네틱스·정보 이론·PAC 학습·SVM·앙상블·베이지안 망(Bayesian network).</dd><dt><a href="../lineage/align.html">규모·정렬·안전</a></dt><dd>스케일링 법칙, 인간 피드백 강화학습, 안전 문제 제기.</dd></dl></details></figcaption></figure>
 <h2>논문 목록 (30)</h2><article class="paper" id="hestness2017">
 <h3>Deep Learning Scaling is Predictable, Empirically</h3>
 <p class="meta">Joel Hestness, Sharan Narang, Newsha Ardalani, Gregory Diamos, Heewoo Jun, Hassan Kianinejad et al. · <b>첫 공개</b> 2017-12-01 (arXiv v1) · 게재: arXiv:1712.00409 [cs.LG] (Baidu Research) · 쪽 19 pp. (arXiv v1) · 피인용(OpenAlex) 427 (조회 2026-11-03)</p>
@@ -551,7 +552,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <p class="wc"><b>무엇을 바꿨나.</b> 영상·텍스트 입력을 받는 트랜스포머 기반 다중 모달 모델 GPT-4를 시험·벤치마크 결과와 사후 훈련 정렬 절차(alignment procedure)와 함께 보고하고, 1/1,000 이하의 연산으로 훈련한 모델로부터 성능의 일부를 예측하게 한 기반 설비를 기술했다. 보고서는 구조(모델 크기 포함)·하드웨어·훈련 연산량·자료 구성·훈련 방법의 세부는 담지 않는다고 적는다.</p>
 <p class="rel">이 목록의 논문 중 인용한 것: <a href="E5.html#ba2016">Ba et al. 2016</a>, <a href="E6.html#bender2021">Bender et al. 2021</a>, <a href="E6.html#bommasani2021">Bommasani et al. 2021</a>, <a href="E6.html#brown2020">Brown et al. 2020</a>, <a href="E6.html#chen2021">Chen et al. 2021</a>, <a href="E6.html#chowdhery2022">Chowdhery et al. 2022</a>, <a href="E5.html#christiano2017">Christiano et al. 2017</a>, <a href="E6.html#devlin2018">Devlin et al. 2018</a>, <a href="E6.html#hestness2017">Hestness et al. 2017</a>, <a href="E6.html#hoffmann2022">Hoffmann et al. 2022</a>, <a href="E6.html#kaplan2020">Kaplan et al. 2020</a>, <a href="E6.html#kojima2022">Kojima et al. 2022</a>, <a href="E6.html#ouyang2022">Ouyang et al. 2022</a>, <a href="E6.html#radford2018">Radford et al. 2018</a>, <a href="E6.html#radford2019">Radford et al. 2019</a>, <a href="E6.html#raffel2019">Raffel et al. 2019</a>, <a href="E7.html#schick2023">Schick et al. 2023</a>, <a href="E5.html#schulman2017">Schulman et al. 2017</a>, <a href="E5.html#shazeer2017">Shazeer et al. 2017</a>, <a href="E6.html#touvron2023">Touvron et al. 2023</a>, <a href="E5.html#vaswani2017">Vaswani et al. 2017</a>, <a href="E6.html#wei2022">Wei et al. 2022</a>, <a href="E6.html#wei2022b">Wei et al. 2022</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E7.html#deepseek2025">DeepSeek-AI 2025</a>, <a href="E7.html#greshake2023">Greshake et al. 2023</a>, <a href="E7.html#hong2023">Hong et al. 2023</a>, <a href="E7.html#liu2023">Liu et al. 2023</a>, <a href="E7.html#mialon2023">Mialon et al. 2023</a>, <a href="E7.html#shen2023">Shen et al. 2023</a>, <a href="E7.html#shinn2023">Shinn et al. 2023</a>, <a href="E7.html#wang2023">Wang et al. 2023</a>, <a href="E7.html#xie2024">Xie et al. 2024</a>, <a href="E7.html#yang2024">Yang et al. 2024</a>, <a href="E7.html#yao2023">Yao et al. 2023</a>, <a href="E7.html#zhou2023">Zhou et al. 2023</a></p>
 </article></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.5 · 생성일 2026-11-16 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.6 · 생성일 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
