@@ -22,9 +22,10 @@ import content as C  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 D = ROOT / "data/derived"
 SITE = ROOT / "site"
-VERSION = "1.1.6"
+VERSION = "1.1.7"
 BUILD_DATE = date.today().isoformat()
 REPO = "https://github.com/BowonKwon/AI-History-in-Papers"
+import site_nav  # 1.1.7: section ids, section lists, a chapter list on the era pages, full contents on the Eras page
 
 ERAS = ["E1", "E2", "E3", "E4", "E5", "E6", "E7"]
 THEMES = ["FOUND", "SYM", "KR", "SEARCH", "EXP", "NN", "VISION", "SPEECH", "LANG", "STAT", "THEORY", "RL", "GEN", "SCALE", "ALIGN", "SAFETY", "AGENT", "HW", "DATA", "SCI", "CYB", "PERC", "EVO", "ROBOT", "IR"]
@@ -299,10 +300,15 @@ def explain_terms(body, lang):
 
 # ----------------------------------------------------------------- page shell
 
-def page(lang, title, body, depth=1, desc="", active=""):
+def page(lang, title, body, depth=1, desc="", active="", head="", chapter=False):
     if lang == "ko":
         body = gloss_ko(body)
     body = explain_terms(body, lang)
+    # 1.1.7: after the glosses, so that a term's first gloss stays in the text and does not move into a list
+    body, _items = site_nav.anchor_html(body, lang, title, with_h3=True)
+    body = site_nav.with_toc(body, site_nav.page_toc(lang, _items, chapter=chapter), lang)
+    if head:
+        body = body.replace("</h1>", "</h1>" + head, 1)
     t = T[lang]
     root = "../" * depth
     other = "en" if lang == "ko" else "ko"
@@ -317,12 +323,12 @@ def page(lang, title, body, depth=1, desc="", active=""):
 <script>(function(){{var v=localStorage.getItem("ahp-theme");if(v)document.documentElement.setAttribute("data-theme",v)}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
-<style>{CSS}</style></head><body>
+<style>{CSS}{site_nav.NAV_CSS}</style></head><body>
 <header><a class="brand" href="{root}{lang}/index.html">{t['site']}</a><nav>{navh}</nav>
 <div class="right"><a class="hub" href="https://bowonkwon.github.io/{hub_path}">{t['hub_link']}</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="{root}{other}/index.html">{t['lang_other']}</a></div></header>
 <main>{body}</main>
 <footer>{t['site']} · {t['version']} {VERSION} · {t['built']} {BUILD_DATE} · <a href="{REPO}">GitHub</a> · {t['hub']} <a href="https://bowonkwon.github.io/{hub_path}">bowonkwon.github.io</a></footer>
-<script>{JS}</script></body></html>"""
+<script>{JS}{site_nav.NAV_JS}</script></body></html>"""
 
 
 def glance(lang, items):
@@ -742,25 +748,32 @@ def build_lang(lang, papers, edges):
 <div class="stats"><span class="stat"><span class="n">{len(papers)}</span><small>{esc(C.STAT[lang]['papers'])}</small></span><span class="stat"><span class="n">{n_edges}</span><small>{esc(C.STAT[lang]['edges'])}</small></span><span class="stat"><span class="n">{papers[0]['first_public_date'][:4]}–{papers[-1]['first_public_date'][:4]}</span><small>{esc(C.STAT[lang]['span'])}</small></span></div>
 <figure class="tl-wide">{timeline_svg(papers, lang)}<figcaption>{timeline_caption(lang, papers)}</figcaption></figure>
 <div class="tl-list"><ol>{tl_list}</ol></div>
-<h2>{t['nav_chapters']}</h2><div class="cards">{eras_html}</div>
+<h2 id="eras">{t['nav_chapters']}</h2><div class="cards">{eras_html}</div>
 <div class="prose">{C.HOME_INTRO[lang]}</div>"""
     (out / "index.html").write_text(page(lang, t["site"], body, 1, active="home"), encoding="utf-8")
     # chapters index + pages
     ch_lead = (f"일곱 장의 목록이다. 장마다 그 시기의 서술, 계보도, 논문 카드가 있다(모두 {len(papers)}편)." if lang == "ko"
                else f"The seven eras. Each has a narrative of the period, a lineage diagram and the paper cards ({len(papers)} papers in all).")
     body = f"<h1>{t['nav_chapters']}</h1><p class=\"lead\">{esc(ch_lead)}</p><div class=\"cards\">{eras_html.replace('href=\"chapters/', 'href=\"')}</div>"
-    (out / "chapters/index.html").write_text(page(lang, t["nav_chapters"], body, 2, active="chapters"), encoding="utf-8")
+    ch_name = (lambda k, e: f"{k}장. {C.ERA_TITLE[lang][e]}") if lang == "ko" else (lambda k, e: f"Chapter {k}. {C.ERA_TITLE[lang][e]}")
+    ch_list = [(f"{e}.html", esc(ch_name(k, e))) for k, e in enumerate(ERAS, 1)]
+    ch_secs = [(f"{e}.html", esc(ch_name(k, e)),
+                [(m.group(1), m.group(2)) for m in re.finditer(r'<h3 id="([^"]+)">(.*?)</h3>', C.ERA_TEXT[lang][e], re.S)]
+                + [("lineage", esc(t["nav_lineage"])), ("papers", esc(t["nav_papers"]))]) for k, e in enumerate(ERAS, 1)]
+    (out / "chapters/index.html").write_text(page(lang, t["nav_chapters"], body, 2, active="chapters",
+                                                  head=site_nav.full_contents(lang, ch_secs, [])), encoding="utf-8")
     for e in ERAS:
         ps = [p for p in papers if p["era"] == e]
         es = [x for x in edges if x["src"] in {p["key"] for p in ps} and x["dst"] in {p["key"] for p in ps}]
         boxes = "".join(C.BOXES[lang].get(e, []))
         body = f"""<div class="eyebrow"><span class="tag">{esc(C.ERA_SHORT[lang][e])}</span></div><h1>{esc(C.ERA_TITLE[lang][e])}</h1><p class="lead">{esc(C.ERA_LEAD[lang][e])}</p>
 {glance(lang, [k.replace("{N_PAPERS}", str(len(ps))).replace("{N_ARXIV_V1}", str(sum(p["first_public_type"] == "arXiv v1" for p in ps))) for k in C.ERA_KEY[lang][e]])}
-<div class="prose">{C.ERA_TEXT[lang][e]}</div>
+{site_nav.TOC_MARK}<div class="prose">{C.ERA_TEXT[lang][e]}</div>
 {boxes}
-<h2>{t['nav_lineage']}</h2><figure>{lineage_svg(ps, es, lang)}<figcaption>{lineage_caption(lang, ps, es, by_key, "era")}</figcaption></figure>
-<h2>{t['nav_papers']} ({len(ps)})</h2>{''.join(paper_block(p, lang, edges, by_key) for p in ps)}"""
-        (out / f"chapters/{e}.html").write_text(page(lang, C.ERA_TITLE[lang][e], body, 2, active="chapters"), encoding="utf-8")
+<h2 id="lineage">{t['nav_lineage']}</h2><figure>{lineage_svg(ps, es, lang)}<figcaption>{lineage_caption(lang, ps, es, by_key, "era")}</figcaption></figure>
+<h2 id="papers">{t['nav_papers']} ({len(ps)})</h2>{''.join(paper_block(p, lang, edges, by_key) for p in ps)}"""
+        (out / f"chapters/{e}.html").write_text(page(lang, C.ERA_TITLE[lang][e], body, 2, active="chapters", chapter=True,
+                                                    head=site_nav.chapter_list(lang, ch_list, ERAS.index(e), "index.html")), encoding="utf-8")
     # lineage pages by lane
     lane_cards = "".join(f'<a class="card" href="{l}.html"><b>{esc(t["theme_names"][l])}</b><small>{sum(1 for p in papers if p["lane"] == l)} {t["papers"]}</small></a>' for l, _ in LANES)
     # 1.1.5: head summary of the lineage list, computed
@@ -837,14 +850,14 @@ def winters_body(lang):
     xl = "연도" if lang == "ko" else "Year"
     body = f"""<h1>{t['nav_winters']}</h1><p class="lead">{esc(C.WINTER_LEAD[lang])}</p>{glance(lang, C.WINTER_KEY[lang])}
 <div class="prose">{C.WINTER_TEXT[lang]['intro']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h1'])}</h2><figure>{line_svg(s1, lang, ylabel=C.WINTER_TEXT[lang]['y1'], xr=(1960, 2024), breaks=(1970,), xlabel=xl, names=PHRASE_KO if lang == 'ko' else None)}<figcaption><p>{esc(C.WINTER_TEXT[lang]['cap1'].replace('{EX1970}', ex1970(lang, ph)))}</p><p>{esc(note1)}</p></figcaption></figure>
+<h2 id="title-terms">{esc(C.WINTER_TEXT[lang]['h1'])}</h2><figure>{line_svg(s1, lang, ylabel=C.WINTER_TEXT[lang]['y1'], xr=(1960, 2024), breaks=(1970,), xlabel=xl, names=PHRASE_KO if lang == 'ko' else None)}<figcaption><p>{esc(C.WINTER_TEXT[lang]['cap1'].replace('{EX1970}', ex1970(lang, ph)))}</p><p>{esc(note1)}</p></figcaption></figure>
 <h3>{esc(zoom_title)}</h3><figure>{line_svg(s1z, lang, ylabel=C.WINTER_TEXT[lang]['y1'], xr=ZOOM, breaks=(1970,), xlabel=xl, names=PHRASE_KO if lang == 'ko' else None)}<figcaption><p>{esc(zoom_cap)}</p></figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t1']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h2'])}</h2><figure>{line_svg(s2, lang, ylabel=C.WINTER_TEXT[lang]['y2'], xr=(1984, 2025), xlabel=xl)}<figcaption><p>{esc(C.WINTER_TEXT[lang]['cap2'])}</p><p>{esc(note2)}</p></figcaption></figure>
+<h2 id="attendance">{esc(C.WINTER_TEXT[lang]['h2'])}</h2><figure>{line_svg(s2, lang, ylabel=C.WINTER_TEXT[lang]['y2'], xr=(1984, 2025), xlabel=xl)}<figcaption><p>{esc(C.WINTER_TEXT[lang]['cap2'])}</p><p>{esc(note2)}</p></figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t2']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h3'])}</h2><figure>{line_svg(s3, lang, ylabel=C.WINTER_TEXT[lang]['y3'], logy=True, y0=50, y1=6000, xr=(1987, 2024), xlabel=xl)}<figcaption>{esc(C.WINTER_TEXT[lang]['cap3'])}</figcaption></figure>
+<h2 id="neurips-papers">{esc(C.WINTER_TEXT[lang]['h3'])}</h2><figure>{line_svg(s3, lang, ylabel=C.WINTER_TEXT[lang]['y3'], logy=True, y0=50, y1=6000, xr=(1987, 2024), xlabel=xl)}<figcaption>{esc(C.WINTER_TEXT[lang]['cap3'])}</figcaption></figure>
 <div class="prose">{C.WINTER_TEXT[lang]['t3']}</div>
-<h2>{esc(C.WINTER_TEXT[lang]['h4'])}</h2><div class="prose">{C.WINTER_TEXT[lang]['t4']}</div>
+<h2 id="funding">{esc(C.WINTER_TEXT[lang]['h4'])}</h2><div class="prose">{C.WINTER_TEXT[lang]['t4']}</div>
 <p class="files"><a href="../data/winter_title_phrases.csv">winter_title_phrases.csv</a> <a href="../data/winter_attendance.csv">winter_attendance.csv</a> <a href="../data/winter_neurips_accepted.csv">winter_neurips_accepted.csv</a></p>"""
     return body
 

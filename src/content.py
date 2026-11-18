@@ -49,10 +49,10 @@ HOME_KEY = {
            "The selection rules were registered before the list was made (see Method and limits). Priority disputes show both sides' bibliographies and make no ruling."],
 }
 HOME_INTRO = {
-    "ko": """<h2>이 사이트가 하는 일</h2>
+    "ko": """<h2 id="about">이 사이트가 하는 일</h2>
 <p>인공지능 연구의 역사는 여러 곳에 정리되어 있다. 위키백과의 연대표, 컴퓨터역사박물관의 연표, 교과서의 역사 장, 한 연구자의 긴 주석 달린 역사. 이 사이트는 그것들을 대신하려는 것이 아니라 한 가지를 보태려 한다 — <b>모든 점을 원 논문에 묶어 두는 것</b>이다. 연도는 널리 알려진 연도가 아니라 처음 공개된 날짜를 쓰고, 「무엇을 바꿨나」는 논문 자신의 문장으로 쓰며, 영향 관계는 인용이 확인된 것과 그렇지 않은 것을 구분해 그린다.</p>
 <p>수치는 서술을 받치는 데만 쓴다. 피인용 수는 카드에 조회일과 함께 작게 적지만 순위표는 없다. 「겨울과 붐」 면은 통념의 두 겨울(1974년 전후, 1987년 전후)을 논문 제목 수·학회 참가자 수·공공 연구비 기록으로 다시 본다.</p>""",
-    "en": """<h2>What this site does</h2>
+    "en": """<h2 id="about">What this site does</h2>
 <p>The history of AI research has been written in many places: the Wikipedia timelines, the Computer History Museum's timeline, the history chapters of textbooks, one researcher's long annotated history. This site does not replace them. It adds one thing: <b>every point is tied to an original paper</b>. Dates are first-public dates rather than popularly quoted years, "what changed" is written from the paper's own sentences, and lines of influence distinguish confirmed citations from unconfirmed attributions.</p>
 <p>Numbers only support the narrative. Citation counts appear small on each card with the date they were read, and there is no ranking. The page on winters and booms re-examines the two conventional winters (around 1974 and around 1987) against paper-title counts, conference attendance and public funding records.</p>""",
 }
@@ -140,38 +140,40 @@ def METHOD(lang):
         if lang == "ko":
             return f"""<h1>방법과 한계</h1>
 <p class="lead">선정 기준은 목록을 만들기 전에 등록했고, 날짜는 원문에서, 계보선은 인용 자료에서 가져왔다. 이 면은 그 절차와 거기서 생기는 한계를 적는다.</p>
-<h2>논문 선정 — 2026-11-03 등록</h2>
+<h2 id="selecting">논문 선정 — 2026-11-03 등록</h2>
 <p>기준 문헌 여섯 종을 먼저 정했다: Nilsson 『The Quest for Artificial Intelligence』(2010), Russell & Norvig 『Artificial Intelligence: A Modern Approach』 4판(2020), Goodfellow·Bengio·Courville 『Deep Learning』(2016), Sutton & Barto 『Reinforcement Learning』 2판(2018), Prince 『Understanding Deep Learning』(2023), Jurafsky & Martin 『Speech and Language Processing』 3판 초고. 1.1에서 Murphy 『Probabilistic Machine Learning: An Introduction』(2022)을 더해 일곱 종이 되었다. 포함 규칙은 넷이다.</p>
 <ul><li><b>R1 교과서.</b> 기준 문헌 가운데 두 종 이상이 그 업적의 원 논문을 참고문헌에 올림. ({by_rule.get('R1', 0)}편)</li>
 <li><b>R2 계보.</b> 이미 선정된 논문 세 편 이상이 인용(OpenAlex 또는 인용한 논문의 참고문헌 목록으로 확인). ({by_rule.get('R2', 0)}편)</li>
 <li><b>R3 수상.</b> 튜링상·노벨상의 공적 설명이 가리키는 업적의 원 논문. ({by_rule.get('R3', 0)}편)</li>
 <li><b>R4 최근(2021년 이후).</b> 동료 심사 게재(또는 공개된 심사 기록)와 원문 확인. ({by_rule.get('R4', 0)}편)</li></ul>
 <p>그 결과 {n}편이다. 교과서 대조는 참고문헌 텍스트를 제목·저자·연도로 자동 대조한 뒤 표본을 손으로 확인했다. 손으로 바로잡은 적중은 근거와 함께 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>에 적었다. Nilsson 의 책은 참고문헌을 장 끝의 주(註)에 두므로 책 전문(저자 공개 PDF, Internet Archive 2026-10-11 보존본)을 대조 텍스트로 썼다 — 본문에서 제목이나 저자·연도로 거명한 것도 인용으로 세었다는 뜻이다. Schmidhuber 의 「Annotated History of Modern AI and Deep Learning」(2022)은 기준 문헌에 넣지 않고 우선권 상자의 한쪽 자료로만 썼다.</p>
-<h2>1.1.6 — 2026-11-17</h2>
+<h2 id="v1-1-7">1.1.7 — 2026-11-18</h2>
+<p>목차에서 장·절로 바로 가기. 장 면 머리에 장 목록을, 절이 셋 이상인 면에 절 목록을 두고, 절 제목마다 바로가기 링크를 달았다. 「시대」 면에는 장과 절 전체 목차가 있다. 넓은 화면에서는 위쪽 메뉴가 화면에 남는다. 본문과 수치는 그대로다.</p>
+<h2 id="v1-1-6">1.1.6 — 2026-11-17</h2>
 <p>그림과 낱말 풀이를 손봤다. 2000년 전부터 2014년 뒤까지 걸치는 주제 묶음 면 다섯 개(신경망 학습, 강화학습·게임, 언어·음성, 시각·생성, 확률·통계·기원)의 계보도는 첫 면 연대표처럼 가로축을 2012년에서 꺾어, 2010년 뒤의 점이 오른쪽 끝에 몰리지 않게 했다. 줄이 하나뿐인 계보도(주제 묶음 면과 7장)는 점을 시간 순서대로 여섯 높이에 돌려 놓았고, 5장 계보도는 같은 반년 칸에 다섯 편이 있어 높이를 다섯 자리로 늘렸다. 선이 120개를 넘는 계보도(5장, 6장, 언어·음성)는 선을 옅게 그렸다. 인용된 논문의 첫 공개일이 인용한 논문보다 늦은 선은 초록색으로 굵게 그리고 범례를 달았다(점에 마우스를 올려도 초록으로 남는다). 줄이 여럿인 계보도와 첫 면 연대표에는 그림 안에 줄의 이름(「주제 묶음」)을 적었다. 그 자리를 내느라 1~6장 계보도의 점과 선을 조금 아래로 옮겼고, 자료의 값은 그대로다. 「겨울과 붐」 첫 그래프 아래에 「artificial intelligence」와 「expert system」만 세로축 0–10으로 다시 그린 확대 그래프를 더했고, NeurIPS 채택 논문 그래프의 로그 눈금에 50 · 200 · 500 · 2,000 · 5,000을 더했다. 한국어판 범례와 점의 설명(마우스를 올리면 뜨는 글)에는 검색 구절의 뜻을 붙였고, 확대 그래프 설명에 점 하나와 단위를 적었으며, 첫 그래프에서 1970년 값을 뺀 까닭에 대한 짐작은 지웠다(확인하지 않았다고만 적는다). 첫 면 연대표의 4장 띠는 자료에 끝 해가 2012년으로 적혀 있던 것을 장 제목대로 2011년으로 고쳤고(띠는 전처럼 2011년 끝까지 그려진다), 3장 띠는 제목대로 1993년 끝까지 그린다. 약어와 낱말(<span class="ng">DARPA, LISP 기계, TIMIT, GMM-HMM, BLEU, mAP, SGVB, AEVB</span>)에 면마다 처음 나올 때 짧은 풀이를 붙였고, 「겨울과 붐」의 「perceptron」과 「83 Stat. 206」을 풀었다. 논문과 인용선의 자료, 그래프의 값은 바뀌지 않았다.</p>
-<h2>1.1.5 — 2026-11-16</h2>
+<h2 id="v1-1-5">1.1.5 — 2026-11-16</h2>
 <p>그래프 설명을 보강했다. 계보도 열다섯 개의 설명에 점 · 가로축 · 줄 · 선이 잇는 것 · 마우스를 올렸을 때의 동작을 적고, 그림마다 논문 수 · 인용선 수 · 그림 안에서 가장 많이 인용된 논문 · 선이 없는 논문 수 · 인용된 논문의 첫 공개일이 더 늦은 선의 수를 자료에서 계산해 붙였다. 점의 색은 줄마다 네 색을 돌려 칠한 것일 뿐 뜻이 없어서 한 색으로 바꿨다(첫 면 연대표도 같다). 그래프마다 가로축 이름을 넣고, 「겨울과 붐」의 세로축 이름을 그것만으로 읽히게 고쳤으며, 로그 눈금과 학회 이름을 풀었다. 그 면의 2002년 값과 2020년 뒤 NeurIPS 참가자 수는 해석하지 않는다고 적었다. 계보 면들과 논문 목록 · 시대 목록 면에 짧은 요약을 두었고, 휴대폰 화면에서는 넓은 그래프가 그린 폭의 92% 아래로 줄지 않고 옆으로 밀리게 했다. 「겨울과 붐」 첫 그래프에서 1970년 값을 뺀 까닭은 자료에서 보이는 것과 확인하지 않은 것을 나눠 적었다. 머리에 공개 자료 허브로 가는 링크를 달았다. 5장 「핵심」 상자의 「이 장의 점 46개 가운데 38개가 arXiv v1 날짜」는 1.1에서 논문을 더한 뒤 고치지 않은 수여서, 자료에서 세도록 바꿨다(54개 가운데 46개). 그 밖에 논문과 인용선의 자료, 그림의 점과 선은 바뀌지 않았다.</p>
-<h2>1.1.4 — 2026-11-15</h2>
+<h2 id="v1-1-4">1.1.4 — 2026-11-15</h2>
 <p>그림을 고쳤다. 계보도의 설명이 그림에 없는 점선을 풀이하고 있었다(인용이 확인되지 않은 선은 현재 0건이다). 점선이 없는 그림에서는 점선 풀이를 뺐다. 「겨울과 붐」의 그래프 두 개는 세로축 눈금이 47.8223 같은 값이어서 0 · 20 · 40처럼 둥근 값으로 바꿨다. 그 면의 첫 그래프는 캡션에서 뺐다고 밝힌 1970년을 선이 이어 지나가고 있어 그 자리에서 선을 끊었다. 첫 면 연대표와 계보도에서 겹치거나 잘리던 글자의 자리를 고쳤다. 논문 · 인용선 · 수치는 바뀌지 않았다.</p>
-<h2>1.1.3 — 2026-11-11</h2>
+<h2 id="v1-1-3">1.1.3 — 2026-11-11</h2>
 <p>Pearl(1988)의 통합 참고문헌(521~538쪽)을 읽었다. 이 책에서 나가는 인용선 네 개(Hart 외 1968, McCarthy–Hayes 1969, Kirkpatrick 외 1983, Geman–Geman 1984)가 책의 참고문헌에 그대로 있음을 확인했고, 선의 수는 바뀌지 않았다.</p>
-<h2>1.1.2 — 2026-11-11</h2>
+<h2 id="v1-1-2">1.1.2 — 2026-11-11</h2>
 <p>원문을 구하지 못해 비어 있던 책 일곱 권의 카드를 채웠다. Bellman(1957년판 6쇄), Minsky–Papert(1988년 증보판), Holland(1992년 MIT Press 판), Marr(2010년 MIT Press 재간본), Pearl(1988)은 책을 읽었고, Schank–Abelson(1977)과 Quinlan의 C4.5(1993)는 출판사 미리보기만 읽어 「부분 확인」이다. 읽은 판과 쪽은 카드에 적었다. 이로써 「접근 불가」 카드는 없다. 책의 참고문헌에서 읽은 인용선 17개가 더해졌다. 함께, 1.0.1에서 카드는 채웠으나 장 본문에는 「읽지 못했다」로 남아 있던 네 편(McCarthy 1960, Buchanan–Feigenbaum 1978, Werbos 1982, Boser 외 1992)의 서술을 카드에 맞게 고쳤다. 선정은 바뀌지 않았다.</p>
-<h2>1.1.1 — 2026-11-08</h2>
+<h2 id="v1-1-1">1.1.1 — 2026-11-08</h2>
 <p>한국어판에서 우리말로 옮긴 용어는 쪽마다 처음 나올 때 원어를 괄호로 붙였다(예: 생각의 사슬(chain of thought)). 대응표는 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/glossary_ko.csv">glossary_ko.csv</a>에 있다. 선정과 카드 내용은 바뀌지 않았다.</p>
-<h2>1.1 개정 — 2026-11-07</h2>
+<h2 id="v1-1">1.1 개정 — 2026-11-07</h2>
 <p>두 가지를 바꿨다. 첫째, 통계적 기계학습 쪽 교과서가 빠져 있어 Murphy 『Probabilistic Machine Learning: An Introduction』(MIT Press 2022)을 일곱 번째 기준 문헌으로 더했다. 대조에는 저자가 공개한 초고 PDF(2025-04-18판)의 참고문헌을 썼다. 둘째, 후보를 넓혔다. 이미 선정된 논문 세 편 이상이 OpenAlex 에서 인용하고 기준 문헌 세 종 이상이 참고문헌에 올린 논문 가운데 후보에 없던 것을 더했다. 교과서·개관 논문, 이미 있는 점과 같은 업적의 다른 판본은 넣지 않았다. 더한 논문도 위 네 규칙으로만 선정했다. 더한 16편과 각 편의 인용 수·기준 문헌은 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/pool-1.1-added.csv">pool-1.1-added.csv</a>에 있다. 그 가운데 Jelinek 1976은 한 기준 문헌(Jurafsky & Martin)의 적중이 같은 저자의 다른 논문을 잡은 것으로 뒤에 밝혀졌다. 바로잡으면 기준 문헌이 두 종이라 확장 조건(세 종)에 못 미치므로, 등록한 조건대로 후보에서 빼고 선정하지 않았다. 후보에 남은 것은 15편이다.</p>
-<h2>날짜</h2>
+<h2 id="dates">날짜</h2>
 <p>점의 위치는 처음 공개된 날짜다 — 기술 보고서, 학위논문, arXiv v1, 학회 발표 중 기록으로 확인되는 가장 이른 것. 저널 게재일·학회 발표일·재판 연도는 카드에 따로 적는다. OpenAlex 의 발행 연도는 재판이나 학회판 날짜가 섞여 있어 쓰지 않았다(1.0 후보 234편 중 23편에서 연도가 달랐다).</p>
-<h2>원문 확인</h2>
+<h2 id="originals">원문 확인</h2>
 <p>카드의 인용문과 쪽은 그 판본을 직접 읽고 옮긴 것이다. 읽은 판본은 카드에 적혀 있다(저널판·학회판·arXiv 판 번호). 상태별로 확인 {status['verified']}편, 부분 확인 {status['partial']}편, 접근 불가 {status['not_accessible']}편이다. 접근 불가는 합법적 공개 사본을 찾지 못한 경우이며, 그 카드에는 인용문이 없다. 공개 사본이 없는 몇 편(예: Werbos 1974 박사논문, Werbos 1982 학회 논문집 장)은 엮은이가 구한 출판본·원본 사본으로 읽었고, 카드의 「읽은 판본」에 그렇게 적었다.</p>
-<h2>계보선</h2>
+<h2 id="lineage-lines">계보선</h2>
 <p>세 종류다. OpenAlex 의 참고문헌 목록에 있는 것({kinds['OA']}건), OpenAlex 에는 없으나 인용한 논문의 참고문헌 목록에서 직접 확인한 것({kinds['original']}건), 교과서가 영향을 말하지만 인용이 확인되지 않은 것({kinds['notion']}건, 점선). OpenAlex 만으로는 선이 크게 빈다 — 후보 목록에서 1990년 이전 레코드의 30%, arXiv 레코드의 40%가 참고문헌 0건이었다.</p>
-<h2>우선권 논쟁</h2>
+<h2 id="priority">우선권 논쟁</h2>
 <p>역전파·합성곱망·심층망 학습·잔차 연결처럼 「누가 먼저인가」가 다투어지는 자리에는 양쪽 원 논문의 서지와 원문 문장만 나란히 놓는다. 판정하는 문장은 쓰지 않는다. 판정이 담긴 2차 문헌은 「이런 주장이 있다」로 출처와 함께 소개한다.</p>
-<h2>편중</h2>
+<h2 id="bias">편중</h2>
 <p>기준 문헌이 영어 교과서라는 점에서 오는 편중을 숨기지 않는다. 소련·일본의 초기 신경망 연구(Ivakhnenko, Amari, Fukushima)와 핀란드의 Linnainmaa 는 교과서 두 종 기준을 넘지 못한 경우가 있고, 그런 논문은 우선권 상자에서 다룬다. 선정 논문의 저자 소속 국가 분포는 이 판의 papers.csv 와 OpenAlex 레코드로 계산할 수 있다.</p>
-<h2>자료원과 이용 조건</h2>
+<h2 id="sources">자료원과 이용 조건</h2>
 <ul><li>OpenAlex — 서지·인용·피인용 수·연도별 건수. 데이터 CC0. 피인용 수는 조회일(2026-11-03)과 함께만 싣는다.</li>
 <li>arXiv — 메타데이터(제목·저자·v1 날짜) CC0. PDF 는 링크만 한다.</li>
 <li>Crossref — DOI 서지 대조.</li>
@@ -180,38 +182,40 @@ def METHOD(lang):
 <p>이 사이트의 글은 CC BY-NC 4.0, 코드는 PolyForm Noncommercial 1.0.0, 데이터 편집물은 CC BY 4.0(원자료는 CC0 또는 CC BY)이다. 논문 본문은 재배포하지 않고 짧은 인용과 링크만 한다.</p>"""
         return f"""<h1>Method and limits</h1>
 <p class="lead">The selection rules were registered before the list was made; dates come from the originals and lineage lines from citation data. This page records the procedure and the limits it carries.</p>
-<h2>Selecting papers — registered 2026-11-03</h2>
+<h2 id="selecting">Selecting papers — registered 2026-11-03</h2>
 <p>Six reference works were fixed first: Nilsson, <i>The Quest for Artificial Intelligence</i> (2010); Russell & Norvig, <i>Artificial Intelligence: A Modern Approach</i>, 4th ed. (2020); Goodfellow, Bengio & Courville, <i>Deep Learning</i> (2016); Sutton & Barto, <i>Reinforcement Learning</i>, 2nd ed. (2018); Prince, <i>Understanding Deep Learning</i> (2023); Jurafsky & Martin, <i>Speech and Language Processing</i>, 3rd ed. draft. Version 1.1 added a seventh, Murphy, <i>Probabilistic Machine Learning: An Introduction</i> (2022). Four inclusion rules apply.</p>
 <ul><li><b>R1 Textbooks.</b> At least two of the reference works cite the original publication. ({by_rule.get('R1', 0)} papers)</li>
 <li><b>R2 Lineage.</b> At least three already-selected papers cite it (OpenAlex or the citing paper's reference list). ({by_rule.get('R2', 0)})</li>
 <li><b>R3 Awards.</b> The Turing Award or Nobel Prize citation names the achievement. ({by_rule.get('R3', 0)})</li>
 <li><b>R4 Recent (2021 onward).</b> Peer-reviewed publication or public review record, original text checked. ({by_rule.get('R4', 0)})</li></ul>
 <p>The result is {n} papers. Textbook matching compared bibliography text by title, author and year automatically, with samples checked by hand; hits corrected by hand are listed with the evidence in <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>. Nilsson's book keeps its references in chapter endnotes, so the whole text (the author's public PDF, Internet Archive capture of 2026-10-11) was used as the comparison text; a work named by title or by author and year in the body counts as cited. Schmidhuber's "Annotated History of Modern AI and Deep Learning" (2022) is not a reference work here; it is used only as one side in the priority boxes.</p>
-<h2>Revision 1.1.6 — 2026-11-17</h2>
+<h2 id="v1-1-7">Revision 1.1.7 — 2026-11-18</h2>
+<p>Straight from the contents to a chapter or section: a chapter list at the head of each chapter, a section list on pages with three or more sections, and a link on every section heading. The Eras page has full contents by chapter and section. On wide screens the top menu stays on screen. Text and numbers are unchanged.</p>
+<h2 id="v1-1-6">Revision 1.1.6 — 2026-11-17</h2>
 <p>Figures and glosses. The lineage diagrams of the five theme-group pages that run from before 2000 to after 2014 (neural network learning; reinforcement learning and games; language and speech; vision and generative models; probability, statistics and origins) now bend the year axis at 2012, as the home-page timeline does, so that the papers after 2010 are no longer packed against the right edge. Single-row diagrams (the theme-group pages and chapter 7) place the dots at six heights in turn, in time order; the chapter 5 diagram, with five papers in one half-year slot, has five heights. Diagrams with more than 120 lines (chapters 5 and 6, language and speech) draw them fainter. Lines whose cited paper was made public later than the citing paper are drawn thicker in green, with a legend (they stay green on hover). Multi-row diagrams and the home timeline name their rows ("Theme group") inside the figure; to make room, the dots and lines of the chapter 1–6 diagrams moved down slightly, with the data unchanged. Under the first chart of "Winters and booms" an enlarged chart redraws “artificial intelligence” and “expert system” alone on a 0–10 scale, and the log axis of the NeurIPS chart gains the ticks 50, 200, 500, 2,000 and 5,000. In the Korean edition the legends and hover labels of the title-phrase charts give the meaning of each searched phrase; the enlarged chart's caption states what a dot is and its unit; and the caption on the omitted 1970 value no longer guesses at its cause. On the home-page timeline the data gave 2012 as the last year of chapter 4, whose title says 1990–2011; it now says 2011 (the band still ends at the end of 2011), and the chapter 3 band now runs to the end of 1993, as its title says. Abbreviations and terms (<span class="ng">DARPA, Lisp machine, TIMIT, GMM-HMM, BLEU, mAP, SGVB, AEVB</span>) get a short gloss at their first appearance on each page, and “perceptron” and "83 Stat. 206" on the "Winters and booms" page are explained. The paper and citation data and the values in the charts are unchanged.</p>
-<h2>Revision 1.1.5 — 2026-11-16</h2>
+<h2 id="v1-1-5">Revision 1.1.5 — 2026-11-16</h2>
 <p>Chart explanations filled in. The captions of the fifteen lineage diagrams now say what a dot, the horizontal axis, the rows and a line stand for and what hovering does, and each adds the number of papers and lines, the paper cited most within the diagram, the number of papers without a line and the number of lines whose cited paper has the later first public date, all computed from the data. Dot colors were four colors cycled over the rows and meant nothing, so the dots now share one color (the home-page timeline too). Every chart names its horizontal axis; the vertical axis names on the "Winters and booms" page can be read on their own, and the log scale and the conference names are explained. That page now says it does not interpret the 2002 values or NeurIPS attendance after 2020. The lineage pages, the paper list and the list of eras have short summaries, and on phones wide charts keep at least 92% of their drawn width and scroll sideways. The caption of the first "Winters and booms" chart now separates what the table shows about the omitted 1970 value from what was not checked. The header links to the hub of public materials. The key box of chapter 5 said "Of the 46 points in this chapter, 38 are arXiv v1 dates", a count left over from before papers were added in 1.1; it is now counted from the data (46 of 54). Apart from that, the paper and citation data and the dots and lines of the charts are unchanged.</p>
-<h2>Revision 1.1.4 — 2026-11-15</h2>
+<h2 id="v1-1-4">Revision 1.1.4 — 2026-11-15</h2>
 <p>Figures corrected. The caption of the lineage diagrams explained dotted lines that the diagrams do not contain (there are currently no links without a confirmed citation); the dotted-line clause is now left out where a diagram has none. Two charts on the "Winters and booms" page had axis ticks such as 47.8223; they are now round values (0, 20, 40). In the first chart on that page the line ran across 1970, a year the caption says is left out; the line now breaks there. Labels that overlapped or were cut off on the home-page timeline and the lineage diagrams were moved. No paper, link or number changed.</p>
-<h2>Revision 1.1.3 — 2026-11-11</h2>
+<h2 id="v1-1-3">Revision 1.1.3 — 2026-11-11</h2>
 <p>The bibliography of Pearl (1988), pp. 521–538, was read. The four citation links leaving the book (Hart et al. 1968, McCarthy–Hayes 1969, Kirkpatrick et al. 1983, Geman–Geman 1984) are all in it; the number of links did not change.</p>
-<h2>Revision 1.1.2 — 2026-11-11</h2>
+<h2 id="v1-1-2">Revision 1.1.2 — 2026-11-11</h2>
 <p>The cards of seven books that had been empty for lack of the original are now filled. Bellman (1957 edition, sixth printing), Minsky–Papert (1988 expanded edition), Holland (1992 MIT Press edition), Marr (2010 MIT Press reissue) and Pearl (1988) were read in the book; Schank–Abelson (1977) and Quinlan's C4.5 (1993) were read only in a publisher's preview and are marked "partially checked". Each card names the edition and page read. No card is "not accessible" any longer. Seventeen citation links read from the books' reference lists were added. Four papers whose cards were filled in 1.0.1 but whose chapter text still said "not read" (McCarthy 1960, Buchanan–Feigenbaum 1978, Werbos 1982, Boser et al. 1992) now agree with their cards. Selection is unchanged.</p>
-<h2>Revision 1.1.1 — 2026-11-08</h2>
+<h2 id="v1-1-1">Revision 1.1.1 — 2026-11-08</h2>
 <p>Korean edition only: technical terms rendered in Korean now carry the English original in parentheses at their first appearance on each page. The term list is <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/glossary_ko.csv">glossary_ko.csv</a>. Selection and cards are unchanged.</p>
-<h2>Revision 1.1 — 2026-11-07</h2>
+<h2 id="v1-1">Revision 1.1 — 2026-11-07</h2>
 <p>Two changes. First, statistical machine learning lacked a textbook, so Murphy, <i>Probabilistic Machine Learning: An Introduction</i> (MIT Press 2022), was added as the seventh reference work; its bibliography was taken from the author's public draft PDF (version of 2025-04-18). Second, the candidate pool was widened: papers cited in OpenAlex by at least three selected papers and listed by at least three reference works were added when they were not yet candidates. Textbooks, surveys, and other versions of a contribution already on the timeline were left out. Added papers were selected only under the four rules above. The 16 works added, with their citation counts and reference works, are listed in <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/pool-1.1-added.csv">pool-1.1-added.csv</a>. One of them, Jelinek 1976, was later found to have been matched in one reference work (Jurafsky & Martin) to a different paper by the same author. Corrected, it is matched in two reference works, short of the three the widening requires, so under the registered condition it was taken out of the pool and is not selected. Fifteen remain in the pool.</p>
-<h2>Dates</h2>
+<h2 id="dates">Dates</h2>
 <p>A point sits at the first public date: the earliest documented technical report, thesis, arXiv v1 or conference presentation. Journal issue dates, conference dates and reprint years are listed on the card. OpenAlex publication years were not used because they mix in reprint and conference dates (23 of the 234 candidates for 1.0 differed).</p>
-<h2>Checking the originals</h2>
+<h2 id="originals">Checking the originals</h2>
 <p>Each card's quotation and page were read from the stated version (journal, conference, or arXiv version number). By status: {status['verified']} verified, {status['partial']} partially checked, {status['not_accessible']} not accessible. "Not accessible" means no legitimate public copy was found; those cards carry no quotation. A few papers with no public copy (for example Werbos's 1974 thesis and his 1982 proceedings chapter) were read from copies of the printed or original text obtained by the editor, as the card's "version read" says.</p>
-<h2>Lineage lines</h2>
+<h2 id="lineage-lines">Lineage lines</h2>
 <p>Three kinds: in OpenAlex's reference list ({kinds['OA']}), not in OpenAlex but seen in the citing paper's own reference list ({kinds['original']}), and stated in a textbook without a confirmed citation ({kinds['notion']}, dotted). OpenAlex alone leaves large gaps: among the candidates, 30% of pre-1990 records and 40% of arXiv records had zero references.</p>
-<h2>Priority disputes</h2>
+<h2 id="priority">Priority disputes</h2>
 <p>Where "who was first" is disputed (backpropagation, convolutional networks, deep network training, residual connections), the boxes place both sides' original bibliographies and sentences side by side and make no ruling. Secondary sources that do rule are introduced as claims, with their source.</p>
-<h2>Bias</h2>
+<h2 id="bias">Bias</h2>
 <p>The reference set is English-language textbooks, and the resulting bias is not hidden. Early neural-network work from the Soviet Union and Japan (Ivakhnenko, Amari, Fukushima) and Linnainmaa in Finland sometimes fails the two-textbook rule; such papers appear in the priority boxes. The country distribution of author affiliations can be computed from this version's papers.csv and the OpenAlex records.</p>
-<h2>Sources and terms</h2>
+<h2 id="sources">Sources and terms</h2>
 <ul><li>OpenAlex — bibliographic data, citations, citation counts, yearly counts. Data CC0. Citation counts appear only with the date read (2026-11-03).</li>
 <li>arXiv — metadata (title, authors, v1 date) CC0. PDFs are linked, not hosted.</li>
 <li>Crossref — DOI checks.</li>

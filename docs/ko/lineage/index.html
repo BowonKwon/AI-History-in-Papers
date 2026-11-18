@@ -70,11 +70,30 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 .eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
 @media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
 @media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+
+h2[id],h3[id],figure[id],nav.toc{scroll-margin-top:var(--hh,.9rem)}
+@media(min-width:900px){body{overflow-x:clip}h2[id],h3[id],figure[id],nav.toc{scroll-margin-top:var(--hh,7.4rem)}.sibs{top:var(--hh,7.4rem);max-height:calc(100vh - var(--hh,7.4rem) - .8rem)}}
+.hx{margin-left:.45rem;font-family:var(--body);font-size:.8em;font-weight:400;color:var(--fg3);opacity:0;transition:opacity .15s}.hx:hover{text-decoration:none;color:var(--accent)}
+h2:hover .hx,h3:hover .hx,.hx:focus-visible{opacity:1}@media(hover:none){.hx{opacity:.6}}
+nav.toc{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.7rem 1rem .8rem;margin:1.3rem 0 .2rem;font-size:.92rem;max-width:72ch}
+nav.toc b{display:block;font-size:.84rem;font-weight:600;color:var(--fg2);margin-bottom:.3rem}
+nav.toc ul{list-style:none;margin:0;padding:0;columns:2;column-gap:1.8rem;max-width:none}nav.toc li{margin:0;padding:.14rem 0;break-inside:avoid;line-height:1.5}
+@media(max-width:640px){nav.toc ul{columns:1}}
+.chlist{margin:.1rem 0 1rem;font-size:.92rem}.chlist summary{font-size:.92rem}.chlist summary small{color:var(--fg3);margin-left:.4rem}
+.chlist ol,.chlist .box{list-style:none;margin:.5rem 0 .4rem;padding:.6rem 1rem .7rem;border:1px solid var(--line);border-radius:10px;background:var(--card);max-width:72ch}
+.chlist li{margin:0;padding:.16rem 0;line-height:1.5}.chlist li small{color:var(--fg3);margin-left:.35rem;white-space:nowrap}
+.chlist a[aria-current]{color:var(--fg);font-weight:600}.chlist p{margin:.3rem 0 0;font-size:.88rem}
+.chlist .tree,.chlist .tree ul{list-style:none;margin:0;padding:0}.chlist .tree>li{padding:.3rem 0}.chlist .tree>li>a{font-weight:600}
+.chlist .tree ul{padding-left:1rem;font-size:.95em}.chlist .box b{display:block;margin:.7rem 0 .1rem;font-size:.84rem;font-weight:600;color:var(--fg2);border-top:1px solid var(--line2);padding-top:.6rem}
+.totoc{position:fixed;right:.9rem;bottom:.9rem;z-index:6;font-size:.84rem;font-weight:600;line-height:1;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.55rem .85rem;box-shadow:var(--shadow)}
+.totoc:hover{text-decoration:none;border-color:var(--accent);color:var(--accent)}
+.navjs .totoc{opacity:0;visibility:hidden;transition:opacity .15s,visibility .15s}.navjs .totoc.show{opacity:1;visibility:visible}
+@media print{.totoc,.hx{display:none}}
 </style></head><body>
 <header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html">시대</a><a href="../../ko/lineage/index.html" class="on">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
 <div class="right"><a class="hub" href="https://bowonkwon.github.io/">공개 자료 허브</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
 <main><h1>계보</h1><p class="lead">주제 묶음별 계보. 가로축은 첫 공개 연도, 선은 확인된 인용 관계다.</p><div class="glance"><p class="glance-h">핵심</p><ul><li>주제 묶음 8개마다 논문과 그 사이의 확인된 인용선을 그린 면의 목록이다.</li><li>가장 큰 묶음은 「신경망 학습」(39편), 가장 작은 묶음은 「규모·정렬·안전」(12편)이다.</li><li>묶음 면에는 같은 묶음 안의 인용선만 그린다. 여덟 면의 선을 모두 합하면 546개로, 확인된 인용선 전체 1,286개 가운데 나머지는 서로 다른 묶음 사이의 선이다.</li></ul></div><div class="cards"><a class="card" href="neural.html"><b>신경망 학습</b><small>39 편</small></a><a class="card" href="rl.html"><b>강화학습(reinforcement learning)·게임</b><small>22 편</small></a><a class="card" href="lang.html"><b>언어·음성</b><small>38 편</small></a><a class="card" href="vision.html"><b>시각·생성</b><small>33 편</small></a><a class="card" href="search.html"><b>탐색·계획·지식</b><small>19 편</small></a><a class="card" href="stat.html"><b>확률·통계·기원</b><small>29 편</small></a><a class="card" href="align.html"><b>규모·정렬·안전</b><small>12 편</small></a><a class="card" href="agent.html"><b>에이전트</b><small>22 편</small></a></div></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.6 · 생성일 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.7 · 생성일 2026-11-18 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
@@ -90,4 +109,4 @@ document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventLis
   g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
   g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
  var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
-</script></body></html>
+(function(){var d=document,r=d.documentElement,h=d.querySelector("header"),SF=900,m=SF&&window.matchMedia?matchMedia("(min-width:"+SF+"px)"):null;r.classList.add("navjs");function gap(){var on=h&&m&&m.matches&&window.CSS&&CSS.supports&&CSS.supports("overflow-x","clip");r.style.setProperty("--hh",on?(h.offsetHeight+12)+"px":".9rem")}gap();addEventListener("resize",gap);addEventListener("load",gap);var c=d.querySelector("nav.toc"),p=d.querySelector(".totoc");function pill(){p.classList.toggle("show",c.getBoundingClientRect().bottom<0)}if(c&&p){addEventListener("scroll",pill,{passive:true});addEventListener("resize",pill);pill()}var ls=d.querySelectorAll("header a.lang,header .lang a");for(var i=0;i<ls.length;i++)(function(l){l.addEventListener("click",function(){if(location.hash&&(l.getAttribute("href")||"").indexOf("http")!==0)l.href=l.href.split("#")[0]+location.hash})})(ls[i])})();</script></body></html>

@@ -70,12 +70,31 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 .eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
 @media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
 @media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+
+h2[id],h3[id],figure[id],nav.toc{scroll-margin-top:var(--hh,.9rem)}
+@media(min-width:900px){body{overflow-x:clip}h2[id],h3[id],figure[id],nav.toc{scroll-margin-top:var(--hh,7.4rem)}.sibs{top:var(--hh,7.4rem);max-height:calc(100vh - var(--hh,7.4rem) - .8rem)}}
+.hx{margin-left:.45rem;font-family:var(--body);font-size:.8em;font-weight:400;color:var(--fg3);opacity:0;transition:opacity .15s}.hx:hover{text-decoration:none;color:var(--accent)}
+h2:hover .hx,h3:hover .hx,.hx:focus-visible{opacity:1}@media(hover:none){.hx{opacity:.6}}
+nav.toc{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.7rem 1rem .8rem;margin:1.3rem 0 .2rem;font-size:.92rem;max-width:72ch}
+nav.toc b{display:block;font-size:.84rem;font-weight:600;color:var(--fg2);margin-bottom:.3rem}
+nav.toc ul{list-style:none;margin:0;padding:0;columns:2;column-gap:1.8rem;max-width:none}nav.toc li{margin:0;padding:.14rem 0;break-inside:avoid;line-height:1.5}
+@media(max-width:640px){nav.toc ul{columns:1}}
+.chlist{margin:.1rem 0 1rem;font-size:.92rem}.chlist summary{font-size:.92rem}.chlist summary small{color:var(--fg3);margin-left:.4rem}
+.chlist ol,.chlist .box{list-style:none;margin:.5rem 0 .4rem;padding:.6rem 1rem .7rem;border:1px solid var(--line);border-radius:10px;background:var(--card);max-width:72ch}
+.chlist li{margin:0;padding:.16rem 0;line-height:1.5}.chlist li small{color:var(--fg3);margin-left:.35rem;white-space:nowrap}
+.chlist a[aria-current]{color:var(--fg);font-weight:600}.chlist p{margin:.3rem 0 0;font-size:.88rem}
+.chlist .tree,.chlist .tree ul{list-style:none;margin:0;padding:0}.chlist .tree>li{padding:.3rem 0}.chlist .tree>li>a{font-weight:600}
+.chlist .tree ul{padding-left:1rem;font-size:.95em}.chlist .box b{display:block;margin:.7rem 0 .1rem;font-size:.84rem;font-weight:600;color:var(--fg2);border-top:1px solid var(--line2);padding-top:.6rem}
+.totoc{position:fixed;right:.9rem;bottom:.9rem;z-index:6;font-size:.84rem;font-weight:600;line-height:1;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.55rem .85rem;box-shadow:var(--shadow)}
+.totoc:hover{text-decoration:none;border-color:var(--accent);color:var(--accent)}
+.navjs .totoc{opacity:0;visibility:hidden;transition:opacity .15s,visibility .15s}.navjs .totoc.show{opacity:1;visibility:visible}
+@media print{.totoc,.hx{display:none}}
 </style></head><body>
 <header><a class="brand" href="../../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../../ko/index.html">홈</a><a href="../../ko/chapters/index.html" class="on">시대</a><a href="../../ko/lineage/index.html">계보</a><a href="../../ko/winters.html">겨울과 붐</a><a href="../../ko/papers.html">논문 목록</a><a href="../../ko/method.html">방법·한계</a></nav>
 <div class="right"><a class="hub" href="https://bowonkwon.github.io/">공개 자료 허브</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../../en/index.html">English</a></div></header>
-<main><div class="eyebrow"><span class="tag">1장 기원 1943–56</span></div><h1>기원 — 사이버네틱스와 계산 (1943–1956)</h1><p class="lead">뇌·기계·정보를 같은 언어로 쓸 수 있는가.</p>
+<main><div class="eyebrow"><span class="tag">1장 기원 1943–56</span></div><h1>기원 — 사이버네틱스와 계산 (1943–1956)</h1><details class="chlist"><summary>장 목록 <small>7장 가운데 1장</small></summary><ol><li><a href="E1.html" aria-current="page">1장. 기원 — 사이버네틱스와 계산 (1943–1956)</a> <small>지금 읽는 장</small></li><li><a href="E2.html">2장. 기호 AI와 첫 신경망 (1956–1974)</a></li><li><a href="E3.html">3장. 지식 시스템과 연결주의의 귀환 (1974–1993)</a></li><li><a href="E4.html">4장. 통계 학습 (1990–2011)</a></li><li><a href="E5.html">5장. 딥러닝 (2012–2017)</a></li><li><a href="E6.html">6장. 사전학습과 생성 모델 (2017–2022)</a></li><li><a href="E7.html">7장. 에이전트 (2022– )</a></li></ol><p><a href="index.html">장과 절 전체 목차</a></p></details><p class="lead">뇌·기계·정보를 같은 언어로 쓸 수 있는가.</p>
 <div class="glance"><p class="glance-h">핵심</p><ul><li>1943년 McCulloch와 Pitts는 뉴런의 실무율에서 출발해 신경망의 행동을 명제 논리로 쓸 수 있음을 보였다. 이 장의 모든 점은 이 발상 — 생물·기계·논리가 같은 언어를 쓴다 — 의 변주이고, Wiener(1948)는 그 분야에 사이버네틱스라는 이름을 붙였다.</li><li>1948~1950년 Shannon의 두 논문이 정보를 비트로 재는 척도와 「컴퓨터가 체스를 두게 하는 프로그램」이라는 문제를 함께 놓았다. 뒤의 탐색·게임 계보가 여기서 시작한다.</li><li>Hebb(1949)의 한 문장이 「세포 A가 세포 B의 발화에 거듭 참여하면 A의 효율이 높아진다」는 학습 규칙의 원문이다. 이 장의 일곱 편 사이에 확인한 인용선은 네 개다 — 이 목록 안에서는 서로를 거의 인용하지 않는다.</li></ul></div>
-<div class="prose">
+<nav class="toc" id="toc" aria-label="이 장의 절"><b>이 장의 절</b><ul><li><a href="#checked">이 장에서 확인한 것과 못 한 것</a></li><li><a href="#lineage">계보</a></li><li><a href="#papers">논문 목록 (7)</a></li></ul></nav><div class="prose">
 <p>이 사이트의 첫 점은 1943년 12월 『Bulletin of Mathematical Biophysics』에 실린 <a href="#mcculloch1943">McCulloch와 Pitts의 「A logical calculus of the ideas immanent in nervous activity」</a>다. 두 사람은 뉴런이 발화하거나 하지 않거나 둘 중 하나라는 실무율에서 출발해, 신경 사건과 그 관계를 명제 논리로 다룰 수 있다고 썼다. 논문의 결론은 두 방향이다. 어떤 신경망의 행동이든 논리식으로 기술할 수 있고, 조건을 만족하는 논리식이 주어지면 그대로 행동하는 망을 만들 수 있다. 「생각하는 기계」라는 말이 나오기 전에, 생각을 계산으로 쓸 수 있다는 주장이 먼저 나온 셈이다.</p>
 <p><a href="#wiener1948">Wiener의 『Cybernetics』</a>(1948, Technology Press/Wiley)는 「기계에서든 동물에서든 제어와 통신 이론의 분야 전체를 사이버네틱스라 부르기로 했다」고 선언하고, 되먹임·시계열·계산 기계·신경계를 한 틀에 놓았다. 1948년 원판은 대출 전용이라 이 판은 MIT 출판부의 2019년 공개 재간본(1961년 2판)으로 읽었고, 1부의 주에서 McCulloch–Pitts와 Rosenblueth–Wiener–Bigelow 1943을 인용함을 확인했다.</p>
 <p>다섯 해 뒤 <a href="#shannon1948">Shannon의 「A Mathematical Theory of Communication」</a>(1948년 7월, 『Bell System Technical Journal』)은 정보를 로그 척도로 재고 밑이 2인 단위를 비트라 불렀다. 논문은 통신의 이론이지 지능의 이론이 아니지만, 이 사이트의 뒤쪽 장들은 이 척도 없이 쓸 수 없다 — 언어 모델의 「혼잡도」, 압축으로서의 학습, 엔트로피 손실 함수가 모두 여기서 나온다. Shannon은 각주에서 Wiener의 「곧 나올 책 『Cybernetics』」를 가리켰다. 이것이 이 장에서 확인된 네 인용선 가운데 하나다.</p>
@@ -83,11 +102,11 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <p>1949년에는 <a href="#hebb1949">Hebb의 『The Organization of Behavior』</a>(1949, Wiley)가 나왔다. 신경생리학과 심리학을 잇겠다는 책의 62쪽에 한 문장이 있다. 세포 A가 세포 B를 거듭 발화시키면 둘 중 한쪽 또는 양쪽에 변화가 일어나 A의 효율이 높아진다는 문장이다. 뒤의 문헌이 「헤브 규칙」이라 부르는 것의 원문이 이것이고, 2장 Rosenblatt의 퍼셉트론과 3장 Hopfield의 망이 이 책을 인용한다. 책의 참고문헌에는 McCulloch–Pitts가 없다 — 두 전통은 처음에는 따로 흘렀다.</p>
 <p>장의 마지막 점은 신경망도 게임도 아니다. <a href="#chomsky1956">Chomsky의 「Three models for the description of language」</a>(1956년 9월, 『IRE Transactions on Information Theory』)는 상태에서 상태로 옮겨 가며 기호를 내는 유한 상태 마르코프 과정은 영어 문법이 될 수 없다고 썼다. 이 논문이 정보 이론 학술지에 실렸다는 사실, 그리고 Shannon–Weaver의 책을 인용한다는 사실이 이 시기의 공기를 보여 준다. 언어·논리·정보·신경이 한자리에서 논의되던 몇 해였다. 그 자리가 1956년 여름의 다트머스 모임이다. 모임의 제안서(McCarthy 외, 1955년 8월)는 이 판의 선정 기준을 넘지 못해 점으로 찍지 않았으나, 「인공지능」이라는 이름이 거기서 나왔다는 서술은 교과서들이 공통으로 적는다.</p>
 <p>1950년 10월 『Mind』에 실린 <a href="#turing1950">Turing의 「Computing Machinery and Intelligence」</a>는 「기계는 생각할 수 있는가」라는 물음을 정의하려 들지 않고 다른 물음으로 바꾼다. 질문자가 텔레프린터로 기계와 사람에게 질문하는 「흉내 게임」에서 적절히 프로그램된 디지털 컴퓨터가 만족스럽게 해낼 수 있는가다. 논문의 뒷부분은 기계 사고에 대한 아홉 가지 반론과, 아이를 가르치듯 가르치는 학습 기계의 제안이다. 2장의 Minsky 1961, McCarthy–Hayes 1969, 3장의 Newell–Simon 1976이 이 논문을 참고문헌에서 인용한다. 이 판은 Internet Archive의 『Mind』 면 스캔으로 읽었다.</p>
-<h3>이 장에서 확인한 것과 못 한 것</h3>
+<h3 id="checked">이 장에서 확인한 것과 못 한 것<a class="hx" href="#checked" aria-label="‘이 장에서 확인한 것과 못 한 것’ 절로 바로 가는 링크">#</a></h3>
 <p>일곱 편 가운데 원문 게재본을 읽은 것은 Shannon 1948, Hebb 1949, Turing 1950, Chomsky 1956 네 편이다. Wiener는 2019년 재간본으로 읽었다. McCulloch–Pitts는 1990년 재수록본(『Bulletin of Mathematical Biology』 52권)으로, Shannon 1950은 재타자본으로 읽었다. 재타자본에는 쪽이 없어 인용문의 쪽을 적지 못했다. </p>
 </div>
 
-<h2>계보</h2><figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 358" role="img" aria-label="lineage">
+<h2 id="lineage">계보<a class="hx" href="#lineage" aria-label="‘계보’ 절로 바로 가는 링크">#</a></h2><figure><div class="sx" style="--vw:920"><svg viewBox="0 0 1000 358" role="img" aria-label="lineage">
 <text x="565.0" y="354" text-anchor="middle" fill="var(--fg3)">첫 공개 연도</text>
 <text x="142" y="26" text-anchor="end" fill="var(--fg3)">주제 묶음</text>
 <line class="grid" x1="150" x2="980" y1="100" y2="100"/>
@@ -113,7 +132,7 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <g class="dot" data-k="turing1950" data-t="Computing Machinery and Intelligence" data-m="Turing · 1950" data-w="「기계는 생각할 수 있는가」라는 물음을, 질문자가 텔레프린터로 기계와 사람에게 질문하는 「흉내 게임」으로 바꾸고, 적절히 프로그램된 디지털 컴퓨터가 그 게임을 만족스럽게 해낼 수 있는가로 다시 세웠다. 기계 사고에 대한 반론들을 논하고, 아이를 가르치듯 가르치는 학습 기계를 만들자고 제안했다." data-href="E1.html#turing1950"><circle cx="603.9" cy="255.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
 <g class="dot" data-k="chomsky1956" data-t="Three models for the description of language" data-m="Chomsky · 1956" data-w="영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다." data-href="E1.html#chomsky1956"><circle cx="910.8" cy="115.5" r="5" fill="var(--s1)" stroke="var(--card)" stroke-width="1"/></g>
 </svg></div><figcaption><p>점 하나가 논문 한 편이다. 가로축은 첫 공개 연도다. 세로줄은 주제 묶음이다. 한 줄 안의 위아래 위치에는 뜻이 없다(첫 공개 시점을 반년 단위로 반올림한 값이 같은 논문을 덜 겹치게 엇갈려 놓았을 뿐이다). 선 하나는 확인된 인용 하나다(OpenAlex 또는 인용한 논문의 참고문헌 목록에서 확인). 선은 인용된 논문과 인용한 논문을 잇고, 대개 왼쪽 끝이 먼저 나온 인용된 논문이다. 점에 마우스를 올리면 그 논문의 카드가 뜨고 그 논문에 이어진 선만 진하게 남는다(나머지 선은 흐려진다). 점을 누르면 그 논문의 카드로 간다.</p><p><b>보이는 것: </b>이 그림에는 논문 7편과 확인된 인용선 4개가 있다. 이 그림 안의 다른 논문에게 가장 많이 인용된 것은 Wiener 1948(선 2개)이다. 선이 하나도 없는 논문은 2편이다. 인용된 논문의 첫 공개일이 인용한 논문보다 늦은 것으로 확인되는 선은 없다(논문 카드에 적은 날짜 기준). 이 밖에 선 1개는 날짜가 연도나 달까지만 적혀 있어 어느 쪽이 먼저인지 가릴 수 없다.</p><p>조심할 것: 선은 이 장의 논문끼리만 그었다. 다른 장 논문과의 인용은 아래 논문 카드의 「이 목록의 논문 중 인용한 것」에 있다. 선은 확인된 인용을 나타낼 뿐 영향의 크기를 재지 않는다.</p><details><summary>줄(주제 묶음) 이름 풀이</summary><dl><dt><a href="../lineage/neural.html">신경망 학습</a></dt><dd>형식 뉴런에서 퍼셉트론, 역전파(backpropagation), 합성곱(convolution)·순환망(recurrent network), 정규화와 잔차 연결(residual connection)까지.</dd><dt><a href="../lineage/lang.html">언어·음성</a></dt><dd>통계적 언어 모델과 음성 인식에서 임베딩, 어텐션, 트랜스포머, 사전학습 언어 모델까지.</dd><dt><a href="../lineage/search.html">탐색·계획·지식</a></dt><dd>논리 이론가·GPS·A*·STRIPS·전문가 시스템(expert system)·MCTS.</dd><dt><a href="../lineage/stat.html">확률·통계·기원</a></dt><dd>사이버네틱스·정보 이론·PAC 학습·SVM·앙상블·베이지안 망(Bayesian network).</dd></dl></details></figcaption></figure>
-<h2>논문 목록 (7)</h2><article class="paper" id="mcculloch1943">
+<h2 id="papers">논문 목록 (7)<a class="hx" href="#papers" aria-label="‘논문 목록 (7)’ 절로 바로 가는 링크">#</a></h2><article class="paper" id="mcculloch1943">
 <h3>A logical calculus of the ideas immanent in nervous activity</h3>
 <p class="meta">Warren S. McCulloch, Walter Pitts · <b>첫 공개</b> 1943-12 (journal issue) · 게재: The Bulletin of Mathematical Biophysics, 5(4) · 쪽 99–115 (1990 reprint); original 115–133 · 피인용(OpenAlex) 18,560 (조회 2026-11-03)</p>
 <p class="meta"><a href="https://doi.org/10.1007/BF02478259">DOI</a> · Bulletin of Mathematical Biology reprint 1990 (vol. 52, pp. 99–115)</p>
@@ -162,8 +181,8 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 <blockquote>We find that no finite-state Markov process that produces symbols with transition from state to state can serve as an English grammar.<cite>p. 113</cite></blockquote><p class="src">상태에서 상태로 옮겨 가며 기호를 산출하는 어떤 유한 상태 마르코프 과정도 영어 문법 노릇을 할 수 없음을 우리는 발견한다.</p>
 <p class="wc"><b>무엇을 바꿨나.</b> 영어의 기술로서 유한 상태 마르코프 문법, 구 구조 문법, 변형 문법을 비교한다. 유한 상태 과정은 영어 문법이 될 수 없으며, 단순문의 핵과 변형을 두면 문법이 단순해진다고 논한다.</p>
 <p class="rel">이 목록의 논문 중 인용한 것: <a href="E1.html#shannon1948">Shannon 1948</a><br>이 목록의 논문 중 이 논문을 인용한 것: <a href="E4.html#collobert2011">Collobert et al. 2011</a>, <a href="E5.html#graves2014">Graves et al. 2014</a></p>
-</article></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.6 · 생성일 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+</article><a class="totoc" href="#toc" aria-label="이 면의 절 목록으로">↑ 목차</a></main>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.7 · 생성일 2026-11-18 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
@@ -179,4 +198,4 @@ document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventLis
   g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
   g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
  var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
-</script></body></html>
+(function(){var d=document,r=d.documentElement,h=d.querySelector("header"),SF=900,m=SF&&window.matchMedia?matchMedia("(min-width:"+SF+"px)"):null;r.classList.add("navjs");function gap(){var on=h&&m&&m.matches&&window.CSS&&CSS.supports&&CSS.supports("overflow-x","clip");r.style.setProperty("--hh",on?(h.offsetHeight+12)+"px":".9rem")}gap();addEventListener("resize",gap);addEventListener("load",gap);var c=d.querySelector("nav.toc"),p=d.querySelector(".totoc");function pill(){p.classList.toggle("show",c.getBoundingClientRect().bottom<0)}if(c&&p){addEventListener("scroll",pill,{passive:true});addEventListener("resize",pill);pill()}var ls=d.querySelectorAll("header a.lang,header .lang a");for(var i=0;i<ls.length;i++)(function(l){l.addEventListener("click",function(){if(location.hash&&(l.getAttribute("href")||"").indexOf("http")!==0)l.href=l.href.split("#")[0]+location.hash})})(ls[i])})();</script></body></html>

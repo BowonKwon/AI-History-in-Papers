@@ -70,50 +70,71 @@ footer{border-top:1px solid var(--line);color:var(--fg3);font-size:.82rem;paddin
 .eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem;margin:1rem 0}
 @media(max-width:640px){.tl-wide{display:none}.tl-list{display:block}}@media(min-width:641px){.tl-list{display:none}}
 @media(prefers-reduced-motion:reduce){.card,a.card:hover{transition:none;transform:none}}
+
+h2[id],h3[id],figure[id],nav.toc{scroll-margin-top:var(--hh,.9rem)}
+@media(min-width:900px){body{overflow-x:clip}h2[id],h3[id],figure[id],nav.toc{scroll-margin-top:var(--hh,7.4rem)}.sibs{top:var(--hh,7.4rem);max-height:calc(100vh - var(--hh,7.4rem) - .8rem)}}
+.hx{margin-left:.45rem;font-family:var(--body);font-size:.8em;font-weight:400;color:var(--fg3);opacity:0;transition:opacity .15s}.hx:hover{text-decoration:none;color:var(--accent)}
+h2:hover .hx,h3:hover .hx,.hx:focus-visible{opacity:1}@media(hover:none){.hx{opacity:.6}}
+nav.toc{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.7rem 1rem .8rem;margin:1.3rem 0 .2rem;font-size:.92rem;max-width:72ch}
+nav.toc b{display:block;font-size:.84rem;font-weight:600;color:var(--fg2);margin-bottom:.3rem}
+nav.toc ul{list-style:none;margin:0;padding:0;columns:2;column-gap:1.8rem;max-width:none}nav.toc li{margin:0;padding:.14rem 0;break-inside:avoid;line-height:1.5}
+@media(max-width:640px){nav.toc ul{columns:1}}
+.chlist{margin:.1rem 0 1rem;font-size:.92rem}.chlist summary{font-size:.92rem}.chlist summary small{color:var(--fg3);margin-left:.4rem}
+.chlist ol,.chlist .box{list-style:none;margin:.5rem 0 .4rem;padding:.6rem 1rem .7rem;border:1px solid var(--line);border-radius:10px;background:var(--card);max-width:72ch}
+.chlist li{margin:0;padding:.16rem 0;line-height:1.5}.chlist li small{color:var(--fg3);margin-left:.35rem;white-space:nowrap}
+.chlist a[aria-current]{color:var(--fg);font-weight:600}.chlist p{margin:.3rem 0 0;font-size:.88rem}
+.chlist .tree,.chlist .tree ul{list-style:none;margin:0;padding:0}.chlist .tree>li{padding:.3rem 0}.chlist .tree>li>a{font-weight:600}
+.chlist .tree ul{padding-left:1rem;font-size:.95em}.chlist .box b{display:block;margin:.7rem 0 .1rem;font-size:.84rem;font-weight:600;color:var(--fg2);border-top:1px solid var(--line2);padding-top:.6rem}
+.totoc{position:fixed;right:.9rem;bottom:.9rem;z-index:6;font-size:.84rem;font-weight:600;line-height:1;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.55rem .85rem;box-shadow:var(--shadow)}
+.totoc:hover{text-decoration:none;border-color:var(--accent);color:var(--accent)}
+.navjs .totoc{opacity:0;visibility:hidden;transition:opacity .15s,visibility .15s}.navjs .totoc.show{opacity:1;visibility:visible}
+@media print{.totoc,.hx{display:none}}
 </style></head><body>
 <header><a class="brand" href="../ko/index.html">논문으로 읽는 인공지능의 역사</a><nav><a href="../ko/index.html">홈</a><a href="../ko/chapters/index.html">시대</a><a href="../ko/lineage/index.html">계보</a><a href="../ko/winters.html">겨울과 붐</a><a href="../ko/papers.html">논문 목록</a><a href="../ko/method.html" class="on">방법·한계</a></nav>
 <div class="right"><a class="hub" href="https://bowonkwon.github.io/">공개 자료 허브</a><button id="theme" class="theme" type="button" aria-label="theme">◑</button><a class="lang" href="../en/index.html">English</a></div></header>
 <main><h1>방법과 한계</h1>
 <p class="lead">선정 기준은 목록을 만들기 전에 등록했고, 날짜는 원문에서, 계보선은 인용 자료에서 가져왔다. 이 면은 그 절차와 거기서 생기는 한계를 적는다.</p>
-<h2>논문 선정 — 2026-11-03 등록</h2>
+<nav class="toc" id="toc" aria-label="이 면의 절"><b>이 면의 절</b><ul><li><a href="#selecting">논문 선정 — 2026-11-03 등록</a></li><li><a href="#v1-1-7">1.1.7 — 2026-11-18</a></li><li><a href="#v1-1-6">1.1.6 — 2026-11-17</a></li><li><a href="#v1-1-5">1.1.5 — 2026-11-16</a></li><li><a href="#v1-1-4">1.1.4 — 2026-11-15</a></li><li><a href="#v1-1-3">1.1.3 — 2026-11-11</a></li><li><a href="#v1-1-2">1.1.2 — 2026-11-11</a></li><li><a href="#v1-1-1">1.1.1 — 2026-11-08</a></li><li><a href="#v1-1">1.1 개정 — 2026-11-07</a></li><li><a href="#dates">날짜</a></li><li><a href="#originals">원문 확인</a></li><li><a href="#lineage-lines">계보선</a></li><li><a href="#priority">우선권 논쟁</a></li><li><a href="#bias">편중</a></li><li><a href="#sources">자료원과 이용 조건</a></li></ul></nav><h2 id="selecting">논문 선정 — 2026-11-03 등록<a class="hx" href="#selecting" aria-label="‘논문 선정 — 2026-11-03 등록’ 절로 바로 가는 링크">#</a></h2>
 <p>기준 문헌 여섯 종을 먼저 정했다: Nilsson 『The Quest for Artificial Intelligence』(2010), Russell & Norvig 『Artificial Intelligence: A Modern Approach』 4판(2020), Goodfellow·Bengio·Courville 『Deep Learning』(2016), Sutton & Barto 『Reinforcement Learning』 2판(2018), Prince 『Understanding Deep Learning』(2023), Jurafsky & Martin 『Speech and Language Processing』 3판 초고. 1.1에서 Murphy 『Probabilistic Machine Learning: An Introduction』(2022)을 더해 일곱 종이 되었다. 포함 규칙은 넷이다.</p>
 <ul><li><b>R1 교과서.</b> 기준 문헌 가운데 두 종 이상이 그 업적의 원 논문을 참고문헌에 올림. (150편)</li>
 <li><b>R2 계보.</b> 이미 선정된 논문 세 편 이상이 인용(OpenAlex 또는 인용한 논문의 참고문헌 목록으로 확인). (33편)</li>
 <li><b>R3 수상.</b> 튜링상·노벨상의 공적 설명이 가리키는 업적의 원 논문. (15편)</li>
 <li><b>R4 최근(2021년 이후).</b> 동료 심사 게재(또는 공개된 심사 기록)와 원문 확인. (28편)</li></ul>
 <p>그 결과 214편이다. 교과서 대조는 참고문헌 텍스트를 제목·저자·연도로 자동 대조한 뒤 표본을 손으로 확인했다. 손으로 바로잡은 적중은 근거와 함께 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>에 적었다. Nilsson 의 책은 참고문헌을 장 끝의 주(註)에 두므로 책 전문(저자 공개 PDF, Internet Archive 2026-10-11 보존본)을 대조 텍스트로 썼다 — 본문에서 제목이나 저자·연도로 거명한 것도 인용으로 세었다는 뜻이다. Schmidhuber 의 「Annotated History of Modern AI and Deep Learning」(2022)은 기준 문헌에 넣지 않고 우선권 상자의 한쪽 자료로만 썼다.</p>
-<h2>1.1.6 — 2026-11-17</h2>
+<h2 id="v1-1-7">1.1.7 — 2026-11-18<a class="hx" href="#v1-1-7" aria-label="‘1.1.7 — 2026-11-18’ 절로 바로 가는 링크">#</a></h2>
+<p>목차에서 장·절로 바로 가기. 장 면 머리에 장 목록을, 절이 셋 이상인 면에 절 목록을 두고, 절 제목마다 바로가기 링크를 달았다. 「시대」 면에는 장과 절 전체 목차가 있다. 넓은 화면에서는 위쪽 메뉴가 화면에 남는다. 본문과 수치는 그대로다.</p>
+<h2 id="v1-1-6">1.1.6 — 2026-11-17<a class="hx" href="#v1-1-6" aria-label="‘1.1.6 — 2026-11-17’ 절로 바로 가는 링크">#</a></h2>
 <p>그림과 낱말 풀이를 손봤다. 2000년 전부터 2014년 뒤까지 걸치는 주제 묶음 면 다섯 개(신경망 학습, 강화학습(reinforcement learning)·게임, 언어·음성, 시각·생성, 확률·통계·기원)의 계보도는 첫 면 연대표처럼 가로축을 2012년에서 꺾어, 2010년 뒤의 점이 오른쪽 끝에 몰리지 않게 했다. 줄이 하나뿐인 계보도(주제 묶음 면과 7장)는 점을 시간 순서대로 여섯 높이에 돌려 놓았고, 5장 계보도는 같은 반년 칸에 다섯 편이 있어 높이를 다섯 자리로 늘렸다. 선이 120개를 넘는 계보도(5장, 6장, 언어·음성)는 선을 옅게 그렸다. 인용된 논문의 첫 공개일이 인용한 논문보다 늦은 선은 초록색으로 굵게 그리고 범례를 달았다(점에 마우스를 올려도 초록으로 남는다). 줄이 여럿인 계보도와 첫 면 연대표에는 그림 안에 줄의 이름(「주제 묶음」)을 적었다. 그 자리를 내느라 1~6장 계보도의 점과 선을 조금 아래로 옮겼고, 자료의 값은 그대로다. 「겨울과 붐」 첫 그래프 아래에 「artificial intelligence」와 「expert system」만 세로축 0–10으로 다시 그린 확대 그래프를 더했고, NeurIPS 채택 논문 그래프의 로그 눈금에 50 · 200 · 500 · 2,000 · 5,000을 더했다. 한국어판 범례와 점의 설명(마우스를 올리면 뜨는 글)에는 검색 구절의 뜻을 붙였고, 확대 그래프 설명에 점 하나와 단위를 적었으며, 첫 그래프에서 1970년 값을 뺀 까닭에 대한 짐작은 지웠다(확인하지 않았다고만 적는다). 첫 면 연대표의 4장 띠는 자료에 끝 해가 2012년으로 적혀 있던 것을 장 제목대로 2011년으로 고쳤고(띠는 전처럼 2011년 끝까지 그려진다), 3장 띠는 제목대로 1993년 끝까지 그린다. 약어와 낱말(<span class="ng">DARPA, LISP 기계, TIMIT, GMM-HMM, BLEU, mAP, SGVB, AEVB</span>)에 면마다 처음 나올 때 짧은 풀이를 붙였고, 「겨울과 붐」의 「perceptron」과 「83 Stat. 206」을 풀었다. 논문과 인용선의 자료, 그래프의 값은 바뀌지 않았다.</p>
-<h2>1.1.5 — 2026-11-16</h2>
+<h2 id="v1-1-5">1.1.5 — 2026-11-16<a class="hx" href="#v1-1-5" aria-label="‘1.1.5 — 2026-11-16’ 절로 바로 가는 링크">#</a></h2>
 <p>그래프 설명을 보강했다. 계보도 열다섯 개의 설명에 점 · 가로축 · 줄 · 선이 잇는 것 · 마우스를 올렸을 때의 동작을 적고, 그림마다 논문 수 · 인용선 수 · 그림 안에서 가장 많이 인용된 논문 · 선이 없는 논문 수 · 인용된 논문의 첫 공개일이 더 늦은 선의 수를 자료에서 계산해 붙였다. 점의 색은 줄마다 네 색을 돌려 칠한 것일 뿐 뜻이 없어서 한 색으로 바꿨다(첫 면 연대표도 같다). 그래프마다 가로축 이름을 넣고, 「겨울과 붐」의 세로축 이름을 그것만으로 읽히게 고쳤으며, 로그 눈금과 학회 이름을 풀었다. 그 면의 2002년 값과 2020년 뒤 NeurIPS 참가자 수는 해석하지 않는다고 적었다. 계보 면들과 논문 목록 · 시대 목록 면에 짧은 요약을 두었고, 휴대폰 화면에서는 넓은 그래프가 그린 폭의 92% 아래로 줄지 않고 옆으로 밀리게 했다. 「겨울과 붐」 첫 그래프에서 1970년 값을 뺀 까닭은 자료에서 보이는 것과 확인하지 않은 것을 나눠 적었다. 머리에 공개 자료 허브로 가는 링크를 달았다. 5장 「핵심」 상자의 「이 장의 점 46개 가운데 38개가 arXiv v1 날짜」는 1.1에서 논문을 더한 뒤 고치지 않은 수여서, 자료에서 세도록 바꿨다(54개 가운데 46개). 그 밖에 논문과 인용선의 자료, 그림의 점과 선은 바뀌지 않았다.</p>
-<h2>1.1.4 — 2026-11-15</h2>
+<h2 id="v1-1-4">1.1.4 — 2026-11-15<a class="hx" href="#v1-1-4" aria-label="‘1.1.4 — 2026-11-15’ 절로 바로 가는 링크">#</a></h2>
 <p>그림을 고쳤다. 계보도의 설명이 그림에 없는 점선을 풀이하고 있었다(인용이 확인되지 않은 선은 현재 0건이다). 점선이 없는 그림에서는 점선 풀이를 뺐다. 「겨울과 붐」의 그래프 두 개는 세로축 눈금이 47.8223 같은 값이어서 0 · 20 · 40처럼 둥근 값으로 바꿨다. 그 면의 첫 그래프는 캡션에서 뺐다고 밝힌 1970년을 선이 이어 지나가고 있어 그 자리에서 선을 끊었다. 첫 면 연대표와 계보도에서 겹치거나 잘리던 글자의 자리를 고쳤다. 논문 · 인용선 · 수치는 바뀌지 않았다.</p>
-<h2>1.1.3 — 2026-11-11</h2>
+<h2 id="v1-1-3">1.1.3 — 2026-11-11<a class="hx" href="#v1-1-3" aria-label="‘1.1.3 — 2026-11-11’ 절로 바로 가는 링크">#</a></h2>
 <p>Pearl(1988)의 통합 참고문헌(521~538쪽)을 읽었다. 이 책에서 나가는 인용선 네 개(Hart 외 1968, McCarthy–Hayes 1969, Kirkpatrick 외 1983, Geman–Geman 1984)가 책의 참고문헌에 그대로 있음을 확인했고, 선의 수는 바뀌지 않았다.</p>
-<h2>1.1.2 — 2026-11-11</h2>
+<h2 id="v1-1-2">1.1.2 — 2026-11-11<a class="hx" href="#v1-1-2" aria-label="‘1.1.2 — 2026-11-11’ 절로 바로 가는 링크">#</a></h2>
 <p>원문을 구하지 못해 비어 있던 책 일곱 권의 카드를 채웠다. Bellman(1957년판 6쇄), Minsky–Papert(1988년 증보판), Holland(1992년 MIT Press 판), Marr(2010년 MIT Press 재간본), Pearl(1988)은 책을 읽었고, Schank–Abelson(1977)과 Quinlan의 C4.5(1993)는 출판사 미리보기만 읽어 「부분 확인」이다. 읽은 판과 쪽은 카드에 적었다. 이로써 「접근 불가」 카드는 없다. 책의 참고문헌에서 읽은 인용선 17개가 더해졌다. 함께, 1.0.1에서 카드는 채웠으나 장 본문에는 「읽지 못했다」로 남아 있던 네 편(McCarthy 1960, Buchanan–Feigenbaum 1978, Werbos 1982, Boser 외 1992)의 서술을 카드에 맞게 고쳤다. 선정은 바뀌지 않았다.</p>
-<h2>1.1.1 — 2026-11-08</h2>
+<h2 id="v1-1-1">1.1.1 — 2026-11-08<a class="hx" href="#v1-1-1" aria-label="‘1.1.1 — 2026-11-08’ 절로 바로 가는 링크">#</a></h2>
 <p>한국어판에서 우리말로 옮긴 용어는 쪽마다 처음 나올 때 원어를 괄호로 붙였다(예: 생각의 사슬(chain of thought)). 대응표는 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/glossary_ko.csv">glossary_ko.csv</a>에 있다. 선정과 카드 내용은 바뀌지 않았다.</p>
-<h2>1.1 개정 — 2026-11-07</h2>
+<h2 id="v1-1">1.1 개정 — 2026-11-07<a class="hx" href="#v1-1" aria-label="‘1.1 개정 — 2026-11-07’ 절로 바로 가는 링크">#</a></h2>
 <p>두 가지를 바꿨다. 첫째, 통계적 기계학습 쪽 교과서가 빠져 있어 Murphy 『Probabilistic Machine Learning: An Introduction』(MIT Press 2022)을 일곱 번째 기준 문헌으로 더했다. 대조에는 저자가 공개한 초고 PDF(2025-04-18판)의 참고문헌을 썼다. 둘째, 후보를 넓혔다. 이미 선정된 논문 세 편 이상이 OpenAlex 에서 인용하고 기준 문헌 세 종 이상이 참고문헌에 올린 논문 가운데 후보에 없던 것을 더했다. 교과서·개관 논문, 이미 있는 점과 같은 업적의 다른 판본은 넣지 않았다. 더한 논문도 위 네 규칙으로만 선정했다. 더한 16편과 각 편의 인용 수·기준 문헌은 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/pool-1.1-added.csv">pool-1.1-added.csv</a>에 있다. 그 가운데 Jelinek 1976은 한 기준 문헌(Jurafsky & Martin)의 적중이 같은 저자의 다른 논문을 잡은 것으로 뒤에 밝혀졌다. 바로잡으면 기준 문헌이 두 종이라 확장 조건(세 종)에 못 미치므로, 등록한 조건대로 후보에서 빼고 선정하지 않았다. 후보에 남은 것은 15편이다.</p>
-<h2>날짜</h2>
+<h2 id="dates">날짜<a class="hx" href="#dates" aria-label="‘날짜’ 절로 바로 가는 링크">#</a></h2>
 <p>점의 위치는 처음 공개된 날짜다 — 기술 보고서, 학위논문, arXiv v1, 학회 발표 중 기록으로 확인되는 가장 이른 것. 저널 게재일·학회 발표일·재판 연도는 카드에 따로 적는다. OpenAlex 의 발행 연도는 재판이나 학회판 날짜가 섞여 있어 쓰지 않았다(1.0 후보 234편 중 23편에서 연도가 달랐다).</p>
-<h2>원문 확인</h2>
+<h2 id="originals">원문 확인<a class="hx" href="#originals" aria-label="‘원문 확인’ 절로 바로 가는 링크">#</a></h2>
 <p>카드의 인용문과 쪽은 그 판본을 직접 읽고 옮긴 것이다. 읽은 판본은 카드에 적혀 있다(저널판·학회판·arXiv 판 번호). 상태별로 확인 202편, 부분 확인 12편, 접근 불가 0편이다. 접근 불가는 합법적 공개 사본을 찾지 못한 경우이며, 그 카드에는 인용문이 없다. 공개 사본이 없는 몇 편(예: Werbos 1974 박사논문, Werbos 1982 학회 논문집 장)은 엮은이가 구한 출판본·원본 사본으로 읽었고, 카드의 「읽은 판본」에 그렇게 적었다.</p>
-<h2>계보선</h2>
+<h2 id="lineage-lines">계보선<a class="hx" href="#lineage-lines" aria-label="‘계보선’ 절로 바로 가는 링크">#</a></h2>
 <p>세 종류다. OpenAlex 의 참고문헌 목록에 있는 것(548건), OpenAlex 에는 없으나 인용한 논문의 참고문헌 목록에서 직접 확인한 것(738건), 교과서가 영향을 말하지만 인용이 확인되지 않은 것(0건, 점선). OpenAlex 만으로는 선이 크게 빈다 — 후보 목록에서 1990년 이전 레코드의 30%, arXiv 레코드의 40%가 참고문헌 0건이었다.</p>
-<h2>우선권 논쟁</h2>
+<h2 id="priority">우선권 논쟁<a class="hx" href="#priority" aria-label="‘우선권 논쟁’ 절로 바로 가는 링크">#</a></h2>
 <p>역전파(backpropagation)·합성곱망(convolutional network)·심층망 학습·잔차 연결(residual connection)처럼 「누가 먼저인가」가 다투어지는 자리에는 양쪽 원 논문의 서지와 원문 문장만 나란히 놓는다. 판정하는 문장은 쓰지 않는다. 판정이 담긴 2차 문헌은 「이런 주장이 있다」로 출처와 함께 소개한다.</p>
-<h2>편중</h2>
+<h2 id="bias">편중<a class="hx" href="#bias" aria-label="‘편중’ 절로 바로 가는 링크">#</a></h2>
 <p>기준 문헌이 영어 교과서라는 점에서 오는 편중을 숨기지 않는다. 소련·일본의 초기 신경망 연구(Ivakhnenko, Amari, Fukushima)와 핀란드의 Linnainmaa 는 교과서 두 종 기준을 넘지 못한 경우가 있고, 그런 논문은 우선권 상자에서 다룬다. 선정 논문의 저자 소속 국가 분포는 이 판의 papers.csv 와 OpenAlex 레코드로 계산할 수 있다.</p>
-<h2>자료원과 이용 조건</h2>
+<h2 id="sources">자료원과 이용 조건<a class="hx" href="#sources" aria-label="‘자료원과 이용 조건’ 절로 바로 가는 링크">#</a></h2>
 <ul><li>OpenAlex — 서지·인용·피인용 수·연도별 건수. 데이터 CC0. 피인용 수는 조회일(2026-11-03)과 함께만 싣는다.</li>
 <li>arXiv — 메타데이터(제목·저자·v1 날짜) CC0. PDF 는 링크만 한다.</li>
 <li>Crossref — DOI 서지 대조.</li>
 <li>Wikidata(튜링상 수상자, CC0)·노벨상 API(CC0).</li>
 <li>AI Index 2019 보고서 2장의 참가자 자료, Our World in Data(CC BY), proceedings.neurips.cc.</li></ul>
-<p>이 사이트의 글은 CC BY-NC 4.0, 코드는 PolyForm Noncommercial 1.0.0, 데이터 편집물은 CC BY 4.0(원자료는 CC0 또는 CC BY)이다. 논문 본문은 재배포하지 않고 짧은 인용과 링크만 한다.</p></main>
-<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.6 · 생성일 2026-11-17 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
+<p>이 사이트의 글은 CC BY-NC 4.0, 코드는 PolyForm Noncommercial 1.0.0, 데이터 편집물은 CC BY 4.0(원자료는 CC0 또는 CC BY)이다. 논문 본문은 재배포하지 않고 짧은 인용과 링크만 한다.</p><a class="totoc" href="#toc" aria-label="이 면의 절 목록으로">↑ 목차</a></main>
+<footer>논문으로 읽는 인공지능의 역사 · 판 1.1.7 · 생성일 2026-11-18 · <a href="https://github.com/BowonKwon/AI-History-in-Papers">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a></footer>
 <script>
 (function(){var k="ahp-theme",r=document.documentElement,b=document.getElementById("theme");function ap(v){if(v)r.setAttribute("data-theme",v);else r.removeAttribute("data-theme");if(b)b.textContent=v==="dark"?"☾":v==="light"?"☀":"◑"}var cur=localStorage.getItem(k)||"";ap(cur);if(b)b.addEventListener("click",function(){cur=cur===""?"light":cur==="light"?"dark":"";if(cur)localStorage.setItem(k,cur);else localStorage.removeItem(k);ap(cur)})})();
 document.querySelectorAll('table.sort').forEach(function(t){var ths=t.querySelectorAll('th');ths.forEach(function(th,i){th.addEventListener('click',function(){
@@ -129,4 +150,4 @@ document.querySelectorAll('.filter input').forEach(function(inp){inp.addEventLis
   g.addEventListener('mouseleave',function(){pop.style.display='none';var svg=g.ownerSVGElement;svg.querySelectorAll('.edge').forEach(function(p){p.classList.remove('hi');p.classList.remove('dim')});g.classList.remove('on')});
   g.addEventListener('click',function(){if(g.dataset.href)location.href=g.dataset.href})});
  var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark'){localStorage.setItem('ahp-theme',q)}else if(q==='auto'){localStorage.removeItem('ahp-theme')}})();
-</script></body></html>
+(function(){var d=document,r=d.documentElement,h=d.querySelector("header"),SF=900,m=SF&&window.matchMedia?matchMedia("(min-width:"+SF+"px)"):null;r.classList.add("navjs");function gap(){var on=h&&m&&m.matches&&window.CSS&&CSS.supports&&CSS.supports("overflow-x","clip");r.style.setProperty("--hh",on?(h.offsetHeight+12)+"px":".9rem")}gap();addEventListener("resize",gap);addEventListener("load",gap);var c=d.querySelector("nav.toc"),p=d.querySelector(".totoc");function pill(){p.classList.toggle("show",c.getBoundingClientRect().bottom<0)}if(c&&p){addEventListener("scroll",pill,{passive:true});addEventListener("resize",pill);pill()}var ls=d.querySelectorAll("header a.lang,header .lang a");for(var i=0;i<ls.length;i++)(function(l){l.addEventListener("click",function(){if(location.hash&&(l.getAttribute("href")||"").indexOf("http")!==0)l.href=l.href.split("#")[0]+location.hash})})(ls[i])})();</script></body></html>
