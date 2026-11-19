@@ -147,6 +147,8 @@ def METHOD(lang):
 <li><b>R3 수상.</b> 튜링상·노벨상의 공적 설명이 가리키는 업적의 원 논문. ({by_rule.get('R3', 0)}편)</li>
 <li><b>R4 최근(2021년 이후).</b> 동료 심사 게재(또는 공개된 심사 기록)와 원문 확인. ({by_rule.get('R4', 0)}편)</li></ul>
 <p>그 결과 {n}편이다. 교과서 대조는 참고문헌 텍스트를 제목·저자·연도로 자동 대조한 뒤 표본을 손으로 확인했다. 손으로 바로잡은 적중은 근거와 함께 <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>에 적었다. Nilsson 의 책은 참고문헌을 장 끝의 주(註)에 두므로 책 전문(저자 공개 PDF, Internet Archive 2026-10-11 보존본)을 대조 텍스트로 썼다 — 본문에서 제목이나 저자·연도로 거명한 것도 인용으로 세었다는 뜻이다. Schmidhuber 의 「Annotated History of Modern AI and Deep Learning」(2022)은 기준 문헌에 넣지 않고 우선권 상자의 한쪽 자료로만 썼다.</p>
+<h2 id="v1-1-8">1.1.8 — 2026-11-19</h2>
+<p>화면만 고쳤다. 헤더가 화면 위에 붙지 않는 폭(900px 아래)에서 아래로 내려가도 언어를 바꿀 수 있게, 오른쪽 아래에 언어 전환 단추를 띄운다. 값은 바뀌지 않았다.</p>
 <h2 id="v1-1-7">1.1.7 — 2026-11-18</h2>
 <p>목차에서 장·절로 바로 가기. 장 면 머리에 장 목록을, 절이 셋 이상인 면에 절 목록을 두고, 절 제목마다 바로가기 링크를 달았다. 「시대」 면에는 장과 절 전체 목차가 있다. 넓은 화면에서는 위쪽 메뉴가 화면에 남는다. 본문과 수치는 그대로다.</p>
 <h2 id="v1-1-6">1.1.6 — 2026-11-17</h2>
@@ -189,6 +191,8 @@ def METHOD(lang):
 <li><b>R3 Awards.</b> The Turing Award or Nobel Prize citation names the achievement. ({by_rule.get('R3', 0)})</li>
 <li><b>R4 Recent (2021 onward).</b> Peer-reviewed publication or public review record, original text checked. ({by_rule.get('R4', 0)})</li></ul>
 <p>The result is {n} papers. Textbook matching compared bibliography text by title, author and year automatically, with samples checked by hand; hits corrected by hand are listed with the evidence in <a href="https://github.com/BowonKwon/AI-History-in-Papers/blob/main/method/textbook_overrides.csv">textbook_overrides.csv</a>. Nilsson's book keeps its references in chapter endnotes, so the whole text (the author's public PDF, Internet Archive capture of 2026-10-11) was used as the comparison text; a work named by title or by author and year in the body counts as cited. Schmidhuber's "Annotated History of Modern AI and Deep Learning" (2022) is not a reference work here; it is used only as one side in the priority boxes.</p>
+<h2 id="v1-1-8">Revision 1.1.8 — 2026-11-19</h2>
+<p>Display only. At widths where the header does not stay on screen (below 900px) a language switch now floats at the bottom right, so the language can be changed further down the page. No values changed.</p>
 <h2 id="v1-1-7">Revision 1.1.7 — 2026-11-18</h2>
 <p>Straight from the contents to a chapter or section: a chapter list at the head of each chapter, a section list on pages with three or more sections, and a link on every section heading. The Eras page has full contents by chapter and section. On wide screens the top menu stays on screen. Text and numbers are unchanged.</p>
 <h2 id="v1-1-6">Revision 1.1.6 — 2026-11-17</h2>
